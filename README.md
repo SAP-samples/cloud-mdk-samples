@@ -1,5 +1,7 @@
 # SAP Mobile Development Kit Samples
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-mdk-samples)](https://api.reuse.software/info/github.com/SAP-samples/cloud-mdk-samples)
+
 ## Welcome to the Mobile Development Kit (MDK) Samples Repository!
 
 The samples provided in this repository are targeted at intermediate to experienced MDK users and are intended to showcase some of the how-to topics that come up in discussions with customers.  We may also provide more full featured sample applications that demonstrate the capabilities of the MDK.
