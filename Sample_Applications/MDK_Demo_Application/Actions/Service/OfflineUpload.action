@@ -1,0 +1,14 @@
+{
+	"ActionResult": {
+		"_Name": "upload"
+	},
+	"OnFailure": {
+		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
+		"Properties": {
+			"Message": "Upload Failure - {#ActionResults:upload/#Property:error}"
+		}
+	},
+	"OnSuccess": "/MDKDemoApp/Actions/Service/DownloadProgress.action",
+	"Service": "/MDKDemoApp/Services/Sample.service",
+	"_Type": "Action.Type.OfflineOData.Upload"
+}

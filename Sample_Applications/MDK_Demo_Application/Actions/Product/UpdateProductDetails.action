@@ -1,0 +1,43 @@
+{
+	"ActionResult": {
+		"_Name": "UpdateProduct"
+	},
+	"OnFailure": {
+		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
+		"Properties": {
+			"Animated": true,
+			"Duration": 0,
+			"Message": "Updating Product Failed: {#ActionResults:UpdateProduct/error}"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/MDKDemoApp/Actions/GenericToastMessage.action",
+		"Properties": {
+			"Animated": true,
+			"Duration": 2,
+			"Message": "Product Updated",
+			"OnSuccess": "/MDKDemoApp/Actions/CloseModalComplete.action"
+		}
+	},
+	"Properties": {
+		"Category": "#Control:ProductCategory/#SelectedValue",
+		"CategoryName": "#Control:ProductCategory/#SelectedValue",
+		"CurrencyCode": "#Control:ProductCurrencyCode/#Value",
+		"DimensionDepth": "#Control:ProductDepth/#Value",
+		"DimensionHeight": "#Control:ProductHeight/#Value",
+		"DimensionUnit": "#Control:ProductDimensionUnit/#Value",
+		"DimensionWidth": "#Control:ProductWidth/#Value",
+		"Name": "#Control:ProductName/#Value",
+		"Price": "#Control:ProductPrice/#Value",
+		"ShortDescription": "#Control:ProductDescription/#Value",
+		"Weight": "#Control:ProductWeight/#Value",
+		"WeightUnit": "#Control:ProductWeightUnit/#Value"
+	},
+	"ShowActivityIndicator": true,
+	"Target": {
+		"EntitySet": "Products",
+		"ReadLink": "{@odata.readLink}",
+		"Service": "/MDKDemoApp/Services/Sample.service"
+	},
+	"_Type": "Action.Type.ODataService.UpdateEntity"
+}

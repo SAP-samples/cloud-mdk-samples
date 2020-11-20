@@ -1,0 +1,15 @@
+{
+	"ActionResult": {
+		"_Name": "AppUpdate"
+	},
+	"OnFailure": {
+		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
+		"Properties": {
+			"Animated": true,
+			"Duration": 0,
+			"Message": "App Update Failure {#ActionResults:AppUpdate/error}"
+		}
+	},
+	"OnSuccess": "/MDKDemoApp/Rules/Application/AppUpdateResult.js",
+	"_Type": "Action.Type.ApplicationUpdate"
+}

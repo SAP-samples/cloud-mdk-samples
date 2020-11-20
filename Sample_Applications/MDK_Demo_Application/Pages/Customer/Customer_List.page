@@ -1,0 +1,57 @@
+{
+	"Caption": "Customers",
+	"Controls": [
+		{
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": ""
+			},
+			"Sections": [
+				{
+					"ContactCell": {
+						"ActivityItems": [
+							{
+								"ActivityType": "Phone",
+								"ActivityValue": "{PhoneNumber}"
+							},
+							{
+								"ActivityType": "Email",
+								"ActivityValue": "{EmailAddress}"
+							}
+						],
+						"DetailImage": "/MDKDemoApp/Rules/Customer/GetSmallCustomerAvatarURL.js",
+						"Headline": "{FirstName} {LastName}",
+						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_Detail.action",
+						"Subheadline": "{City}, {Country}"
+					},
+					"DataPaging": {
+						"LoadingIndicatorText": "",
+						"ShowLoadingIndicator": true
+					},
+					"EmptySection": {
+						"Caption": "No Customers Found",
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": false
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Customer Search"
+					},
+					"Target": {
+						"EntitySet": "Customers",
+						"Service": "/MDKDemoApp/Services/Sample.service"
+					},
+					"Visible": true,
+					"_Name": "SectionContactCellTable0",
+					"_Type": "Section.Type.ContactCell"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "Customer_List",
+	"_Type": "Page"
+}

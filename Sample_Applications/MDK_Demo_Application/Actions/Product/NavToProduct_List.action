@@ -1,0 +1,5 @@
+{
+	"NavigationType": "Cross",
+	"PageToOpen": "/MDKDemoApp/Pages/Product/Product_List.page",
+	"_Type": "Action.Type.Navigation"
+}

@@ -1,0 +1,6 @@
+{
+	"ModalPage": true,
+	"NavigationType": "Cross",
+	"PageToOpen": "/MDKDemoApp/Pages/Application/Support.page",
+	"_Type": "Action.Type.Navigation"
+}

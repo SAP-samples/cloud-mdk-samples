@@ -1,0 +1,7 @@
+{
+	"Animated": true,
+	"CompletionMessage": "Complete",
+	"CompletionTimeout": 2,
+	"Message": "Message Text",
+	"_Type": "Action.Type.ProgressBanner"
+}

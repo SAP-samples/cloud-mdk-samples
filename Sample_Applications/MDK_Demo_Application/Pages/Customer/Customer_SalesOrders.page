@@ -1,0 +1,47 @@
+{
+	"Caption": "Customer Orders",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"DataSubscriptions": [
+						"SalesOrderHeaders"
+					],
+					"EmptySection": {
+						"Caption": "No Customer Orders",
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"DetailImageIsCircular": false,
+						"Footnote": "{SalesOrderId}",
+						"OnPress": "/MDKDemoApp/Actions/SalesOrder/NavtoSalesOrder_Detail.action",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{LifeCycleStatusName}",
+						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
+						"Title": "Order Date: $(DT,{CreatedAt},'','')"
+					},
+					"Search": {
+						"BarcodeScanner": true,
+						"Enabled": true,
+						"Placeholder": "Order Search"
+					},
+					"Target": {
+						"EntitySet": "SalesOrderHeaders",
+						"QueryOptions": "$filter=CustomerId eq '{CustomerId}'&$orderby=CreatedAt desc",
+						"Service": "/MDKDemoApp/Services/Sample.service"
+					},
+					"_Name": "SectionObjectTable0",
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "Customer_SalesOrders",
+	"_Type": "Page"
+}

@@ -1,0 +1,73 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"IsIconCircular": false,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action",
+				"Position": "right",
+				"SystemItem": "Done",
+				"Text": "Done",
+				"Visible": true
+			}
+		]
+	},
+	"Caption": "About",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"KeyAndValues": [
+						{
+							"KeyName": "Application",
+							"Value": "/MDKDemoApp/Globals/Application/ApplicationName.global",
+							"Visible": true
+						},
+						{
+							"KeyName": "Application Metadata Version",
+							"Value": "/MDKDemoApp/Globals/Application/AppDefinition_Version.global",
+							"Visible": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"MaxItemCount": 1,
+					"Visible": true,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"KeyAndValues": [
+						{
+							"KeyName": "Client Version",
+							"Value": "/MDKDemoApp/Rules/Application/GetClientVersion.js",
+							"Visible": true
+						},
+						{
+							"KeyName": "Client Support Versions",
+							"Value": "/MDKDemoApp/Rules/Application/GetClientSupportVersions.js",
+							"Visible": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"MaxItemCount": 1,
+					"Visible": true,
+					"_Name": "SectionKeyValue1",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "About",
+	"_Type": "Page"
+}

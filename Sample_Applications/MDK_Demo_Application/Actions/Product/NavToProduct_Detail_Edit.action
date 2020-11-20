@@ -1,0 +1,7 @@
+{
+	"ModalPage": true,
+	"ModalPageFullscreen": false,
+	"NavigationType": "Cross",
+	"PageToOpen": "/MDKDemoApp/Pages/Product/Product_Detail_Edit.page",
+	"_Type": "Action.Type.Navigation"
+}

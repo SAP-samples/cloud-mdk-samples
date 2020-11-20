@@ -1,0 +1,70 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"IsIconCircular": false,
+				"OnPress": "/MDKDemoApp/Actions/Product/ProductFilter.action",
+				"Position": "right",
+				"Text": "Filter",
+				"Visible": true
+			}
+		]
+	},
+	"Caption": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
+	"Controls": [
+		{
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": ""
+			},
+			"Sections": [
+				{
+					"DataPaging": {
+						"LoadingIndicatorText": "",
+						"ShowLoadingIndicator": true
+					},
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": false
+					},
+					"HighlightSelectedItem": false,
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"DetailImage": "/MDKDemoApp/Rules/Product/GetProductImage.js",
+						"DetailImageIsCircular": false,
+						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
+						"Styles": {
+							"StatusText": "Price",
+							"SubstatusText": "Discount"
+						},
+						"Subhead": "{CategoryName}",
+						"SubstatusText": "/MDKDemoApp/Rules/Product/GetPromoDiscount.js",
+						"Title": "{Name}"
+					},
+					"Search": {
+						"BarcodeScanner": true,
+						"Enabled": true,
+						"Placeholder": "Product Search"
+					},
+					"Target": {
+						"EntitySet": "Products",
+						"QueryOptions": "$orderby=Name",
+						"Service": "/MDKDemoApp/Services/Sample.service"
+					},
+					"Visible": true,
+					"_Name": "SectionObjectTable0",
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"OnReturning": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
+	"_Name": "Product_List",
+	"_Type": "Page"
+}

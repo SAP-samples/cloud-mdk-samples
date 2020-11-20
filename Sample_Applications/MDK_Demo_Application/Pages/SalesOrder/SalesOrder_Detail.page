@@ -1,0 +1,175 @@
+{
+	"Caption": "Order Detail",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": false
+					},
+					"KeyAndValues": [
+						{
+							"KeyName": "Order Number",
+							"Value": "{SalesOrderId}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"KeyAndValues": [
+						{
+							"KeyName": "Created At",
+							"Value": "$(DT,{CreatedAt})"
+						},
+						{
+							"KeyName": "Status",
+							"Value": "{LifeCycleStatusName}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"Visible": true,
+					"_Name": "SectionKeyValue2",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"KeyAndValues": [
+						{
+							"KeyName": "Price",
+							"Value": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"Visible": true
+						},
+						{
+							"KeyName": "Tax",
+							"Value": "$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"Visible": true
+						},
+						{
+							"KeyName": "Total",
+							"Value": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"Visible": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 3
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue1",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"Grid": {
+							"Items": [
+								{
+									"NumberOfLines": 1,
+									"Text": "Product",
+									"TextAlignment": "left"
+								},
+								{
+									"NumberOfLines": 1,
+									"Text": "Qty",
+									"TextAlignment": "right"
+								},
+								{
+									"NumberOfLines": 1,
+									"Text": "Price",
+									"TextAlignment": "right"
+								},
+								{
+									"NumberOfLines": 1,
+									"Text": "Tax",
+									"TextAlignment": "right"
+								},
+								{
+									"NumberOfLines": 1,
+									"Text": "Total",
+									"TextAlignment": "right"
+								}
+							]
+						},
+						"UseTopPadding": true
+					},
+					"Row": {
+						"AccessoryType": "disclosureIndicator",
+						"Items": [
+							{
+								"BindTo": "headline",
+								"LineBreakMode": "wordWrapping",
+								"NumberOfLines": 1,
+								"Text": "{ProductDetails/Name}",
+								"TextAlignment": "left"
+							},
+							{
+								"BindTo": "status",
+								"LineBreakMode": "wordWrapping",
+								"NumberOfLines": 1,
+								"Text": "{Quantity} {QuantityUnit}",
+								"TextAlignment": "right"
+							},
+							{
+								"LineBreakMode": "wordWrapping",
+								"NumberOfLines": 1,
+								"Text": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+								"TextAlignment": "right"
+							},
+							{
+								"LineBreakMode": "wordWrapping",
+								"NumberOfLines": 1,
+								"Text": "$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+								"TextAlignment": "right"
+							},
+							{
+								"BindTo": "substatus",
+								"LineBreakMode": "wordWrapping",
+								"NumberOfLines": 1,
+								"Text": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+								"TextAlignment": "right"
+							}
+						],
+						"Layout": {
+							"ColumnWidthPercentage": [
+								-1,
+								0.15,
+								0.18,
+								0.15,
+								0.18
+							]
+						},
+						"OnPress": "/MDKDemoApp/Rules/SalesOrder/ShowSalesOrder_Item_Product.js"
+					},
+					"Target": {
+						"EntitySet": "SalesOrderItems",
+						"QueryOptions": "$expand=ProductDetails&$filter=SalesOrderId eq '{SalesOrderId}'&$orderby=ItemNumber,ProductId",
+						"Service": "/MDKDemoApp/Services/Sample.service"
+					},
+					"_Name": "SectionGridTable0",
+					"_Type": "Section.Type.GridTable"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "SalesOrder_Detail",
+	"_Type": "Page"
+}

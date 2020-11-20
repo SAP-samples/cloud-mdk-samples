@@ -1,0 +1,14 @@
+{
+	"ActionResult": {
+		"_Name": "download"
+	},
+	"OnFailure": {
+		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
+		"Properties": {
+			"Duration": 0,
+			"Message": "Download Failure - {#ActionResults:download/#Property:error}"
+		}
+	},
+	"Service": "/MDKDemoApp/Services/Sample.service",
+	"_Type": "Action.Type.OfflineOData.Download"
+}

@@ -1,0 +1,175 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"IsIconCircular": false,
+				"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail_Edit.action",
+				"Position": "right",
+				"SystemItem": "Edit",
+				"Text": "Edit",
+				"Visible": true
+			}
+		]
+	},
+	"Caption": "Product Detail",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": true
+					},
+					"ObjectCells": [
+						{
+							"ObjectCell": {
+								"AccessoryType": "none",
+								"DetailImage": "/MDKDemoApp/Rules/Product/GetProductImage.js",
+								"DetailImageIsCircular": false,
+								"PreserveIconStackSpacing": false,
+								"StatusText": "$(C,{Price},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+								"Styles": {
+									"StatusText": "Price",
+									"SubstatusText": "Discount"
+								},
+								"Subhead": " ",
+								"SubstatusText": "/MDKDemoApp/Rules/Product/GetPromoDiscount.js",
+								"Title": "{Name}"
+							}
+						}
+					],
+					"_Name": "SectionObjectTable0",
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": true
+					},
+					"KeyAndValues": [
+						{
+							"KeyName": "Description",
+							"Value": "{ShortDescription}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue4",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": true
+					},
+					"KeyAndValues": [
+						{
+							"KeyName": "Category",
+							"Value": "{CategoryName}"
+						},
+						{
+							"KeyName": "Quantity Unit",
+							"Value": "{QuantityUnit}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue2",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"Caption": "Stock Details",
+						"UseTopPadding": true
+					},
+					"KeyAndValues": [
+						{
+							"KeyName": "Quantity",
+							"Value": "{Quantity}"
+						},
+						{
+							"KeyName": "Lot Size",
+							"Value": "{LotSize}"
+						},
+						{
+							"KeyName": "Min Stock Level",
+							"Value": "{MinStock}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"Target": {
+						"EntitySet": "Stock",
+						"QueryOptions": "$filter=ProductId eq '{ProductId}'",
+						"Service": "/MDKDemoApp/Services/Sample.service"
+					},
+					"_Name": "SectionKeyValue3",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"Caption": "Dimensions",
+						"UseTopPadding": true
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"SimplePropertyCells": [
+						{
+							"SimplePropertyCell": {
+								"AccessoryType": "none",
+								"KeyName": "Height",
+								"Value": "{DimensionHeight} {DimensionUnit}"
+							}
+						},
+						{
+							"SimplePropertyCell": {
+								"AccessoryType": "none",
+								"KeyName": "Width",
+								"Value": "{DimensionWidth} {DimensionUnit}"
+							}
+						},
+						{
+							"SimplePropertyCell": {
+								"AccessoryType": "none",
+								"KeyName": "Depth",
+								"Value": "{DimensionDepth} {DimensionUnit}"
+							}
+						},
+						{
+							"SimplePropertyCell": {
+								"AccessoryType": "none",
+								"KeyName": "Weight",
+								"Value": "{Weight} {WeightUnit}"
+							}
+						}
+					],
+					"_Name": "SectionSimplePropertyCollection1",
+					"_Type": "Section.Type.SimplePropertyCollection"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "Product_Detail",
+	"_Type": "Page"
+}

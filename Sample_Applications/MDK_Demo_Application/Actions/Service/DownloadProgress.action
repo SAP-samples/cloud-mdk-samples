@@ -1,0 +1,8 @@
+{
+	"Animated": true,
+	"CompletionMessage": "Sync Complete",
+	"CompletionTimeout": 3,
+	"Message": "Download in Process...",
+	"OnSuccess": "/MDKDemoApp/Actions/Service/OfflineDownload.action",
+	"_Type": "Action.Type.ProgressBanner"
+}

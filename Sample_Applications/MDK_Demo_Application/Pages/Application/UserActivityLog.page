@@ -1,0 +1,49 @@
+{
+	"Caption": "Activity Log",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Caption": "Enable Logging",
+							"IsEditable": true,
+							"OnValueChange": "/MDKDemoApp/Rules/Logging/ToggleLogging.js",
+							"Value": false,
+							"_Name": "EnableLogSwitch",
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"AllowMultipleSelection": false,
+							"Caption": "Log Level",
+							"IsEditable": false,
+							"IsSearchEnabled": false,
+							"OnValueChange": "/MDKDemoApp/Rules/Logging/SetUserLogLevel.js",
+							"PickerItems": "/MDKDemoApp/Rules/Logging/LogLevels.js",
+							"_Name": "LogLevelListPicker",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						}
+					],
+					"Visible": true
+				},
+				{
+					"Controls": [
+						{
+							"OnPress": "/MDKDemoApp/Actions/Logging/UploadLogProgress.action",
+							"TextAlignment": "center",
+							"Title": "Send Activity Log",
+							"_Name": "Send",
+							"_Type": "Control.Type.FormCell.Button"
+						}
+					],
+					"Visible": true
+				}
+			],
+			"_Name": "FormCellContainer",
+			"_Type": "Control.Type.FormCellContainer"
+		}
+	],
+	"OnLoaded": "/MDKDemoApp/Rules/Logging/UserLogSetting.js",
+	"_Name": "UserActivityLog",
+	"_Type": "Page"
+}

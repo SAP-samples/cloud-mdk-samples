@@ -1,0 +1,7 @@
+{
+	"CancelCaption": "Later",
+	"Message": "A new version of the application is now ready to apply.  Do you want to update to this version now?",
+	"OKCaption": "Now",
+	"Title": "New Version Available!",
+	"_Type": "Action.Type.Message"
+}
