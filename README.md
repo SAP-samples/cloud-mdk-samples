@@ -43,7 +43,7 @@ These resources are provided *without* any warranty or support obligations.
 
 For any issues you can
 * Create a new `Issue` in the [Issues](https://github.com/SAP/cloud-mdk-samples/issues) section of this repository, but please remember that these resources are provided *without* any warranty or support obligations.
-* Registered users can also log-in and submit their question in the **SAP Community** by following [this link](https://answers.sap.com/questions/ask.html?primaryTagId=73555000100800001081) .
+* Registered users can also log-in and submit their question in the **SAP Community** by following [this link](https://answers.sap.com/questions/ask.html?primaryTagId=73555000100800001081).
 Please select the **Primary Tag** - `mobile development kit client`.
 
 ***
