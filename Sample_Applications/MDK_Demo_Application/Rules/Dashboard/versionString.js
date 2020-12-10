@@ -1,4 +1,8 @@
 export default function versionString(context) {
-	let ver = 'v' + context.getGlobalDefinition('/MDKDemoApp/Globals/Application/AppDefinition_Version.global').getValue();
+	var versionInfo = context.getVersionInfo();
+	let ver = null;
+	  if (versionInfo.hasOwnProperty('Application Version')) {
+		  ver = 'v' + versionInfo['Application Version'];
+	}
 	return ver;
-}
+  }
