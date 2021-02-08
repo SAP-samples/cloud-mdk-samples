@@ -1,4 +1,4 @@
-# MDK Demo Application
+# Image Handling App
 
 This is a showcase application that demonstrate how to:
 

@@ -1,4 +1,4 @@
-# MDK Demo Application
+# Print And QR Code App
 
 This is a showcase application that demonstrate how to:
 
