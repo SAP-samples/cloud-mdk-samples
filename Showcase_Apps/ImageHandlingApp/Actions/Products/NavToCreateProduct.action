@@ -1,0 +1,5 @@
+{
+  "_Type": "Action.Type.Navigation",
+  "ModalPage": true,
+  "PageToOpen": "/ProductListApp/Pages/Products/Product_Create.page"
+}

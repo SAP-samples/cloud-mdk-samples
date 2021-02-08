@@ -1,0 +1,8 @@
+{
+  "AppName": "PrintApp",
+  "AppVersion": "1.0.0",
+  "BundleID": "com.sap.mdk.mdk.printapp",
+  "Externals": ["nativescript-printer", "nativescript-qr-generator"],
+  "NSPlugins": ["nativescript-printer@1.5.0", "nativescript-qr-generator@1.0.0"],
+  "UrlScheme": "printapp"
+}

@@ -1,0 +1,6 @@
+{
+	"ModalPage": true,
+	"NavigationType": "Cross",
+	"PageToOpen": "/PrintingSampleApp/Pages/ShowQRCode.page",
+	"_Type": "Action.Type.Navigation"
+}

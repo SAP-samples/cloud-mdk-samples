@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.ODataService.Open",
+  "Service": "/ProductListApp/Services/SampleServiceV2.service",
+  "OnFailure": "/ProductListApp/Actions/OnlineService/OpenServiceFailureToast.action",
+  "OnSuccess": "/ProductListApp/Actions/OnlineService/OpenServiceSuccessToast.action"
+}
