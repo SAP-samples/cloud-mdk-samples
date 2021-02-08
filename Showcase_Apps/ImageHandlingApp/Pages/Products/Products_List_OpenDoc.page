@@ -8,9 +8,9 @@
 			},
 			"ObjectCell": {
 				"OnPress": "/ProductListApp/Rules/Product/DownloadOrOpenDocument.js",
-        "OnAccessoryButtonPress": "/ProductListApp/Rules/Product/DownloadOrOpenDocument.js",
-        "ProgressIndicator": "/ProductListApp/Rules/Product/GetProductImageStatus.js",
-        "Title": "{Name}",
+				"OnAccessoryButtonPress": "/ProductListApp/Rules/Product/DownloadOrOpenDocument.js",
+				"ProgressIndicator": "/ProductListApp/Rules/Product/GetProductImageStatus.js",
+				"Title": "{Name}",
 				"Footnote": "{SupplierDetails/SupplierName}",
 				"PreserveIconStackSpacing": false,
 				"Subhead": "{CategoryName}"

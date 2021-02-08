@@ -1,13 +1,13 @@
 {
-  "ApplicationDisplayName": "Print App",
-  "ConnectionSettings": {
-    "EnableOverrides": true
-  },
-  "LogSettings": {
-    "FileName": "ClientLog.txt",
-    "MaxFileSizeInMegaBytes": 1,
-    "LogLevel": "Debug"
-  },
-  "EncryptDatabase" : false,
-  "PasscodeTimeout": 120
+	"ApplicationDisplayName": "Print App",
+	"ConnectionSettings": {
+		"EnableOverrides": true
+	},
+	"LogSettings": {
+		"FileName": "ClientLog.txt",
+		"MaxFileSizeInMegaBytes": 1,
+		"LogLevel": "Debug"
+	},
+	"EncryptDatabase" : false,
+	"PasscodeTimeout": 120
 }

@@ -3,7 +3,7 @@
 	"DefiningRequests": [{
 		"Name": "Products",
 		"Query": "Products",
-    "AutomaticallyRetrievesStreams": false
+		"AutomaticallyRetrievesStreams": false
 	}],
 	"_Type": "Action.Type.OfflineOData.Download",
 	"ActionResult": {

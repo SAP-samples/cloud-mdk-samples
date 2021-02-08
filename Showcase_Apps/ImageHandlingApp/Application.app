@@ -5,7 +5,7 @@
 	"OnLaunch": [
 		"/ProductListApp/Actions/Service/InitializeOffline.action"
 	],
-  "OnWillUpdate": "/ProductListApp/Rules/OnWillUpdate.js",
+	"OnWillUpdate": "/ProductListApp/Rules/OnWillUpdate.js",
 	"OnDidUpdate": "/ProductListApp/Actions/Service/InitializeOffline.action",
 	"Styles": "/ProductListApp/Styles/Styles.less",
 	"Localization": "/ProductListApp/i18n/i18n.properties"

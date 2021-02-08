@@ -1,45 +1,45 @@
 {
-  "Caption": "Products List",
-  "ActionBar": {
-    "Items": []
-  },
-  "Controls": [{
-    "Sections": [{
-      "Header": {
+	"Caption": "Products List",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [{
+		"Sections": [{
+			"Header": {
 
-        "UseTopPadding": false
-      },
-      "ObjectCell": {
-        "AccessoryType": "disclosureIndicator",
-        "Description": "",
-        "DetailImage": "/ProductListApp/Rules/Product/GetDetailImage.js",
-        "DetailImageIsCircular": false,
-        "Icons": [],
-        "OnPress": "/ProductListApp/Actions/Products/NavToProducts_Detail.action",
-        "Title": "{Name}",
-        "Footnote": "{SupplierDetails/SupplierName}",
-        "PreserveIconStackSpacing": false,
-        "StatusText": "",
-        "Subhead": "{CategoryName}",
-        "SubstatusText": ""
-      },
-      "Search": {
-        "Enabled": true,
-        "Placeholder": "Item Search",
-        "BarcodeScanner": true,
-        "Delay": 500,
-        "MinimumCharacterThreshold": 3
-      },
-      "Target": {
-        "EntitySet": "Products",
-        "Service": "/ProductListApp/Services/SampleServiceV2.service",
-        "QueryOptions": "$expand=SupplierDetails&$orderby=Name"
-      },
-      "_Type": "Section.Type.ObjectTable"
-    }],
-    "_Type": "Control.Type.SectionedTable",
-    "_Name": "SectionedTable"
-  }],
-  "_Type": "Page",
-  "_Name": "Products_List"
+				"UseTopPadding": false
+			},
+			"ObjectCell": {
+				"AccessoryType": "disclosureIndicator",
+				"Description": "",
+				"DetailImage": "/ProductListApp/Rules/Product/GetDetailImage.js",
+				"DetailImageIsCircular": false,
+				"Icons": [],
+				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_Detail.action",
+				"Title": "{Name}",
+				"Footnote": "{SupplierDetails/SupplierName}",
+				"PreserveIconStackSpacing": false,
+				"StatusText": "",
+				"Subhead": "{CategoryName}",
+				"SubstatusText": ""
+			},
+			"Search": {
+				"Enabled": true,
+				"Placeholder": "Item Search",
+				"BarcodeScanner": true,
+				"Delay": 500,
+				"MinimumCharacterThreshold": 3
+			},
+			"Target": {
+				"EntitySet": "Products",
+				"Service": "/ProductListApp/Services/SampleServiceV2.service",
+				"QueryOptions": "$expand=SupplierDetails&$orderby=Name"
+			},
+			"_Type": "Section.Type.ObjectTable"
+		}],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "Products_List"
 }

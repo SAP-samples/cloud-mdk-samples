@@ -4,8 +4,8 @@ import GenerateQRCode from './GenerateQRCode';
 * @param {IClientAPI} context
 */
 export default function GenerateQRCodeAndRefresh(context) {
-    let pageProxy = context.getPageProxy();
-    let clientData = pageProxy.getClientData();
-    clientData.QRCodeImageSource = GenerateQRCode(context);
-    pageProxy.getControl("SectionedTable0").redraw();
+		let pageProxy = context.getPageProxy();
+		let clientData = pageProxy.getClientData();
+		clientData.QRCodeImageSource = GenerateQRCode(context);
+		pageProxy.getControl("SectionedTable0").redraw();
 }

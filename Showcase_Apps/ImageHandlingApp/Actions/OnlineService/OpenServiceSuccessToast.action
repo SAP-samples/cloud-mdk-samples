@@ -1,4 +1,4 @@
 {
 	"_Type": "Action.Type.ToastMessage",
-  "Message": "Online Service Initialized"
+	"Message": "Online Service Initialized"
 }

@@ -1,4 +1,4 @@
 {
-  "_Type": "Action.Type.ToastMessage",
-  "Message": "Please override this message using action override feature"
+	"_Type": "Action.Type.ToastMessage",
+	"Message": "Please override this message using action override feature"
 }

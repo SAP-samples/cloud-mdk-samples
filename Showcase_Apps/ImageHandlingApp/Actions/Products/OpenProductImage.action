@@ -1,4 +1,4 @@
 {
-  "_Type": "Action.Type.OpenDocument",
-  "Path": "{FileName}"
+	"_Type": "Action.Type.OpenDocument",
+	"Path": "{FileName}"
 }

@@ -6,13 +6,13 @@
 	"Controls": [{
 		"Sections": [{
 			"ImageCell": {
-        "Image": "/ProductListApp/Rules/Product/GetImageCellImage.js",
-        "OnPress": "/ProductListApp/Actions/Products/NavToProducts_Detail.action",
-        "Title": "{Name}"
-      },
-      "Layout": {
-        "LayoutType": "HorizontalScroll"
-      },
+				"Image": "/ProductListApp/Rules/Product/GetImageCellImage.js",
+				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_Detail.action",
+				"Title": "{Name}"
+			},
+			"Layout": {
+				"LayoutType": "HorizontalScroll"
+			},
 			"Target": {
 				"EntitySet": "Products",
 				"Service": "/ProductListApp/Services/SampleServiceV2.service",

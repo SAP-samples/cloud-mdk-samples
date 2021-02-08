@@ -20,11 +20,11 @@ export default function GetProductImageStatus(context) {
 	}
 	
 	// first we need to decide if the media exists locally or needs to be downloaded
-  //const fileName = imageToPath(bindingObject, 'ProductId', 'ProductImagesForOpenDoc');
-  const tempDir = fs.knownFolders.temp();
-  const fileName = imageToPath(bindingObject, 'ProductId', 'ProductImagesForOpenDoc');
-  //const filenameOnly = `${bindingObject["ProductId"]}.png`;
-  //const fileName = fs.path.join(tempDir.path, filenameOnly);
+	//const fileName = imageToPath(bindingObject, 'ProductId', 'ProductImagesForOpenDoc');
+	const tempDir = fs.knownFolders.temp();
+	const fileName = imageToPath(bindingObject, 'ProductId', 'ProductImagesForOpenDoc');
+	//const filenameOnly = `${bindingObject["ProductId"]}.png`;
+	//const fileName = fs.path.join(tempDir.path, filenameOnly);
 
 	if (fileExists(fileName)) {
 		// media is local and can be opened
@@ -32,7 +32,7 @@ export default function GetProductImageStatus(context) {
 		// 	'FileName': fileName,
 		// });
 		return "open";
-  } else {
-    return "toDownload";
+	} else {
+		return "toDownload";
 	}
 }

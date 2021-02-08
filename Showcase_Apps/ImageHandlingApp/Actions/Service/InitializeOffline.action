@@ -3,7 +3,7 @@
 	"DefiningRequests": [{
 		"Name": "Products",
 		"Query": "Products",
-    "AutomaticallyRetrievesStreams": true
+		"AutomaticallyRetrievesStreams": true
 	}],
 	"_Type": "Action.Type.OfflineOData.Initialize",
 	"ShowActivityIndicator": true,

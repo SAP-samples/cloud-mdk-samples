@@ -1,10 +1,10 @@
 {
-  "DefiningRequests": [{
-    "AutomaticallyRetrievesStreams": true,
-    "Name": "{ProductId}",
-    "Query": "{@odata.readLink}"
-  }],
-  "OnFailure": "/ProductListApp/Actions/Products/DownloadStreamFailedToast.action",
-  "Service": "/ProductListApp/Services/SampleServiceV2.service",
-  "_Type": "Action.Type.OfflineOData.Download"
+	"DefiningRequests": [{
+		"AutomaticallyRetrievesStreams": true,
+		"Name": "{ProductId}",
+		"Query": "{@odata.readLink}"
+	}],
+	"OnFailure": "/ProductListApp/Actions/Products/DownloadStreamFailedToast.action",
+	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"_Type": "Action.Type.OfflineOData.Download"
 }

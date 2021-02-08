@@ -1,6 +1,6 @@
 {
 	"Caption": "Main",
-  "Controls": [{
+	"Controls": [{
 		"_Name": "SectionedTable0",
 		"_Type": "Control.Type.SectionedTable",
 		"Sections": [{
@@ -9,21 +9,21 @@
 				"TextAlignment": "center",
 				"Title": "Products"
 			},
-      {
+			{
 				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_ImgColl.action",
 				"TextAlignment": "center",
 				"Title": "Products Image Collection"
-      },
-      {
+			},
+			{
 				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_List_OpenDoc.action",
 				"TextAlignment": "center",
 				"Title": "Products Image via Open Doc"
-      },
-      {
-        "OnPress": "/ProductListApp/Actions/Products/NavToCreateProduct.action",
-        "TextAlignment": "center",
-        "Title": "Create Product with Image Attachment"
-      }],
+			},
+			{
+				"OnPress": "/ProductListApp/Actions/Products/NavToCreateProduct.action",
+				"TextAlignment": "center",
+				"Title": "Create Product with Image Attachment"
+			}],
 			"_Name": "SectionButtonTable0",
 			"_Type": "Section.Type.ButtonTable"
 		}]

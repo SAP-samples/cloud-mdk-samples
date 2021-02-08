@@ -1,4 +1,4 @@
 {
-  "_Type": "Action.Type.ToastMessage",
-  "Message": "Download Is In Progress"
+	"_Type": "Action.Type.ToastMessage",
+	"Message": "Download Is In Progress"
 }
