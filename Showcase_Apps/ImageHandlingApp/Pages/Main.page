@@ -1,0 +1,46 @@
+{
+	"Caption": "Main",
+	"Controls": [{
+		"_Name": "SectionedTable0",
+		"_Type": "Control.Type.SectionedTable",
+		"Sections": [{
+			"Buttons": [{
+				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_List.action",
+				"TextAlignment": "center",
+				"Title": "Products"
+			},
+			{
+				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_ImgColl.action",
+				"TextAlignment": "center",
+				"Title": "Products Image Collection"
+			},
+			{
+				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_List_OpenDoc.action",
+				"TextAlignment": "center",
+				"Title": "Products Image via Open Doc"
+			},
+			{
+				"OnPress": "/ProductListApp/Actions/Products/NavToCreateProduct.action",
+				"TextAlignment": "center",
+				"Title": "Create Product with Image Attachment"
+			}],
+			"_Name": "SectionButtonTable0",
+			"_Type": "Section.Type.ButtonTable"
+		}]
+	}],
+	"_Name": "Main",
+	"_Type": "Page",
+	"ToolBar": {
+		"Controls": [{
+			"_Name": "LogoutToolbarItem",
+			"_Type": "Control.Type.ToolbarItem",
+			"Caption": "Logout",
+			"OnPress": "/ProductListApp/Actions/Logout.action"
+		}, {
+			"_Name": "UploadToolbarItem",
+			"_Type": "Control.Type.ToolbarItem",
+			"Caption": "Sync",
+			"OnPress": "/ProductListApp/Actions/Service/SyncStartedMessage.action"
+		}]
+	}
+}

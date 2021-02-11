@@ -1,0 +1,13 @@
+{
+	"OnSuccess": "/ProductListApp/Rules/Product/DocumentFileSave.js",
+	"OnFailure": "/ProductListApp/Actions/Products/DownloadMediaFailedToast.action",
+	"Target": {
+		"EntitySet": "Products",
+		"ReadLink": "{@odata.readLink}",
+		"Service": "/ProductListApp/Services/SampleServiceV2.service"
+	},
+	"ActionResult": {
+		"_Name": "DownloadImageRes"
+	},
+	"_Type": "Action.Type.ODataService.DownloadMedia"
+}

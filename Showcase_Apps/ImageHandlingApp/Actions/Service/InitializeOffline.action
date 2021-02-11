@@ -1,0 +1,16 @@
+{
+	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"DefiningRequests": [{
+		"Name": "Products",
+		"Query": "Products",
+		"AutomaticallyRetrievesStreams": true
+	}],
+	"_Type": "Action.Type.OfflineOData.Initialize",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnSuccess": "/ProductListApp/Actions/Service/InitializeOfflineSuccessMessage.action",
+	"OnFailure": "/ProductListApp/Actions/Service/InitializeOfflineFailureMessage.action"
+} 

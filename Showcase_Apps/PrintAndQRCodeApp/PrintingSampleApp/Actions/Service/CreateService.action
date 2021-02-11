@@ -1,0 +1,11 @@
+{
+	"_Type": "Action.Type.ODataService.Create",
+	"Service": "/PrintingSampleApp/Services/SampleService.service",
+	"OnSuccess": "/PrintingSampleApp/Actions/Service/OpenService.action",
+	"OnFailure": "/PrintingSampleApp/Actions/Service/CreateOpenServiceFailureMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Initializing Application...",
+	"ActionResult": {
+		"_Name": "init"
+	}
+}

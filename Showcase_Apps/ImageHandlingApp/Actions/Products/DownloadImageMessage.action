@@ -1,0 +1,5 @@
+{
+	"_Type": "Action.Type.Message",
+	"Message": "{@odata.readLink}",
+	"OKCaption": "OK"
+}

@@ -1,0 +1,9 @@
+{
+	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnSuccess": "/ProductListApp/Actions/Service/DownloadStartedMessage.action",
+	"OnFailure": "/ProductListApp/Actions/Service/SyncFailureMessage.action"
+}

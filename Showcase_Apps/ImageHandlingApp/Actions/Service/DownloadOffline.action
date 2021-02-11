@@ -1,0 +1,13 @@
+{
+	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"DefiningRequests": [{
+		"Name": "Products",
+		"Query": "Products",
+		"AutomaticallyRetrievesStreams": false
+	}],
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/ProductListApp/Actions/Service/SyncFailureMessage.action"
+}

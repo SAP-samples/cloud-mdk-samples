@@ -1,0 +1,73 @@
+{
+	"Caption": "Generate QR Code",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ImageCells": [
+						{
+							"ImageCell": {
+								"Image": "/PrintingSampleApp/Rules/GetQRCodeImage.js",
+								"ImageIsCircular": false,
+								"Styles": {
+									"Image": "/PrintingSampleApp/Rules/GetQRCodeImage.js"
+								},
+								"Title": "QR Code",
+								"Visible": true
+							}
+						}
+					],
+					"Layout": {
+						"LayoutType": "HorizontalFit"
+					},
+					"Visible": true,
+					"_Name": "SectionImageCollection0",
+					"_Type": "Section.Type.ImageCollection"
+				},
+				{
+					"Controls": [
+						{
+							"Caption": "Enter Text",
+							"IsEditable": true,
+							"IsVisible": true,
+							"PlaceHolder": "PlaceHolder",
+							"Value": "Hello World",
+							"_Name": "TextForQRCodeInput",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"ButtonType": "Button",
+							"IsVisible": true,
+							"OnPress": "/PrintingSampleApp/Rules/GenerateQRCodeAndRefresh.js",
+							"TextAlignment": "center",
+							"Title": "Generate QR Code",
+							"_Name": "GenQRCodeButton",
+							"_Type": "Control.Type.FormCell.Button"
+						},
+						{
+							"ButtonType": "Button",
+							"IsVisible": true,
+							"OnPress": "/PrintingSampleApp/Rules/PrintQRCode.js",
+							"TextAlignment": "center",
+							"Title": "Print",
+							"_Name": "PrintButton",
+							"_Type": "Control.Type.FormCell.Button"
+						}
+					],
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Visible": true,
+					"_Type": "Section.Type.FormCell"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "ShowQRCode",
+	"_Type": "Page"
+}

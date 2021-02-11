@@ -1,0 +1,5 @@
+{
+	"Duration": 8,
+	"Message": "Failed to download product image",
+	"_Type": "Action.Type.BannerMessage"
+}

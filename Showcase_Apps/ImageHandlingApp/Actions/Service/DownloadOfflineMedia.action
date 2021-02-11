@@ -1,0 +1,14 @@
+{
+	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"DefiningRequests": [{
+		"Name": "{ProductId}",
+		"Query": "{@odata.readLink}",
+		"AutomaticallyRetrievesStreams": true
+	}],
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "downloadOfflineMedia"
+	},
+	"OnSuccess": "/ProductListApp/Actions/Products/DownloadProductImage.action",
+	"OnFailure": "/ProductListApp/Actions/Service/DownloadOfflineMediaFailureMessage.action"
+}
