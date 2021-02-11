@@ -8,8 +8,8 @@ export function GetAvatarURL(context, name, colorInput = 'hash', imgSize = 'larg
 
 	// Hash / Random color options
 	const bgcolors = [
-		"1abc9c", "2ecc71", "3498db", "9b59b6", "16a085", "27ae60", "2980b9", 
-		"8e44ad", "f1c40f", "e67e22", "e74c3c", "f39c12", "d35400", "c0392b"
+		"2ecc71", "2980b9", "8e44ad", "f1c40f", "e67e22", 
+		"e74c3c", "04633F", "FF38D3", "3A3DFF"
 	];
 	var initials;
 	var backgroundColor;
@@ -32,16 +32,26 @@ export function GetAvatarURL(context, name, colorInput = 'hash', imgSize = 'larg
 		}
 		initials = first.toUpperCase() + last.toUpperCase();
 		//console.log(`Inits: ${initials}`);
-	}	
+	}
+	if (context.isDemoMode()) {
+		let init = initials.substring(0,1).toLowerCase();
+		var demoAvatar;
+		if (init === '-') {
+			demoAvatar = 'res://none.png'; 
+		} else {
+			demoAvatar = `res://${init}.png`;
+		}
+		return demoAvatar;	
+	}
 	switch (colorInput) {
 		case 'hash':
 			let strHash = hashCode(name);
-			let hashColor = Math.abs(strHash % 14);
+			let hashColor = Math.abs(strHash % 9);
 			//console.log(`Hash: ${strHash}  Color Index: ${hashColor}`);
 			backgroundColor = bgcolors[hashColor];
 			break; 
 		case 'random':
-			let randomColor = Math.floor((Math.random() * 14));
+			let randomColor = Math.floor((Math.random() * 9));
 			//console.log(`Random Index: ${randomColor}`);
 			backgroundColor = bgcolors[randomColor];
 			break;

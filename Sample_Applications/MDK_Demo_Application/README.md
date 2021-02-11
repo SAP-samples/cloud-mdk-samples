@@ -4,7 +4,13 @@ This is the demo application that is included in the SAP Mobile Services Client 
 
 *Last Updated: 19-Nov-2020*
 *** 
+## Trying the Demo:
 
+This application is unique in that it can be previewed simply by installing the SAP Mobile Services Client from the Apple App Store or Google Play Store on your device.
+
+1. Tap **Agree** on the End User License Agreement and Privacy Statement page
+2. On the SAP Mobile Services Client welcome page tap **Try the Demo** to launch the application
+3. When done using the demo application you can logout by tapping on the user icon in the Action Bar and selecting Logout to return to the Welcome Page
 ## Requirements:
 
 ### *Supported Platforms*
