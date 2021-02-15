@@ -13,13 +13,13 @@ If you are new to using the MDK, we highly recommend visiting the Mobile Develop
 ***
 
 ### Requirements
-The included resources depend on availability of an SAP Cloud Platform account. To use the resources you will need the following:
-1. An SAP Cloud Platform account. Users who don't have an account can register for a free trial account.
-	See [Sign up for a free trial account on SAP Cloud Platform](https://www.sap.com/developer/tutorials/hcp-create-trial-account.html).
+The included resources depend on availability of an SAP Business Technology Platform (BTP) account. To use the resources you will need the following:
+1. An SAP BTP account. Users who don't have an account can register for a free trial account.
+	See [Get a Free Account on SAP BTP Trial](https://www.sap.com/developer/tutorials/hcp-create-trial-account.html).
 
-1. Some of the resources connect to the **Sample OData Service** that is part of SAP Cloud Platform Mobile Services cockpit based on ESPM model (Enterprise Sales & Procurement Model) and is available for developers to use during development and testing. The sample OData service also lets you evaluate how delta tokens are handled in your test application. This service is specific to an SCP account.
+1. Some of the resources connect to the **Sample OData Service** that is part of SAP Mobile Services cockpit based on ESPM model (Enterprise Sales & Procurement Model) and is available for developers to use during development and testing. The sample OData service also lets you evaluate how delta tokens are handled in your test application. This service is specific to an SAP BTP account.
 
-1. Some of the resources connect to a **Mobile OData Service** backend. Use of these backends will require Quota within your SAP Cloud Platform account. Before attempting to run these backends, please ensure you have appropriate quota available.
+1. Some of the resources connect to a **Mobile OData Service** backend. Use of these backends will require Quota within your SAP BTP account. Before attempting to run these backends, please ensure you have appropriate quota available.
 
 1. The Mobile Development Kit SDK environment. Users can download the Mobile Development Kit SDK from the SAP Software Downloads center or the latest version is available on the [SAP Developers site](https://developers.sap.com/trials-downloads.html?search=Mobile%20development%20kit).  Please be sure to run the MDK Dependency Installer within the MDK SDK to ensure your environment is setup before trying to create an MDK client using the samples in this repository.
 

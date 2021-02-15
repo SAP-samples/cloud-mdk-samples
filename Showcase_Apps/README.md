@@ -24,7 +24,7 @@ To run any of the apps, you will need to setup an Application in Mobile Servies 
 It is assumed that you will use Business Application Studio as the Editor environment for working with the showcase applications.  The steps below are for the BAS environment, but the application metadata can also be used with WebIDE or the Visual Studio Code MDK Editor.
 1. If you do not already have a dev space created, on the BAS Dev Spaces page click **Create Dev Space**
 1. Enter the name for your Dev Space
-1. Select SAP Cloud Platform Mobile Services as the type for your Dev Space
+1. Select SAP Mobile Services as the type for your Dev Space
 1. Click the **Create Dev Sapce** button at the bottom.  The Dev Space will be created an automatically Started.
 1. Once Running, the name will become a link to launch the Editor
 1. Login the CF Org / Space where your CF Mobile Services application exists
