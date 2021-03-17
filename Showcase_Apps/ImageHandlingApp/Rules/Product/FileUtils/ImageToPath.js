@@ -6,6 +6,11 @@ let fs = require('tns-core-modules/file-system');
 // imageGroup is a name that will be used as a folder to keep all related images together
 export function imageToPath(bindingObject, keyProperty, imageGroup) {
 	let key = bindingObject[keyProperty];
+	if (!key) { //If key property has no value, let's fall back to use read link
+		var pattern = /.*?lodata_sys_eid=X'(.*?)'\)/i;
+		var readLink = bindingObject["@odata.readLink"];
+		key = readLink.replace(pattern,'$1');
+	}
 	// WARNING: CURRENTLY IN THIS SAMPLE WE ARE ASSUMING ALL FILES ARE PNG IMAGES
 	// If you support different file types, then you must find a way to identify each files.
 	let filename = `${key}.png`;
