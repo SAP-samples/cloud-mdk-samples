@@ -1,8 +1,0 @@
-{
-	"Animated": true,
-	"CompletionMessage": "Upload Complete",
-	"CompletionTimeout": 5,
-	"Message": "Customer Upload in Progres...",
-	"OnSuccess": "/PartialUpload/Actions/Customers/UploadCustomerOnly.action",
-	"_Type": "Action.Type.ProgressBanner"
-}

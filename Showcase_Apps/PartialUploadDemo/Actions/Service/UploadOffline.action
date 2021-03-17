@@ -1,9 +1,0 @@
-{
-	"Service": "/PartialUpload/Services/Sample.service",
-	"_Type": "Action.Type.OfflineOData.Upload",
-	"ActionResult": {
-		"_Name": "sync"
-	},
-	"OnSuccess": "/PartialUpload/Actions/Service/DownloadStartedMessage.action",
-	"OnFailure": "/PartialUpload/Actions/Service/SyncFailureMessage.action"
-}

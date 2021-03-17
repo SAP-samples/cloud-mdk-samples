@@ -1,8 +1,0 @@
-{
-	"Message": "Upload in progress...",
-	"CompletionMessage": "Upload Successful",
-	"CompletionTimeout": 7,
-	"OnSuccess": "/PartialUpload/Actions/Service/UploadOffline.action",
-	"OnFailure": "/PartialUpload/Actions/Service/SyncFailureMessage.action",
-	"_Type": "Action.Type.ProgressBanner"
-}

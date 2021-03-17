@@ -1,6 +1,0 @@
-{
-	"ModalPageFullscreen": false,
-	"ModalPage": true,
-	"PageToOpen": "/PartialUpload/Pages/Customers/Customers_Edit.page",
-	"_Type": "Action.Type.Navigation"
-}

@@ -1,8 +1,0 @@
-{
-	"Animated": true,
-	"Duration": 2,
-	"Message": "Entity created",
-	"IsIconHidden": true,
-	"OnSuccess": "/PartialUpload/Actions/CloseModalPage_Complete.action",
-	"_Type": "Action.Type.ToastMessage"
-}
