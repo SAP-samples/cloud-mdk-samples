@@ -1,0 +1,8 @@
+{
+	"Animated": true,
+	"CompletionMessage": "Upload Complete",
+	"CompletionTimeout": 5,
+	"Message": "Product Upload in Progress...",
+	"OnSuccess": "/PartialUpload/Actions/Products/UploadProductOnly.action",
+	"_Type": "Action.Type.ProgressBanner"
+}

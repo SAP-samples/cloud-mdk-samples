@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.OfflineOData.Close",
+	"Service": "/PartialUpload/Services/Sample.service",
+	"Force": true,
+	"ActionResult": {
+		"_Name": "close"
+	},
+	"OnSuccess": "/PartialUpload/Actions/Service/CloseOfflineSuccessMessage.action",
+	"OnFailure": "/PartialUpload/Actions/Service/CloseOfflineFailureMessage.action"
+}

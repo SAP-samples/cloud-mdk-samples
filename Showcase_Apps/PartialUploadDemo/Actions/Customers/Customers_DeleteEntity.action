@@ -1,0 +1,16 @@
+{
+	"ActionResult": {
+		"_Name": "delete"
+	},
+	"OnFailure": "/PartialUpload/Actions/DeleteEntityFailureMessage.action",
+	"OnSuccess": "/PartialUpload/Actions/DeleteEntitySuccessMessage.action",
+	"RequestOptions": {
+		"UploadCategory": "Customer"
+	},
+	"Target": {
+		"EntitySet": "Customers",
+		"ReadLink": "{@odata.readLink}",
+		"Service": "/PartialUpload/Services/Sample.service"
+	},
+	"_Type": "Action.Type.ODataService.DeleteEntity"
+}
