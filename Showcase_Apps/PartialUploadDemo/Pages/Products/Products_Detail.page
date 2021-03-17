@@ -1,0 +1,118 @@
+{
+	"Caption": "Products Details",
+
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/PartialUpload/Actions/Products/NavToProducts_Edit.action",
+			"Position": "right",
+			"SystemItem": "Edit"
+		}, {
+			"OnPress": "/PartialUpload/Rules/Products/Products_DeleteConfirmation.js",
+			"Position": "right",
+			"SystemItem": "Trash"
+		}]
+	},
+	"Controls": [{
+		"Sections": [{
+			"ObjectHeader": {
+				"DetailImage": "",
+				"HeadlineText": "{Category}",
+				"Subhead": "{CurrencyCode}",
+				"Tags": [],
+				"BodyText": "",
+				"Footnote": "{DimensionDepth}",
+				"Description": "{CategoryName}",
+				"StatusText": "{DimensionHeight}",
+				"StatusImage": "",
+				"SubstatusImage": "",
+				"SubstatusText": "{DimensionUnit}"
+			},
+			"_Type": "Section.Type.ObjectHeader"
+		}, {
+			"KeyAndValues": [
+	{
+		"KeyName": "Category",
+		"Value": "{Category}"
+	},
+	{
+		"KeyName": "CategoryName",
+		"Value": "{CategoryName}"
+	},
+	{
+		"KeyName": "CurrencyCode",
+		"Value": "{CurrencyCode}"
+	},
+	{
+		"KeyName": "DimensionDepth",
+		"Value": "{DimensionDepth}"
+	},
+	{
+		"KeyName": "DimensionHeight",
+		"Value": "{DimensionHeight}"
+	},
+	{
+		"KeyName": "DimensionUnit",
+		"Value": "{DimensionUnit}"
+	},
+	{
+		"KeyName": "DimensionWidth",
+		"Value": "{DimensionWidth}"
+	},
+	{
+		"KeyName": "LongDescription",
+		"Value": "{LongDescription}"
+	},
+	{
+		"KeyName": "Name",
+		"Value": "{Name}"
+	},
+	{
+		"KeyName": "PictureUrl",
+		"Value": "{PictureUrl}"
+	},
+	{
+		"KeyName": "Price",
+		"Value": "{Price}"
+	},
+	{
+		"KeyName": "ProductId",
+		"Value": "{ProductId}"
+	},
+	{
+		"KeyName": "QuantityUnit",
+		"Value": "{QuantityUnit}"
+	},
+	{
+		"KeyName": "ShortDescription",
+		"Value": "{ShortDescription}"
+	},
+	{
+		"KeyName": "SupplierId",
+		"Value": "{SupplierId}"
+	},
+	{
+		"KeyName": "UpdatedTimestamp",
+		"Value": "{UpdatedTimestamp}"
+	},
+	{
+		"KeyName": "Weight",
+		"Value": "{Weight}"
+	},
+	{
+		"KeyName": "WeightUnit",
+		"Value": "{WeightUnit}"
+	}
+],
+			"Layout": {
+				"NumberOfColumns": 2
+			},
+			"MaxItemCount": 1,
+			"_Name": "SectionKeyValue0",
+			"_Type": "Section.Type.KeyValue"
+		}],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "Products_Detail"
+}

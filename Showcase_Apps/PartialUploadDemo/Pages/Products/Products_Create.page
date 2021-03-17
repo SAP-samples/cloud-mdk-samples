@@ -1,0 +1,115 @@
+{
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/PartialUpload/Actions/CloseModalPage_Cancel.action",
+			"Position": "left",
+			"SystemItem": "Cancel"
+		}, {
+			"OnPress": "/PartialUpload/Actions/Products/Products_CreateEntity.action",
+			"Position": "right",
+			"SystemItem": "Save"
+		}]
+	},
+	"Caption": "Create Product",
+	"Controls": [{
+		"Sections": [{
+			"Controls": [
+	{
+		"Caption": "Category",
+		"_Name": "Category",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "CategoryName",
+		"_Name": "CategoryName",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "CurrencyCode",
+		"_Name": "CurrencyCode",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "DimensionDepth",
+		"_Name": "DimensionDepth",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "DimensionHeight",
+		"_Name": "DimensionHeight",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "DimensionUnit",
+		"_Name": "DimensionUnit",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "DimensionWidth",
+		"_Name": "DimensionWidth",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "LongDescription",
+		"_Name": "LongDescription",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "Name",
+		"_Name": "Name",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "PictureUrl",
+		"_Name": "PictureUrl",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "Price",
+		"_Name": "Price",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "ProductId",
+		"_Name": "ProductId",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "QuantityUnit",
+		"_Name": "QuantityUnit",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "ShortDescription",
+		"_Name": "ShortDescription",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "SupplierId",
+		"_Name": "SupplierId",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Mode": "Date",
+		"_Name": "UpdatedTimestamp",
+		"Caption": "UpdatedTimestamp",
+		"_Type": "Control.Type.FormCell.DatePicker"
+	},
+	{
+		"Caption": "Weight",
+		"_Name": "Weight",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	},
+	{
+		"Caption": "WeightUnit",
+		"_Name": "WeightUnit",
+		"_Type": "Control.Type.FormCell.SimpleProperty"
+	}
+]
+		}],
+		"_Name": "FormCellContainer",
+		"_Type": "Control.Type.FormCellContainer"
+	}],
+	"_Type": "Page",
+	"_Name": "Products_Create"
+}

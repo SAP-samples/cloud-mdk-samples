@@ -1,0 +1,94 @@
+{
+	"Caption": "Customers Details",
+
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/PartialUpload/Actions/Customers/NavToCustomers_Edit.action",
+			"Position": "right",
+			"SystemItem": "Edit"
+		}, {
+			"OnPress": "/PartialUpload/Rules/Customers/Customers_DeleteConfirmation.js",
+			"Position": "right",
+			"SystemItem": "Trash"
+		}]
+	},
+	"Controls": [{
+		"Sections": [{
+			"ObjectHeader": {
+				"DetailImage": "",
+				"HeadlineText": "{City}",
+				"Subhead": "{CustomerId}",
+				"Tags": [],
+				"BodyText": "",
+				"Footnote": "{DateOfBirth}",
+				"Description": "{Country}",
+				"StatusText": "{EmailAddress}",
+				"StatusImage": "",
+				"SubstatusImage": "",
+				"SubstatusText": "{FirstName}"
+			},
+			"_Type": "Section.Type.ObjectHeader"
+		}, {
+			"KeyAndValues": [
+	{
+		"KeyName": "City",
+		"Value": "{City}"
+	},
+	{
+		"KeyName": "Country",
+		"Value": "{Country}"
+	},
+	{
+		"KeyName": "CustomerId",
+		"Value": "{CustomerId}"
+	},
+	{
+		"KeyName": "DateOfBirth",
+		"Value": "{DateOfBirth}"
+	},
+	{
+		"KeyName": "EmailAddress",
+		"Value": "{EmailAddress}"
+	},
+	{
+		"KeyName": "FirstName",
+		"Value": "{FirstName}"
+	},
+	{
+		"KeyName": "HouseNumber",
+		"Value": "{HouseNumber}"
+	},
+	{
+		"KeyName": "LastName",
+		"Value": "{LastName}"
+	},
+	{
+		"KeyName": "PhoneNumber",
+		"Value": "{PhoneNumber}"
+	},
+	{
+		"KeyName": "PostalCode",
+		"Value": "{PostalCode}"
+	},
+	{
+		"KeyName": "Street",
+		"Value": "{Street}"
+	},
+	{
+		"KeyName": "UpdatedTimestamp",
+		"Value": "{UpdatedTimestamp}"
+	}
+],
+			"Layout": {
+				"NumberOfColumns": 2
+			},
+			"MaxItemCount": 1,
+			"_Name": "SectionKeyValue0",
+			"_Type": "Section.Type.KeyValue"
+		}],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "Customers_Detail"
+}

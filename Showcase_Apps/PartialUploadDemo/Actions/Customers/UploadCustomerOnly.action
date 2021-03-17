@@ -1,0 +1,12 @@
+{
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/PartialUpload/Actions/Service/SyncFailureMessage.action",
+	"OnSuccess": "/PartialUpload/Actions/Service/SyncSuccessMessage.action",
+	"Service": "/PartialUpload/Services/Sample.service",
+	"UploadCategories": [
+		"Customer"
+	],
+	"_Type": "Action.Type.OfflineOData.Upload"
+}

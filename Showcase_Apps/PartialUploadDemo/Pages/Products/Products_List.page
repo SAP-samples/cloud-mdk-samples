@@ -1,0 +1,73 @@
+{
+	"Caption": "Products",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"ContextMenu": {
+							"Items": [
+							],
+							"PerformFirstActionWithFullSwipe": true
+						},
+						"Description": "{LongDescription}",
+						"DetailImageIsCircular": false,
+						"Footnote": "{ShortDescription}",
+						"OnPress": "/PartialUpload/Actions/Products/NavToProducts_Detail.action",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{Price}",
+						"Subhead": "{Category}",
+						"SubstatusText": "{CurrencyCode}",
+						"Title": "{Name}"
+					},
+					"Search": {
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"Enabled": true,
+						"MinimumCharacterThreshold": 3,
+						"Placeholder": "Item Search"
+					},
+					"Target": {
+						"EntitySet": "Products",
+						"QueryOptions": "",
+						"Service": "/PartialUpload/Services/Sample.service"
+					},
+					"_Name": "SectionObjectTable0",
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"_Name": "SectionedTable",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"ToolBar": {
+		"Controls": [
+			{
+				"Clickable": true,
+				"Enabled": true,
+				"SystemItem": "FlexibleSpace",
+				"Visible": true,
+				"_Name": "ToolbarItem0",
+				"_Type": "Control.Type.ToolbarItem"
+			},
+			{
+				"Caption": "Upload Product Only",
+				"Clickable": true,
+				"Enabled": true,
+				"OnPress": "/PartialUpload/Actions/Products/ProductUploadProgress.action",
+				"Visible": true,
+				"_Name": "ToolbarItem1",
+				"_Type": "Control.Type.ToolbarItem"
+			}
+		]
+	},
+	"_Name": "Products_List",
+	"_Type": "Page"
+}

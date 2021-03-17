@@ -1,0 +1,33 @@
+{
+	"CreateLinks": [],
+	"OnFailure": "/PartialUpload/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/PartialUpload/Actions/CreateEntitySuccessMessage.action",
+	"Properties": {
+	"Category": "#Control:Category/#Value",
+	"CategoryName": "#Control:CategoryName/#Value",
+	"CurrencyCode": "#Control:CurrencyCode/#Value",
+	"DimensionDepth": "#Control:DimensionDepth/#Value",
+	"DimensionHeight": "#Control:DimensionHeight/#Value",
+	"DimensionUnit": "#Control:DimensionUnit/#Value",
+	"DimensionWidth": "#Control:DimensionWidth/#Value",
+	"LongDescription": "#Control:LongDescription/#Value",
+	"Name": "#Control:Name/#Value",
+	"PictureUrl": "#Control:PictureUrl/#Value",
+	"Price": "#Control:Price/#Value",
+	"ProductId": "#Control:ProductId/#Value",
+	"QuantityUnit": "#Control:QuantityUnit/#Value",
+	"ShortDescription": "#Control:ShortDescription/#Value",
+	"SupplierId": "#Control:SupplierId/#Value",
+	"UpdatedTimestamp": "#Control:UpdatedTimestamp/#Value",
+	"Weight": "#Control:Weight/#Value",
+	"WeightUnit": "#Control:WeightUnit/#Value"
+},
+	"Target": {
+		"EntitySet": "Products",
+		"Service": "/PartialUpload/Services/Sample.service"
+	},
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"_Type": "Action.Type.ODataService.CreateEntity"
+}

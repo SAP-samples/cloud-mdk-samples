@@ -177,7 +177,7 @@ interface IClientAPI {
    */
   isDemoMode(): Boolean;
   /**
-   * This method is to get AppId used for application in Mobile Services on SAP Cloud Platform.
+   * This method is to get AppId used for application in SAP Mobile Services.
    */
   getMobileServiceAppId(): string;
   /**
@@ -186,7 +186,7 @@ interface IClientAPI {
    */
   getMobileServiceEndpointUrl(): string;
   /**
-   * This method is to send a request to application's mobile service on SAP Cloud Platform.
+   * This method is to send a request to application's SAP Mobile Services.
    * 
    * * Example of the `params` parameter: <br/>
    * ```json
@@ -200,7 +200,7 @@ interface IClientAPI {
    * }
    * ```
    * 
-   * @param path Relative path of request via application's mobile services on SAP Cloud Platform.
+   * @param path Relative path of request via application's SAP Mobile Services.
    * @param params Optional. An object consists of `method`, `header`, and `body` of request.<br/>
    * Note: If params is not given, request is set as GET method by default. See description above for the example.<br/>
    *   <li> `method` is string representing the HTTP Method to use. Supported value for methods are:
@@ -210,7 +210,7 @@ interface IClientAPI {
    */
   sendRequest(path: string, params?: any): Promise<any>;
   /**
-   * Send a request to application's mobile service on SAP Cloud Platform
+   * Send a request to application's SAP Mobile Services
    * @deprecated - use the new sendRequest API
    */
   sendMobileServiceRequest(path: string, params?: any): Promise<any>;
