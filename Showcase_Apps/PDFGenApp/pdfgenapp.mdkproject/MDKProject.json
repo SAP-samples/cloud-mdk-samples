@@ -1,0 +1,8 @@
+{
+  "AppName": "PDFGenApp",
+  "AppVersion": "1.0.0",
+  "BundleID": "com.sap.mdk.mdk.pdfgenapp",
+  "Externals": ["pdfmake/build/pdfmake"],
+  "NSPlugins": [],
+  "UrlScheme": "pdfgenapp"
+}
