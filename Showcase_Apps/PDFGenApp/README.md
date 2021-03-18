@@ -8,10 +8,9 @@ This is a showcase application that demonstrate how to generate PDF document usi
 2. Use the plugin in your project to generate PDF document.
 
 This showcase application is loosely based on the following guide:
-<https://medium.com/@kumarandena/pdf-generation-in-nativescript-using-javascript-libraries-864ecf4e9a3a>
+[Pdf generation in NativeScript using JavaScript libraries](https://medium.com/@kumarandena/pdf-generation-in-nativescript-using-javascript-libraries-864ecf4e9a3a)
 
-And contains excerpt of code from the following project:
-<https://github.com/kumarandena/nativescript-pdf-generation>
+And contains excerpt of sample code from the following project [nativescript-pdf-generation](https://github.com/kumarandena/nativescript-pdf-generation)
 
 Last Updated: 18-Mar-2021
 
@@ -45,7 +44,7 @@ Last Updated: 18-Mar-2021
 
 This showcase application requires that you create your own client in order to explore the application.
 
-The `pdfgenapp.mdkproject` folder contains the MDK client configuration to add the external plugins to the client but does not contain the application metadata.  It is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor.
+The `pdfgenapp.mdkproject` folder contains the MDK client configuration to add the external plugins to the client but does not contain the application metadata. The application metadata is the `PDFGeneratorApp` folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor.
 
 For a more detailed information on the setup for MDK development please see the following tutorial.
 
@@ -66,3 +65,5 @@ Go to VS Code Settings > Search for "MDK Bundler Externals" > Press Edit in sett
  "pdfmake/build/pdfmake"
 ]
 ```
+
+`PDFGeneratorApp` is the application metadata project that you can import into your SAP Business Application Studio workspace or SAP Web IDE Full Stack workspace. You should deploy this project to your mobile services account and make sure to enable Mobile Services Sample OData ESPM feature in your mobile services app.
