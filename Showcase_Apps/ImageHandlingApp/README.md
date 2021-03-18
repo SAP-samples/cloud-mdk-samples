@@ -7,7 +7,7 @@ This is a showcase application that demonstrate how to:
 3. Write the media to a file
 4. Display the media on supported UI controls or display the media using the Open Document action.
 
-*Last Updated: 05-Feb-2021*
+*Last Updated: 11-Feb-2021*
 
 ***
 
