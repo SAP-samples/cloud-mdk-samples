@@ -1,0 +1,25 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"Service": "/PDFGeneratorApp/Services/SampleService.service",
+	"OnSuccess": "/PDFGeneratorApp/Actions/Service/InitializeServiceSuccessMessage.action",
+	"OnFailure": "/PDFGeneratorApp/Actions/Service/InitializeServiceFailureMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Initializing Application...",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"DefiningRequests": [
+		{
+			"Name": "SalesOrderHeaders", "Query": "SalesOrderHeaders"
+		},
+		{
+			"Name": "SalesOrderItems", "Query": "SalesOrderItems"
+		},
+		{
+			"Name": "Customers", "Query": "Customers"
+		},
+		{
+			"Name": "Products", "Query": "Products"
+		}
+	]
+}

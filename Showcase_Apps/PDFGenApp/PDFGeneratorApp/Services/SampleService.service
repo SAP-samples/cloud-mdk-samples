@@ -1,7 +1,7 @@
 {
 		"AppId": "com.sap.mk.otherdemo",
 		"DestinationName": "com.sap.edm.sampleservice.v2",
-		"OfflineEnabled": false,
+		"OfflineEnabled": true,
 		"LanguageURLParam": "sap-language",
 		"OnlineOptions": {},
 		"PathSuffix": "",

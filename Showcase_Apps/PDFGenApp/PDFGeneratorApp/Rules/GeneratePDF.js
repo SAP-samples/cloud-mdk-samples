@@ -12,6 +12,14 @@ import dataJson from "./data.json";
  * @param {IClientAPI} context
  */
 export default function GenerateQRCode(context) {
+	let pageProxy = context.getPageProxy();
+	let salesOrderHeader = pageProxy.binding;
+	let customer = salesOrderHeader.CustomerDetails;
+	// Get Sales Order Items
+	let sectionedTable = pageProxy.getControl("SectionedTable0");
+	let itemsTable = sectionedTable.getSection("SalesOrderItemsTable");
+	let salesOrderItems = itemsTable.binding;
+	
 	// This is helper function to convert data buffer to native byte array
 	let _bufferToNativeArray = function (byteArray) {
 		let array;
@@ -27,48 +35,64 @@ export default function GenerateQRCode(context) {
 		return array;
 	}
 
+	//Build the items table for the PDF content
+	var salesOrderItems_TableBody = [[ 'Product Name', 'Quantity', { text: "Net Amount", alignment: 'right' }]];
+	for (var i = 0; i < salesOrderItems.length; i++) {
+		var salesOrderItem = salesOrderItems.getItem(i);
+		var row = [
+			{ text: salesOrderItem.ProductDetails.Name, bold: true },
+			`${salesOrderItem.Quantity}${salesOrderItem.QuantityUnit}`,
+			{ text: context.formatCurrency(salesOrderItem.NetAmount, salesOrderItem.CurrencyCode), alignment: 'right' }
+		];
+		salesOrderItems_TableBody.push(row);
+	}
+	salesOrderItems_TableBody.push(['',{ text: 'Sub Total', bold: true },{ text: context.formatCurrency(salesOrderHeader.NetAmount, salesOrderItem.CurrencyCode), alignment: 'right' }]);
+	salesOrderItems_TableBody.push(['',{ text: 'Total Tax', bold: true },{ text: context.formatCurrency(salesOrderHeader.TaxAmount, salesOrderItem.CurrencyCode), alignment: 'right' }]);
+	salesOrderItems_TableBody.push(['',{ text: 'Total Amount', bold: true },{ text: context.formatCurrency(salesOrderHeader.GrossAmount, salesOrderItem.CurrencyCode), alignment: 'right' }]);
+
 	// This is where you define the content of the PDF
 	var docDefinition = {
 		pageOrientation: 'landscape',
 
 		content: [
-				{ text: 'Certificate', fontSize: '25', italics: true, alignment: 'center' },
-				{ text: 'of', fontSize: '25', italics: true, alignment: 'center' },
-				{ text: '\nTRAINING COMPLETION', fontSize: '30', alignment: 'center' },
-				{ text: '\n\nThis certifies that', fontSize: '18', alignment: 'center' },
-				{ text: '\n' + "John Doe", fontSize: '30', alignment: 'center' },
-				{ text: '\nhas successfully completed the training in', fontSize: '18', alignment: 'center' },
-				{ text: '\n' + "Computer Science", fontSize: '30', alignment: 'center' },
-				{ text: '\nOn ' + "16th Feb 2021" + '\n\n', fontSize: '18', alignment: 'center' },
 				{
-						columns: [
-								{
-										width: 150,
-										text: ''
-								},
-								{
-										image: dataJson.images['nscripting'],
-										width: 100
-								},
-								{},
-								{
-										image: dataJson.images['nslogojpeg'],
-										width: 80
-								}
-						]
+					image: dataJson.images['saplogo'],
+					width: 80
+				},
+				{ text: 'Invoice\n', fontSize: '25', alignment: 'center' },
+				{
+					columns: [
+						{ text: `\nInvoice ID: ${salesOrderHeader.SalesOrderId}` },
+						{ text: `\nDate: ${context.formatDate(salesOrderHeader.CreatedAt)}`, alignment: 'right' }
+					]
 				},
 				{
-						"canvas": [{
-								"type": "line",
-								"x1": 400,
-								"y1": 0,
-								"x2": 0,
-								"y2": 0,
-								"lineWidth": 0.5,
-								"lineColor": "#000000"
-						}]
+					columns: [
+						`\nBill to: ${customer.FirstName} ${customer.LastName}`,
+						{ text: `\nPhone: ${customer.PhoneNumber}\n\n`, alignment: 'right' }
+					]
+				},
+				{ text: `\nAddress:`, bold: true },
+				`${customer.HouseNumber} ${customer.Street}`,
+				`${customer.City}`,
+				`${customer.Country} ${customer.PostalCode}`,
+				`Phone: ${customer.PhoneNumber}\n\n`,
+				{
+					layout: 'lightHorizontalLines', // optional
+					table: {
+						// headers are automatically repeated if the table spans over multiple pages
+						// you can declare how many rows should be treated as headers
+						headerRows: 1,
+						widths: [ '*', 'auto', 100],
+						body: salesOrderItems_TableBody
+					}
 				}
-		]
+		],
+
+		defaultStyle: {
+			fontSize: 12,
+			alignment: 'left'
+		}
 	};
 	
 	// Now use the PDFMake to create PDF data

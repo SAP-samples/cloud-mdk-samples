@@ -6,9 +6,9 @@
 				{
 					"Buttons": [
 						{
-							"OnPress": "/PDFGeneratorApp/Rules/GeneratePDF.js",
+							"OnPress": "/PDFGeneratorApp/Actions/NavToSalesOrders_ListPage.action",
 							"TextAlignment": "center",
-							"Title": "Generate PDF",
+							"Title": "$(L,NavToSalesOrders_List_Button)",
 							"Visible": true
 						}
 					],

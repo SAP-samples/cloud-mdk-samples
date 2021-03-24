@@ -1,9 +1,0 @@
-{
-	"Service": "/PDFGeneratorApp/Services/SampleService.service",
-	"_Type": "Action.Type.ODataService.Open",
-	"OnSuccess": "/PDFGeneratorApp/Actions/Service/CreateOpenServiceSuccessMessage.action",
-	"OnFailure": "/PDFGeneratorApp/Actions/Service/CreateOpenServiceFailureMessage.action",
-	"ActionResult": {
-		"_Name": "init"
-	}
-}
