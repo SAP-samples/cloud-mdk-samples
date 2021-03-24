@@ -102,7 +102,7 @@ export default function GenerateQRCode(context) {
 			let nativeData = _bufferToNativeArray(data);
 			
 			//Now prepare to save the data to a file
-			let filename = "generated.pdf";
+			let filename = "Invoice.pdf";
 			var tempDir = fs.knownFolders.documents();
 			var folder = "PDFFiles";
 			if (!fs.Folder.exists(fs.path.join(tempDir.path, folder))) {

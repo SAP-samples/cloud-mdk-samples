@@ -67,3 +67,18 @@ Go to VS Code Settings > Search for "MDK Bundler Externals" > Press Edit in sett
 ```
 
 `PDFGeneratorApp` is the application metadata project that you can import into your SAP Business Application Studio workspace or SAP Web IDE Full Stack workspace. You should deploy this project to your mobile services account and make sure to enable Mobile Services Sample OData ESPM feature in your mobile services app.
+
+Once the app is running and you have onboarded, do the following steps to generate the PDF file:
+
+1. Press "Sales Orders"
+1. Press any one of the sales orders
+1. In the detail page of the sales order, press the Generate PDF Invoice button in the toolbar
+1. A PDF file will be generated based on the data of the selected sales order and displayed to you.
+
+Screenshots:
+
+Android
+![Android PDF Screenshot](Screenshots/Android.jpg)
+
+iOS
+![iOS PDF Screenshot](Screenshots/iOS.png)
