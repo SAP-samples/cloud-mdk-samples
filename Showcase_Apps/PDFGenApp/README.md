@@ -2,17 +2,18 @@
 
 ## PDF Generation App
 
-This is a showcase application that demonstrate how to generate PDF document using 3rd party open source library : `pdfmake`:
+This is a showcase application that demonstrate how to generate PDF document using 3rd party open source library : [`pdfmake`](https://pdfmake.github.io/docs/0.1/):
 
 1. Include non-UI based NPM plugin in your custom branded client (`.mdkproject`)
 2. Use the plugin in your project to generate PDF document.
+3. See [`pdfmake`'s documentation](https://pdfmake.github.io/docs/0.1/document-definition-object/styling/) for more details on customizing the generated PDF.
 
 This showcase application is loosely based on the following guide:
 [Pdf generation in NativeScript using JavaScript libraries](https://medium.com/@kumarandena/pdf-generation-in-nativescript-using-javascript-libraries-864ecf4e9a3a)
 
 And contains excerpt of sample code from the following project [nativescript-pdf-generation](https://github.com/kumarandena/nativescript-pdf-generation)
 
-Last Updated: 18-Mar-2021
+Last Updated: 25-Mar-2021
 
 ***
 
