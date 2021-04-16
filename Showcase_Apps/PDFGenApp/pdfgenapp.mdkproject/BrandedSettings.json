@@ -1,0 +1,14 @@
+{
+  "ApplicationDisplayName": "PDF Generation App",
+  "ConnectionSettings": {
+    "EnableOverrides": true,
+    "EnableScreenSharing": true
+  },
+  "LogSettings": {
+    "FileName": "ClientLog.txt",
+    "MaxFileSizeInMegaBytes": 1,
+    "LogLevel": "Debug"
+  },
+  "EncryptDatabase" : false,
+  "PasscodeTimeout": 120
+}

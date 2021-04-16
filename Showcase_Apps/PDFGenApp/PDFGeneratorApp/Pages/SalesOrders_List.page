@@ -1,0 +1,28 @@
+{
+	"Caption": "SalesOrders_List",
+	"Controls": [
+		{
+			"Sections": [{
+				"_Type": "Section.Type.ObjectTable",
+				"_Name": "SalesOrdersTable",
+				"Target": {
+					"Service": "/PDFGeneratorApp/Services/SampleService.service",
+					"EntitySet": "SalesOrderHeaders",
+					"QueryOptions": "$expand=CustomerDetails,Items"
+				},
+				"ObjectCell": {
+					"PreserveIconStackSpacing": false,
+					"Title": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
+					"Subhead": "{SalesOrderId}",
+					"StatusText": "{LifeCycleStatusName}",
+					"SubstatusText": "$(C, {NetAmount}, {CurrencyCode})",
+					"OnPress":"/PDFGeneratorApp/Actions/NavToSalesOrder_Detail.action"
+				}
+			}],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "SalesOrders_List",
+	"_Type": "Page"
+}
