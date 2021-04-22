@@ -6,6 +6,7 @@ All of the applications in these folders are full working applications.  Please 
 ***
 ## Applications
 * Image Handling
+* PDF Generation
 * Printing and QR Codes
 
 ***
