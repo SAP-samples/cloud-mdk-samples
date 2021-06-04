@@ -9,6 +9,6 @@ export default function GetQRCodeImage(context) {
 		if (!clientData.QRCodeImageSource) {
 				clientData.QRCodeImageSource = GenerateQRCode(context);
 		}
-		var base64Str = clientData.QRCodeImageSource.toBase64String();
+		var base64Str = clientData.QRCodeImageSource.toBase64String("png");
 		return "data:image/png;base64," + base64Str;
 }
