@@ -1,6 +1,4 @@
-# Read Me First
-
-## Video Player App
+# Video Player App
 
 This is a showcase application that demonstrate how to play remote videos.
 
