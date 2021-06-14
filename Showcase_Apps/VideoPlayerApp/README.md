@@ -2,7 +2,9 @@
 
 This is a showcase application that demonstrate how to play remote videos.
 
-Last Updated: 16-Jun-2021
+* Blog for iOS implementation: [https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/](https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/)
+
+*Last Updated: 16-Jun-2021*
 
 ***
 
@@ -30,12 +32,14 @@ Last Updated: 16-Jun-2021
 
 No additional steps required. The content of [metadata/](metadata/) folder can be used as is to run the application.
 
-Screenshots:
+## Screenshots
 
-Android
+<p align="center">
+  <b>Android</b><br>
+  <img src="Screenshots/android.png" width="35%">
+</p>
 
-![Android PDF Screenshot](Screenshots/android.png)
-
-iOS
-
-![iOS PDF Screenshot](Screenshots/ios.png)
+<p align="center">
+  <b>iOS</b><br>
+  <img src="Screenshots/ios.png" width="35%">
+</p>
