@@ -40,8 +40,7 @@ export class VideoPlayer extends IControl {
                 }
             }
             if (app.android) {
-                var uri = android.net.Uri.parse(this._videoURL);
-                this._videoView.setVideoURI(uri);
+                this._videoView.setVideoURI(android.net.Uri.parse(this._videoURL));
                 this._videoView.start();
             }
         });
