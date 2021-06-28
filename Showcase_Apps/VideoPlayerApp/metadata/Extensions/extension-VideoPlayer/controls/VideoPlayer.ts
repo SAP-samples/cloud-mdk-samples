@@ -1,7 +1,6 @@
 import * as app from 'tns-core-modules/application';
 import { IControl } from 'mdk-core/controls/IControl';
 import { BaseObservable } from 'mdk-core/observables/BaseObservable';
-import { screen } from 'tns-core-modules/platform';
 
 export class VideoPlayer extends IControl {
     private _observable: BaseObservable;
