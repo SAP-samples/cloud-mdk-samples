@@ -8,6 +8,9 @@ This is a showcase application that demonstrates how to play remote videos.
 
 *Last Updated: 16-Jun-2021*
 
+### Author
+* Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
+
 ***
 
 ## Requirements
