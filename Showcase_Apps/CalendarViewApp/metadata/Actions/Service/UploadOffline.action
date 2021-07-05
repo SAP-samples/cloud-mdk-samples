@@ -1,0 +1,9 @@
+{
+	"Service": "/CalendarControl/Services/Sample.service",
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnSuccess": "/CalendarControl/Actions/Service/DownloadStartedMessage.action",
+	"OnFailure": "/CalendarControl/Actions/Service/SyncFailureMessage.action"
+}

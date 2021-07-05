@@ -1,0 +1,88 @@
+{
+	"Caption": "Calendar",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Class": "CalendarControl",
+					"Control": "CalendarControl",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Header": {
+						"UseTopPadding": false
+					},
+					"Height": 300,
+					"Module": "extension-CalendarControl",
+					"Visible": true,
+					"_Name": "SectionExtension0",
+					"_Type": "Section.Type.Extension",
+					"OnValueChange": "/CalendarControl/Rules/OnSelectDate.js"
+				},
+				{
+					"DataPaging": {
+						"PageSize": 50,
+						"ShowLoadingIndicator": false
+					},
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"HighlightSelectedItem": false,
+					"ObjectCell": {
+						"AccessoryType": "none",
+						"ContextMenu": {
+							"Items": [
+							],
+							"PerformFirstActionWithFullSwipe": true
+						},
+						"DetailImageIsCircular": false,
+						"PreserveIconStackSpacing": true,
+						"Selected": false,
+						"StatusText": "/CalendarControl/Rules/Main/FormatDate.js",
+						"Subhead": "{GrossAmount}",
+						"Title": "{SalesOrderId}"
+					},
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					},
+					"Target": {
+						"EntitySet": "SalesOrderHeaders",
+						"Service": "/CalendarControl/Services/Sample.service",
+						"QueryOptions": "/CalendarControl/Rules/Main/QueryOptions.js"
+					},
+					"Visible": true,
+					"_Name": "SectionObjectTable0",
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"ToolBar": {
+		"Controls": [
+			{
+				"Caption": "Logout",
+				"Clickable": true,
+				"Enabled": true,
+				"OnPress": "/CalendarControl/Actions/Logout.action",
+				"Visible": true,
+				"_Name": "LogoutToolbarItem",
+				"_Type": "Control.Type.ToolbarItem"
+			},
+			{
+				"Caption": "Sync",
+				"Clickable": true,
+				"Enabled": true,
+				"OnPress": "/CalendarControl/Actions/Service/SyncStartedMessage.action",
+				"Visible": "$(PLT,true,true,false)",
+				"_Name": "UploadToolbarItem",
+				"_Type": "Control.Type.ToolbarItem"
+			}
+		]
+	},
+	"_Name": "Main",
+	"_Type": "Page"
+}

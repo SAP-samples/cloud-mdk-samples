@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.OfflineOData.Close",
+	"Service": "/CalendarControl/Services/Sample.service",
+	"Force": true,
+	"ActionResult": {
+		"_Name": "close"
+	},
+	"OnSuccess": "/CalendarControl/Actions/Service/CloseOfflineSuccessMessage.action",
+	"OnFailure": "/CalendarControl/Actions/Service/CloseOfflineFailureMessage.action"
+}

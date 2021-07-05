@@ -2,7 +2,7 @@
 
 <img src="Screenshots/android.gif" width="35%">
 
-This is a showcase application that demonstrates how to use the standard Calendar View for Android as Extension Control and implementation of its `observable()` Method for Data Binding.
+This is a showcase application that demonstrates how to implement the Calendar View for Android as Extension Control.
 
 *Last Updated: 05-Jul-2021*
 
@@ -29,8 +29,12 @@ This is a showcase application that demonstrates how to use the standard Calenda
 
 ## Key Highlights
 
-* Filtering by selected date using implementation of Extensions `OnValueChange` Event
+* Filtering of Object Table by selected date using implementation of Extensions `OnValueChange` Event
 * Native control used: [Android CalendarView](https://developer.android.com/reference/android/widget/CalendarView)
+
+## To Do
+
+* Add implementation of native [FUICalendarView](https://help.sap.com/doc/978e4f6c968c4cc5a30f9d324aa4b1d7/Latest/en-US/Documents/Frameworks/SAPFiori/Classes/FUICalendarView.html) Control for iOS
 
 ***
 

@@ -1,0 +1,6 @@
+{
+	"Class": "CalendarControl",
+	"Control": "CalendarControl",
+	"Module": "extension-CalendarControl",
+	"_Type": "Register.Type.ExtensionControl"
+}
