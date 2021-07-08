@@ -36,7 +36,7 @@
 							"PerformFirstActionWithFullSwipe": true
 						},
 						"DetailImageIsCircular": false,
-						"PreserveIconStackSpacing": true,
+						"PreserveIconStackSpacing": false,
 						"Selected": false,
 						"StatusText": "/CalendarControl/Rules/Main/FormatDate.js",
 						"Subhead": "{GrossAmount}",
