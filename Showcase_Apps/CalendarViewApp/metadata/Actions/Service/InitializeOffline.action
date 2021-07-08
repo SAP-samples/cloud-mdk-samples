@@ -1,0 +1,17 @@
+{
+	"Service": "/CalendarControl/Services/Sample.service",
+	"DefiningRequests": [
+	{
+		"Name": "SalesOrderHeaders",
+		"Query": "SalesOrderHeaders"
+	}
+],
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnSuccess": "/CalendarControl/Actions/Service/InitializeOfflineSuccessMessage.action",
+	"OnFailure": "/CalendarControl/Actions/Service/InitializeOfflineFailureMessage.action"
+}
