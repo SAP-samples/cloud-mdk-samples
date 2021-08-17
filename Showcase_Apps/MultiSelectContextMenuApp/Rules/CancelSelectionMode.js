@@ -4,6 +4,6 @@
 */
 export default function CancelSelectionMode(context) {
 	var sectionedTable = context.getControl("SectionedTable0");
-	var section = sectionedTable.getSections()[0];
+	var section = sectionedTable.getSection("SalesOrdersTable");
 	section.setSelectionMode("None");
 }
