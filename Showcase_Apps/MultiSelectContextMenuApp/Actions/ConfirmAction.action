@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Message",
+	"Message": "_PROVIDE_NEW_MESSAGE_VIA_OVERRIDE_",
+	"OKCaption": "$(L,YesCaption)",
+	"CancelCaption": "$(L,NoCaption)",
+	"Duration": 3
+}
