@@ -1,0 +1,21 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"Properties": {
+		"LifeCycleStatus": "?"
+	},
+	"OnFailure": {
+		"Name": "/MultiSelectContextMenuApp/Actions/BasicToast.action",
+		"Properties": {
+			"Message": "Update Failed: {#ActionResults:UpdateSalesOrderResult/error}",
+			"NumberOfLines": 4
+		}
+	},
+	"ActionResult": {
+		"_Name": "UpdateSalesOrderResult"
+	},
+	"Target": {
+		"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+		"EntitySet": "SalesOrderHeaders",
+		"ReadLink": "{@odata.readLink}"
+	}
+}

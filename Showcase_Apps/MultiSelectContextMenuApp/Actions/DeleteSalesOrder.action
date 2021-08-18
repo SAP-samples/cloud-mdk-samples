@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.ODataService.DeleteEntity",
+	"Target": {
+		"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+		"EntitySet": "SalesOrderHeaders",
+		"ReadLink": "{@odata.readLink}"
+	}
+}

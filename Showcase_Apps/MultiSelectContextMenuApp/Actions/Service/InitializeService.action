@@ -1,0 +1,25 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+	"OnSuccess": "/MultiSelectContextMenuApp/Actions/Service/InitializeServiceSuccessMessage.action",
+	"OnFailure": "/MultiSelectContextMenuApp/Actions/Service/InitializeServiceFailureMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Initializing Application...",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"DefiningRequests": [
+		{
+			"Name": "SalesOrderHeaders", "Query": "SalesOrderHeaders"
+		},
+		{
+			"Name": "SalesOrderItems", "Query": "SalesOrderItems"
+		},
+		{
+			"Name": "Customers", "Query": "Customers"
+		},
+		{
+			"Name": "Products", "Query": "Products"
+		}
+	]
+}
