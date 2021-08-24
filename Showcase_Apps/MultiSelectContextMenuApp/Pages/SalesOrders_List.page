@@ -1,5 +1,5 @@
 {
-	"Caption": "SalesOrders_List",
+	"Caption": "Sales Orders",
 	"ActionBar": {
 		"Items": [
 			{
@@ -156,7 +156,7 @@
 				"_Name": "ToolBarItem1",
 				"Clickable": false,
 				"Visible": true,
-				"Caption": "$(L,TotalLabel, 0)"
+				"Caption": "$(L,TotalLabel, '0')"
 			}
 		]
 	},

@@ -11,6 +11,12 @@ This is a showcase application that demonstrate how to:
 
 ***
 
+## Author
+
+* Ming Kho ([GitHub](https://github.com/mingkho), [SAP Community](https://people.sap.com/ming.kho))
+
+***
+
 ## Requirements
 
 ### *Supported Platforms*

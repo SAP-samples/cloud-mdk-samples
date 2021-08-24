@@ -17,6 +17,12 @@ Last Updated: 25-Mar-2021
 
 ***
 
+## Author
+
+* Ming Kho ([GitHub](https://github.com/mingkho), [SAP Community](https://people.sap.com/ming.kho))
+
+***
+
 ## Requirements
 
 ### Supported Platforms
