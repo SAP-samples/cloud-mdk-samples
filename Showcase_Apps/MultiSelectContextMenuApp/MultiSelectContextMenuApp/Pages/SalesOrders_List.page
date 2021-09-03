@@ -19,6 +19,12 @@
 				"Icon": "sap-icon://edit",
 				"Visible": true,
 				"OnPress": "/MultiSelectContextMenuApp/Rules/SetSelectionMode.js"
+			},
+			{
+				"Position": "Right",
+				"Icon": "sap-icon://refresh",
+				"Visible": true,
+				"OnPress": "/MultiSelectContextMenuApp/Actions/Service/SyncStartedMessage.action"
 			}
 		]
 	},
