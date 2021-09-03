@@ -1,4 +1,4 @@
-let fs = require('tns-core-modules/file-system');
+let fs = require('@nativescript/core/file-system');
 import { imageToPath } from './FileUtils/ImageToPath';
 
 export default async function DownloadOrOpenDocument(sectionedTableProxy) {

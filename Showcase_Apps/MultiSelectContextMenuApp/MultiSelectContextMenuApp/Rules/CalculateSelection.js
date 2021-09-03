@@ -14,6 +14,7 @@ export default function CalculateSelection(context) {
 			total += netamt;
 		});
 
+		total = context.formatCurrency(total, "EUR"); //For sample only, we'll hard code the currency to EUR
 		return pageProxy.setToolbarItemCaption("ToolBarItem1",context.localizeText("TotalLabel", [total]));
 	}
 }

@@ -1,4 +1,4 @@
-let fs = require('tns-core-modules/file-system');
+let fs = require('@nativescript/core/file-system');
 import { fileExists } from './FileUtils/FileExists';
 import { imageToPath } from './FileUtils/ImageToPath';
 import { pathToFile } from './FileUtils/PathToFile';

@@ -1,4 +1,4 @@
-let fs = require('tns-core-modules/file-system');
+let fs = require('@nativescript/core/file-system');
 // This is a helper function to help generate a file name and path based on the 
 //	entity object (bindingObject) + the primary key property (keyProperty) and a folder name (imageGroup)
 

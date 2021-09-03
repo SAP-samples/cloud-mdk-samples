@@ -1,6 +1,6 @@
 import * as pdfMake from "pdfmake/build/pdfmake";
-import * as fs from 'tns-core-modules/file-system';
-import { isAndroid } from "tns-core-modules/platform";
+import * as fs from '@nativescript/core/file-system';
+import { isAndroid } from "@nativescript/core/platform";
 //data.json is taken from the github sample from the tutorial:
 // https://github.com/kumarandena/nativescript-pdf-generation/
 // It contains base64 of the fonts

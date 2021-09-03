@@ -1,5 +1,5 @@
 {
-	"Caption": "SalesOrders_List",
+	"Caption": "Sales Orders",
 	"ActionBar": {
 		"Items": [
 			{
@@ -156,7 +156,21 @@
 				"_Name": "ToolBarItem1",
 				"Clickable": false,
 				"Visible": true,
-				"Caption": "$(L,TotalLabel, 0)"
+				"Caption": "$(L,TotalLabel, '0')"
+			},
+			{
+				"SystemItem": "FlexibleSpace",
+				"_Name": "FlexibleToolbarItem",
+				"_Type": "Control.Type.ToolbarItem"
+			},
+			{
+				"Caption": "Logout",
+				"Clickable": true,
+				"Enabled": true,
+				"OnPress": "/MultiSelectContextMenuApp/Actions/Logout.action",
+				"Visible": true,
+				"_Name": "LogoutToolbarItem",
+				"_Type": "Control.Type.ToolbarItem"
 			}
 		]
 	},
