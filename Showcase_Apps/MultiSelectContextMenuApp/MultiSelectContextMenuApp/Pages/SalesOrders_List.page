@@ -4,7 +4,7 @@
 		"Items": [
 			{
 				"Position": "Right",
-				"Text": "Cancel",
+				"Caption": "Cancel",
 				"Visible": false,
 				"OnPress": "/MultiSelectContextMenuApp/Rules/CancelSelectionMode.js"
 			},
@@ -30,133 +30,143 @@
 	},
 	"Controls": [
 		{
-			"Sections": [{
-				"_Type": "Section.Type.ObjectTable",
-				"_Name": "SalesOrdersTable",
-				"Target": {
-					"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
-					"EntitySet": "SalesOrderHeaders",
-					"QueryOptions": "$expand=CustomerDetails,Items"
-				},
-				"Selection": {
-					"LongPressToEnable": "Multiple",
-					"ExitOnLastDeselect": true
-				},
-				"OnSelectionModeChanged": "/MultiSelectContextMenuApp/Rules/OnSelectionModeChanged.js",
-				"OnSelectionChanged": "/MultiSelectContextMenuApp/Rules/CalculateSelection.js",
-				"ObjectCell": {
-					"PreserveIconStackSpacing": false,
-					"DetailImageIsCircular": true,
-					"DetailImageText": "/MultiSelectContextMenuApp/Rules/GetAvatarName.js",
-					"Title": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
-					"Subhead": "{SalesOrderId}",
-					"Footnote": "$(DT, {CreatedAt})",
-					"StatusText": "{LifeCycleStatusName}",
-					"SubstatusText": "$(C, {NetAmount}, {CurrencyCode})",
-					"OnPress":"/MultiSelectContextMenuApp/Actions/NavToSalesOrder_Detail.action",
-					"Styles": {
-						"StatusText": "/MultiSelectContextMenuApp/Rules/GetStatusStyle.js"
+			"Sections": [
+				{
+					"_Type": "Section.Type.ObjectTable",
+					"_Name": "SalesOrdersTable",
+					"Target": {
+						"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+						"EntitySet": "SalesOrderHeaders",
+						"QueryOptions": "$expand=CustomerDetails,Items"
 					},
-					"ContextMenu": {
-						"Items": [{
-							"_Name": "Delete",
-							"Text": "Delete",
-							"Image": "sap-icon://delete",
-							"Mode": "Deletion",
-							"Style": "DeleteMenuItem",
-							"OnSwipe": {
-								"Name": "/MultiSelectContextMenuApp/Actions/ConfirmAction.action",
-								"Properties": {
-									"Message": "$(L,ConfirmDelete)",
-									"OnOK": "/MultiSelectContextMenuApp/Actions/DeleteSalesOrder.action"
-								}
-							}
-						},{
-							"_Name": "Process",
-							"Text": "Process",
-							"Image": "sap-icon://process",
-							"Style": "ProcessMenuItem",
-							"OnSwipe": {
-								"Name": "/MultiSelectContextMenuApp/Actions/UpdateSalesOrder.action",
-								"Properties": {
-									"Properties": {
-										"LifeCycleStatus": "P",
-										"LifeCycleStatusName": "In Process"
+					"Selection": {
+						"LongPressToEnable": "Multiple",
+						"ExitOnLastDeselect": true
+					},
+					"OnSelectionModeChanged": "/MultiSelectContextMenuApp/Rules/OnSelectionModeChanged.js",
+					"OnSelectionChanged": "/MultiSelectContextMenuApp/Rules/CalculateSelection.js",
+					"ObjectCell": {
+						"PreserveIconStackSpacing": false,
+						"DetailImageIsCircular": true,
+						"DetailImageText": "/MultiSelectContextMenuApp/Rules/GetAvatarName.js",
+						"Title": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
+						"Subhead": "{SalesOrderId}",
+						"Footnote": "$(DT, {CreatedAt})",
+						"StatusText": "{LifeCycleStatusName}",
+						"SubstatusText": "$(C, {NetAmount}, {CurrencyCode})",
+						"OnPress": "/MultiSelectContextMenuApp/Actions/NavToSalesOrder_Detail.action",
+						"Styles": {
+							"StatusText": "/MultiSelectContextMenuApp/Rules/GetStatusStyle.js"
+						},
+						"ContextMenu": {
+							"Items": [
+								{
+									"_Name": "Delete",
+									"Text": "Delete",
+									"Image": "sap-icon://delete",
+									"Mode": "Deletion",
+									"Style": "DeleteMenuItem",
+									"OnSwipe": {
+										"Name": "/MultiSelectContextMenuApp/Actions/ConfirmAction.action",
+										"Properties": {
+											"Message": "$(L,ConfirmDelete)",
+											"OnOK": "/MultiSelectContextMenuApp/Actions/DeleteSalesOrder.action"
+										}
 									}
-								}
-							}
-						},{
-							"_Name": "Hold",
-							"Text": "Hold",
-							"Image": "sap-icon://stop",
-							"Style": "HoldMenuItem",
-							"OnSwipe": {
-								"Name": "/MultiSelectContextMenuApp/Actions/UpdateSalesOrder.action",
-								"Properties": {
-									"Properties": {
-										"LifeCycleStatus": "H",
-										"LifeCycleStatusName": "On Hold"
-									}
-								}
-							}
-						},{
-							"_Name": "Refund",
-							"Text": "Refund",
-							"Image": "sap-icon://simple-payment",
-							"Style": "RefundMenuItem",
-							"OnSwipe": {
-								"Name": "/MultiSelectContextMenuApp/Actions/ConfirmAction.action",
-								"Properties": {
-									"Message": "$(L,ConfirmRefund)",
-									"OnOK": {
+								},
+								{
+									"_Name": "Process",
+									"Text": "Process",
+									"Image": "sap-icon://process",
+									"Style": "ProcessMenuItem",
+									"OnSwipe": {
 										"Name": "/MultiSelectContextMenuApp/Actions/UpdateSalesOrder.action",
 										"Properties": {
 											"Properties": {
-												"LifeCycleStatus": "R",
-												"LifeCycleStatusName": "Refunded"
-											},
-											"Target": {
-												"ReadLink": "{@odata.readLink}"
+												"LifeCycleStatus": "P",
+												"LifeCycleStatusName": "In Process"
+											}
+										}
+									}
+								},
+								{
+									"_Name": "Hold",
+									"Text": "Hold",
+									"Image": "sap-icon://stop",
+									"Style": "HoldMenuItem",
+									"OnSwipe": {
+										"Name": "/MultiSelectContextMenuApp/Actions/UpdateSalesOrder.action",
+										"Properties": {
+											"Properties": {
+												"LifeCycleStatus": "H",
+												"LifeCycleStatusName": "On Hold"
+											}
+										}
+									}
+								},
+								{
+									"_Name": "Refund",
+									"Text": "Refund",
+									"Image": "sap-icon://simple-payment",
+									"Style": "RefundMenuItem",
+									"OnSwipe": {
+										"Name": "/MultiSelectContextMenuApp/Actions/ConfirmAction.action",
+										"Properties": {
+											"Message": "$(L,ConfirmRefund)",
+											"OnOK": {
+												"Name": "/MultiSelectContextMenuApp/Actions/UpdateSalesOrder.action",
+												"Properties": {
+													"Properties": {
+														"LifeCycleStatus": "R",
+														"LifeCycleStatusName": "Refunded"
+													},
+													"Target": {
+														"ReadLink": "{@odata.readLink}"
+													}
+												}
+											}
+										}
+									}
+								},
+								{
+									"_Name": "Complete",
+									"Text": "Complete",
+									"Image": "sap-icon://complete",
+									"Style": "CompleteMenuItem",
+									"OnSwipe": {
+										"Name": "/MultiSelectContextMenuApp/Actions/ConfirmAction.action",
+										"Properties": {
+											"Message": "$(L,ConfirmCompletion)",
+											"OnOK": {
+												"Name": "/MultiSelectContextMenuApp/Actions/UpdateSalesOrder.action",
+												"Properties": {
+													"Properties": {
+														"LifeCycleStatus": "C",
+														"LifeCycleStatusName": "Completed"
+													},
+													"Target": {
+														"ReadLink": "{@odata.readLink}"
+													}
+												}
 											}
 										}
 									}
 								}
-							}
-						},{
-							"_Name": "Complete",
-							"Text": "Complete",
-							"Image": "sap-icon://complete",
-							"Style": "CompleteMenuItem",
-							"OnSwipe": {
-								"Name": "/MultiSelectContextMenuApp/Actions/ConfirmAction.action",
-								"Properties": {
-									"Message": "$(L,ConfirmCompletion)",
-									"OnOK": {
-										"Name": "/MultiSelectContextMenuApp/Actions/UpdateSalesOrder.action",
-										"Properties": {
-											"Properties": {
-												"LifeCycleStatus": "C",
-												"LifeCycleStatusName": "Completed"
-											},
-											"Target": {
-												"ReadLink": "{@odata.readLink}"
-											}
-										}
-									}
-								}
-							}
-						}],
-						"TrailingItems": ["Delete"],
-						"LeadingItems": "/MultiSelectContextMenuApp/Rules/GetLeadingItems.js"
+							],
+							"TrailingItems": [
+								"Delete"
+							],
+							"LeadingItems": "/MultiSelectContextMenuApp/Rules/GetLeadingItems.js"
+						}
 					}
 				}
-			}],
+			],
 			"_Name": "SectionedTable0",
 			"_Type": "Control.Type.SectionedTable"
 		}
 	],
 	"ToolBar": {
-		"Controls": [
+		"Items": [
 			{
 				"_Type": "Control.Type.ToolbarItem",
 				"_Name": "ToolBarItem1",

@@ -8,5 +8,6 @@
 	"OnWillUpdate": "/ProductListApp/Rules/OnWillUpdate.js",
 	"OnDidUpdate": "/ProductListApp/Actions/Service/InitializeOffline.action",
 	"Styles": "/ProductListApp/Styles/Styles.less",
-	"Localization": "/ProductListApp/i18n/i18n.properties"
+	"Localization": "/ProductListApp/i18n/i18n.properties",
+	"_SchemaVersion": "6.0"
 }
