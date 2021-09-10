@@ -1,10 +1,10 @@
 {
 	"_Type": "Action.Type.OfflineOData.Close",
-	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
 	"Force": true,
 	"ActionResult": {
 		"_Name": "close"
 	},
-	"OnSuccess": "/ProductListApp/Actions/Service/CloseOfflineSuccessMessage.action",
-	"OnFailure": "/ProductListApp/Actions/Service/CloseOfflineFailureMessage.action"
+	"OnSuccess": "/ImageHandlingApp/Actions/Service/CloseOfflineSuccessMessage.action",
+	"OnFailure": "/ImageHandlingApp/Actions/Service/CloseOfflineFailureMessage.action"
 }

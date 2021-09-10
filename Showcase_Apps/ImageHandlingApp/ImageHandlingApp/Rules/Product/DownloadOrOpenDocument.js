@@ -9,7 +9,7 @@ export default async function DownloadOrOpenDocument(sectionedTableProxy) {
 		// Download is in progress, so let's get out.
 		return Promise.resolve();
 	}
-	const serviceName = "/ProductListApp/Services/SampleServiceV2.service";
+	const serviceName = "/ImageHandlingApp/Services/SampleServiceV2.service";
 	const entitySet = 'Products';
 	// first we need to decide if the media exists locally or needs to be downloaded
 	var mediaIsLocal = await sectionedTableProxy.isMediaLocal(serviceName, entitySet, readLink);
@@ -27,21 +27,21 @@ export default async function DownloadOrOpenDocument(sectionedTableProxy) {
 		pageProxy.setActionBinding({
 			'FileName': attachmentPath
 		});
-		return pageProxy.executeAction("/ProductListApp/Actions/Products/OpenProductImage.action");
+		return pageProxy.executeAction("/ImageHandlingApp/Actions/Products/OpenProductImage.action");
 	} else if (mediaIsLocal) {
 		let pressedItem = pageProxy.getPressedItem();
 		let section = sectionedTableProxy.getSections()[0];
 		section.setIndicatorState("inProgress", pressedItem);
-		return pageProxy.executeAction("/ProductListApp/Actions/Products/DownloadImage.action");
+		return pageProxy.executeAction("/ImageHandlingApp/Actions/Products/DownloadImage.action");
 	} 
 	else {
 		let pressedItem = pageProxy.getPressedItem();
 		let section = sectionedTableProxy.getSections()[0];
 		section.setIndicatorState("inProgress", pressedItem);
-		await sectionedTableProxy.executeAction("/ProductListApp/Actions/Products/DownloadDocumentStreams.action").catch(error => {
+		await sectionedTableProxy.executeAction("/ImageHandlingApp/Actions/Products/DownloadDocumentStreams.action").catch(error => {
 			alert("DOWNLOAD STREAM ERROR: " + error);
 		});
 		pageProxy.setActionBinding(bindingObject);
-		return pageProxy.executeAction("/ProductListApp/Actions/Products/DownloadImage.action");
+		return pageProxy.executeAction("/ImageHandlingApp/Actions/Products/DownloadImage.action");
 	}
 }

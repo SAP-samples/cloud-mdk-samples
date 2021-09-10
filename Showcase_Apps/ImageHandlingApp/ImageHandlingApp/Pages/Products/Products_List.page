@@ -12,10 +12,10 @@
 			"ObjectCell": {
 				"AccessoryType": "disclosureIndicator",
 				"Description": "",
-				"DetailImage": "/ProductListApp/Rules/Product/GetDetailImage.js",
+				"DetailImage": "/ImageHandlingApp/Rules/Product/GetDetailImage.js",
 				"DetailImageIsCircular": false,
 				"Icons": [],
-				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_Detail.action",
+				"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_Detail.action",
 				"Title": "{Name}",
 				"Footnote": "{SupplierDetails/SupplierName}",
 				"PreserveIconStackSpacing": false,
@@ -32,7 +32,7 @@
 			},
 			"Target": {
 				"EntitySet": "Products",
-				"Service": "/ProductListApp/Services/SampleServiceV2.service",
+				"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
 				"QueryOptions": "$expand=SupplierDetails&$orderby=Name"
 			},
 			"_Type": "Section.Type.ObjectTable"

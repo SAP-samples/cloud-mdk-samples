@@ -10,21 +10,21 @@
 	},
 	"Media": "#Control:ProductImage/#Value",
 	"Target": {
-		"Service": "/ProductListApp/Services/SampleServiceV2.service",
+		"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
 		"EntitySet": "Products"
 	},
 	"ActionResult": {
 		"_Name": "CreateProductResult"
 	},
 	"OnSuccess": {
-		"Name": "/ProductListApp/Actions/Generic/ToastMessage.action",
+		"Name": "/ImageHandlingApp/Actions/Generic/ToastMessage.action",
 		"Properties": {
 			"Message": "Produce Created",
-			"OnSuccess": "/ProductListApp/Actions/CloseModalPage_Complete.action"
+			"OnSuccess": "/ImageHandlingApp/Actions/CloseModalPage_Complete.action"
 		}
 	},
 	"OnFailure": {
-		"Name": "/ProductListApp/Actions/Generic/ToastMessage.action",
+		"Name": "/ImageHandlingApp/Actions/Generic/ToastMessage.action",
 		"Properties": {
 			"Message": "Product Creation Failed {#ActionResults:CreateProductResult/error}"
 		}

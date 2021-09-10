@@ -7,9 +7,9 @@
 				"UseTopPadding": false
 			},
 			"ObjectCell": {
-				"OnPress": "/ProductListApp/Rules/Product/DownloadOrOpenDocument.js",
-				"OnAccessoryButtonPress": "/ProductListApp/Rules/Product/DownloadOrOpenDocument.js",
-				"ProgressIndicator": "/ProductListApp/Rules/Product/GetProductImageStatus.js",
+				"OnPress": "/ImageHandlingApp/Rules/Product/DownloadOrOpenDocument.js",
+				"OnAccessoryButtonPress": "/ImageHandlingApp/Rules/Product/DownloadOrOpenDocument.js",
+				"ProgressIndicator": "/ImageHandlingApp/Rules/Product/GetProductImageStatus.js",
 				"Title": "{Name}",
 				"Footnote": "{SupplierDetails/SupplierName}",
 				"PreserveIconStackSpacing": false,
@@ -24,7 +24,7 @@
 			},
 			"Target": {
 				"EntitySet": "Products",
-				"Service": "/ProductListApp/Services/SampleServiceV2.service",
+				"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
 				"QueryOptions": "$expand=SupplierDetails&$orderby=Name"
 			},
 			"_Type": "Section.Type.ObjectTable"

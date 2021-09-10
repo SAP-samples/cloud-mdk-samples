@@ -1,10 +1,10 @@
 {
-	"OnSuccess": "/ProductListApp/Rules/Product/DocumentFileSave.js",
-	"OnFailure": "/ProductListApp/Actions/Products/DownloadMediaFailedToast.action",
+	"OnSuccess": "/ImageHandlingApp/Rules/Product/DocumentFileSave.js",
+	"OnFailure": "/ImageHandlingApp/Actions/Products/DownloadMediaFailedToast.action",
 	"Target": {
 		"EntitySet": "Products",
 		"ReadLink": "{@odata.readLink}",
-		"Service": "/ProductListApp/Services/SampleServiceV2.service"
+		"Service": "/ImageHandlingApp/Services/SampleServiceV2.service"
 	},
 	"ActionResult": {
 		"_Name": "DownloadImageRes"

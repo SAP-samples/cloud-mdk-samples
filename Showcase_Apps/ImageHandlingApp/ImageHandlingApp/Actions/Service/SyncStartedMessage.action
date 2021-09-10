@@ -2,7 +2,7 @@
 	"Message": "Upload in progress...",
 	"CompletionMessage": "Upload Successful",
 	"CompletionTimeout": 7,
-	"OnSuccess": "/ProductListApp/Actions/Service/UploadOffline.action",
-	"OnFailure": "/ProductListApp/Actions/Service/SyncFailureMessage.action",
+	"OnSuccess": "/ImageHandlingApp/Actions/Service/UploadOffline.action",
+	"OnFailure": "/ImageHandlingApp/Actions/Service/SyncFailureMessage.action",
 	"_Type": "Action.Type.ProgressBanner"
 }

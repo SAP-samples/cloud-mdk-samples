@@ -4,7 +4,7 @@
 		"Name": "{ProductId}",
 		"Query": "{@odata.readLink}"
 	}],
-	"OnFailure": "/ProductListApp/Actions/Products/DownloadStreamFailedToast.action",
-	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"OnFailure": "/ImageHandlingApp/Actions/Products/DownloadStreamFailedToast.action",
+	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
 	"_Type": "Action.Type.OfflineOData.Download"
 }

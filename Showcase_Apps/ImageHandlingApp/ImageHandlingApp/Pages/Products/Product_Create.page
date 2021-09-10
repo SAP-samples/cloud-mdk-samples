@@ -5,12 +5,13 @@
 			{
 				"Position": "Left",
 				"SystemItem": "Cancel",
-				"OnPress": "/ProductListApp/Actions/CloseModalPage_Cancel.action"
+				"OnPress": "/ImageHandlingApp/Actions/CloseModalPage_Cancel.action"
 			},
 			{
 				"Position": "Right",
 				"Icon": "sap-icon://save",
-				"OnPress": "/ProductListApp/Actions/Products/CreateProduct.action"
+        "_OnPress": "/ImageHandlingApp/Actions/Products/CreateProduct.action",
+				"OnPress": "/ImageHandlingApp/Rules/CreateProduct.js"
 			}
 		]
 	},

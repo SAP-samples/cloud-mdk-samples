@@ -19,7 +19,7 @@ export default async function GetDetailImage(context, folderName) {
 	}
 	else {
 		return context.executeAction({
-			"Name": "/ProductListApp/Actions/Products/DownloadProductImage.action",
+			"Name": "/ImageHandlingApp/Actions/Products/DownloadProductImage.action",
 			"Properties": {
 				"Target": {
 					"ReadLink": prod["@odata.readLink"]

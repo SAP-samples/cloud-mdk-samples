@@ -7,7 +7,7 @@
 	"Controls": [{
 		"Sections": [{
 			"ObjectHeader": {
-				"DetailImage": "/ProductListApp/Rules/Product/GetDetailImage.js",
+				"DetailImage": "/ImageHandlingApp/Rules/Product/GetDetailImage.js",
 				"HeadlineText": "{Name}",
 				"Subhead": "{CategoryName}",
 				"Tags": [],

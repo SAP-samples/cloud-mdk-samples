@@ -1,5 +1,5 @@
 {
-	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
 	"DefiningRequests": [{
 		"Name": "Products",
 		"Query": "Products",
@@ -9,5 +9,5 @@
 	"ActionResult": {
 		"_Name": "sync"
 	},
-	"OnFailure": "/ProductListApp/Actions/Service/SyncFailureMessage.action"
+	"OnFailure": "/ImageHandlingApp/Actions/Service/SyncFailureMessage.action"
 }

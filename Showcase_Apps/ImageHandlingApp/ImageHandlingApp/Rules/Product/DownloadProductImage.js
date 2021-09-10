@@ -25,10 +25,10 @@ export default function DownloadOrReturnProductImage(context) {
 		 pageProxy.setActionBinding({
 		 	'FileName': fileName,
 		 });
-		 return context.executeAction("/ProductListApp/Actions/Products/OpenProductImage.action");
+		 return context.executeAction("/ImageHandlingApp/Actions/Products/OpenProductImage.action");
 	} else {
 		pageProxy.setActionBinding(bindingObject);
-		return context.executeAction("/ProductListApp/Actions/Products/DownloadProductImage.action").then((result) => {
+		return context.executeAction("/ImageHandlingApp/Actions/Products/DownloadProductImage.action").then((result) => {
 			// success case
 			const file = pathToFile(fileName);
 			writeSync(pageProxy, file, result.data);

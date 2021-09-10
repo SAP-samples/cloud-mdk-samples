@@ -1,5 +1,5 @@
 {
-	"Service": "/ProductListApp/Services/SampleServiceV2.service",
+	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
 	"DefiningRequests": [{
 		"Name": "Products",
 		"Query": "Products",
@@ -11,6 +11,6 @@
 	"ActionResult": {
 		"_Name": "init"
 	},
-	"OnSuccess": "/ProductListApp/Actions/Service/InitializeOfflineSuccessMessage.action",
-	"OnFailure": "/ProductListApp/Actions/Service/InitializeOfflineFailureMessage.action"
+	"OnSuccess": "/ImageHandlingApp/Actions/Service/InitializeOfflineSuccessMessage.action",
+	"OnFailure": "/ImageHandlingApp/Actions/Service/InitializeOfflineFailureMessage.action"
 } 

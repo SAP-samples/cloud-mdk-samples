@@ -1,12 +1,12 @@
 {
-	"_Name": "ProductListApp",
-	"Version": "/ProductListApp/Globals/AppDefinition_Version.global",
-	"MainPage": "/ProductListApp/Pages/Main.page",
+	"_Name": "ImageHandlingApp",
+	"Version": "/ImageHandlingApp/Globals/AppDefinition_Version.global",
+	"MainPage": "/ImageHandlingApp/Pages/Main.page",
 	"OnLaunch": [
-		"/ProductListApp/Actions/Service/InitializeOffline.action"
+		"/ImageHandlingApp/Actions/Service/InitializeOffline.action"
 	],
-	"OnWillUpdate": "/ProductListApp/Rules/OnWillUpdate.js",
-	"OnDidUpdate": "/ProductListApp/Actions/Service/InitializeOffline.action",
-	"Styles": "/ProductListApp/Styles/Styles.less",
-	"Localization": "/ProductListApp/i18n/i18n.properties"
+	"OnWillUpdate": "/ImageHandlingApp/Rules/OnWillUpdate.js",
+	"OnDidUpdate": "/ImageHandlingApp/Actions/Service/InitializeOffline.action",
+	"Styles": "/ImageHandlingApp/Styles/Styles.less",
+	"Localization": "/ImageHandlingApp/i18n/i18n.properties"
 }

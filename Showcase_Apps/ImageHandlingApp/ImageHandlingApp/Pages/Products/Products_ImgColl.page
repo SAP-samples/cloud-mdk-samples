@@ -6,8 +6,8 @@
 	"Controls": [{
 		"Sections": [{
 			"ImageCell": {
-				"Image": "/ProductListApp/Rules/Product/GetImageCellImage.js",
-				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_Detail.action",
+				"Image": "/ImageHandlingApp/Rules/Product/GetImageCellImage.js",
+				"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_Detail.action",
 				"Title": "{Name}"
 			},
 			"Layout": {
@@ -15,7 +15,7 @@
 			},
 			"Target": {
 				"EntitySet": "Products",
-				"Service": "/ProductListApp/Services/SampleServiceV2.service",
+				"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
 				"QueryOptions": "$orderby=Name"
 			},
 			"_Type": "Section.Type.ImageCollection"

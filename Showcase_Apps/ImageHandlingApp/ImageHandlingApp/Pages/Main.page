@@ -5,22 +5,22 @@
 		"_Type": "Control.Type.SectionedTable",
 		"Sections": [{
 			"Buttons": [{
-				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_List.action",
+				"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List.action",
 				"TextAlignment": "center",
 				"Title": "Products"
 			},
 			{
-				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_ImgColl.action",
+				"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_ImgColl.action",
 				"TextAlignment": "center",
 				"Title": "Products Image Collection"
 			},
 			{
-				"OnPress": "/ProductListApp/Actions/Products/NavToProducts_List_OpenDoc.action",
+				"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List_OpenDoc.action",
 				"TextAlignment": "center",
 				"Title": "Products Image via Open Doc"
 			},
 			{
-				"OnPress": "/ProductListApp/Actions/Products/NavToCreateProduct.action",
+				"OnPress": "/ImageHandlingApp/Actions/Products/NavToCreateProduct.action",
 				"TextAlignment": "center",
 				"Title": "Create Product with Image Attachment"
 			}],
@@ -35,12 +35,12 @@
 			"_Name": "LogoutToolbarItem",
 			"_Type": "Control.Type.ToolbarItem",
 			"Caption": "Logout",
-			"OnPress": "/ProductListApp/Actions/Logout.action"
+			"OnPress": "/ImageHandlingApp/Actions/Logout.action"
 		}, {
 			"_Name": "UploadToolbarItem",
 			"_Type": "Control.Type.ToolbarItem",
 			"Caption": "Sync",
-			"OnPress": "/ProductListApp/Actions/Service/SyncStartedMessage.action"
+			"OnPress": "/ImageHandlingApp/Actions/Service/SyncStartedMessage.action"
 		}]
 	}
 }
