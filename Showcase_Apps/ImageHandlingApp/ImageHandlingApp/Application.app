@@ -8,5 +8,6 @@
 	"OnWillUpdate": "/ImageHandlingApp/Rules/OnWillUpdate.js",
 	"OnDidUpdate": "/ImageHandlingApp/Actions/Service/InitializeOffline.action",
 	"Styles": "/ImageHandlingApp/Styles/Styles.less",
-	"Localization": "/ImageHandlingApp/i18n/i18n.properties"
+	"Localization": "/ImageHandlingApp/i18n/i18n.properties",
+	"_SchemaVersion": "6.0"
 }
