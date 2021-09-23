@@ -1,0 +1,13 @@
+{
+	"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+	"DefiningRequests": [{
+		"Name": "Products",
+		"Query": "Products",
+		"AutomaticallyRetrievesStreams": false
+	}],
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/MultiSelectContextMenuApp/Actions/Service/SyncFailureMessage.action"
+}

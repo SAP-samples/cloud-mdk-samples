@@ -1,0 +1,9 @@
+{
+	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnSuccess": "/ImageHandlingApp/Actions/Service/DownloadStartedMessage.action",
+	"OnFailure": "/ImageHandlingApp/Actions/Service/SyncFailureMessage.action"
+}

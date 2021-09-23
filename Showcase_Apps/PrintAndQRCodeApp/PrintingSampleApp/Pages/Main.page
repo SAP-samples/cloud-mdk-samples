@@ -25,7 +25,7 @@
 		}
 	],
 	"ToolBar": {
-		"Controls": [
+		"Items": [
 			{
 				"Caption": "Logout",
 				"Clickable": true,

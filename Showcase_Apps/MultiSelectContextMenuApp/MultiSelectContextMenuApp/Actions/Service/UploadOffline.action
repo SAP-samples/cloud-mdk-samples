@@ -1,0 +1,9 @@
+{
+	"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnSuccess": "/MultiSelectContextMenuApp/Actions/Service/DownloadStartedMessage.action",
+	"OnFailure": "/MultiSelectContextMenuApp/Actions/Service/SyncFailureMessage.action"
+}

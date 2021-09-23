@@ -8,6 +8,7 @@
 		"MaxFileSizeInMegaBytes": 1,
 		"LogLevel": "Debug"
 	},
+	"DetailLabelViewText": "Demonstrate how to generate QR code and printing using 3rd party NativeScript plugins",
 	"EncryptDatabase" : false,
 	"PasscodeTimeout": 120
 }

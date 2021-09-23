@@ -1,0 +1,10 @@
+{
+	"DefiningRequests": [{
+		"AutomaticallyRetrievesStreams": true,
+		"Name": "{ProductId}",
+		"Query": "{@odata.readLink}"
+	}],
+	"OnFailure": "/ImageHandlingApp/Actions/Products/DownloadStreamFailedToast.action",
+	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
+	"_Type": "Action.Type.OfflineOData.Download"
+}
