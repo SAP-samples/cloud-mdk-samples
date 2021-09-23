@@ -36,7 +36,6 @@ This is a showcase application that demonstrate how to:
 
 ## Key Highlights
 
-* The showcase project will include a specific plugins version due to newer version is incompatible with MDK 5.1.2.
 * Showing how to import 3rd party plugin into your rules.
 * Make use of ClientData to store information for later use in the app.
 * Showing how to execute a rule from another rule.
