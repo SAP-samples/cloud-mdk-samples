@@ -1,4 +1,4 @@
-import { ImageSource } from "tns-core-modules/image-source";
+import { ImageSource } from "@nativescript/core/image-source";
 import { QrGenerator } from "nativescript-qr-generator";
 
 /**

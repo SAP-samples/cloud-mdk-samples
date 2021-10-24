@@ -11,9 +11,15 @@ This is a showcase application that demonstrate how to generate PDF document usi
 This showcase application is loosely based on the following guide:
 [Pdf generation in NativeScript using JavaScript libraries](https://medium.com/@kumarandena/pdf-generation-in-nativescript-using-javascript-libraries-864ecf4e9a3a)
 
-And contains excerpt of sample code from the following project [nativescript-pdf-generation](https://github.com/kumarandena/nativescript-pdf-generation)
+And contains excerpt of sample code from the following project [`nativescript-pdf-generation`](https://github.com/kumarandena/nativescript-pdf-generation)
 
-Last Updated: 25-Mar-2021
+*Last Updated: 03-Sep-2021*
+
+***
+
+## Author
+
+* Ming Kho ([GitHub](https://github.com/mingkho), [SAP Community](https://people.sap.com/ming.kho))
 
 ***
 
@@ -26,7 +32,7 @@ Last Updated: 25-Mar-2021
 
 ### MDK Client Version
 
-* MDK 5.1 or higher
+* MDK 6.0 or higher
 
 ### Data Source
 
@@ -58,8 +64,9 @@ After executing the create-client command you need to:
 3. Execute `npm i pdfmake` to install the PDFMake library to your project (Note: PDFMake is not a NativeScript Plugin, therefore you can't use the `NSPlugins` property in `MDKProject.json` to install it)
 4. You need to do this every time you regenerate the project using the create-client command/cmd
 
-If you are using Visual Studio Code to develop your app too, then it's also best to add `"pdfmake/build/pdfmake"` to the externals property of the built-in MDK bundler tool.
-Go to VS Code Settings > Search for "MDK Bundler Externals" > Press Edit in settings.son > Add `"pdfmake/build/pdfmake"` inside the `"mdk.bundlerExternals"` array. e.g.
+If you are using SAP Business Application Studio or Visual Studio Code to develop your app, then you need to add `"pdfmake/build/pdfmake"` to the externals property of the built-in MDK bundler tool.
+
+Go to `Preferences` > Search for "MDK Bundler Externals" > Press Edit in settings.son > Add `"pdfmake/build/pdfmake"` inside the `"mdk.bundlerExternals"` array. e.g.
 
 ```json
 "mdk.bundlerExternals": [
@@ -76,10 +83,12 @@ Once the app is running and you have onboarded, do the following steps to genera
 1. In the detail page of the sales order, press the Generate PDF Invoice button in the toolbar
 1. A PDF file will be generated based on the data of the selected sales order and displayed to you.
 
-Screenshots:
+## Screenshots
 
-Android
-![Android PDF Screenshot](Screenshots/Android.jpg)
+### iOS
 
-iOS
 ![iOS PDF Screenshot](Screenshots/iOS.png)
+
+### Android
+
+![Android PDF Screenshot](Screenshots/Android.jpg)

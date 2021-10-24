@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Message",
+	"Message": "$(L,ConfirmDelete)",
+	"OKCaption": "$(L,YesCaption)",
+	"CancelCaption": "$(L,NoCaption)",
+	"OnOK": "/MultiSelectContextMenuApp/Actions/DeleteSalesOrder.action"
+}
