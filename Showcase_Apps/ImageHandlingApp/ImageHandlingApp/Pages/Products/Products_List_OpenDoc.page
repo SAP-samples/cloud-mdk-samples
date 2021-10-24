@@ -1,0 +1,37 @@
+{
+	"Caption": "Products List",
+	"Controls": [{
+		"Sections": [{
+			"Header": {
+
+				"UseTopPadding": false
+			},
+			"ObjectCell": {
+				"OnPress": "/ImageHandlingApp/Rules/Product/DownloadOrOpenDocument.js",
+				"OnAccessoryButtonPress": "/ImageHandlingApp/Rules/Product/DownloadOrOpenDocument.js",
+				"ProgressIndicator": "/ImageHandlingApp/Rules/Product/GetProductImageStatus.js",
+				"Title": "{Name}",
+				"Footnote": "{SupplierDetails/SupplierName}",
+				"PreserveIconStackSpacing": false,
+				"Subhead": "{CategoryName}"
+			},
+			"Search": {
+				"Enabled": true,
+				"Placeholder": "Item Search",
+				"BarcodeScanner": true,
+				"Delay": 500,
+				"MinimumCharacterThreshold": 3
+			},
+			"Target": {
+				"EntitySet": "Products",
+				"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
+				"QueryOptions": "$expand=SupplierDetails&$orderby=Name"
+			},
+			"_Type": "Section.Type.ObjectTable"
+		}],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "Products_List_OpenDoc"
+}

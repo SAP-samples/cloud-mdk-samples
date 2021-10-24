@@ -1,5 +1,14 @@
 {
 	"Caption": "Generate QR Code",
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"Caption": "Close",
+				"OnPress": "/PrintingSampleApp/Actions/ClosePage.action"
+			}
+		]
+	},
 	"Controls": [
 		{
 			"Sections": [

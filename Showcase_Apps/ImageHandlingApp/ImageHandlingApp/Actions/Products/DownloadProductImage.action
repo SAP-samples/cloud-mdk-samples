@@ -1,0 +1,8 @@
+{
+	"OnFailure": "/ImageHandlingApp/Actions/Products/ProductImageDownloadFailure.action",
+	"Target": {
+		"EntitySet": "Products",
+		"Service": "/ImageHandlingApp/Services/SampleServiceV2.service"
+	},
+	"_Type": "Action.Type.ODataService.DownloadMedia"
+}
