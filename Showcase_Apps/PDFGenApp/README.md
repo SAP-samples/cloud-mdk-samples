@@ -13,7 +13,7 @@ This showcase application is loosely based on the following guide:
 
 And contains excerpt of sample code from the following project [`nativescript-pdf-generation`](https://github.com/kumarandena/nativescript-pdf-generation)
 
-*Last Updated: 03-Sep-2021*
+*Last Updated: 23-Nov-2021*
 
 ***
 
@@ -60,6 +60,7 @@ For a more detailed information on the setup for MDK development please see the 
 After executing the create-client command you need to:
 
 1. Generate this project using the the create-client command/cmd
+      * Note: From MDK version 6.0.3 or newer, you will get an error when running the create-client command e.g. `TS2307: Cannot find module 'pdfmake/build/pdfmake' or its corresponding type declarations.`. You can ignore this error and continue to the next step to add the `pdfmake` module.
 2. Go to the generated `PDFGenApp` folder in Terminal
 3. Execute `npm i pdfmake` to install the PDFMake library to your project (Note: PDFMake is not a NativeScript Plugin, therefore you can't use the `NSPlugins` property in `MDKProject.json` to install it)
 4. You need to do this every time you regenerate the project using the create-client command/cmd
