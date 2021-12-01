@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/PersistentFilters/Services/SampleServiceV2.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/PersistentFilters/Actions/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/PersistentFilters/Actions/Service/CloseOfflineFailureMessage.action"
+}

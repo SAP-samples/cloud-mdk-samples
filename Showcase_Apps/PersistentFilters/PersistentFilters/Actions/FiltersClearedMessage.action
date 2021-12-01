@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"Message": "Cleared Saved Filters",
+	"NumberOfLines": 1,
+	"Duration": 2,
+	"IsIconHidden": true,
+	"Animated": true
+}
