@@ -11,6 +11,7 @@ All of the applications in these folders are full working applications.  Please 
 * PDF Generation
 * Printing and QR Codes
 * Multi-Select & Context Menu App
+* Persistent Filters
 
 ***
 

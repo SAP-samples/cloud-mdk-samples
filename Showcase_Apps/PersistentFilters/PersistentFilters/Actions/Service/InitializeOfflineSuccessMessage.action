@@ -1,0 +1,7 @@
+{
+    "Animated": true,
+    "Duration": 2,
+    "Message": "Application data service initialized",
+    "IsIconHidden": true,
+    "_Type": "Action.Type.ToastMessage"
+}

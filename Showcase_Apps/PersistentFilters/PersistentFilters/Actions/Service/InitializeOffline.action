@@ -1,0 +1,27 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/PersistentFilters/Actions/Service/InitializeOfflineFailureMessage.action",
+	"OnSuccess": "/PersistentFilters/Actions/Service/InitializeOfflineSuccessMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"Service": "/PersistentFilters/Services/SampleServiceV2.service",
+	"DefiningRequests": [
+		{
+			"Name": "Customers",
+			"Query": "Customers"
+		},
+		{
+			"Name": "Products",
+			"Query": "Products",
+			"AutomaticallyRetrievesStreams": true
+		},
+		{
+			"Name": "ProductCategories",
+			"Query": "ProductCategories",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}
