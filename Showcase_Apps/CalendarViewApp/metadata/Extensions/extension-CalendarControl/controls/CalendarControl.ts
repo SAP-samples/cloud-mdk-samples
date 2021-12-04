@@ -1,4 +1,4 @@
-import * as app from 'tns-core-modules/application';
+import { Application as app } from '@nativescript/core';
 import { IControl } from 'mdk-core/controls/IControl';
 import { BaseObservable } from 'mdk-core/observables/BaseObservable';
 
