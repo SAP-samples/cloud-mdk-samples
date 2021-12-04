@@ -1,11 +1,12 @@
 {
-	"Caption": "Calendar",
+	"Caption": "/CalendarControl/Rules/CalendarPage/Caption.js",
 	"Controls": [
 		{
 			"Sections": [
 				{
 					"Class": "CalendarControl",
 					"Control": "CalendarControl",
+					"Module": "extension-CalendarControl",
 					"EmptySection": {
 						"FooterVisible": false
 					},
@@ -13,7 +14,6 @@
 						"UseTopPadding": false
 					},
 					"Height": 300,
-					"Module": "extension-CalendarControl",
 					"Visible": true,
 					"_Name": "SectionExtension0",
 					"_Type": "Section.Type.Extension",
@@ -38,7 +38,7 @@
 						"DetailImageIsCircular": false,
 						"PreserveIconStackSpacing": false,
 						"Selected": false,
-						"StatusText": "/CalendarControl/Rules/Main/FormatDate.js",
+						"StatusText": "$(D, {CreatedAt})",
 						"Subhead": "{GrossAmount}",
 						"Title": "{SalesOrderId}"
 					},
@@ -50,7 +50,7 @@
 					"Target": {
 						"EntitySet": "SalesOrderHeaders",
 						"Service": "/CalendarControl/Services/Sample.service",
-						"QueryOptions": "/CalendarControl/Rules/Main/QueryOptions.js"
+						"QueryOptions": "/CalendarControl/Rules/CalendarPage/QueryOptions.js"
 					},
 					"Visible": true,
 					"_Name": "SectionObjectTable0",
@@ -62,7 +62,7 @@
 		}
 	],
 	"ToolBar": {
-		"Controls": [
+		"Items": [
 			{
 				"Caption": "Logout",
 				"Clickable": true,
