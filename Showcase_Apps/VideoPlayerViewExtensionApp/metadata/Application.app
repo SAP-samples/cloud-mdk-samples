@@ -3,5 +3,6 @@
 	"MainPage": "/VideoPlayer/Pages/VideoPlayer.page",
 	"OnWillUpdate": "/VideoPlayer/Rules/OnWillUpdate.js",
 	"Styles": "/VideoPlayer/Styles/Styles.less",
-	"_Name": "VideoPlayer"
-} 
+	"_Name": "VideoPlayer",
+	"_SchemaVersion": "6.1"
+}

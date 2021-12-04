@@ -6,6 +6,7 @@
 				{
 					"Class": "VideoPlayer",
 					"Control": "VideoPlayer",
+					"Module": "extension-VideoPlayer",
 					"EmptySection": {
 						"FooterVisible": false
 					},
@@ -13,7 +14,6 @@
 						"videoURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
 					},
 					"Height": 300,
-					"Module": "extension-VideoPlayer",
 					"Visible": true,
 					"_Name": "SectionExtension0",
 					"_Type": "Section.Type.Extension"
@@ -25,4 +25,4 @@
 	],
 	"_Name": "VideoPlayer",
 	"_Type": "Page"
-} 
+}

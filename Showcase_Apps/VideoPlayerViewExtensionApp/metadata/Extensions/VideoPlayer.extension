@@ -3,4 +3,4 @@
 	"Control": "VideoPlayer",
 	"Module": "extension-VideoPlayer",
 	"_Type": "Register.Type.ExtensionControl"
-} 
+}

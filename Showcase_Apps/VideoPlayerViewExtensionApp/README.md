@@ -1,12 +1,12 @@
-# Video Player App
+# Video Player View Extension App
 
 <img src="Screenshots/android.png" width="35%"> <img src="Screenshots/ios.png" width="35%">
 
-This is a showcase application that demonstrates how to play remote videos.
+This is a showcase application that demonstrates how to implement the Android VideoView and iOS AVPlayer to play remote videos.
 
 * Blog for iOS implementation: [https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/](https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/)
 
-*Last Updated: 16-Jun-2021*
+*Last Updated: 04-Dec-2021*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
@@ -22,13 +22,13 @@ This is a showcase application that demonstrates how to play remote videos.
 
 ### MDK Client Version
 
-* MDK 5.2 or higher
+* MDK 6.1
 
 ***
 
 ## Key Highlights
 
-* Playing videos from a remote URL.
+* Playing videos from a remote URL. The remote URL can be bound in the `VideoPlayer.page` to `videoURL` extension property of the extension control.
 * Native controls used: [Android VideoView](https://developer.android.com/reference/android/widget/VideoView) and [iOS AVPlayer](https://developer.apple.com/documentation/avfoundation/avplayer)
 
 ***
