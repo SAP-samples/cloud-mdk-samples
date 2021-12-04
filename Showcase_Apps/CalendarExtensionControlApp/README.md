@@ -1,4 +1,4 @@
-# Calendar View App
+# Calendar View Extension App
 
 <img src="Screenshots/android.gif" width="35%">
 
