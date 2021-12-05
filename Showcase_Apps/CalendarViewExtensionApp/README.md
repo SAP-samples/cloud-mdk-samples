@@ -1,7 +1,5 @@
 # Calendar View Extension App
 
-<img src="Screenshots/android.gif" width="35%">
-
 This is a showcase application that demonstrates how to implement the Calendar View for Android as Extension Control.
 
 *Last Updated: 04-Dec-2021*
@@ -19,11 +17,11 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ### MDK Client Version
 
-* MDK 6.1
+* MDK 6.1 or higher
 
 ### Data Source
 
-* Mobile Services Sample OData ESPM
+* Mobile Services Sample OData ESPM (destination created as SampleServiceV2)
 
 ***
 
@@ -57,3 +55,7 @@ Select `Generate sample sales orders`:
 In the mobile application, select `Sync` to synchronize offline store and download the generated Sales Orders:
 
 <img src="Screenshots/sync.png" width="35%">
+
+## Screenshots
+
+<img src="Screenshots/android.gif" width="35%">

@@ -1,5 +1,5 @@
 {
-	"Service": "/CalendarControl/Services/Sample.service",
+	"Service": "/CalendarViewExtensionApp/Services/Sample.service",
 	"DefiningRequests": [
 	{
 		"Name": "SalesOrderHeaders",
@@ -12,6 +12,6 @@
 	"ActionResult": {
 		"_Name": "init"
 	},
-	"OnSuccess": "/CalendarControl/Actions/Service/InitializeOfflineSuccessMessage.action",
-	"OnFailure": "/CalendarControl/Actions/Service/InitializeOfflineFailureMessage.action"
+	"OnSuccess": "/CalendarViewExtensionApp/Actions/Service/InitializeOfflineSuccessMessage.action",
+	"OnFailure": "/CalendarViewExtensionApp/Actions/Service/InitializeOfflineFailureMessage.action"
 }

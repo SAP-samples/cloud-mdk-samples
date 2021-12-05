@@ -1,0 +1,8 @@
+{
+	"Message": "Upload in progress...",
+	"CompletionMessage": "Upload Successful",
+	"CompletionTimeout": 7,
+	"OnSuccess": "/CalendarViewExtensionApp/Actions/Service/UploadOffline.action",
+	"OnFailure": "/CalendarViewExtensionApp/Actions/Service/SyncFailureMessage.action",
+	"_Type": "Action.Type.ProgressBanner"
+}
