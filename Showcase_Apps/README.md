@@ -10,7 +10,7 @@ All of the applications in these folders are full working applications.  Please 
 * Image Handling
 * PDF Generation
 * Printing and QR Codes
-* Video Player
+* Video Player View Extension App
 * Multi-Select & Context Menu App
 
 ***

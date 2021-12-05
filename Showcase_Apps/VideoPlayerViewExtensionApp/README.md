@@ -4,7 +4,7 @@ This is a showcase application that demonstrates how to implement the Android Vi
 
 * Blog for iOS implementation: [https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/](https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/)
 
-*Last Updated: 04-Dec-2021*
+*Last Updated: 05-Dec-2021*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
