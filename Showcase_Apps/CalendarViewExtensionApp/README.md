@@ -2,7 +2,7 @@
 
 This is a showcase application that demonstrates how to implement the Calendar View for Android as Extension Control.
 
-*Last Updated: 04-Dec-2021*
+*Last Updated: 05-Dec-2021*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
@@ -27,7 +27,7 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ## Key Highlights
 
-* Filtering of Object Table by selected date using implementation of Extensions `OnValueChange` event
+* Filtering of Object Table by selected date using implementation of Extensions `OnValueChange` event. (Note: You might not see any Sales Orders in the table. Read below on how to add additional Sales Orders)
 * Native control used: [Android CalendarView](https://developer.android.com/reference/android/widget/CalendarView)
 
 ## To Do
@@ -42,7 +42,7 @@ No additional steps required. The content of [metadata/](metadata/) folder can b
 
 ### Generate additional Sales Orders for current date
 
-You can generate Sales Orders which are displayed in the Object Table after the application started. (The date filter  is executed on the `CreatedAt` attribute of SalesOrderHeaders) 
+You can generate Sales Orders which are displayed in the Object Table after the application started. (The date filter is executed on the `CreatedAt` attribute of SalesOrderHeaders) 
 
 In the app configuration of SAP Mobile Services cockpit, select the `Mobile Sample OData ESPM` feature:
 
