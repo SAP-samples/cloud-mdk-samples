@@ -20,7 +20,7 @@ This is a showcase application that demonstrates how to implement the Android Vi
 
 ### MDK Client Version
 
-* MDK 6.1
+* MDK 6.1 or higher
 
 ***
 
