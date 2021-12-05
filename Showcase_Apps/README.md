@@ -6,7 +6,7 @@ All of the applications in these folders are full working applications.  Please 
 ***
 
 ## Applications
-* Calendar View
+* Calendar View Extension App
 * Image Handling
 * PDF Generation
 * Printing and QR Codes
