@@ -2,7 +2,7 @@ import { Application as app } from '@nativescript/core';
 import { IControl } from 'mdk-core/controls/IControl';
 import { BaseObservable } from 'mdk-core/observables/BaseObservable';
 
-export class VideoPlayer extends IControl {
+export class VideoPlayerControl extends IControl {
     private _observable: BaseObservable;
     private _videoURL: string;
     private _avplayerViewController: AVPlayerViewController;

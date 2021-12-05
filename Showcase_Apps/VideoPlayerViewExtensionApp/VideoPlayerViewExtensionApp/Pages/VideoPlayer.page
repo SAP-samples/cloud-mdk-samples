@@ -4,9 +4,9 @@
 		{
 			"Sections": [
 				{
-					"Class": "VideoPlayer",
-					"Control": "VideoPlayer",
-					"Module": "extension-VideoPlayer",
+					"Class": "VideoPlayerControl",
+					"Control": "VideoPlayerControl",
+					"Module": "VideoPlayerControl",
 					"EmptySection": {
 						"FooterVisible": false
 					},
