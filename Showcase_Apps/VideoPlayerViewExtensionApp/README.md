@@ -33,7 +33,7 @@ This is a showcase application that demonstrates how to implement the Android Vi
 
 ## Setup Instructions
 
-No additional steps required. The content of [metadata/](metadata/) folder can be used as is to run the application.
+No additional steps required. The content of [VideoPlayerViewExtensionApp/](VideoPlayerViewExtensionApp/) folder can be used as is to run the application.
 
 ## Screenshots
 
