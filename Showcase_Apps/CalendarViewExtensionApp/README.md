@@ -38,7 +38,7 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ## Setup Instructions
 
-No additional steps required. The content of [metadata/](metadata/) folder can be used as is to run the application.
+No additional steps required. The content of [CalendarViewExtensionApp/](CalendarViewExtensionApp/) folder can be used as is to run the application.
 
 ### Generate additional Sales Orders for current date
 
