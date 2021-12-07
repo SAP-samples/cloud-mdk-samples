@@ -3,5 +3,15 @@
 	"Module": "VideoPlayerControl",
 	"Control": "VideoPlayerControl",
 	"Class": "VideoPlayerControl",
-	"Display": "/VideoPlayerViewExtensionApp/Images/android_videoplayer.png"
+		"Display": "/VideoPlayerViewExtensionApp/Images/android_videoplayer.png",
+	"ExtensionPropertiesSchema": {
+		"type": "object",
+		"BindType": "",
+		"properties": {
+			"videoURL": {
+				"type": "string",
+				"BindType": ""
+			}
+		}
+	}
 }
