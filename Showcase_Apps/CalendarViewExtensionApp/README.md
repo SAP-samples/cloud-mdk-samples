@@ -27,7 +27,8 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ## Key Highlights
 
-* Filtering of Object Table by selected date using implementation of Extensions `OnValueChange` event. (Note: You might not see any Sales Orders in the table. Read below on how to add additional Sales Orders)
+* Filtering of Object Table by selected date using implementation of Extensions `OnValueChange` event. This event is currently not supported in the layout editor, open the `Calendar.page` in code editor to access it. 
+    >You might not see any Sales Orders in the table. Read below on how to add additional Sales Orders)
 * Native control used: [Android CalendarView](https://developer.android.com/reference/android/widget/CalendarView)
 
 ## To Do
