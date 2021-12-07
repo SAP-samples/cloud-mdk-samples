@@ -1,0 +1,89 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"OnValueChange": "/CalendarViewExtensionApp/Rules/CalendarPage/OnSelectDate.js",
+					"_Type": "Section.Type.Extension",
+					"_Name": "SectionExtension0",
+					"Header": {
+						"UseTopPadding": false
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Height": 300,
+					"Module": "CalendarControl",
+					"Control": "CalendarControl",
+					"Class": "CalendarControl"
+				},
+				{
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"EntitySet": "SalesOrderHeaders",
+						"Service": "/CalendarViewExtensionApp/Services/Sample.service",
+						"QueryOptions": "/CalendarViewExtensionApp/Rules/CalendarPage/QueryOptions.js"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [
+							],
+							"PerformFirstActionWithFullSwipe": true
+						},
+						"Title": "Order Date: $(D,{CreatedAt},'','',{format:'medium'})",
+						"Footnote": "{SalesOrderId}",
+						"StatusText": "{LifeCycleStatusName}",
+						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
+						"DetailImageIsCircular": false,
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "none",
+						"Selected": false
+					},
+					"DataPaging": {
+						"PageSize": 50,
+						"ShowLoadingIndicator": false
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "/CalendarViewExtensionApp/Rules/CalendarPage/Caption.js",
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "LogoutToolbarItem",
+				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"OnPress": "/CalendarViewExtensionApp/Actions/Logout.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "UploadToolbarItem",
+				"Caption": "Sync",
+				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
+				"Clickable": true,
+				"OnPress": "/CalendarViewExtensionApp/Actions/Service/SyncStartedMessage.action"
+			}
+		]
+	}
+}

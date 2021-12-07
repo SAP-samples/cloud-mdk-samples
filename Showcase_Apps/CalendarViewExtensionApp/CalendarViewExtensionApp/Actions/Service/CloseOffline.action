@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.OfflineOData.Close",
+	"Service": "/CalendarViewExtensionApp/Services/Sample.service",
+	"Force": true,
+	"ActionResult": {
+		"_Name": "close"
+	},
+	"OnSuccess": "/CalendarViewExtensionApp/Actions/Service/CloseOfflineSuccessMessage.action",
+	"OnFailure": "/CalendarViewExtensionApp/Actions/Service/CloseOfflineFailureMessage.action"
+}

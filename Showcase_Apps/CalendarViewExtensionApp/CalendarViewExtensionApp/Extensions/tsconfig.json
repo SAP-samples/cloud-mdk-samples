@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES2017",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmitHelpers": true,
+        "lib": [
+            "es7",
+            "dom"
+        ],
+        "baseUrl": "{PATH_TO_MDK_CLIENT}",
+        "paths": {
+            "*": ["app/*"],
+            "mdk-sap":["./node_modules/mdk-sap"],
+            "mdk-core/*": ["./modules/mdk-core/*"],
+            "@nativescript/*": ["./node_modules/@nativescript/*"]
+        }
+    }
+}

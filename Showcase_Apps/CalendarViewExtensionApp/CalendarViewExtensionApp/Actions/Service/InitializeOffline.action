@@ -1,0 +1,17 @@
+{
+	"Service": "/CalendarViewExtensionApp/Services/Sample.service",
+	"DefiningRequests": [
+	{
+		"Name": "SalesOrderHeaders",
+		"Query": "SalesOrderHeaders"
+	}
+],
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnSuccess": "/CalendarViewExtensionApp/Actions/Service/InitializeOfflineSuccessMessage.action",
+	"OnFailure": "/CalendarViewExtensionApp/Actions/Service/InitializeOfflineFailureMessage.action"
+}

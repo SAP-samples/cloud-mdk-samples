@@ -1,0 +1,9 @@
+{
+	"Service": "/CalendarViewExtensionApp/Services/Sample.service",
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnSuccess": "/CalendarViewExtensionApp/Actions/Service/DownloadStartedMessage.action",
+	"OnFailure": "/CalendarViewExtensionApp/Actions/Service/SyncFailureMessage.action"
+}

@@ -1,0 +1,14 @@
+{
+	"Service": "/CalendarViewExtensionApp/Services/Sample.service",
+	"DefiningRequests": [
+	{
+		"Name": "SalesOrderHeaders",
+		"Query": "SalesOrderHeaders"
+	}
+],
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/CalendarViewExtensionApp/Actions/Service/SyncFailureMessage.action"
+}
