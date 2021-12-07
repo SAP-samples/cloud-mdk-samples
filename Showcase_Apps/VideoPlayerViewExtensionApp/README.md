@@ -2,7 +2,7 @@
 
 This is a showcase application that demonstrates how to implement the Android VideoView and iOS AVPlayer as Extension control to play remote videos.
 
-* Blog for iOS implementation: [https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/](https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/)
+>iOS implementation part of this application has been referenced from [this](https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/) blog post and Android implementation part has been added in addition to it. 
 
 *Last Updated: 05-Dec-2021*
 
