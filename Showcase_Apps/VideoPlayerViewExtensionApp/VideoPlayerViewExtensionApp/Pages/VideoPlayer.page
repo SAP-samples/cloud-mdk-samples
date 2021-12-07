@@ -1,28 +1,41 @@
 {
-	"Caption": "VideoPlayer",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"Class": "VideoPlayerControl",
-					"Control": "VideoPlayerControl",
-					"Module": "VideoPlayerControl",
+					"_Type": "Section.Type.Extension",
+					"_Name": "SectionExtension0",
+					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
 					},
+					"Height": 300,
+					"Module": "VideoPlayerControl",
+					"Control": "VideoPlayerControl",
+					"Class": "VideoPlayerControl",
 					"ExtensionProperties": {
 						"videoURL": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-					},
-					"Height": 300,
-					"Visible": true,
-					"_Name": "SectionExtension0",
-					"_Type": "Section.Type.Extension"
+					}
 				}
-			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			]
 		}
 	],
+	"_Type": "Page",
 	"_Name": "VideoPlayer",
-	"_Type": "Page"
+	"Caption": "VideoPlayer",
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "LogoutToolbarItem",
+				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"OnPress": "/VideoPlayerViewExtensionApp/Actions/Logout.action"
+			}
+		]
+	}
 }
