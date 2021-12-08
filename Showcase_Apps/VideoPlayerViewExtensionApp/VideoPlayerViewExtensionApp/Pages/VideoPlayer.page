@@ -7,6 +7,9 @@
 				{
 					"_Type": "Section.Type.Extension",
 					"_Name": "SectionExtension0",
+					"Header": {
+						"UseTopPadding": false
+					},
 					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
