@@ -8,10 +8,13 @@ All of the applications in these folders are full working applications.  Please 
 ## Applications
 
 * Image Handling
+* Multi-Select & Context Menu
 * PDF Generation
+* Persistent Filters
 * Printing and QR Codes
-* Video Player View Extension App
-* Multi-Select & Context Menu App
+* Extension Samples
+    * Calender View
+    * Video Player
 
 ***
 
