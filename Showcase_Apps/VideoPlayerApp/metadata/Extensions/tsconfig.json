@@ -1,19 +1,18 @@
 {
     "compilerOptions": {
-        "target": "ES2017",
-        "module": "esnext",
-        "moduleResolution": "node",
+        "module": "commonjs",
+        "target": "es5",
         "noEmitHelpers": true,
         "lib": [
-            "es7",
+            "es6",
             "dom"
-        ],
+        ],        
         "baseUrl": "{PATH_TO_MDK_CLIENT}",
         "paths": {
             "*": ["app/*"],
             "mdk-sap":["./node_modules/mdk-sap"],
             "mdk-core/*": ["./modules/mdk-core/*"],
-            "@nativescript/*": ["./node_modules/@nativescript/*"]
+            "tns-core-modules/*": ["./node_modules/tns-core-modules/*"]
         }
     }
 }
