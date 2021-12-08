@@ -1,5 +1,5 @@
 {
-	"DestinationName": "com.sap.edm.sampleservice.v2",
+	"DestinationName": "SampleServiceV2",
 	"OfflineEnabled": true,
 	"SourceType": "Mobile"
 }

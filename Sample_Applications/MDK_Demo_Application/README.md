@@ -2,7 +2,7 @@
 
 This is the demo application that is included in the SAP Mobile Services Client that is distributed on the Apple App Store and Google Play Store.
 
-*Last Updated: 19-Nov-2020*
+*Last Updated: 29-Nov-2021*
 *** 
 ## Trying the Demo:
 

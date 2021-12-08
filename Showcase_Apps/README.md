@@ -6,7 +6,7 @@ All of the applications in these folders are full working applications.  Please 
 ***
 
 ## Applications
-
+* Calendar View Extension App
 * Image Handling
 * Multi-Select & Context Menu
 * PDF Generation
@@ -15,8 +15,6 @@ All of the applications in these folders are full working applications.  Please 
 * Extension Samples
     * Calender View
     * Video Player
-
-***
 
 ## Setup and Installation
 

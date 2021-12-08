@@ -1,0 +1,7 @@
+{
+	"_Type": "Register.Type.ExtensionControl",
+	"Module": "CalendarControl",
+	"Control": "CalendarControl",
+	"Class": "CalendarControl",
+	"Display": "/CalendarViewExtensionApp/Images/android_calendar.png"
+}

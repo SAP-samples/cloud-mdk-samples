@@ -1,0 +1,6 @@
+{
+    "Animated": true,
+    "Duration": 2,
+    "Message": "Sync offline data service complete",
+    "_Type": "Action.Type.ToastMessage"
+}

@@ -19,7 +19,7 @@ export default function GetProductImage(context) {
         } else if (platform.isIOS) {
             imageData = `data:image/example;base64,${result.data.base64Encoding()}`;	
         } else {  // Assume MDK Web
-            let buffer = Buffer.from(result.data);
+            let buffer = btoa([].reduce.call(new Uint8Array(result.data),function(p,c){return p+String.fromCharCode(c)},''));
             imageData = `data:image/example;base64,${buffer.toString('base64')}`;
         }
         return imageData;
