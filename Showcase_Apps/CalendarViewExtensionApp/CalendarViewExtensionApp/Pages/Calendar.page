@@ -5,20 +5,28 @@
 			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"OnValueChange": "/CalendarViewExtensionApp/Rules/CalendarPage/OnSelectDate.js",
-					"_Type": "Section.Type.Extension",
-					"_Name": "SectionExtension0",
+					"Controls": [
+						{
+							"OnValueChange": "/CalendarViewExtensionApp/Rules/CalendarPage/OnSelectDate.js",
+							"_Type": "Control.Type.FormCell.Extension",
+							"_Name": "FormCellExtension1",
+							"Module": "CalendarControl",
+							"Control": "CalendarControl",
+							"Class": "CalendarControl",
+							"Height": 300,
+							"IsVisible": true
+						}
+					],
 					"Header": {
+						"_Name": "SectionHeader0",
 						"UseTopPadding": false
 					},
 					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
 					},
-					"Height": 300,
-					"Module": "CalendarControl",
-					"Control": "CalendarControl",
-					"Class": "CalendarControl"
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
 				},
 				{
 					"_Type": "Section.Type.ObjectTable",
@@ -62,7 +70,7 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Main",
+	"_Name": "Calendar_FormCellSection",
 	"Caption": "/CalendarViewExtensionApp/Rules/CalendarPage/Caption.js",
 	"ToolBar": {
 		"Items": [
