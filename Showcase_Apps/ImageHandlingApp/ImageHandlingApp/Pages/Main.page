@@ -6,6 +6,33 @@
 			"_Type": "Control.Type.SectionedTable",
 			"Sections": [
 				{
+					"Header": {
+						"Caption": "Direct binding of OData Media (MDK 6.1 or newer)"
+					},
+					"Buttons": [
+						{
+							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_List.action",
+							"TextAlignment": "center",
+							"Title": "Products"
+						},
+						{
+							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_ImgColl.action",
+							"TextAlignment": "center",
+							"Title": "Products Image Collection"
+						},
+						{
+							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_List_OpenDoc.action",
+							"TextAlignment": "center",
+							"Title": "Products Image via Open Doc"
+						}
+					],
+					"_Name": "SectionButtonTable1",
+					"_Type": "Section.Type.ButtonTable"
+				},
+				{
+					"Header": {
+						"Caption": "Download and write OData Media to local filesystem (Pre MDK 6.1)"
+					},
 					"Buttons": [
 						{
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List.action",
@@ -21,14 +48,23 @@
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List_OpenDoc.action",
 							"TextAlignment": "center",
 							"Title": "Products Image via Open Doc"
-						},
+						}
+					],
+					"_Name": "SectionButtonTable0",
+					"_Type": "Section.Type.ButtonTable"
+				},
+				{
+					"Header": {
+						"Caption": "Uploading Media"
+					},
+					"Buttons": [
 						{
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToCreateProduct.action",
 							"TextAlignment": "center",
 							"Title": "Create Product with Image Attachment"
 						}
 					],
-					"_Name": "SectionButtonTable0",
+					"_Name": "SectionButtonTable2",
 					"_Type": "Section.Type.ButtonTable"
 				}
 			]
