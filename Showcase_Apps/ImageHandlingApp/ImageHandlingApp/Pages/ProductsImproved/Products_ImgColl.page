@@ -7,7 +7,7 @@
 		"Sections": [{
 			"ImageCell": {
 				"Image": "/ImageHandlingApp/Services/SampleServiceV2.service/{@odata.readLink}/$value",
-				"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_Detail.action",
+				"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_Detail.action",
 				"Title": "{Name}"
 			},
 			"Layout": {
