@@ -2,12 +2,18 @@
 
 This is a showcase application that demonstrate how to:
 
+For MDK 6.1 or newer client:
+
+1. Use direct OData media binding to easily display OData media images in various UI controls
+
+For MDK 6.0 or older client:
+
 1. Store media entity to your Offline OData storage
 2. Download the media out from your Offline OData storage
 3. Write the media to a file
 4. Display the media on supported UI controls or display the media using the Open Document action.
 
-*Last Updated: 03-Sep-2021*
+*Last Updated: 08-Feb-2022*
 
 ***
 
@@ -26,7 +32,7 @@ This is a showcase application that demonstrate how to:
 
 ### *MDK Client Version*
 
-* MDK 6.0 or higher
+* MDK 6.1 or higher
 
 ### *Data Source*
 
@@ -37,6 +43,13 @@ This is a showcase application that demonstrate how to:
 ## Key Highlights
 
 * Uses "AutomaticallyRetrievesStreams": true during Offline OData Initialization to pre-download media to the offline storage.
+
+For MDK 6.1 or newer client:
+
+* The demo will use direct OData media binding on image properties such as `DetailImage`, etc. to easily display OData media images in various UI controls.
+
+For MDK 6.0 or older client:
+
 * The demo will download the images from offline storage and write the images a folder and return the path to the images to the respective UI controls or actions.
 * Only for the purpose of showcasing, each demo will store the images in different folders.
 

@@ -1,0 +1,28 @@
+{
+	"Caption": "Products",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [{
+		"Sections": [{
+			"ImageCell": {
+				"Image": "/ImageHandlingApp/Services/SampleServiceV2.service/{@odata.readLink}/$value",
+				"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_Detail.action",
+				"Title": "{Name}"
+			},
+			"Layout": {
+				"LayoutType": "HorizontalScroll"
+			},
+			"Target": {
+				"EntitySet": "Products",
+				"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
+				"QueryOptions": "$orderby=Name"
+			},
+			"_Type": "Section.Type.ImageCollection"
+		}],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "Products_ImgColl_Improved"
+}
