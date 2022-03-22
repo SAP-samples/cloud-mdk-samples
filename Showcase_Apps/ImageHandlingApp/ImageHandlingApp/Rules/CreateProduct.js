@@ -18,6 +18,7 @@ export default function CreateProduct(context) {
 	}
 
 	var attachment = attachments[0]; // We'll take only first attachment because each media entity can only store 1 media.
+	
 	// Do this only for image files and only if "Reduce Large Image Size" is enabled
 	if (shouldCompressImage && attachment.contentType.startsWith("image/")) { 
 		// The NativeScript's ImageSource API will scale the image to your specified max dimension size while keeping the aspect ration intact
@@ -25,7 +26,7 @@ export default function CreateProduct(context) {
 		let maxImageSize = 1024; //This is max size in pixels (not in bytes)
 		var platform = context.nativescript.platformModule;
 		if (platform.isAndroid) {
-			// For Android, we have to concert content which is a byte array to an InputStream first
+			// For Android, we have to convert the content which is a byte array to an InputStream first
 			var data = new java.io.ByteArrayInputStream(attachment.content);
 			var img = ImageSource.fromDataSync(data);
 			// Only resize if one of the image's dimension is larger than maxImageSize
@@ -33,7 +34,6 @@ export default function CreateProduct(context) {
 				var imgResized = img.resize(maxImageSize, { "filter" : true});
 				var scaledBitmap = imgResized.android;
 				var outputStream = new java.io.ByteArrayOutputStream();
-				//Maybe add check for which type here?
 				scaledBitmap.compress(android.graphics.Bitmap.CompressFormat.PNG, 0 , outputStream);
 				attachment.content = outputStream.toByteArray()
 			}
