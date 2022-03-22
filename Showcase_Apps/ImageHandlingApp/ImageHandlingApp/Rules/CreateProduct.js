@@ -16,8 +16,8 @@ export default function CreateProduct(context) {
 			}
 		});
 	}
-	var attachment = attachments[0]; // We'll take only first attachment because each media entity can only store 1 media.
 
+	var attachment = attachments[0]; // We'll take only first attachment because each media entity can only store 1 media.
 	// Do this only for image files and only if "Reduce Large Image Size" is enabled
 	if (shouldCompressImage && attachment.contentType.startsWith("image/")) { 
 		// The NativeScript's ImageSource API will scale the image to your specified max dimension size while keeping the aspect ration intact

@@ -13,7 +13,13 @@ For MDK 6.0 or older client:
 3. Write the media to a file
 4. Display the media on supported UI controls or display the media using the Open Document action.
 
-*Last Updated: 08-Feb-2022*
+For all version of clients:
+
+1. Create OData media entity using ODataService `CreateMedia` action
+2. Add check to enforce limit of 1 image per media entity
+3. Resize the image before creating the media entity
+
+*Last Updated: 22-Mar-2022*
 
 ***
 
