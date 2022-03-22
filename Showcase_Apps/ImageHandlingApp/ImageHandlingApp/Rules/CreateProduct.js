@@ -6,7 +6,17 @@ import { ImageSource } from '@nativescript/core/image-source';
 export default function CreateProduct(context) {
 	var attachments = context.evaluateTargetPath("#Control:ProductImage/#Value");
 	var shouldCompressImage = context.evaluateTargetPath("#Control:CompressImage/#Value");
-	var attachment = attachments[0];
+	if (attachments.length !== 1) {
+		var message = attachments.length < 1 ? "Please add 1 product image" : "Max. 1 image allowed for the product";
+		return context.executeAction({
+			"Name": "/ImageHandlingApp/Actions/Generic/ToastMessage.action",
+			"Properties": {
+				"Message": message,
+				"Duration": 6
+			}
+		});
+	}
+	var attachment = attachments[0]; // We'll take only first attachment because each media entity can only store 1 media.
 
 	// Do this only for image files and only if "Reduce Large Image Size" is enabled
 	if (shouldCompressImage && attachment.contentType.startsWith("image/")) { 
