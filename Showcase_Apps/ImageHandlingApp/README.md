@@ -16,6 +16,7 @@ For MDK 6.0 or older client:
 For all version of clients:
 
 1. Create OData media entity using ODataService `CreateMedia` action
+   * Note: This will work for both online and offline OData, however, for this sample app it works in offline OData mode only because the Sample OData Service used in this sample app does not allow uploading media.
 2. Add check to enforce limit of 1 image per media entity
 3. Resize the image before creating the media entity
 
