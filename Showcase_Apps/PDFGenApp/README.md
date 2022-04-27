@@ -67,13 +67,14 @@ After executing the create-client command you need to:
 3. Execute `npm i pdfmake` to install the PDFMake library to your project (Note: PDFMake is not a NativeScript Plugin, therefore you can't use the `NSPlugins` property in `MDKProject.json` to install it)
 4. You need to do this every time you regenerate the project using the create-client command/cmd
 
-If you are using SAP Business Application Studio or Visual Studio Code to develop your app, then you need to add `"pdfmake/build/pdfmake"` to the externals property of the built-in MDK bundler tool.
+If you are using SAP Business Application Studio or Visual Studio Code to develop your app, then you need to add `"pdfmake/build/pdfmake"` and `"nativescript-pdf-view"` to the externals property of the built-in MDK bundler tool.
 
-Go to `Preferences` > Search for "MDK Bundler Externals" > Press Edit in settings.son > Add `"pdfmake/build/pdfmake"` inside the `"mdk.bundlerExternals"` array. e.g.
+Go to `Preferences` > Search for "MDK Bundler Externals" > Press Edit in settings.son > Add `"pdfmake/build/pdfmake"` and `"nativescript-pdf-view"` inside the `"mdk.bundlerExternals"` array. e.g.
 
 ```json
 "mdk.bundlerExternals": [
- "pdfmake/build/pdfmake"
+ "pdfmake/build/pdfmake",
+ "nativescript-pdf-view"
 ]
 ```
 
