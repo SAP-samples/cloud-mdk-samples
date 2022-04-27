@@ -1,5 +1,6 @@
 {
 	"Caption": "Sales Order Detail",
+	"PrefersLargeCaption": true,
 	"Controls": [
 		{
 			"Sections": [

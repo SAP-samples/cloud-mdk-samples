@@ -1,5 +1,6 @@
 {
 	"Caption": "Main",
+	"PrefersLargeCaption": true,
 	"Controls": [
 		{
 			"Sections": [
