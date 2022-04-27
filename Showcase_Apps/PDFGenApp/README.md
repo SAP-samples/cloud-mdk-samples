@@ -91,8 +91,16 @@ Once the app is running and you have onboarded, do the following steps to genera
 
 ### iOS
 
-![iOS PDF Screenshot](Screenshots/iOS.png)
+iOS PDF Screenshot with External Viewer
+![iOS PDF Screenshot with External Viewer](Screenshots/iOS.png)
+
+iOS PDF Screenshot with Inline Viewer (MDK Extension)
+![iOS PDF Screenshot with Inline Viewer](Screenshots/iOS_inline.png)
 
 ### Android
 
-![Android PDF Screenshot](Screenshots/Android.jpg)
+Android PDF Screenshot with External Viewer
+![Android PDF Screenshot with External Viewer](Screenshots/Android.jpg)
+
+Android PDF Screenshot with Inline Viewer (MDK Extension)
+![Android PDF Screenshot with Inline Viewer](Screenshots/Android_inline.jpg)
