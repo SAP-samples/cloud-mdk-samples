@@ -1,5 +1,6 @@
 {
 	"Caption": "Sales Order Detail",
+	"PrefersLargeCaption": true,
 	"Controls": [
 		{
 			"Sections": [
@@ -60,8 +61,14 @@
 			{
 				"_Type": "Control.Type.ToolbarItem",
 				"_Name": "GeneratePDFToolbarItem",
-				"Caption": "$(L,GeneratePDFToolbarItem_Label)",
-				"OnPress": "/PDFGeneratorApp/Rules/GeneratePDF.js"
+				"Caption": "$(L,GeneratePDFInlineToolbarItem_Label)",
+				"OnPress": "/PDFGeneratorApp/Rules/GeneratePDFAsBase64.js"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "GeneratePDFToolbarItem2",
+				"Caption": "$(L,GeneratePDFExternalToolbarItem_Label)",
+				"OnPress": "/PDFGeneratorApp/Rules/GeneratePDFAsFile.js"
 			}
 		]
 	},

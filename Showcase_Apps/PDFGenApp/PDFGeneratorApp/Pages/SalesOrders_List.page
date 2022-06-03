@@ -1,5 +1,6 @@
 {
 	"Caption": "SalesOrders_List",
+	"PrefersLargeCaption": true,
 	"Controls": [
 		{
 			"Sections": [{

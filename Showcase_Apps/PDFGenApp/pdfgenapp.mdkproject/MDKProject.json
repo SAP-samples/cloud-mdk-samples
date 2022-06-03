@@ -2,7 +2,7 @@
   "AppName": "PDFGenApp",
   "AppVersion": "1.0.0",
   "BundleID": "com.sap.mdk.mdk.pdfgenapp",
-  "Externals": ["pdfmake/build/pdfmake"],
-  "NSPlugins": [],
+  "Externals": ["pdfmake/build/pdfmake", "nativescript-pdf-view"],
+  "NSPlugins": ["nativescript-pdf-view"],
   "UrlScheme": "pdfgenapp"
 }

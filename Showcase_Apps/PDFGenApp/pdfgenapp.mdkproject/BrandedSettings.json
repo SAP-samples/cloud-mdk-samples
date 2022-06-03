@@ -10,6 +10,5 @@
     "LogLevel": "Debug"
   },
 	"DetailLabelViewText": "Demonstrate how to generate PDF document using 3rd party open source library",
-  "EncryptDatabase" : false,
   "PasscodeTimeout": 120
 }

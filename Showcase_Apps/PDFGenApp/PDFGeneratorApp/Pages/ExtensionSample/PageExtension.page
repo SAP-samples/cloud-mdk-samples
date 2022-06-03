@@ -1,0 +1,30 @@
+{
+    "Caption": "Sales Order Invoice",
+    "PrefersLargeCaption": true,
+    "Controls": [{
+      "Module": "MDKExtension",
+      "Control": "PDFViewer",
+      "Class": "PDFViewerClass",
+      "ExtensionProperties": {
+        "Source": "{#Page:SalesOrders_Detail/#ClientData/PDFSource}"
+      },
+      "_Name": "ExtensionControl",
+      "_Type": "Control.Type.Extension"
+    }],
+    "ToolBar": {
+      "Items": [
+        {
+				"_Name": "ToolBarItem1",
+				"_Type": "Control.Type.ToolbarItem",
+				"Caption": "Reject"
+			},
+			{
+				"_Name": "ToolBarItem2",
+				"_Type": "Control.Type.ToolbarItem",
+				"Caption": "Approve"
+			}
+      ]
+    },
+    "_Type": "Page",
+    "_Name": "ExtensionControl"
+}

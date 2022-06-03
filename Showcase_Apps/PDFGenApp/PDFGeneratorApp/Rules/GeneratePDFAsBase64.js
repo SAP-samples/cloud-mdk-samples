@@ -1,3 +1,4 @@
+import * as pdfMake from "pdfmake/build/pdfmake";
 import { isAndroid } from "@nativescript/core/platform";
 //data.json is taken from the github sample from the tutorial:
 // https://github.com/kumarandena/nativescript-pdf-generation/
@@ -10,6 +11,7 @@ import dataJson from "./data.json";
  * @param {IClientAPI} context
  */
 export default function GeneratePDF(context) {
+	
 	let pageProxy = context.getPageProxy();
 	let salesOrderHeader = pageProxy.binding;
 	let customer = salesOrderHeader.CustomerDetails;
@@ -18,6 +20,21 @@ export default function GeneratePDF(context) {
 	let itemsTable = sectionedTable.getSection("SalesOrderItemsTable");
 	let salesOrderItems = itemsTable.binding;
 	
+	// This is helper function to convert data buffer to native byte array
+	let _bufferToNativeArray = function (byteArray) {
+		let array;
+
+		if (isAndroid) {
+			array = Array.create("byte", byteArray.byteLength);
+			for (let i = 0; i < byteArray.length; i++) {
+				array[i] = new java.lang.Byte(byteArray[i]);
+			}
+		} else {
+			array = NSData.dataWithBytesLength(byteArray, byteArray.byteLength);
+		}
+		return array;
+	}
+
 	//Build the items table for the PDF content
 	var salesOrderItems_TableBody = [[ 'Product Name', 'Quantity', { text: "Net Amount", alignment: 'right' }]];
 	for (var i = 0; i < salesOrderItems.length; i++) {
@@ -78,5 +95,10 @@ export default function GeneratePDF(context) {
 		}
 	};
 
-	return docDefinition;
+	pdfMake.createPdf(docDefinition, '', '', dataJson.fonts)
+	.getBase64((data) => {
+		let clientData = context.getPageProxy().getClientData();
+		clientData.PDFSource = data;
+		context.executeAction("/PDFGeneratorApp/Actions/NavToPageExtension.action");
+	});
 }
