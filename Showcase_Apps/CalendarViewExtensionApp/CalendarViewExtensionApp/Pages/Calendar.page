@@ -13,7 +13,7 @@
 							"Module": "CalendarControl",
 							"Control": "CalendarControl",
 							"Class": "CalendarControl",
-							"Height": 300,
+							"Height": "$(PLT,280,300)",
 							"IsVisible": true
 						}
 					],
@@ -34,10 +34,14 @@
 						"Service": "/CalendarViewExtensionApp/Services/Sample.service",
 						"QueryOptions": "/CalendarViewExtensionApp/Rules/CalendarPage/QueryOptions.js"
 					},
+					"Header": {
+						"UseTopPadding": false
+					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
 					"EmptySection": {
-						"FooterVisible": false
+						"FooterVisible": false,
+						"Caption": "No sales orders found"
 					},
 					"ObjectCell": {
 						"ContextMenu": {
