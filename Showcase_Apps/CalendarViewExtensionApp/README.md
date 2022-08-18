@@ -41,7 +41,7 @@ For a more detailed information on the setup for MDK development please see the 
 
 * [Build Your Mobile Development Kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
 
-Before executing the create-client command you need to copy the [App_Resources](App_Resources) folder into your .mdkproject folder. For more information about adding native iOS source code check out this [page](https://docs.nativescript.org/guides/ios-source-code.html).
+Before executing the create-client command you need to copy the [App_Resources](App_Resources) folder into your .mdkproject folder. You can find more information about adding native iOS source code [here](https://docs.nativescript.org/guides/ios-source-code.html) and details about the structure of .mdkproject folder [here](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/custom-client/branding-custom-client.html#structure-of-mdkproject).
 
 [CalendarViewExtensionApp](CalendarViewExtensionApp) is the application metadata project that you can import into your SAP Business Application Studio workspace or SAP Web IDE Full Stack workspace. You should deploy this project to your mobile services account and make sure to enable feature `Mobile Sample OData ESPM` in your mobile services app.
 
