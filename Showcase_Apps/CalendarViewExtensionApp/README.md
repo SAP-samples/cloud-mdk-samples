@@ -67,5 +67,4 @@ In the mobile application, select `Sync` to synchronize offline store and downlo
 
 ## Screenshots
 
-<img src="Screenshots/android.gif" width="35%">
-<img src="Screenshots/iOS.gif" width="35%">
+<img src="Screenshots/android.gif" width="35%"> <img src="Screenshots/iOS.gif" width="35%">
