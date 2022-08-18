@@ -13,7 +13,7 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ### Supported Platforms
 
-* Android
+* iOS, Android
 
 ### MDK Client Version
 
