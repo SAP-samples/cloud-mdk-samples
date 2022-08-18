@@ -1,5 +1,5 @@
 //
-//  FUICalendarViewBridge.swift
+//  FUICalendarViewControllerBridge.swift
 //  CalendarControl
 //
 //  Created by Kuck, Robin on 11.08.22.
