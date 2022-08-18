@@ -4,26 +4,34 @@ import { BaseObservable } from 'mdk-core/observables/BaseObservable';
 
 export class CalendarControl extends IControl {
 
-  protected _calendarView: android.widget.CalendarView;
+  protected _calendarViewAndroid: android.widget.CalendarView;
+  protected _calendarViewControlleriOS: FUICalendarViewControllerBridge;
   private _observable: BaseObservable;
 
   public initialize(props) {
     super.initialize(props);
+    const that = this;
     if (app.android) {
-      var that = this;
-      this._calendarView = new android.widget.CalendarView(this.androidContext());
-      this._calendarView.setOnDateChangeListener(new android.widget.CalendarView.OnDateChangeListener({
+      this._calendarViewAndroid = new android.widget.CalendarView(this.androidContext());
+      this._calendarViewAndroid.setOnDateChangeListener(new android.widget.CalendarView.OnDateChangeListener({
         onSelectedDayChange: function (view: android.widget.CalendarView, year: number, month: number, dayOfMonth: number) {
-          let oDate = new Date(year + "-" + (month + 1) + "-" + dayOfMonth);
-          that.setValue(oDate, true, true);
+          that.setValue(new Date(year + "-" + (month + 1) + "-" + dayOfMonth), true, true);
         }
       }));
+    } else if (app.ios) {
+      this._calendarViewControlleriOS = FUICalendarViewControllerBridge.new();
+      this._calendarViewControlleriOS.onDateSelectCallback = (date: Date) => {
+        that.setValue(date, true, true);
+      }
     }
   }
 
   public view(): any {
     if (app.android) {
-      return this._calendarView;
+      return this._calendarViewAndroid;
+    }
+    if (app.ios) {
+      return this._calendarViewControlleriOS.view;
     }
   }
 
