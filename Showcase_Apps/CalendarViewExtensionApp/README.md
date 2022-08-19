@@ -1,6 +1,6 @@
 # Calendar View Extension App
 
-This is a showcase application that demonstrates how to implement the Calendar View for Android as Extension Control.
+This is a showcase application that demonstrates how to implement the Calendar View for Android and iOS as Extension Control.
 
 *Last Updated: 19-Aug-2022*
 
