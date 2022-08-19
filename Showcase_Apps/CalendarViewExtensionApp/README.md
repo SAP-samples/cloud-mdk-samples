@@ -28,7 +28,7 @@ This is a showcase application that demonstrates how to implement the Calendar V
 ## Key Highlights
 
 * Filtering of Object Table by selected date using implementation of Extensions `OnValueChange` event. This event is currently not supported in the layout editor, open the `Calendar.page` in code editor to access it. 
-    >You might not see any Sales Orders in the table. Read below on how to add additional Sales Orders)
+    >You might not see any Sales Orders in the table. Read below on how to add additional Sales Orders
 * Native control used: [Android CalendarView](https://developer.android.com/reference/android/widget/CalendarView) and [iOS FUICalendarView](https://help.sap.com/doc/978e4f6c968c4cc5a30f9d324aa4b1d7/Latest/en-US/Documents/Frameworks/SAPFiori/Classes/FUICalendarView.html) from [SAP BTP SDK for iOS](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/ios/introduction.html)
 
 ***
