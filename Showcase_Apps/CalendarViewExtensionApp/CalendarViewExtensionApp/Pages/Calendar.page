@@ -45,8 +45,7 @@
 					},
 					"ObjectCell": {
 						"ContextMenu": {
-							"Items": [
-							],
+							"Items": [],
 							"PerformFirstActionWithFullSwipe": true
 						},
 						"Title": "Order Date: $(D,{CreatedAt},'','',{format:'medium'})",
@@ -96,5 +95,6 @@
 				"OnPress": "/CalendarViewExtensionApp/Actions/Service/SyncStartedMessage.action"
 			}
 		]
-	}
+	},
+	"PrefersLargeCaption": true
 }
