@@ -21,7 +21,7 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ### Data Source
 
-* Mobile Services Sample OData ESPM (destination created as SampleServiceV2)
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v2)
 
 ***
 
