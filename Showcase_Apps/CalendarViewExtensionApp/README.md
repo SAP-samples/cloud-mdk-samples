@@ -2,7 +2,7 @@
 
 This is a showcase application that demonstrates how to implement the Calendar View for Android and iOS as Extension Control.
 
-*Last Updated: 19-Aug-2022*
+*Last Updated: 22-Aug-2022*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
