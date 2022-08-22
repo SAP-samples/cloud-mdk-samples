@@ -27,7 +27,7 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ## Key Highlights
 
-* Filtering of Object Table by selected date using implementation of Extensions `OnValueChange` event. This event is currently not supported in the layout editor, open the `Calendar.page` in code editor to access it. 
+* Filtering of Object Table by selected date using implementation of Extensions `OnValueChange` event.
     >You might not see any Sales Orders in the table. Read below on how to add additional Sales Orders
 * Native control used: [Android CalendarView](https://developer.android.com/reference/android/widget/CalendarView) and [iOS FUICalendarView](https://help.sap.com/doc/978e4f6c968c4cc5a30f9d324aa4b1d7/Latest/en-US/Documents/Frameworks/SAPFiori/Classes/FUICalendarView.html) from [SAP BTP SDK for iOS](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/ios/introduction.html)
 
@@ -35,16 +35,14 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ## Setup Instructions
 
-The [calendarviewextensionapp.mdkproject/App_Resources/iOS/src](calendarviewextensionapp.mdkproject/App_Resources/iOS/src) folder contains a native [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller) which implements the [FUICalendarView](https://help.sap.com/doc/978e4f6c968c4cc5a30f9d324aa4b1d7/Latest/en-US/Documents/Frameworks/SAPFiori/Classes/FUICalendarView.html) control. The application metadata is the [CalendarViewExtensionApp](CalendarViewExtensionApp) folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor.
-
-This application requires a custom build of Mobile Development Kit Client. Before executing the `create-client` command make sure the [FUICalendarViewControllerBridge.swift](calendarviewextensionapp.mdkproject/App_Resources/iOS/src/FUICalendarViewControllerBridge.swift) file is present in the `calendarviewextensionapp.mdkproject/App_Resources/iOS/src` folder. You can find more information about adding native iOS source code [here](https://docs.nativescript.org/guides/ios-source-code.html) and details about the structure of `.mdkproject` folder [here](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/custom-client/branding-custom-client.html#structure-of-mdkproject).
+This application requires a custom build of Mobile Development Client. The [calendarviewextensionapp.mdkproject/App_Resources/iOS/src](calendarviewextensionapp.mdkproject/App_Resources/iOS/src) folder contains a native [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller) which implements the [FUICalendarView](https://help.sap.com/doc/978e4f6c968c4cc5a30f9d324aa4b1d7/Latest/en-US/Documents/Frameworks/SAPFiori/Classes/FUICalendarView.html) control. You can find more information about adding native iOS source code [here](https://v7.docs.nativescript.org/guides/ios-source-code) and details about the structure of `.mdkproject` folder [here](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/custom-client/branding-custom-client.html#structure-of-mdkproject).
 
 For more detailed information on building a Mobile Development Kit Client please see the following tutorials:
 
 * [Build Your Mobile Development Kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
 * [Build Your Mobile Development Kit Client Using Cloud Build Service](https://developers.sap.com/tutorials/cp-mobile-dev-kit-cbs-client.html)
 
-[CalendarViewExtensionApp](CalendarViewExtensionApp) is the application metadata project that you can import into your SAP Business Application Studio workspace or SAP Web IDE Full Stack workspace. You should deploy this project to your mobile services account and make sure to enable feature `Mobile Sample OData ESPM` in your mobile services app.
+The application metadata is the [CalendarViewExtensionApp](CalendarViewExtensionApp) folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor and make sure to enable feature `Mobile Sample OData ESPM` in your mobile services app.
 
 ### Generate additional Sales Orders for current date
 
