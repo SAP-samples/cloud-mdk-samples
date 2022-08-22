@@ -1,0 +1,8 @@
+{
+  "AppName": "CalendarViewExtensionApp",
+  "AppVersion": "1.0.0",
+  "BundleID": "com.sap.mdk.calendarviewextensionapp",
+  "Externals": [],
+  "NSPlugins": [],
+  "UrlScheme": "calendarviewextensionapp"
+}
