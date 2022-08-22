@@ -9,6 +9,6 @@
     "MaxFileSizeInMegaBytes": 1,
     "LogLevel": "Debug"
   },
-	"DetailLabelViewText": "Demonstrate how to use calendar view as extension control",
+  "DetailLabelViewText": "Demonstrate how to use calendar view as extension control",
   "PasscodeTimeout": 120
 }
