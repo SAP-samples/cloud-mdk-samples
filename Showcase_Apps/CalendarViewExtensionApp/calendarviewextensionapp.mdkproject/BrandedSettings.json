@@ -1,0 +1,14 @@
+{
+  "ApplicationDisplayName": "Calendar View Extension App",
+  "ConnectionSettings": {
+    "EnableOverrides": true,
+    "EnableScreenSharing": true
+  },
+  "LogSettings": {
+    "FileName": "ClientLog.txt",
+    "MaxFileSizeInMegaBytes": 1,
+    "LogLevel": "Debug"
+  },
+  "DetailLabelViewText": "Demonstrate how to use calendar view as extension control",
+  "PasscodeTimeout": 120
+}
