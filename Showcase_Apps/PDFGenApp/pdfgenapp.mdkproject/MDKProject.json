@@ -4,5 +4,6 @@
   "BundleID": "com.sap.mdk.mdk.pdfgenapp",
   "Externals": ["pdfmake/build/pdfmake", "nativescript-pdf-view"],
   "NSPlugins": ["nativescript-pdf-view"],
+  "NPMPlugins": ["pdfmake"],
   "UrlScheme": "pdfgenapp"
 }
