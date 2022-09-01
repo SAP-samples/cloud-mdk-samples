@@ -59,13 +59,15 @@ For a more detailed information on the setup for MDK development please see the 
 
 * [Build Your Mobile Development Kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
 
-After executing the create-client command you need to:
 
-1. Generate this project using the the create-client command/cmd
-      * Note: From MDK version 6.0.3 or newer, you will get an error when running the create-client command e.g. `TS2307: Cannot find module 'pdfmake/build/pdfmake' or its corresponding type declarations.`. You can ignore this error and continue to the next step to add the `pdfmake` module.
-2. Go to the generated `PDFGenApp` folder in Terminal
-3. Execute `npm i pdfmake` to install the PDFMake library to your project (Note: PDFMake is not a NativeScript Plugin, therefore you can't use the `NSPlugins` property in `MDKProject.json` to install it)
-4. You need to do this every time you regenerate the project using the create-client command/cmd
+> Info: For MDK version 6.2 or older, you'd need to make additional changes after executing the create-client:
+>
+> 1. Generate this project using the the create-client command/cmd
+>      * Note: Between MDK version 6.0.3 to 6.2.x, you will get an error when running the create-client command e.g. `TS2307: Cannot find module 'pdfmake/build/pdfmake' or its corresponding type declarations.`. You can ignore this error and continue to the next step to add the `pdfmake` module.
+> 2. Go to the generated `PDFGenApp` folder in Terminal
+> 3. Execute `npm i pdfmake` to install the PDFMake library to your project (Note: PDFMake is not a NativeScript Plugin, therefore you can't use the `NSPlugins` property in `MDKProject.json` to install it)
+> 4. You need to do this every time you regenerate the project using the create-client command/cmd
+> 
 
 If you are using SAP Business Application Studio or Visual Studio Code to develop your app, then you need to add `"pdfmake/build/pdfmake"` and `"nativescript-pdf-view"` to the externals property of the built-in MDK bundler tool.
 
