@@ -98,7 +98,7 @@ iOS PDF Screenshot with External Viewer
 ![iOS PDF Screenshot with External Viewer](Screenshots/iOS.png)
 
 iOS PDF Screenshot with Inline Viewer (MDK Extension)
-![iOS PDF Screenshot with Inline Viewer](Screenshots/iOS_inline.png)
+![iOS PDF Screenshot with Inline Viewer](Screenshots/iOS_inline.jpg)
 
 ### Android
 
