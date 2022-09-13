@@ -1,0 +1,73 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": 10,
+							"_Type": "Control.Type.FormCell.Extension",
+							"_Name": "ExtensionFormCell1",
+							"Module": "NativeScriptViewExtension",
+							"Control": "NSView",
+							"Class": "NSViewClass",
+							"ExtensionProperties": {
+								"MinValue": 0,
+								"MaxValue": 100,
+								"Title": "Counter"
+							},
+							"Height": 100,
+							"OnValueChange": "/NativeScriptViewExtensionApp/Rules/FormCellExtensionOnValueChange.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCurrentValue",
+							"Caption": "Current Value"
+						}
+					],
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "Main",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Set Counter to 50",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/NativeScriptViewExtensionApp/Rules/FormCellExtensionSetValue.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "LogoutToolbarItem",
+				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"OnPress": "/NativeScriptViewExtensionApp/Actions/Logout.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "UpdateToolbarItem",
+				"Caption": "Update",
+				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
+				"Clickable": true,
+				"OnPress": "/NativeScriptViewExtensionApp/Actions/AppUpdateProgressBanner.action"
+			}
+		]
+	}
+}
