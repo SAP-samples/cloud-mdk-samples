@@ -24,7 +24,7 @@ create and return a NativeScript view in an extension control for Form Cell Exte
 
 ### MDK Client Version
 
-* MDK 2208 or higher
+* MDK 6.3 or higher
 
 ***
 
