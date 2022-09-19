@@ -5,7 +5,7 @@ create and return a NativeScript view in an extension control for Form Cell Exte
 
  You can do similar implementation of creating and returning a NativeScript view in an extension control for Section Extension, Object Cell extension and Object Header Extension types too.
 
-*Last Updated: 16-Sept-2022*
+*Last Updated: 19-Sept-2022*
 
 ***
 
@@ -37,9 +37,11 @@ create and return a NativeScript view in an extension control for Form Cell Exte
 
 ## Setup Instructions
 
-No additional steps required. The content of [NativeScriptViewExtensionApp/](NativeScriptViewExtensionApp/) folder can be used as is to run the application.
+No additional steps required. The content of [NativeScriptViewExtensionApp](NativeScriptViewExtensionApp/) folder can be used as is to run the application.
 
 ## Screenshots
+
+> The `Current Value` in the UI is a normal MDK Simple Property field and only the slider is the NativeScript Extension.
 
 ### iOS client
 
