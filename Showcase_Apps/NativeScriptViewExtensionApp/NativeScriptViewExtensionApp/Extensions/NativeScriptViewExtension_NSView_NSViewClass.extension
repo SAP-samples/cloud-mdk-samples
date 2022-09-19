@@ -1,0 +1,25 @@
+{
+	"_Type": "Register.Type.ExtensionControl",
+	"Module": "NativeScriptViewExtension",
+	"Control": "NSView",
+	"Class": "NSViewClass",
+	"Display": "/NativeScriptViewExtensionApp/Images/Slider.png",
+	"ExtensionPropertiesSchema": {
+		"type": "object",
+		"BindType": "",
+		"properties": {
+			"MaxValue": {
+				"type": "number",
+				"BindType": ""
+			},
+			"MinValue": {
+				"type": "number",
+				"BindType": ""
+			},
+			"Title": {
+				"type": "string",
+				"BindType": ""
+			}
+		}
+	}
+}

@@ -14,6 +14,7 @@ All of the applications in these folders are full working applications.  Please 
 * Extension Samples
     * Calender View
     * Video Player
+    * NativeScript View
 
 ## Setup and Installation
 
