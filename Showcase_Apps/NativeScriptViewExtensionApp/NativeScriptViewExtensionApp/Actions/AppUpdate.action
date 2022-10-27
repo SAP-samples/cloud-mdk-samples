@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/NativeScriptViewExtensionApp/Rules/AppUpdateFailure.js",
+    "OnSuccess": "/NativeScriptViewExtensionApp/Rules/AppUpdateSuccess.js"
+}
