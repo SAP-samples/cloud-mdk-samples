@@ -2,27 +2,30 @@ export default function SetUserLogLevel(context) {
     try {
         if (context.getValue() && context.getValue()[0]) {
             var logger = context.getLogger();
-            var listPickerValue = context.getValue()[0].ReturnValue;
-            if (listPickerValue) {
-                switch (listPickerValue) {
-                    case 'Debug':
-                        logger.setLevel('Debug');
-                        break;
-                    case 'Error':
-                        logger.setLevel('Error');
-                        break;
-                    case 'Warn':
-                        logger.setLevel('Warn');
-                        break;
-                    case 'Info':
-                        logger.setLevel('Info');
-                        break;
-                    default:
-                        // eslint-disable-next-line no-console
-                        console.log(`unrecognized key ${listPickerValue}`);
-                }
-                return listPickerValue;
+            var loggerLevel = context.getValue()[0].ReturnValue;
+            logger.setLevel(loggerLevel)
+
+            const container = context.getPageProxy().getControl('FormCellContainer');
+            const CategoriesListPicker = container.getControl('CategoriesListPicker');
+            let debugODataProvider = true;
+            let tracingEnabled = true;
+            let tracingCategories = CategoriesListPicker.getValue().map(function (cat) {
+                return cat.ReturnValue;
+            });
+            if (loggerLevel == 'Trace') {
+                CategoriesListPicker.setVisible(true);
+                CategoriesListPicker.setEditable(true);
+                CategoriesListPicker.redraw();
+            } else {
+                CategoriesListPicker.setVisible(false);
+                CategoriesListPicker.setEditable(false);
+                CategoriesListPicker.redraw();
+                debugODataProvider = false;
+                tracingEnabled = false;
+                tracingCategories = [];
             }
+            context.setDebugSettings(debugODataProvider, tracingEnabled, tracingCategories);
+            return loggerLevel;
         }
     } catch (exception) {
         logger.log(String(exception), 'Error');

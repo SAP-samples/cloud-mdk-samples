@@ -5,10 +5,6 @@ export default function LogLevels(context) {
         'ReturnValue': 'Error',
     });
     levels.push({
-        'DisplayValue': 'Debug',
-        'ReturnValue': 'Debug',
-    });
-    levels.push({
         'DisplayValue': 'Warning',
         'ReturnValue': 'Warn',
     });
@@ -16,5 +12,13 @@ export default function LogLevels(context) {
         'DisplayValue': 'Info',
         'ReturnValue': 'Info',
     });
+    levels.push({
+        'DisplayValue': 'Debug',
+        'ReturnValue': 'Debug',
+    });    
+    levels.push({
+        'DisplayValue': 'Trace',
+        'ReturnValue': 'Trace',
+    });    
     return levels;
 }

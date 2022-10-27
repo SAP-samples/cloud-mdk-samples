@@ -1,27 +1,49 @@
 {
-	"Caption": "Activity Log",
 	"Controls": [
 		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer",
 			"Sections": [
 				{
 					"Controls": [
 						{
-							"Caption": "Enable Logging",
-							"IsEditable": true,
-							"OnValueChange": "/MDKDemoApp/Rules/Logging/ToggleLogging.js",
 							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch",
 							"_Name": "EnableLogSwitch",
-							"_Type": "Control.Type.FormCell.Switch"
+							"IsEditable": true,
+							"Caption": "Enable Logging",
+							"OnValueChange": "/MDKDemoApp/Rules/Logging/ToggleLogging.js",
+							"Value": "/MDKDemoApp/Rules/Logging/IsLoggerOn.js"
 						},
 						{
+							"IsSearchEnabled": false,
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "LogLevelListPicker",
+							"IsEditable": false,
 							"AllowMultipleSelection": false,
 							"Caption": "Log Level",
-							"IsEditable": false,
-							"IsSearchEnabled": false,
 							"OnValueChange": "/MDKDemoApp/Rules/Logging/SetUserLogLevel.js",
 							"PickerItems": "/MDKDemoApp/Rules/Logging/LogLevels.js",
-							"_Name": "LogLevelListPicker",
-							"_Type": "Control.Type.FormCell.ListPicker"
+							"Value": "/MDKDemoApp/Rules/Logging/GetCurrentLogLevel.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "CategoriesListPicker",
+							"IsEditable": true,
+							"IsVisible": false,
+							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
+							"Caption": "Tracing Categories",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one or more categories to enable",
+							"OnValueChange": "/MDKDemoApp/Rules/Logging/ToggleCategories.js",
+							"IsSelectedSectionEnabled": true,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": "/MDKDemoApp/Rules/Logging/TracingCategories.js",
+							"Value": "/MDKDemoApp/Rules/Logging/DefaultCategoriesList.js"
 						}
 					],
 					"Visible": true
@@ -29,21 +51,21 @@
 				{
 					"Controls": [
 						{
-							"OnPress": "/MDKDemoApp/Actions/Logging/UploadLogProgress.action",
-							"TextAlignment": "center",
-							"Title": "Send Activity Log",
+							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Send",
-							"_Type": "Control.Type.FormCell.Button"
+							"Title": "Send Activity Log",
+							"TextAlignment": "Center",
+							"Alignment": "Center",
+							"OnPress": "/MDKDemoApp/Actions/Logging/UploadLogProgress.action"
 						}
 					],
 					"Visible": true
 				}
-			],
-			"_Name": "FormCellContainer",
-			"_Type": "Control.Type.FormCellContainer"
+			]
 		}
 	],
-	"OnLoaded": "/MDKDemoApp/Rules/Logging/UserLogSetting.js",
+	"_Type": "Page",
 	"_Name": "UserActivityLog",
-	"_Type": "Page"
+	"Caption": "Activity Log",
+	"OnLoaded": "/MDKDemoApp/Rules/Logging/UserLogSetting.js"
 }
