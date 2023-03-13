@@ -33,4 +33,4 @@ No additional steps required. The content of [InlineValidationViewApp/](InlineVa
 
 ## Screenshots
 
-<img src="Screenshots/android.png" width="35%"> <img src="Screenshots/ios.jpeg" width="35%"> <img src="Screenshots/web.jpeg" width="35%">
+<img src="Screenshots/android.png" width="35%"> <img src="Screenshots/ios.png" width="35%"> <img src="Screenshots/web.png" width="75%">
