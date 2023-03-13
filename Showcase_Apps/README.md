@@ -7,6 +7,7 @@ All of the applications in these folders are full working applications.  Please 
 
 ## Applications
 * Image Handling
+* FormCell Inline Validation
 * Multi-Select & Context Menu
 * PDF Generation
 * Persistent Filters
