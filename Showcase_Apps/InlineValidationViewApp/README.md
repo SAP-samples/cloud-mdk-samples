@@ -1,6 +1,8 @@
 # Inline Validation View App
 
-This is a showcase application that demonstrates how to implement a validation view for [FormCell controls](https://help.sap.com/doc/3642933ef2e1478fb1578ef2acba4ae9/Latest/en-US/reference/schemadoc/index.html#formcell) for example for displaying error messages during input validation.
+This is a showcase application that demonstrates how to implement a proper error feedback for [FormCell controls](https://help.sap.com/doc/3642933ef2e1478fb1578ef2acba4ae9/Latest/en-US/reference/schemadoc/index.html#formcell) using inline validation views.
+
+For more details about Inline Errors check out the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-ios/article/inline-errors/)
 
 *Last Updated: 13-Mar-2023*
 
@@ -20,10 +22,6 @@ This is a showcase application that demonstrates how to implement a validation v
 ### MDK Client Version
 
 * MDK 6.3 or higher
-
-## Key Highlights
-
-* TBD
 
 ***
 
