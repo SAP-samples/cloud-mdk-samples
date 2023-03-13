@@ -1,5 +1,4 @@
 /**
- * Describe this function...
  * @param {IClientAPI} clientAPI
  * @param {IFormCellProxy} control
  * @param {string} errorText

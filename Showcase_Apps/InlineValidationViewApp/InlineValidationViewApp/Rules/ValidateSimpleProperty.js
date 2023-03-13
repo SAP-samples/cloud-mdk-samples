@@ -1,7 +1,6 @@
 import ShowInlineValidationView from "./ShowInlineValidationView";
 
 /**
- * Describe this function...
  * @param {IClientAPI} clientAPI
  */
 export default function ValidateSimpleProperty(clientAPI) {
