@@ -245,7 +245,7 @@
 						"UseTopPadding": true,
 						"Caption": "Inline Signature Capture"
 					},
-					"Visible": true,
+					"Visible": "$(PLT,true,true,false)",
 					"EmptySection": {
 						"FooterVisible": false
 					},
@@ -272,7 +272,7 @@
 						"UseTopPadding": true,
 						"Caption": "Signature Capture"
 					},
-					"Visible": true,
+					"Visible": "$(PLT,true,true,false)",
 					"EmptySection": {
 						"FooterVisible": false
 					},
