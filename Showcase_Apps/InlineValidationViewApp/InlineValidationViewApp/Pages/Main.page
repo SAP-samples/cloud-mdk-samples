@@ -99,7 +99,7 @@
 							"PickerPrompt": "Please select one single item",
 							"HelperText": "HelperText",
 							"IsSelectedSectionEnabled": false,
-							"IsPickerDismissedOnSelection": false,
+							"IsPickerDismissedOnSelection": true,
 							"IsSearchCancelledAfterSelection": false,
 							"AllowDefaultValueIfOneItem": false,
 							"PickerItems": [
