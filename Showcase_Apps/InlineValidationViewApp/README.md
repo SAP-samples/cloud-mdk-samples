@@ -21,7 +21,7 @@ For more details about Inline Errors check out the [SAP Fiori Design Guidelines]
 
 ### MDK Client Version
 
-* MDK 6.3 or higher
+* MDK 23.4 or higher
 
 ***
 
