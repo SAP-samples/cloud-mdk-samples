@@ -52,7 +52,9 @@
 						"Footnote": "{SalesOrderId}",
 						"StatusText": "{LifeCycleStatusName}",
 						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
-						"DetailImageIsCircular": false,
+						"AvatarStack": {
+							"ImageIsCircular": false
+						},
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "none",
 						"Selected": false
