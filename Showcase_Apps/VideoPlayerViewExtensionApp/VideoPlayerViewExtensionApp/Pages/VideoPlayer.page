@@ -40,5 +40,6 @@
 				"OnPress": "/VideoPlayerViewExtensionApp/Actions/Logout.action"
 			}
 		]
-	}
+	},
+	"PrefersLargeCaption": false
 }
