@@ -17,7 +17,7 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ### MDK Client Version
 
-* MDK 6.1 or higher
+* MDK 23.4 or higher
 
 ### Data Source
 
