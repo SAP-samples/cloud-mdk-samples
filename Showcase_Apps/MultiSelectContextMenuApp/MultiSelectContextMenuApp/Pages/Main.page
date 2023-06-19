@@ -7,9 +7,11 @@
 					"Buttons": [
 						{
 							"OnPress": "/MultiSelectContextMenuApp/Actions/NavToSalesOrders_ListPage.action",
-							"TextAlignment": "center",
+							"Alignment": "Center",
 							"Title": "$(L,NavToSalesOrders_List_Button)",
-							"Visible": true
+							"Visible": true,
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					],
 					"EmptySection": {
@@ -38,5 +40,6 @@
 		]
 	},
 	"_Name": "Main",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

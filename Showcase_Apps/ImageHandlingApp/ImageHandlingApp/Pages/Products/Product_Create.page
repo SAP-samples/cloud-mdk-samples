@@ -10,71 +10,77 @@
 			{
 				"Position": "Right",
 				"Icon": "sap-icon://save",
-        		"OnPress": "/ImageHandlingApp/Rules/CreateProduct.js"
+				"OnPress": "/ImageHandlingApp/Rules/CreateProduct.js"
 			}
 		]
 	},
 	"Controls": [
 		{
-			"Sections": [{
-				"_Type": "Section.Type.FormCell",
-				"Controls": [
-					{
-						"_Type": "Control.Type.FormCell.SimpleProperty",
-						"_Name": "ProductId",
-						"Caption": "Product ID",
-						"Value": "abc-123-456-"
-					},
-					{
-						"_Type": "Control.Type.FormCell.SimpleProperty",
-						"_Name": "ProductName",
-						"Caption": "Name",
-						"Value": "A Test Product "
-					},
-					{
-						"_Type": "Control.Type.FormCell.Attachment",
-						"_Name": "ProductImage",
-						"AttachmentTitle": "Product's Image (Max. 1 Image)",
-						"AttachmentActionType": ["AddPhoto", "TakePhoto"]
-					},
-					{
-						"_Type": "Control.Type.FormCell.Switch",
-						"_Name": "CompressImage",
-						"Caption": "Reduce Large Image Size",
-						"Value": true
-					},
-					{
-						"_Type": "Control.Type.FormCell.SimpleProperty",
-						"_Name": "ProductPrice",
-						"Caption": "Price",
-						"Value": "20",
-						"KeyboardType": "Number"
-					},
-					{
-						"_Type": "Control.Type.FormCell.Note",
-						"_Name": "ProductShortDesc",
-						"Caption": "Short Description",
-						"Value": "This is a Sample Test Product"
-					},
-					{
-						"_Type": "Control.Type.FormCell.Note",
-						"_Name": "ProductLongDesc",
-						"Caption": "Long Description",
-						"MinNumberOfLines": 4,
-						"Value": "This is a Sample Test Product For Testing Downloading and Uploading Media."
-					},
-					{
-						"_Type": "Control.Type.FormCell.SimpleProperty",
-						"_Name": "ProductCurrencyCode",
-						"Caption": "Currency Code",
-						"Value": "EUR"
-					}
-				]
-			}],
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ProductId",
+							"Caption": "Product ID",
+							"Value": "abc-123-456-"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ProductName",
+							"Caption": "Name",
+							"Value": "A Test Product "
+						},
+						{
+							"_Type": "Control.Type.FormCell.Attachment",
+							"_Name": "ProductImage",
+							"AttachmentTitle": "Product's Image (Max. 1 Image)",
+							"AttachmentActionType": [
+								"AddPhoto",
+								"TakePhoto"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "CompressImage",
+							"Caption": "Reduce Large Image Size",
+							"Value": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ProductPrice",
+							"Caption": "Price",
+							"Value": "20",
+							"KeyboardType": "Number"
+						},
+						{
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "ProductShortDesc",
+							"Caption": "Short Description",
+							"Value": "This is a Sample Test Product"
+						},
+						{
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "ProductLongDesc",
+							"Caption": "Long Description",
+							"MinNumberOfLines": 4,
+							"Value": "This is a Sample Test Product For Testing Downloading and Uploading Media."
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ProductCurrencyCode",
+							"Caption": "Currency Code",
+							"Value": "EUR"
+						}
+					]
+				}
+			],
 			"_Name": "SectionedTable0",
 			"_Type": "Control.Type.SectionedTable"
 		}
 	],
 	"_Name": "Product_Create",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

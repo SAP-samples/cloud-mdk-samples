@@ -2,55 +2,62 @@
 	"Caption": "Sales Order Detail",
 	"Controls": [
 		{
-			"Sections": [{
-				"_Type": "Section.Type.ObjectHeader",
-				"ObjectHeader": {
-					"HeadlineText": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
-					"Subhead": "{SalesOrderId}",
-					"StatusText": "$(C, {NetAmount}, {CurrencyCode})",
-					"Tags": [
-						"{LifeCycleStatusName}"
-					]
-				}
-			}, {
-				"_Type": "Section.Type.KeyValue",
-				"KeyAndValues": [
-					{
-						"KeyName": "Net Amount",
-						"Value": "$(C, {NetAmount}, {CurrencyCode})"
-					},
-					{
-						"KeyName": "Gross Amount",
-						"Value": "$(C, {GrossAmount}, {CurrencyCode})"
-					},
-					{
-						"KeyName": "Tax Amount",
-						"Value": "$(C, {TaxAmount}, {CurrencyCode})"
+			"Sections": [
+				{
+					"_Type": "Section.Type.ObjectHeader",
+					"ObjectHeader": {
+						"Tags": [
+							{
+								"Text": "{LifeCycleStatusName}"
+							}
+						],
+						"HeadlineText": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
+						"Subhead": "{SalesOrderId}",
+						"StatusText": "$(C, {NetAmount}, {CurrencyCode})"
 					}
-				]
-			}, {
-				"Header": {
-					"Caption": "Items"
 				},
-				"_Type": "Section.Type.ObjectTable",
-				"_Name": "SalesOrderItemsTable",
-				"Target": {
-					"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
-					"EntitySet": "{@odata.readLink}/Items",
-					"QueryOptions": "$expand=ProductDetails"
+				{
+					"_Type": "Section.Type.KeyValue",
+					"KeyAndValues": [
+						{
+							"KeyName": "Net Amount",
+							"Value": "$(C, {NetAmount}, {CurrencyCode})"
+						},
+						{
+							"KeyName": "Gross Amount",
+							"Value": "$(C, {GrossAmount}, {CurrencyCode})"
+						},
+						{
+							"KeyName": "Tax Amount",
+							"Value": "$(C, {TaxAmount}, {CurrencyCode})"
+						}
+					]
 				},
-				"ObjectCell": {
-					"PreserveIconStackSpacing": false,
-					"Title": "{ProductDetails/Name}",
-					"Subhead": "{ProductDetails/CategoryName}",
-					"StatusText": "$(C, {NetAmount}, {CurrencyCode})",
-					"SubStatusText": "{Quantity}{QuantityUnit}"
+				{
+					"Header": {
+						"Caption": "Items"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"_Name": "SalesOrderItemsTable",
+					"Target": {
+						"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+						"EntitySet": "{@odata.readLink}/Items",
+						"QueryOptions": "$expand=ProductDetails"
+					},
+					"ObjectCell": {
+						"PreserveIconStackSpacing": false,
+						"Title": "{ProductDetails/Name}",
+						"Subhead": "{ProductDetails/CategoryName}",
+						"StatusText": "$(C, {NetAmount}, {CurrencyCode})",
+						"SubStatusText": "{Quantity}{QuantityUnit}"
+					}
 				}
-			}],
+			],
 			"_Name": "SectionedTable0",
 			"_Type": "Control.Type.SectionedTable"
 		}
 	],
 	"_Name": "SalesOrders_Detail",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

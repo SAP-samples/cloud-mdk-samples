@@ -12,18 +12,24 @@
 					"Buttons": [
 						{
 							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_List.action",
-							"TextAlignment": "center",
-							"Title": "Products"
+							"Alignment": "Center",
+							"Title": "Products",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						},
 						{
 							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_ImgColl.action",
-							"TextAlignment": "center",
-							"Title": "Products Image Collection"
+							"Alignment": "Center",
+							"Title": "Products Image Collection",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						},
 						{
 							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_List_OpenDoc.action",
-							"TextAlignment": "center",
-							"Title": "Products Image via Open Doc"
+							"Alignment": "Center",
+							"Title": "Products Image via Open Doc",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					],
 					"_Name": "SectionButtonTable1",
@@ -36,18 +42,24 @@
 					"Buttons": [
 						{
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List.action",
-							"TextAlignment": "center",
-							"Title": "Products"
+							"Alignment": "Center",
+							"Title": "Products",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						},
 						{
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_ImgColl.action",
-							"TextAlignment": "center",
-							"Title": "Products Image Collection"
+							"Alignment": "Center",
+							"Title": "Products Image Collection",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						},
 						{
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List_OpenDoc.action",
-							"TextAlignment": "center",
-							"Title": "Products Image via Open Doc"
+							"Alignment": "Center",
+							"Title": "Products Image via Open Doc",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					],
 					"_Name": "SectionButtonTable0",
@@ -60,8 +72,10 @@
 					"Buttons": [
 						{
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToCreateProduct.action",
-							"TextAlignment": "center",
-							"Title": "Create Product with Image Attachment"
+							"Alignment": "Center",
+							"Title": "Create Product with Image Attachment",
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					],
 					"_Name": "SectionButtonTable2",
@@ -87,5 +101,6 @@
 				"OnPress": "/ImageHandlingApp/Actions/Service/SyncStartedMessage.action"
 			}
 		]
-	}
+	},
+	"PrefersLargeCaption": true
 }
