@@ -47,8 +47,14 @@
 					"OnSelectionChanged": "/MultiSelectContextMenuApp/Rules/CalculateSelection.js",
 					"ObjectCell": {
 						"PreserveIconStackSpacing": false,
-						"DetailImageIsCircular": true,
-						"DetailImageText": "/MultiSelectContextMenuApp/Rules/GetAvatarName.js",
+						"AvatarStack": {
+							"ImageIsCircular": true,
+							"Avatars": [
+								{
+									"ImageText": "/MultiSelectContextMenuApp/Rules/GetAvatarName.js"
+								}
+							]
+						},
 						"Title": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
 						"Subhead": "{SalesOrderId}",
 						"Footnote": "$(DT, {CreatedAt})",
@@ -191,5 +197,6 @@
 		]
 	},
 	"_Name": "SalesOrders_List",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

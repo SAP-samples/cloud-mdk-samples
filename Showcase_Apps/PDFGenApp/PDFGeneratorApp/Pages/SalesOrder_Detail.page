@@ -7,12 +7,14 @@
 				{
 					"_Type": "Section.Type.ObjectHeader",
 					"ObjectHeader": {
+						"Tags": [
+							{
+								"Text": "{LifeCycleStatusName}"
+							}
+						],
 						"HeadlineText": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
 						"Subhead": "{SalesOrderId}",
-						"StatusText": "$(C, {NetAmount}, {CurrencyCode})",
-						"Tags": [
-							"{LifeCycleStatusName}"
-						]
+						"StatusText": "$(C, {NetAmount}, {CurrencyCode})"
 					}
 				},
 				{

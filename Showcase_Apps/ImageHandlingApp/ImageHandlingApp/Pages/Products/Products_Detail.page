@@ -1,91 +1,115 @@
 {
 	"Caption": "Product Details",
-
 	"ActionBar": {
 		"Items": []
 	},
-	"Controls": [{
-		"Sections": [{
-			"ObjectHeader": {
-				"DetailImage": "/ImageHandlingApp/Rules/Product/GetDetailImage.js",
-				"HeadlineText": "{Name}",
-				"Subhead": "{CategoryName}",
-				"Tags": [],
-				"BodyText": "",
-				"Footnote": "",
-				"Description": "",
-				"StatusText": "",
-				"StatusImage": "",
-				"SubstatusImage": "",
-				"SubstatusText": ""
-			},
-			"_Type": "Section.Type.ObjectHeader"
-		}, {
-			"KeyAndValues": [{
-				"KeyName": "Category",
-				"Value": "{Category}"
-			}, {
-				"KeyName": "CategoryName",
-				"Value": "{CategoryName}"
-			}, {
-				"KeyName": "CurrencyCode",
-				"Value": "{CurrencyCode}"
-			}, {
-				"KeyName": "DimensionDepth",
-				"Value": "{DimensionDepth}"
-			}, {
-				"KeyName": "DimensionHeight",
-				"Value": "{DimensionHeight}"
-			}, {
-				"KeyName": "DimensionUnit",
-				"Value": "{DimensionUnit}"
-			}, {
-				"KeyName": "DimensionWidth",
-				"Value": "{DimensionWidth}"
-			}, {
-				"KeyName": "LongDescription",
-				"Value": "{LongDescription}"
-			}, {
-				"KeyName": "Name",
-				"Value": "{Name}"
-			}, {
-				"KeyName": "PictureUrl",
-				"Value": "{PictureUrl}"
-			}, {
-				"KeyName": "Price",
-				"Value": "{Price}"
-			}, {
-				"KeyName": "ProductId",
-				"Value": "{ProductId}"
-			}, {
-				"KeyName": "QuantityUnit",
-				"Value": "{QuantityUnit}"
-			}, {
-				"KeyName": "ShortDescription",
-				"Value": "{ShortDescription}"
-			}, {
-				"KeyName": "SupplierId",
-				"Value": "{SupplierId}"
-			}, {
-				"KeyName": "UpdatedTimestamp",
-				"Value": "{UpdatedTimestamp}"
-			}, {
-				"KeyName": "Weight",
-				"Value": "{Weight}"
-			}, {
-				"KeyName": "WeightUnit",
-				"Value": "{WeightUnit}"
-			}],
-			"Layout": {
-				"NumberOfColumns": 2
-			},
-			"MaxItemCount": 1,
-			"_Name": "SectionKeyValue0",
-			"_Type": "Section.Type.KeyValue"
-		}],
-		"_Type": "Control.Type.SectionedTable",
-		"_Name": "SectionedTable"
-	}],
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "/ImageHandlingApp/Rules/Product/GetDetailImage.js",
+						"HeadlineText": "{Name}",
+						"Subhead": "{CategoryName}",
+						"BodyText": "",
+						"Footnote": "",
+						"Description": "",
+						"StatusText": "",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Category",
+							"Value": "{Category}"
+						},
+						{
+							"KeyName": "CategoryName",
+							"Value": "{CategoryName}"
+						},
+						{
+							"KeyName": "CurrencyCode",
+							"Value": "{CurrencyCode}"
+						},
+						{
+							"KeyName": "DimensionDepth",
+							"Value": "{DimensionDepth}"
+						},
+						{
+							"KeyName": "DimensionHeight",
+							"Value": "{DimensionHeight}"
+						},
+						{
+							"KeyName": "DimensionUnit",
+							"Value": "{DimensionUnit}"
+						},
+						{
+							"KeyName": "DimensionWidth",
+							"Value": "{DimensionWidth}"
+						},
+						{
+							"KeyName": "LongDescription",
+							"Value": "{LongDescription}"
+						},
+						{
+							"KeyName": "Name",
+							"Value": "{Name}"
+						},
+						{
+							"KeyName": "PictureUrl",
+							"Value": "{PictureUrl}"
+						},
+						{
+							"KeyName": "Price",
+							"Value": "{Price}"
+						},
+						{
+							"KeyName": "ProductId",
+							"Value": "{ProductId}"
+						},
+						{
+							"KeyName": "QuantityUnit",
+							"Value": "{QuantityUnit}"
+						},
+						{
+							"KeyName": "ShortDescription",
+							"Value": "{ShortDescription}"
+						},
+						{
+							"KeyName": "SupplierId",
+							"Value": "{SupplierId}"
+						},
+						{
+							"KeyName": "UpdatedTimestamp",
+							"Value": "{UpdatedTimestamp}"
+						},
+						{
+							"KeyName": "Weight",
+							"Value": "{Weight}"
+						},
+						{
+							"KeyName": "WeightUnit",
+							"Value": "{WeightUnit}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
 	"_Type": "Page",
-	"_Name": "Products_Detail"
+	"_Name": "Products_Detail",
+	"PrefersLargeCaption": true
 }

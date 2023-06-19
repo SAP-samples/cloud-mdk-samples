@@ -8,9 +8,11 @@
 					"Buttons": [
 						{
 							"OnPress": "/PDFGeneratorApp/Actions/NavToSalesOrders_ListPage.action",
-							"TextAlignment": "center",
+							"Alignment": "Center",
 							"Title": "$(L,NavToSalesOrders_List_Button)",
-							"Visible": true
+							"Visible": true,
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					],
 					"EmptySection": {

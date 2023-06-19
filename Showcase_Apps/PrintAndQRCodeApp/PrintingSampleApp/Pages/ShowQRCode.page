@@ -48,22 +48,24 @@
 							"_Type": "Control.Type.FormCell.SimpleProperty"
 						},
 						{
-							"ButtonType": "Button",
+							"ButtonType": "Primary",
 							"IsVisible": true,
 							"OnPress": "/PrintingSampleApp/Rules/GenerateQRCodeAndRefresh.js",
-							"TextAlignment": "center",
+							"Alignment": "Center",
 							"Title": "Generate QR Code",
 							"_Name": "GenQRCodeButton",
-							"_Type": "Control.Type.FormCell.Button"
+							"_Type": "Control.Type.FormCell.Button",
+							"Semantic": "Tint"
 						},
 						{
-							"ButtonType": "Button",
+							"ButtonType": "Primary",
 							"IsVisible": true,
 							"OnPress": "/PrintingSampleApp/Rules/PrintQRCode.js",
-							"TextAlignment": "center",
+							"Alignment": "Center",
 							"Title": "Print",
 							"_Name": "PrintButton",
-							"_Type": "Control.Type.FormCell.Button"
+							"_Type": "Control.Type.FormCell.Button",
+							"Semantic": "Tint"
 						}
 					],
 					"EmptySection": {
@@ -78,5 +80,6 @@
 		}
 	],
 	"_Name": "ShowQRCode",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

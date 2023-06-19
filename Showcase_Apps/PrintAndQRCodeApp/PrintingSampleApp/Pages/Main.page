@@ -7,9 +7,11 @@
 					"Buttons": [
 						{
 							"OnPress": "/PrintingSampleApp/Actions/NavToQRPage.action",
-							"TextAlignment": "center",
+							"Alignment": "Center",
 							"Title": "Show QR Code",
-							"Visible": true
+							"Visible": true,
+							"ButtonType": "Text",
+							"Semantic": "Tint"
 						}
 					],
 					"EmptySection": {
@@ -38,5 +40,6 @@
 		]
 	},
 	"_Name": "Main",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

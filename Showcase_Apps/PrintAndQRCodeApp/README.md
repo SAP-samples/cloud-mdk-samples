@@ -7,7 +7,7 @@ This is a showcase application that demonstrate how to:
       1. Generate QR Code as image from text using `nativescript-qr-generator` plugin
       2. Print the image using the `nativescript-printer` plugin
 
-*Last Updated: 03-Sep-2021*
+*Last Updated: 19-Jun-2023*
 
 ***
 
@@ -26,7 +26,7 @@ This is a showcase application that demonstrate how to:
 
 ### *MDK Client Version*
 
-* MDK 6.0 or higher
+* MDK 23.4 or higher
 
 ### *Data Source*
 
