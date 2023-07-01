@@ -1,0 +1,324 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Title",
+							"_Name": "TitleInput",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Value": "",
+							"PlaceHolder": "PlaceHolder",
+							"HelperText": "HelperText",
+							"Enabled": true
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader0",
+						"UseTopPadding": false,
+						"Caption": "Title"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell1"
+				},
+				{
+					"Controls": [
+						{
+							"validationProperties": {
+								"ValidationViewIsHidden": true
+							},
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "SimplePropertyInput",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Input",
+							"PlaceHolder": "PlaceHolder",
+							"HelperText": "HelperText",
+							"Enabled": true
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader1",
+						"UseTopPadding": true,
+						"Caption": "Simple Property"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell2"
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "NoteInput",
+							"IsEditable": true,
+							"IsVisible": true,
+							"PlaceHolder": "PlaceHolder",
+							"HelperText": "HelperText",
+							"Enabled": true
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader2",
+						"UseTopPadding": true,
+						"Caption": "Note"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell3"
+				},
+				{
+					"Controls": [
+						{
+							"Value": [],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "ListPicker",
+							"IsEditable": true,
+							"IsVisible": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Choose Single",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"HelperText": "HelperText",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": [
+								"One",
+								"Two",
+								"Three"
+							]
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader3",
+						"UseTopPadding": true,
+						"Caption": "List Picker"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell4"
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "Segmented",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Caption",
+							"HelperText": "HelperText",
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Low",
+								"Medium",
+								"High"
+							]
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader4",
+						"UseTopPadding": true,
+						"Caption": "Segmented"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell5"
+				},
+				{
+					"Controls": [
+						{
+							"Value": "Enter Date",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "DatePicker",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Caption",
+							"HelperText": "HelperText",
+							"Mode": "Date"
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader5",
+						"UseTopPadding": true,
+						"Caption": "Date Picker"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell6"
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.DurationPicker",
+							"_Name": "DurationPicker",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Duration",
+							"HelperText": "HelperText",
+							"MinuteInterval": 1,
+							"Unit": "H"
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader6",
+						"UseTopPadding": true,
+						"Caption": "Duration Picker"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell7"
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Attachment",
+							"_Name": "Attachment",
+							"IsVisible": true,
+							"AttachmentActionType": [
+								"SelectFile",
+								"AddPhoto",
+								"TakePhoto"
+							]
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader7",
+						"UseTopPadding": true,
+						"Caption": "Attachment"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell8"
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.InlineSignatureCapture",
+							"_Name": "InlineSignatureCapture",
+							"IsVisible": true,
+							"Caption": "Add Inline Signature",
+							"ShowTimestampInImage": false,
+							"ShowXMark": true,
+							"ShowUnderline": true,
+							"WatermarkText": "",
+							"WatermarkTextMaxLines": 5,
+							"HelperText": "HelperText"
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader8",
+						"UseTopPadding": true,
+						"Caption": "Inline Signature Capture"
+					},
+					"Visible": "$(PLT,true,true,false)",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell9"
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SignatureCapture",
+							"_Name": "SignatureCapture",
+							"IsVisible": true,
+							"Caption": "Add Signature",
+							"ShowTimestampInImage": false,
+							"ShowXMark": true,
+							"ShowUnderline": true,
+							"WatermarkText": "",
+							"WatermarkTextMaxLines": 5,
+							"HelperText": "HelperText"
+						}
+					],
+					"Header": {
+						"_Name": "SectionHeader9",
+						"UseTopPadding": true,
+						"Caption": "Signature Capture"
+					},
+					"Visible": "$(PLT,true,true,false)",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "Main",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Validate",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/InlineValidationViewApp/Rules/ValidateFormCellControls.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "LogoutToolbarItem",
+				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"OnPress": "/InlineValidationViewApp/Actions/LogoutMessage.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "UpdateToolbarItem",
+				"Caption": "Update",
+				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
+				"Clickable": true,
+				"OnPress": "/InlineValidationViewApp/Actions/AppUpdateProgressBanner.action"
+			}
+		]
+	}
+}
