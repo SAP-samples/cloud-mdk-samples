@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.OfflineOData.Close",
+	"ActionResult": {
+		"_Name": "CloseOfflineDB"
+	},
+	"Service": "/MDKDemoApp/Services/Sample.service",
+	"Force": true
+}
