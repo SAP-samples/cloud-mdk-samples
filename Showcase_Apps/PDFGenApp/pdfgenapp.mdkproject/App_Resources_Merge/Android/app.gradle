@@ -1,0 +1,6 @@
+android {
+    // Fixed for conflicting libc++_shared.so file issue
+   packagingOptions {
+        pickFirst '**/libc++_shared.so'
+    }
+}

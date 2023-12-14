@@ -20,7 +20,7 @@ For all version of clients:
 2. Add check to enforce limit of 1 image per media entity
 3. Resize the image before creating the media entity
 
-*Last Updated: 19-Jun-2023*
+*Last Updated: 16-Nov-2023*
 
 ***
 
@@ -39,7 +39,7 @@ For all version of clients:
 
 ### *MDK Client Version*
 
-* MDK 23.4 or higher
+* MDK 23.8 or higher
 
 ### *Data Source*
 
