@@ -1,0 +1,10 @@
+{
+    "Service": "/HomeScreenWidgetApp/Services/com_sap_edm_sampleservice_v2.service",
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "OnSuccess": "/HomeScreenWidgetApp/Actions/Service/InitializeOnlineSuccessMessage.action",
+    "OnFailure": "/HomeScreenWidgetApp/Actions/Service/InitializeOnlineFailureMessage.action",
+    "ActionResult": {
+        "_Name": "init"
+    }
+}

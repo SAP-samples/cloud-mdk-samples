@@ -1,0 +1,9 @@
+{
+  "AppDisplayName": "Home Screen Widget App",
+  "AppName": "HomeScreenWidgetApp",
+  "AppVersion": "1.0.0",
+  "BundleID": "com.sap.mdk.homescreenwidgetapp",
+  "Externals": [],
+  "NSPlugins": [],
+  "UrlScheme": "homescreenwidgetapp"
+}
