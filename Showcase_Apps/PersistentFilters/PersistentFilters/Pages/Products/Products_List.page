@@ -6,6 +6,8 @@
 			"Sections": [
 				{
 					"Header": {
+						"_Name": "SectionHeader0",
+						"AccessoryType": "none",
 						"UseTopPadding": false
 					},
 					"_Type": "Section.Type.ObjectTable",
@@ -20,8 +22,7 @@
 					},
 					"ObjectCell": {
 						"ContextMenu": {
-							"Items": [
-							],
+							"Items": [],
 							"PerformFirstActionWithFullSwipe": true
 						},
 						"Title": "{Name}",

@@ -1,9 +1,5 @@
 {
-    "DestinationName": "SampleServiceV2",
-    "OfflineEnabled": true,
-    "LanguageURLParam": "",
-    "OnlineOptions": {},
-    "PathSuffix": "",
-    "SourceType": "Mobile",
-    "ServiceUrl":""
+	"DestinationName": "SampleServiceV2",
+	"OfflineEnabled": true,
+	"SourceType": "Mobile"
 }
