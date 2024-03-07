@@ -18,7 +18,7 @@
         "INFOPLIST_KEY_CFBundleDisplayName" : "widget",
 
         "INFOPLIST_KEY_NSHumanReadableCopyright" : "\"Copyright © 2023 NativeScript. All rights reserved.\"",
-        "IPHONEOS_DEPLOYMENT_TARGET" : 16.4,
+        "IPHONEOS_DEPLOYMENT_TARGET" : 17.0,
         
         "MARKETING_VERSION" : "1.0",
 
