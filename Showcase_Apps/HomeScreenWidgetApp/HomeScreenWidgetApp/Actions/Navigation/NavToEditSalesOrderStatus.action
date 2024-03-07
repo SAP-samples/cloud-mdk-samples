@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToEditSalesOrderStatus"
+	},
+	"PageToOpen": "/HomeScreenWidgetApp/Pages/EditSalesOrderStatus.page",
+	"ModalPage": true
+}

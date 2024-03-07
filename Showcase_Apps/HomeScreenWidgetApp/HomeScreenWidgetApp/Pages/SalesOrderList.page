@@ -44,7 +44,7 @@
 						"DisplayDescriptionInMobile": true,
 						"StatusText": "{LifeCycleStatusName}",
 						"PreserveIconStackSpacing": false,
-						"AccessoryType": "None",
+						"AccessoryType": "DisclosureIndicator",
 						"Tags": [],
 						"AvatarStack": {
 							"Avatars": [],
@@ -55,6 +55,7 @@
 							"Avatars": [],
 							"ImageIsCircular": true
 						},
+						"OnPress": "/HomeScreenWidgetApp/Actions/Navigation/NavToEditSalesOrderStatus.action",
 						"Selected": false
 					},
 					"DataPaging": {
@@ -75,8 +76,8 @@
 		"OnPulledDown": "/HomeScreenWidgetApp/Rules/Main/OnPulledDown.js"
 	},
 	"_Type": "Page",
-	"_Name": "Main",
-	"Caption": "Main",
+	"_Name": "SalesOrderList",
+	"Caption": "Sales Orders",
 	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [

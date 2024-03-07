@@ -1,5 +1,5 @@
 {
-	"MainPage": "/HomeScreenWidgetApp/Pages/Main.page",
+	"MainPage": "/HomeScreenWidgetApp/Pages/SalesOrderList.page",
 	"OnLaunch": [
 		"/HomeScreenWidgetApp/Actions/Service/InitializeOnline.action"
 	],

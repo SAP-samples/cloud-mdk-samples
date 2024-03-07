@@ -1,0 +1,92 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"ObjectHeader": {
+						"Subhead": "{NetAmount} {CurrencyCode}",
+						"StatusText": "{LifeCycleStatusName}",
+						"DetailImageIsCircular": false,
+						"HeadlineText": "{SalesOrderId}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "{LifeCycleStatus}",
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "SalesOrderStatusFormCellSegmentedControl",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Select Status",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								{
+									"DisplayValue": "Accepted",
+									"ReturnValue": "A"
+								},
+								{
+									"DisplayValue": "Rejected",
+									"ReturnValue": "R"
+								}
+							]
+						}
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "EditSalesOrderStatus",
+	"Caption": "Edit Status",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Item",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/HomeScreenWidgetApp/Actions/ClosePage.action"
+			},
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/HomeScreenWidgetApp/Rules/EditSalesOrderStatus/OnPressSave.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

@@ -1,7 +1,7 @@
 {
-    "_Type": "Action.Type.Navigation",
-    "ActionResult": {
-        "_Name": "GenericNavigation"
-    },
-    "PageToOpen": "/HomeScreenWidgetApp/Pages/Main.page"
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "GenericNavigation"
+	},
+	"PageToOpen": "/HomeScreenWidgetApp/Pages/SalesOrderList.page"
 }

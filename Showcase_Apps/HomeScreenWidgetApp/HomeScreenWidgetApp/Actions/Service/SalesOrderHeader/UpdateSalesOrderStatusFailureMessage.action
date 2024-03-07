@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.BannerMessage",
+	"Message": "Failed to update sales order status - {#ActionResults:UpdateResult/error}",
+	"Duration": 7,
+	"Animated": true
+}
