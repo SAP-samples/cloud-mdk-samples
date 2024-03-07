@@ -15,7 +15,7 @@ This is a showcase application that demonstrates how to implement a [Home Screen
 
 ### Supported Platforms
 
-* iOS
+* iOS 17.0 or higher
 
 ### MDK Client Version
 
