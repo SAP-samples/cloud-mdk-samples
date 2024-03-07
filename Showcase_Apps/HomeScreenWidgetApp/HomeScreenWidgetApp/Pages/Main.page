@@ -29,6 +29,7 @@
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
 					"EmptySection": {
+						"Caption": "No Sales Orders found",
 						"FooterVisible": false
 					},
 					"ObjectCell": {
