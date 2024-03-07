@@ -8,40 +8,45 @@
 
 import WidgetKit
 import SwiftUI
+import AppIntents
 
-struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), salesOrdersCount: "-")
+struct Provider: AppIntentTimelineProvider {
+    func placeholder(in context: Context) -> SalesOrderHeaderEntry {
+        SalesOrderHeaderEntry(date: Date(), salesOrdersCount: "-", salesOrderStatus: .new)
     }
-
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), salesOrdersCount: "-")
-        completion(entry)
+    
+    func snapshot(for configuration: SelectSalesOrderHeaderIntent, in context: Context) async -> SalesOrderHeaderEntry {
+        SalesOrderHeaderEntry(date: Date(), salesOrdersCount: "-", salesOrderStatus: configuration.salesOrderStatus)
     }
     
     private func getGroupId() -> String {
         var result: String = ""
         if let bundleIdentifier = Bundle.main.bundleIdentifier {
-            let splittedBundleIdentifier = bundleIdentifier.split(separator: ".widget")[0]
-            result = "group." + splittedBundleIdentifier
+            let separator = ".widget"
+            result = "group." + bundleIdentifier.components(separatedBy: separator).dropLast().joined(separator: separator)
         }
         return result
     }
-
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        let salesOrdersCount = UserDefaults(suiteName: getGroupId())!.string(forKey: "salesOrdersCount")
-        let currentDate = Date()
-        let entry = SimpleEntry(date: currentDate, salesOrdersCount: salesOrdersCount ?? "-")
+    
+    func timeline(for configuration: SelectSalesOrderHeaderIntent, in context: Context) async -> Timeline<SalesOrderHeaderEntry> {
+        let salesOrdersCountDictionary = UserDefaults(suiteName: getGroupId())!.dictionary(forKey: "salesOrdersCount")
+        let salesOrdersCount: String = salesOrdersCountDictionary?[configuration.salesOrderStatus.rawValue] as? String ?? "-"
+        let entry = SalesOrderHeaderEntry(date: Date(), salesOrdersCount: salesOrdersCount, salesOrderStatus: configuration.salesOrderStatus)
         
         // Create a date that's 30 minutes in the future.
+        let currentDate = Date()
         let nextUpdateDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
         
-        // Create a timeline with the entry and reload policy with the date for next update.
         let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
         
-        // Call completion handler to pass the timeline to WidgetKit.
-        completion(timeline)
+        return timeline
     }
+}
+
+struct SalesOrderHeaderEntry: TimelineEntry {
+    let date: Date
+    let salesOrdersCount: String
+    let salesOrderStatus: SalesOrderHeaderStatus
 }
 
 struct SimpleEntry: TimelineEntry {
@@ -55,9 +60,18 @@ struct widgetEntryView : View {
     var body: some View {
         VStack {
             Text(entry.salesOrdersCount).fontWeight(.black).font(.largeTitle)
+            switch entry.salesOrderStatus {
+            case .new:
+                Text("New").fontWeight(.black)
+            case .accepted:
+                Text("Accepted").fontWeight(.black)
+            case .rejected:
+                Text("Rejected").fontWeight(.black)
+            }
             Text("Sales Orders").fontWeight(.black)
             Text("Time: \(entry.date, style: .time)")
         }
+        .widgetURL(URL(string: "sapmobilesvcs://widgetdemo/salesorders?status=\(entry.salesOrderStatus.rawValue)"))
     }
 }
 
@@ -65,26 +79,49 @@ struct widget: Widget {
     let kind: String = "widget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(iOS 17.0, *) {
-                widgetEntryView(entry: entry)
-                    .containerBackground(.fill.tertiary, for: .widget)
-            } else {
-                widgetEntryView(entry: entry)
-                    .padding()
-                    .background()
-            }
+        AppIntentConfiguration(kind: kind, intent: SelectSalesOrderHeaderIntent.self, provider: Provider()) { entry in
+            widgetEntryView(entry: entry)
+                .containerBackground(.fill.tertiary, for: .widget)
         }
         .configurationDisplayName("Sales Orders Widget")
         .description("This is an example widget to show the count of Sales Orders.")
     }
 }
 
-/*
+struct SelectSalesOrderHeaderIntent: WidgetConfigurationIntent {
+    static var title: LocalizedStringResource = "Select Sales Order Status"
+    
+    @Parameter(title: "Sales Order Status")
+    var salesOrderStatus: SalesOrderHeaderStatus
+    
+    init(salesOrderStatus: SalesOrderHeaderStatus) {
+        self.salesOrderStatus = salesOrderStatus
+    }
+    
+    init() {
+    }
+}
+
+enum SalesOrderHeaderStatus: String, AppEnum {
+    typealias RawValue = String
+    
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = TypeDisplayRepresentation(name: LocalizedStringResource("Status"))
+    
+    static var caseDisplayRepresentations: [SalesOrderHeaderStatus : DisplayRepresentation] = [
+        .new: "New",
+        .accepted: "Accepted",
+        .rejected: "Rejected"
+    ]
+    
+    case new = "New"
+    case accepted = "Accepted"
+    case rejected = "Rejected"
+}
+
 #Preview(as: .systemSmall) {
     widget()
 } timeline: {
-    SimpleEntry(date: .now, salesOrdersCount: "-")
-    SimpleEntry(date: .now, salesOrdersCount: "105")
+    SalesOrderHeaderEntry(date: .now, salesOrdersCount: "0", salesOrderStatus: .new)
+    SalesOrderHeaderEntry(date: .now, salesOrdersCount: "105", salesOrderStatus: .accepted)
+    SalesOrderHeaderEntry(date: .now, salesOrdersCount: "85", salesOrderStatus: .rejected)
 }
-*/
