@@ -3,10 +3,39 @@
 		{
 			"FilterFeedbackBar": {
 				"ShowAllFilters": false,
+				"FastFilters": [
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter0",
+						"FilterProperty": "LifeCycleStatus",
+						"CustomQueryGroup": "Status",
+						"DisplayValue": "New",
+						"ReturnValue": "N",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter1",
+						"FilterProperty": "LifeCycleStatus",
+						"CustomQueryGroup": "Status",
+						"DisplayValue": "Accepted",
+						"ReturnValue": "A",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter2",
+						"FilterProperty": "LifeCycleStatus",
+						"CustomQueryGroup": "Status",
+						"DisplayValue": "Rejected",
+						"ReturnValue": "R",
+						"FilterType": "Filter"
+					}
+				],
 				"_Type": "Control.Type.FilterFeedbackBar"
 			},
 			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable0",
+			"_Name": "SalesOrderListSectionedTable",
 			"Sections": [
 				{
 					"Separators": {
@@ -69,7 +98,8 @@
 						"Mode": "None"
 					}
 				}
-			]
+			],
+			"Filters": "/HomeScreenWidgetApp/Rules/SalesOrderList/LoadFilter.js"
 		}
 	],
 	"PullDown": {
