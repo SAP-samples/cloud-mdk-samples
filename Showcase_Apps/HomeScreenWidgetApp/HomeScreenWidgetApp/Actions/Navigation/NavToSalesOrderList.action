@@ -4,6 +4,7 @@
 		"_Name": "NavToSalesOrderList"
 	},
 	"PageToOpen": "/HomeScreenWidgetApp/Pages/SalesOrderList.page",
+	"BackStackVisible": false,
 	"ClearHistory": true,
 	"Transition": {
 		"Name": "None"
