@@ -71,7 +71,8 @@ struct widgetEntryView : View {
             Text("Sales Orders").fontWeight(.black)
             Text("Time: \(entry.date, style: .time)")
         }
-        .widgetURL(URL(string: "sapmobilesvcs://widgetdemo/salesorders?status=\(entry.salesOrderStatus.rawValue)"))
+        // Change `homescreenwidgetapp` to your custom UrlScheme defined in MDKProject.json
+        .widgetURL(URL(string: "homescreenwidgetapp://widgetdemo/salesorders?status=\(entry.salesOrderStatus.rawValue)"))
     }
 }
 

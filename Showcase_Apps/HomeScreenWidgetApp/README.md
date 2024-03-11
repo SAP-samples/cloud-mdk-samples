@@ -29,6 +29,7 @@ This is a showcase application that demonstrates how to implement a [Home Screen
 
 ## Key Highlights
 
+* Deep Link into MDK App from configurable Widget Extension (defined in [HomeScreenWidgetApp/Rules/Application/OnLinkDataReceived.js](HomeScreenWidgetApp/Rules/Application/OnLinkDataReceived.js) and [homescreenwidgetapp.mdkproject/App_Resources/iOS/extensions/widget/widget.swift](homescreenwidgetapp.mdkproject/App_Resources/iOS/extensions/widget/widget.swift), line 75)
 * Sharing data between MDK App and Widget Extension using [UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults/) and [Application Group](https://developer.apple.com/documentation/xcode/configuring-app-groups) (defined in [HomeScreenWidgetApp/Rules/Widget/RefreshWidgetData.js](HomeScreenWidgetApp/Rules/Widget/RefreshWidgetData.js)) 
 * Trigger update of the Widget Extension from within the MDK App (defined in [homescreenwidgetapp.mdkproject/App_Resources/iOS/src/utils.swift](homescreenwidgetapp.mdkproject/App_Resources/iOS/src/utils.swift))
 
@@ -38,7 +39,7 @@ This is a showcase application that demonstrates how to implement a [Home Screen
 
 This application requires a custom build of Mobile Development Client. 
 
-The [homescreenwidgetapp.mdkproject/App_Resources/iOS/extensions](homescreenwidgetapp.mdkproject/App_Resources/iOS/extensions) folder contains the Widget Extension implementation and required entitlements. 
+The [homescreenwidgetapp.mdkproject/App_Resources/iOS/extensions](homescreenwidgetapp.mdkproject/App_Resources/iOS/extensions) folder contains the Widget Extension implementation and required entitlements.
 
 The [homescreenwidgetapp.mdkproject/App_Resources/iOS/src](homescreenwidgetapp.mdkproject/App_Resources/iOS/src) folder contains a native Swift class for triggering a reload of all Widget Extensions. 
 
