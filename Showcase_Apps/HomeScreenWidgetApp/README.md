@@ -57,7 +57,7 @@ The application metadata is the [HomeScreenWidgetApp](HomeScreenWidgetApp) folde
 After you have created and installed the custom built MDK client, you must perform the following steps to display the widget on the home screen:
 
 * From the Home Screen, touch and hold an empty area until the edit mode becomes available.
-* Press the Add Button in the upper left-corner.
+* Press the Add Button in the upper-left corner.
 * Search for your application display name, which is `Home Screen Widget App` by default as defined in [homescreenwidgetapp.mdkproject/MDKProject.json](homescreenwidgetapp.mdkproject/MDKProject.json) file.
 * Press the newly added Widget and select a Sales Order Status (*New*, *Accepted* or *Rejected*) from the list.
 
