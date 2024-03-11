@@ -9,8 +9,6 @@
 			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"_Type": "Section.Type.ObjectHeader",
-					"_Name": "SectionObjectHeader0",
 					"ObjectHeader": {
 						"Subhead": "{NetAmount} {CurrencyCode}",
 						"StatusText": "{LifeCycleStatusName}",
@@ -20,6 +18,8 @@
 						"StatusImagePosition": "Leading",
 						"SubstatusImagePosition": "Leading"
 					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
 					"Visible": true
 				},
 				{
@@ -65,7 +65,7 @@
 	"_Type": "Page",
 	"_Name": "EditSalesOrderStatus",
 	"Caption": "Edit Status",
-	"PrefersLargeCaption": true,
+	"PrefersLargeCaption": false,
 	"ActionBar": {
 		"Items": [
 			{

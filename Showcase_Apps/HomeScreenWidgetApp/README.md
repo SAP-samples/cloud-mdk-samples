@@ -54,4 +54,4 @@ The application metadata is the [HomeScreenWidgetApp](HomeScreenWidgetApp) folde
 
 ## Screenshots
 
-<img src="Screenshots/iOS.png" width="35%">
+<img src="Screenshots/widget.gif" width="30%"> <img src="Screenshots/widget_configuration.png" width="30%">

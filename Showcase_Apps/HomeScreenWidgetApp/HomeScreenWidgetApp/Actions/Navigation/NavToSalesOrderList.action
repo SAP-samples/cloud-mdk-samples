@@ -7,6 +7,6 @@
 	"BackStackVisible": false,
 	"ClearHistory": true,
 	"Transition": {
-		"Name": "None"
+		"Name": "Fade"
 	}
 }

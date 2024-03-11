@@ -108,7 +108,7 @@
 	"_Type": "Page",
 	"_Name": "SalesOrderList",
 	"Caption": "Sales Orders",
-	"PrefersLargeCaption": true,
+	"PrefersLargeCaption": false,
 	"ActionBar": {
 		"Items": [
 			{
