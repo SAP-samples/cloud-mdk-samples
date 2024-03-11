@@ -4,7 +4,7 @@ This is a showcase application that demonstrates how to implement a [Home Screen
 
 *Android Widget sample will be added soon.*
 
-*Last Updated: 09-Jan-2024*
+*Last Updated: 11-Mar-2024*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
