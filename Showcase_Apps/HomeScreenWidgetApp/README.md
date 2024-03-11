@@ -7,7 +7,7 @@ This is a showcase application that demonstrates how to implement a [Home Screen
 *Last Updated: 11-Mar-2024*
 
 ### Author
-* Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
+* Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
 
 ***
 
