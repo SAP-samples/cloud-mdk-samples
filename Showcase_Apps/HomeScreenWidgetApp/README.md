@@ -52,6 +52,17 @@ For more detailed information on building a Mobile Development Kit Client please
 
 The application metadata is the [HomeScreenWidgetApp](HomeScreenWidgetApp) folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor and make sure to enable feature `Mobile Sample OData ESPM` in your mobile services app.
 
+### Add Widget to Home Screen
+
+After you have created and installed the custom built MDK client, you must perform the following steps to display the widget on the home screen:
+
+* From the Home Screen, touch and hold an empty area until the edit mode becomes available.
+* Press the Add Button in the upper left-corner.
+* Search for your application display name, which is `Home Screen Widget App` by default as defined in [homescreenwidgetapp.mdkproject/MDKProject.json](homescreenwidgetapp.mdkproject/MDKProject.json) file.
+* Press the newly added Widget and select a Sales Order Status (*New*, *Accepted* or *Rejected*) from the list.
+
+Additional help: https://support.apple.com/en-us/HT207122
+
 ## Screenshots
 
 <img src="Screenshots/widget.gif" width="30%"> <img src="Screenshots/widget_configuration.png" width="30%">
