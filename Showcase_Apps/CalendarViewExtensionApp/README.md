@@ -5,7 +5,7 @@ This is a showcase application that demonstrates how to implement the Calendar V
 *Last Updated: 22-Aug-2022*
 
 ### Author
-* Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
+* Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
 
 ***
 

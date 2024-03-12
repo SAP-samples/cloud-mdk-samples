@@ -1,0 +1,14 @@
+{
+  "ApplicationDisplayName": "Home Screen Widget App",
+  "ConnectionSettings": {
+    "EnableOverrides": true,
+    "EnableScreenSharing": true
+  },
+  "LogSettings": {
+    "FileName": "ClientLog.txt",
+    "MaxFileSizeInMegaBytes": 1,
+    "LogLevel": "Debug"
+  },
+  "DetailLabelViewText": "Demonstrate how to implement a Home Screen Widget",
+  "PasscodeTimeout": 120
+}

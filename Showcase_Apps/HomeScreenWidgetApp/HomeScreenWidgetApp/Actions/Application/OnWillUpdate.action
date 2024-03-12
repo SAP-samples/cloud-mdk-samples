@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.Message",
+    "Message": "A new version of the application is now ready to apply. Do you want to update to this version?",
+    "Title": "New Version Available!",
+    "OKCaption": "Now",
+    "CancelCaption": "Later",
+    "ActionResult": {
+        "_Name": "OnWillUpdate"
+    }
+}

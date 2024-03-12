@@ -1,0 +1,17 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "UpdateResult"
+	},
+	"OnFailure": "/HomeScreenWidgetApp/Actions/Service/SalesOrderHeader/UpdateSalesOrderStatusFailureMessage.action",
+	"OnSuccess": "/HomeScreenWidgetApp/Actions/Service/SalesOrderHeader/UpdateSalesOrderSuccessMessage.action",
+	"Target": {
+		"Service": "/HomeScreenWidgetApp/Services/com_sap_edm_sampleservice_v2.service",
+		"EntitySet": "SalesOrderHeaders",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"LifeCycleStatus": "N",
+		"LifeCycleStatusName": "New"
+	}
+}

@@ -1,0 +1,7 @@
+{
+    "Animated": true,
+    "CompletionTimeout": 3,
+    "Message": "Checking for Updates...",
+    "OnSuccess": "/HomeScreenWidgetApp/Actions/Application/AppUpdate.action",
+    "_Type": "Action.Type.ProgressBanner"
+}

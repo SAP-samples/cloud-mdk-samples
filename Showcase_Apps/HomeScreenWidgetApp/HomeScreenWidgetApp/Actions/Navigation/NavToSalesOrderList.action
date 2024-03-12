@@ -1,0 +1,12 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToSalesOrderList"
+	},
+	"PageToOpen": "/HomeScreenWidgetApp/Pages/SalesOrderList.page",
+	"BackStackVisible": false,
+	"ClearHistory": true,
+	"Transition": {
+		"Name": "Fade"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"OnSuccess": "/HomeScreenWidgetApp/Rules/Widget/RefreshWidgetData.js",
+	"Message": "Application data service initialized",
+	"NumberOfLines": 2,
+	"Duration": 2,
+	"IsIconHidden": true,
+	"Animated": true
+}

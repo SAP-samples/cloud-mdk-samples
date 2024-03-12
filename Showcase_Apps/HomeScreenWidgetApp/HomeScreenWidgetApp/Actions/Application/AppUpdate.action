@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/HomeScreenWidgetApp/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/HomeScreenWidgetApp/Rules/Application/AppUpdateSuccess.js"
+}

@@ -7,7 +7,7 @@ For more details about Inline Errors check out the [SAP Fiori Design Guidelines]
 *Last Updated: 30-June-2023*
 
 ### Author
-* Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://people.sap.com/kucki99))
+* Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
 
 ***
 
