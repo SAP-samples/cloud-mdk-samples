@@ -1,4 +1,4 @@
-# Home Screen Widget App
+# MDK Home Screen Widget App
 
 This is a showcase application that demonstrates how to implement a [Home Screen Widget for iOS](https://support.apple.com/en-us/HT207122). The implementation is based on this [blog post](https://blog.nativescript.org/add-home-screen-widget/) where you can find further explanations and details about the signing of the app with widget extension for release.
 
