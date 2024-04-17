@@ -94,7 +94,7 @@
 					"Footer": {
 						"AttributeLabel": "#Count",
 						"Caption": "See All",
-						"FooterStyle": "attribute",
+						"FooterStyle": "Attribute",
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_SalesOrders.action",
 						"UseBottomPadding": false,
 						"Visible": true
@@ -106,9 +106,11 @@
 					"HighlightSelectedItem": false,
 					"MaxItemCount": 4,
 					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
-						"DetailImageIsCircular": false,
-						"Footnote": "{SalesOrderId}",
+						"AccessoryType": "DisclosureIndicator",
+						"AvatarStack": {
+							"ImageIsCircular": false
+						},
+						"Footnote": "{SalesOrderID}",
 						"OnPress": "/MDKDemoApp/Actions/SalesOrder/NavtoSalesOrder_Detail.action",
 						"PreserveIconStackSpacing": false,
 						"StatusText": "{LifeCycleStatusName}",
@@ -129,5 +131,6 @@
 		}
 	],
 	"_Name": "Customer_Detail",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

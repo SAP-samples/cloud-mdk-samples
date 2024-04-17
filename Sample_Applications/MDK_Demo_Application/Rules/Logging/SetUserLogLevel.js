@@ -14,6 +14,9 @@ export default function SetUserLogLevel(context) {
                     case 'Warn':
                         logger.setLevel('Warn');
                         break;
+                    case 'Trace':
+                        logger.setLevel('Trace');
+                        break;                        
                     case 'Info':
                         logger.setLevel('Info');
                         break;

@@ -22,8 +22,7 @@
 						"HeadlineText": "$(L,'mdk')",
 						"StatusPosition": "Stacked",
 						"StatusImagePosition": "Leading",
-						"SubstatusImagePosition": "Leading",
-						"Labels": []
+						"SubstatusImagePosition": "Leading"
 					},
 					"_Type": "Section.Type.ObjectHeader",
 					"_Name": "SectionObjectHeader0",
@@ -99,7 +98,27 @@
 						"_Name": "SectionHeader1",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Promotion Items"
+						"Items": [
+							{
+								"_Type": "SectionHeaderItem.Type.Label",
+								"_Name": "SectionHeaderItemTypeLabel0",
+								"Visible": true,
+								"Position": "Left",
+								"Title": "Promotion Items"
+							},
+							{
+								"_Name": "SectionHeaderItemTypeButton0",
+								"Title": "/MDKDemoApp/Rules/Product/ProductCountLabel.js",
+								"ButtonType": "Text",
+								"Semantic": "Tint",
+								"ImagePosition": "Leading",
+								"Visible": true,
+								"Enabled": true,
+								"Position": "Right",
+								"_Type": "SectionHeaderItem.Type.Button",
+								"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_List.action"
+							}
+						]
 					},
 					"Footer": {
 						"_Name": "SectionFooter1",
@@ -119,13 +138,32 @@
 						"Title": "{Name}",
 						"Subtitle": "{CategoryName}",
 						"Attribute": "/MDKDemoApp/Rules/Product/PercentOff.js",
-						"Image": "/MDKDemoApp/Rules/Product/GetProductImage.js",
+						"Image": "/MDKDemoApp/Services/Sample.service/{@odata.readLink}/Picture",
 						"ImageIsCircular": false,
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action"
 					},
 					"Layout": {
 						"LayoutType": "HorizontalScroll"
 					}
+				},
+				{
+					"_Type": "Section.Type.Image",
+					"_Name": "SectionImage0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Image": "",
+					"Height": 100,
+					"Alignment": "Center",
+					"ContentMode": "ScaleAspectFit"
 				}
 			]
 		}

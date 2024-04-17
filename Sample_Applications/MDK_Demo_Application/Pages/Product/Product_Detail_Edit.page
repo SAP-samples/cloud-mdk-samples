@@ -4,25 +4,25 @@
 			{
 				"IsIconCircular": false,
 				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action",
-				"Position": "left",
+				"Position": "Left",
 				"SystemItem": "Cancel",
-				"Text": "Cancel"
+				"Caption": "Cancel"
 			},
 			{
 				"IsIconCircular": false,
 				"OnPress": "/MDKDemoApp/Actions/Product/UpdateProductDetails.action",
-				"Position": "right",
+				"Position": "Right",
 				"SystemItem": "Done",
-				"Text": "Done"
+				"Caption": "Done"
 			}
 		]
 	},
 	"Caption": "Edit Product",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
 			"Sections": [
 				{
-					"Caption": "Product",
 					"Controls": [
 						{
 							"Caption": "ID",
@@ -30,7 +30,7 @@
 							"IsVisible": false,
 							"KeyboardType": "DateTime",
 							"PlaceHolder": "value",
-							"Value": "{ProductId}",
+							"Value": "{ProductID}",
 							"_Name": "ProductID",
 							"_Type": "Control.Type.FormCell.SimpleProperty"
 						},
@@ -101,10 +101,11 @@
 							"_Type": "Control.Type.FormCell.SimpleProperty"
 						}
 					],
-					"Visible": true
+					"Visible": true,
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell0"
 				},
 				{
-					"Caption": "Dimensions",
 					"Controls": [
 						{
 							"Caption": "Height",
@@ -143,10 +144,11 @@
 							"_Type": "Control.Type.FormCell.SimpleProperty"
 						}
 					],
-					"Visible": true
+					"Visible": true,
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell1"
 				},
 				{
-					"Caption": "Weight",
 					"Controls": [
 						{
 							"Caption": "Weight",
@@ -167,13 +169,15 @@
 							"_Type": "Control.Type.FormCell.SimpleProperty"
 						}
 					],
-					"Visible": true
+					"Visible": true,
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell2"
 				}
 			],
-			"_Name": "FormCellContainer0",
-			"_Type": "Control.Type.FormCellContainer"
+			"_Name": "FormCellContainer0"
 		}
 	],
 	"_Name": "Product_Detail_Edit",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }
