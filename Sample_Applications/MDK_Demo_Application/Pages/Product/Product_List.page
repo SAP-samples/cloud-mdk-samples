@@ -61,7 +61,6 @@
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
 						"Selected": false,
 						"Styles": {
-							"StatusText": "Price",
 							"SubstatusText": "Discount"
 						}
 					},

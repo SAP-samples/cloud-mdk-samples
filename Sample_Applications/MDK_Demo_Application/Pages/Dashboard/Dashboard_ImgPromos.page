@@ -145,25 +145,6 @@
 					"Layout": {
 						"LayoutType": "HorizontalScroll"
 					}
-				},
-				{
-					"_Type": "Section.Type.Image",
-					"_Name": "SectionImage0",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Image": "",
-					"Height": 100,
-					"Alignment": "Center",
-					"ContentMode": "ScaleAspectFit"
 				}
 			]
 		}

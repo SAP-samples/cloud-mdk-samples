@@ -43,7 +43,6 @@
 								"AccessoryType": "None",
 								"PreserveIconStackSpacing": false,
 								"Styles": {
-									"StatusText": "Price",
 									"SubstatusText": "Discount"
 								}
 							}
