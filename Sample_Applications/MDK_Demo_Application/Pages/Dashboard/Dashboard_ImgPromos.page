@@ -15,10 +15,7 @@
 						"StatusText": "/MDKDemoApp/Rules/Dashboard/versionString.js",
 						"DetailImage": "/MDKDemoApp/Images/mdk_logo.png",
 						"DetailImageIsCircular": false,
-						"Tags": [
-							"/MDKDemoApp/Rules/Dashboard/daysLeftInQuarter.rule.js",
-							"/MDKDemoApp/Rules/Dashboard/getCurrentQuarter.rule.js"
-						],
+						"Tags": "/MDKDemoApp/Rules/Dashboard/GetDashboardTags.js",
 						"HeadlineText": "$(L,'mdk')",
 						"StatusPosition": "Stacked",
 						"StatusImagePosition": "Leading",
@@ -40,7 +37,28 @@
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Top Customers"
+						"Caption": "Top Customers",
+						"Items": [
+							{
+								"_Type": "SectionHeaderItem.Type.Label",
+								"_Name": "SectionHeaderItemTypeLabel1",
+								"Visible": true,
+								"Position": "Left",
+								"Title": "Top Customers"
+							},
+							{
+								"_Name": "SectionHeaderItemTypeButton1",
+								"Title": "/MDKDemoApp/Rules/Customer/CustomerCountLabel.js",
+								"ButtonType": "Text",
+								"Semantic": "Tint",
+								"ImagePosition": "Leading",
+								"Visible": true,
+								"Enabled": true,
+								"Position": "Right",
+								"_Type": "SectionHeaderItem.Type.Button",
+								"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_List.action"
+							}
+						]
 					},
 					"Footer": {
 						"_Name": "SectionFooter0",
@@ -48,7 +66,7 @@
 						"AttributeLabel": "/MDKDemoApp/Rules/Customer/CustomerCount.js",
 						"AccessoryType": "disclosureIndicator",
 						"FooterStyle": "attribute",
-						"Visible": true,
+						"Visible": false,
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_List.action",
 						"UseBottomPadding": true
 					},
@@ -126,7 +144,7 @@
 						"AttributeLabel": "/MDKDemoApp/Rules/Product/ProductCount.js",
 						"AccessoryType": "disclosureIndicator",
 						"FooterStyle": "attribute",
-						"Visible": true,
+						"Visible": false,
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_List.action",
 						"UseBottomPadding": false
 					},
