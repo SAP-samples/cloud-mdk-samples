@@ -6,7 +6,7 @@ export default function ResetAppSettingsAndLogout(context) {
     if (platform && (platform.isIOS || platform.isAndroid)) {
         appId = context.evaluateTargetPath('#Application/#ClientData/#Property:MobileServiceAppId');
     } else {
-        appId = 'WindowsClient';
+        appId = 'WebClient';
     }
     try {
         // Remove any other app specific settings

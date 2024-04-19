@@ -1,36 +1,18 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"IsIconCircular": false,
-				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action",
-				"Position": "left",
-				"SystemItem": "Cancel",
-				"Text": "Cancel",
-				"Visible": true
-			},
-			{
-				"IsIconCircular": false,
-				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action",
-				"Position": "right",
-				"SystemItem": "Done",
-				"Text": "Done",
-				"Visible": true
-			}
-		]
-	},
-	"Caption": "Filter",
 	"Controls": [
 		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
 			"Sections": [
 				{
-					"Caption": "Sort by",
 					"Controls": [
 						{
-							"AllowEmptySelection": false,
 							"AllowMultipleSelection": true,
-							"IsEditable": true,
+							"_Type": "Control.Type.FormCell.Sorter",
+							"_Name": "SortBy",
 							"IsVisible": true,
+							"AllowEmptySelection": false,
+							"IsEditable": true,
 							"SortByItems": [
 								{
 									"DisplayValue": "Name",
@@ -48,44 +30,51 @@
 									"DisplayValue": "Price (High to Low)",
 									"ReturnValue": "Price desc"
 								}
-							],
-							"_Name": "SortBy",
-							"_Type": "Control.Type.FormCell.Sorter"
+							]
 						}
 					],
+					"_Name": "FormCellSection0",
+					"Caption": "Sort by",
 					"Visible": true
 				},
 				{
-					"Caption": "Filter By",
 					"Controls": [
 						{
-							"AllowEmptySelection": true,
+							"_Type": "Control.Type.FormCell.Filter",
+							"_Name": "PromoFilter",
+							"IsVisible": true,
 							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
 							"Caption": "Products",
+							"IsEditable": true,
 							"FilterProperty": [
 								{
 									"DisplayValue": "On Promotion",
 									"ReturnValue": "/MDKDemoApp/Rules/Product/ProductOnPromoFilter.js"
 								}
-							],
-							"IsEditable": true,
-							"IsVisible": true,
-							"_Name": "PromoFilter",
-							"_Type": "Control.Type.FormCell.Filter"
+							]
 						},
 						{
-							"AllowDefaultValueIfOneItem": true,
-							"AllowEmptySelection": true,
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "CategoryFilter",
+							"IsVisible": true,
 							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
 							"Caption": "Category",
 							"DataPaging": {
 								"LoadingIndicatorText": "",
 								"ShowLoadingIndicator": true
 							},
-							"FilterProperty": "CategoryName",
-							"IsEditable": true,
+							"PickerPrompt": "Please select multiple items",
 							"IsSelectedSectionEnabled": false,
-							"IsVisible": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": true,
+							"IsEditable": true,
+							"FilterProperty": "CategoryName",
+							"Search": {
+								"Enabled": true
+							},
 							"PickerItems": {
 								"DisplayValue": "{CategoryName}",
 								"ReturnValue": "{CategoryName}",
@@ -93,57 +82,65 @@
 									"EntitySet": "ProductCategories",
 									"Service": "/MDKDemoApp/Services/Sample.service"
 								}
-							},
-							"PickerPrompt": "Please select multiple items",
-							"Search": {
-								"Enabled": true
-							},
-							"_Name": "CategoryFilter",
-							"_Type": "Control.Type.FormCell.ListPicker"
+							}
 						}
 					],
+					"_Name": "FormCellSection1",
+					"Caption": "Filter By",
 					"Visible": true
 				}
-			],
-			"_Name": "FormCellContainer0",
-			"_Type": "Control.Type.FormCellContainer"
+			]
 		}
 	],
+	"_Type": "Page",
+	"_Name": "Product_Filter",
+	"Caption": "Filter",
+	"ActionBar": {
+		"Items": [
+			{
+				"Text": "Cancel",
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action"
+			},
+			{
+				"Text": "Done",
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Done",
+				"Position": "right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",		
+		"Visible": true,
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ResetAllBtn",
+				"Visible": true,
+				"Title": "Reset All",
+				"OnPress": "/MDKDemoApp/Rules/Product/ResetFilter.js",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	},
 	"Result": [
 		"#Page:Product_Filter/#Control:SortBy/#Value",
 		"#Page:Product_Filter/#Control:CategoryFilter/#FilterValue",
 		"#Page:Product_Filter/#Control:PromoFilter/#Value"
-	],
-	"ToolBar": {
-		"Controls": [
-			{
-				"Clickable": true,
-				"Enabled": true,
-				"ItemType": "Normal",
-				"SystemItem": "FlexibleSpace",
-				"Visible": true,
-				"_Name": "ToolbarItem1",
-				"_Type": "Control.Type.ToolbarItem"
-			},
-			{
-				"Caption": "Reset All",
-				"Clickable": true,
-				"Enabled": true,
-				"OnPress": "/MDKDemoApp/Rules/Product/ResetFilter.js",
-				"Visible": true,
-				"_Name": "ToolbarItem0",
-				"_Type": "Control.Type.ToolbarItem"
-			},
-			{
-				"Clickable": true,
-				"Enabled": true,
-				"SystemItem": "FlexibleSpace",
-				"Visible": true,
-				"_Name": "ToolbarItem2",
-				"_Type": "Control.Type.ToolbarItem"
-			}
-		]
-	},
-	"_Name": "Product_Filter",
-	"_Type": "Page"
+	]
 }

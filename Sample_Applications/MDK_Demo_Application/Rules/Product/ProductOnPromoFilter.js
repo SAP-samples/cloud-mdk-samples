@@ -6,18 +6,15 @@ export default function ProductOnPromoFilter(context) {
     if (platform && (platform.isIOS || platform.isAndroid)) {
         appId = context.evaluateTargetPath('#Application/#ClientData/#Property:MobileServiceAppId');
     } else {
-        appId = 'WindowsClient';
+        appId = 'WebClient';
     }
-    let mainPage = appSettings.getString(`${appId}-MainPage`);
-    let mainPageName = mainPage.substring(mainPage.lastIndexOf('/') + 1).slice(0,-5);
-
-    let cd = context.evaluateTargetPathForAPI(`#Page:${mainPageName}`).getClientData();
+    let cd = context.getAppClientData();
     let promoItems = [];
     var filter = '';
 
     if (cd.promoItems) {
         for (var item of Object.keys(cd.promoItems)) {
-            promoItems.push(`ProductId eq '${item}'`)
+            promoItems.push(`ProductID eq ${item}`)
         }
         if (promoItems.length > 0) {
             filter = `(${promoItems.join(' or ')})`;

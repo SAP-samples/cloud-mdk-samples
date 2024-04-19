@@ -2,35 +2,35 @@
 	"PopoverItems": [
 		{
 			"Enabled": true,
-			"Icon": "/MDKDemoApp/Images/Application/sync.png",
+			"Icon": "sap-icon://synchronize",
 			"OnPress": "/MDKDemoApp/Actions/Service/StartSync.action",
 			"Title": "Sync Changes",
 			"Visible": "$(PLT,true,true,false)"
 		},
 		{
 			"Enabled": true,
-			"Icon": "/MDKDemoApp/Images/Application/headset.png",
+			"Icon": "sap-icon://headset",
 			"OnPress": "/MDKDemoApp/Actions/Application/NavToSupport.action",
 			"Title": "Support",
 			"Visible": true
 		},
 		{
 			"Enabled": true,
-			"Icon": "/MDKDemoApp/Images/Application/update-check.png",
+			"Icon": "sap-icon://refresh",
 			"OnPress": "/MDKDemoApp/Actions/Application/AppUpdateProgressBanner.action",
 			"Title": "Check for Updates",
 			"Visible": "$(PLT,true,true,false)"
 		},
 		{
 			"Enabled": true,
-			"Icon": "/MDKDemoApp/Images/Application/about.png",
+			"Icon": "sap-icon://hint",
 			"OnPress": "/MDKDemoApp/Actions/Application/NavToAbout.action",
 			"Title": "About",
 			"Visible": true
 		},
 		{
 			"Enabled": true,
-			"Icon": "/MDKDemoApp/Images/Application/logout.png",
+			"Icon": "sap-icon://log",
 			"OnPress": "/MDKDemoApp/Actions/LogoutConfirmation.action",
 			"Title": "Logout",
 			"Visible": true

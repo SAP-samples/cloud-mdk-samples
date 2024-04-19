@@ -1,6 +1,6 @@
 export default function TopCustomersQO(context) {
 	return context.count('/MDKDemoApp/Services/Sample.service', 'Customers', '').then((count) => {
-		let cd = context.getPageProxy().getClientData();
+		let cd = context.getAppClientData();
 		var skip = 0;
 		if (count && count > 4) {
 			if (!cd.CustSkip) {

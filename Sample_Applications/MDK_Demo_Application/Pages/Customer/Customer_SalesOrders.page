@@ -15,9 +15,11 @@
 						"UseTopPadding": false
 					},
 					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
-						"DetailImageIsCircular": false,
-						"Footnote": "{SalesOrderId}",
+						"AccessoryType": "DisclosureIndicator",
+						"AvatarStack": {
+							"ImageIsCircular": false
+						},
+						"Footnote": "{SalesOrderID}",
 						"OnPress": "/MDKDemoApp/Actions/SalesOrder/NavtoSalesOrder_Detail.action",
 						"PreserveIconStackSpacing": false,
 						"StatusText": "{LifeCycleStatusName}",
@@ -31,7 +33,7 @@
 					},
 					"Target": {
 						"EntitySet": "SalesOrderHeaders",
-						"QueryOptions": "$filter=CustomerId eq '{CustomerId}'&$orderby=CreatedAt desc",
+						"QueryOptions": "$filter=CustomerID eq {CustomerID}&$orderby=CreatedAt desc",
 						"Service": "/MDKDemoApp/Services/Sample.service"
 					},
 					"_Name": "SectionObjectTable0",
@@ -43,5 +45,6 @@
 		}
 	],
 	"_Name": "Customer_SalesOrders",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

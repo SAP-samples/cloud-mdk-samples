@@ -1,0 +1,22 @@
+{
+	"_Type": "Action.Type.ODataService.DownloadStream",
+	"ActionResult": {
+		"_Name": "DownloadProductStream"
+	},
+	"Target": {
+		"Service": "/MDKDemoApp/Services/Sample.service",
+		"EntitySet": "Products",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": [
+		"Picture"
+	],
+	"OnFailure": {
+		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
+		"Properties": {
+			"Animated": true,
+			"Duration": 0,
+			"Message": "Failed to download product image - {#ActionResults:download/error}"
+		}
+	}
+}

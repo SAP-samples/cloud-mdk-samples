@@ -53,5 +53,6 @@
 		}
 	],
 	"_Name": "Customer_List",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

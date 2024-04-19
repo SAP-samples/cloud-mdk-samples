@@ -6,18 +6,14 @@ export default function GetPromoDiscount(context) {
         if (platform && (platform.isIOS || platform.isAndroid)) {
             appId = context.evaluateTargetPath('#Application/#ClientData/#Property:MobileServiceAppId');
         } else {
-            appId = 'WindowsClient';
+            appId = 'WebClient';
         }
-        mainPage = appSettings.getString(`${appId}-MainPage`);
-        mainPageName = mainPage.substring(mainPage.lastIndexOf('/') + 1).slice(0,-5);
-
-        console.log(`Main Page Name: ${mainPageName}`);
     } catch (err) {
         console.log('ERROR: Failure getting AppId');
     }    
-    let cd = context.evaluateTargetPathForAPI(`#Page:${mainPageName}`).getClientData();
-    if (cd.promoItems && cd.promoItems.hasOwnProperty(context.binding.ProductId)) {
-        let discountStr = `+${context.formatPercentage(cd.promoItems[context.binding.ProductId],null,{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:0,useGrouping:true})} Off`;
+    let cd = context.getAppClientData();
+    if (cd.promoItems && cd.promoItems.hasOwnProperty(`${context.binding.ProductID}`)) {
+        let discountStr = `+${context.formatPercentage(cd.promoItems[`${context.binding.ProductID}`],null,{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:0,useGrouping:true})} Off`;
         return discountStr;
     }
     return null;

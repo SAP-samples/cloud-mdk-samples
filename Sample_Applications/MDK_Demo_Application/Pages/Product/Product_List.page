@@ -1,70 +1,94 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"IsIconCircular": false,
-				"OnPress": "/MDKDemoApp/Actions/Product/ProductFilter.action",
-				"Position": "right",
-				"Text": "Filter",
-				"Visible": true
-			}
-		]
-	},
-	"Caption": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
 	"Controls": [
 		{
-			"LoadingIndicator": {
-				"Enabled": true,
-				"Text": ""
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
 			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"DataPaging": {
-						"LoadingIndicatorText": "",
-						"ShowLoadingIndicator": true
-					},
-					"EmptySection": {
-						"FooterVisible": false
-					},
 					"Header": {
+						"_Name": "SectionHeader0",
+						"AccessoryType": "None",
 						"UseTopPadding": false
 					},
-					"HighlightSelectedItem": false,
-					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
-						"DetailImage": "/MDKDemoApp/Rules/Product/GetProductImage.js",
-						"DetailImageIsCircular": false,
-						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
-						"PreserveIconStackSpacing": false,
-						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
-						"Styles": {
-							"StatusText": "Price",
-							"SubstatusText": "Discount"
-						},
-						"Subhead": "{CategoryName}",
-						"SubstatusText": "/MDKDemoApp/Rules/Product/GetPromoDiscount.js",
-						"Title": "{Name}"
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
 					},
-					"Search": {
-						"BarcodeScanner": true,
-						"Enabled": true,
-						"Placeholder": "Product Search"
-					},
+					"_Type": "Section.Type.ObjectTable",
 					"Target": {
 						"EntitySet": "Products",
 						"QueryOptions": "$orderby=Name",
 						"Service": "/MDKDemoApp/Services/Sample.service"
 					},
-					"Visible": true,
 					"_Name": "SectionObjectTable0",
-					"_Type": "Section.Type.ObjectTable"
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": []
+						},
+						"Title": "{Name}",
+						"Subhead": "{CategoryName}",
+						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
+						"SubstatusText": "/MDKDemoApp/Rules/Product/GetPromoDiscount.js",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "/MDKDemoApp/Services/Sample.service/{@odata.readLink}/Picture"
+								}
+							],
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"ImageIsCircular": true
+						},
+						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
+						"Selected": false,
+						"Styles": {
+							"SubstatusText": "Discount"
+						}
+					},
+					"HighlightSelectedItem": false
 				}
 			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": ""
+			}
 		}
 	],
-	"OnReturning": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
+	"_Type": "Page",
 	"_Name": "Product_List",
-	"_Type": "Page"
+	"Caption": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
+	"PrefersLargeCaption": true,
+	"OnReturning": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Filter",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDKDemoApp/Actions/Product/ProductFilter.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }

@@ -4,9 +4,9 @@
 			{
 				"IsIconCircular": false,
 				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action",
-				"Position": "right",
+				"Position": "Right",
 				"SystemItem": "Done",
-				"Text": "Done",
+				"Caption": "Done",
 				"Visible": true
 			}
 		]
@@ -69,5 +69,6 @@
 		}
 	],
 	"_Name": "About",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

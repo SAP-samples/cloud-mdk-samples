@@ -1,0 +1,73 @@
+/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.
+
+Examples:
+
+@mdkYellow1: #ffbb33;
+@mdkRed1: #ff0000;
+
+//// By-Type style: All Pages in the application will now have a yellow background
+Page
+
+{ background-color: @mdkYellow1; }
+//// By-Name style: All Buttons with _Name == "BlueButton" will now have this style
+#BlueButton
+
+{ color: @mdkYellow1; background-color: #0000FF; }
+//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function
+
+.MyButton
+
+{ color: @mdkYellow1; background-color: @mdkRed1; }
+*/
+
+@mdkYellow1: #ffbb33;
+@mdkRed1: #ff0000;
+@mdkBlack: #000000;
+
+.Discount {
+    font-color: @mdkRed1;
+}
+
+.Price {
+    font-color: @mdkBlack;
+}
+
+.tagStyleRed {
+    font-color: #AB0708;
+    background-color: #FFDCE8;   
+}
+
+.tagStyleBlue {
+    font-color: #0057D3;
+    background-color: #D1EFFF; 
+}
+
+.tagStyleGreen {
+    font-color: #256F3A;
+    background-color: #EBF5CC; 
+}
+
+.tagStylePink {
+    font-color: #A111C2;
+    background-color: #FFDCF4; 
+}
+
+.tagStyleIndigo {
+    font-color: #470CEE;
+    background-color: #E2D8FF; 
+}
+
+.tagStyleMango {
+    font-color: #A93E00;
+    background-color: #FFF4B8; 
+}
+
+.tagStyleTeal {
+    font-color: #046C7A;
+    background-color: #C2FCEE; 
+}
+
+.tagStyleGrey {
+    font-color: #354B5F;
+    background-color: #EAECEE; 
+}

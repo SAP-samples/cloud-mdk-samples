@@ -5,7 +5,7 @@ export default function GetProductImage(context) {
 	let pageProxy = context.getPageProxy()
 
     return pageProxy.executeAction({
-        "Name": "/MDKDemoApp/Actions/Product/DownloadProductImage.action",
+        "Name": "/MDKDemoApp/Actions/Product/DownloadProductStream.action",
         "Properties": {
             "Target": {
                 "ReadLink": imageObject['@odata.readLink']

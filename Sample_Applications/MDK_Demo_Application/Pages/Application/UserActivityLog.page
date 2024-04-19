@@ -1,49 +1,64 @@
 {
-	"Caption": "Activity Log",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "FormCellContainer",
 			"Sections": [
 				{
 					"Controls": [
 						{
-							"Caption": "Enable Logging",
-							"IsEditable": true,
-							"OnValueChange": "/MDKDemoApp/Rules/Logging/ToggleLogging.js",
 							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch",
 							"_Name": "EnableLogSwitch",
-							"_Type": "Control.Type.FormCell.Switch"
+							"IsVisible": true,
+							"Caption": "Enable Logging",
+							"OnValueChange": "/MDKDemoApp/Rules/Logging/ToggleLogging.js",
+							"IsEditable": true
 						},
 						{
-							"AllowMultipleSelection": false,
-							"Caption": "Log Level",
-							"IsEditable": false,
 							"IsSearchEnabled": false,
-							"OnValueChange": "/MDKDemoApp/Rules/Logging/SetUserLogLevel.js",
-							"PickerItems": "/MDKDemoApp/Rules/Logging/LogLevels.js",
+							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "LogLevelListPicker",
-							"_Type": "Control.Type.FormCell.ListPicker"
+							"IsVisible": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Log Level",
+							"OnValueChange": "/MDKDemoApp/Rules/Logging/SetUserLogLevel.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"PickerItems": "/MDKDemoApp/Rules/Logging/LogLevels.js"
 						}
 					],
-					"Visible": true
+					"_Name": "FormCellContainerSectionFormCell0",
+					"Visible": true,
+					"_Type": "Section.Type.FormCell"
 				},
 				{
 					"Controls": [
 						{
-							"OnPress": "/MDKDemoApp/Actions/Logging/UploadLogProgress.action",
-							"TextAlignment": "center",
-							"Title": "Send Activity Log",
+							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Send",
-							"_Type": "Control.Type.FormCell.Button"
+							"IsVisible": true,
+							"Title": "Send Activity Log",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"Enabled": true
 						}
 					],
-					"Visible": true
+					"_Name": "FormCellContainerSectionFormCell1",
+					"Visible": true,
+					"_Type": "Section.Type.FormCell"
 				}
-			],
-			"_Name": "FormCellContainer",
-			"_Type": "Control.Type.FormCellContainer"
+			]
 		}
 	],
-	"OnLoaded": "/MDKDemoApp/Rules/Logging/UserLogSetting.js",
+	"_Type": "Page",
 	"_Name": "UserActivityLog",
-	"_Type": "Page"
+	"Caption": "Activity Log",
+	"OnLoaded": "/MDKDemoApp/Rules/Logging/UserLogSetting.js",
+	"PrefersLargeCaption": true
 }
