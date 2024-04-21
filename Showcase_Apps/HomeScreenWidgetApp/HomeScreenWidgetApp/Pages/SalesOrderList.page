@@ -52,7 +52,7 @@
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
-						"Service": "/HomeScreenWidgetApp/Services/com_sap_edm_sampleservice_v2.service",
+						"Service": "/HomeScreenWidgetApp/Services/com_sap_edm_sampleservice_v4.service",
 						"EntitySet": "SalesOrderHeaders"
 					},
 					"_Name": "SectionObjectTable0",

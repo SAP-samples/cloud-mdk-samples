@@ -1,10 +1,10 @@
 {
-    "Service": "/HomeScreenWidgetApp/Services/com_sap_edm_sampleservice_v2.service",
-    "_Type": "Action.Type.ODataService.Initialize",
-    "ShowActivityIndicator": true,
-    "OnSuccess": "/HomeScreenWidgetApp/Actions/Service/InitializeOnlineSuccessMessage.action",
-    "OnFailure": "/HomeScreenWidgetApp/Actions/Service/InitializeOnlineFailureMessage.action",
-    "ActionResult": {
-        "_Name": "init"
-    }
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/HomeScreenWidgetApp/Actions/Service/InitializeOnlineFailureMessage.action",
+	"OnSuccess": "/HomeScreenWidgetApp/Actions/Service/InitializeOnlineSuccessMessage.action",
+	"ShowActivityIndicator": true,
+	"Service": "/HomeScreenWidgetApp/Services/com_sap_edm_sampleservice_v4.service"
 }
