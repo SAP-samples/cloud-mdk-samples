@@ -68,7 +68,7 @@
 							"LeadingItems": [],
 							"TrailingItems": []
 						},
-						"Title": "{SalesOrderId}",
+						"Title": "{SalesOrderID}",
 						"Subhead": "{NetAmount} {CurrencyCode}",
 						"DisplayDescriptionInMobile": true,
 						"StatusText": "{LifeCycleStatusName}",

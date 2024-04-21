@@ -13,7 +13,7 @@
 						"Subhead": "{NetAmount} {CurrencyCode}",
 						"StatusText": "{LifeCycleStatusName}",
 						"DetailImageIsCircular": false,
-						"HeadlineText": "{SalesOrderId}",
+						"HeadlineText": "{SalesOrderID}",
 						"StatusPosition": "Stacked",
 						"StatusImagePosition": "Leading",
 						"SubstatusImagePosition": "Leading"
