@@ -9,10 +9,8 @@ export default function InitializeApplication(context) {
         if (platform && (platform.isIOS || platform.isAndroid)) {
             appId = context.evaluateTargetPath('#Application/#ClientData/#Property:MobileServiceAppId');
         } else {
-            appId = 'WindowsClient';
+            appId = 'WebClient';
         } 
-        mainPageName = '/MDKDemoApp/Pages/Dashboard/Dashboard_ImgPromos.page';
-        appSettings.setString(`${appId}-MainPage`, mainPageName);
     } catch (err) {
         console.log('ERROR: Failure getting AppId');
     }    

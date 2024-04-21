@@ -5,15 +5,14 @@ export default function PercentOff(context) {
     // Only give discounts if price is > 0
     if (context.binding.Price && context.binding.Price > 0) {
         // Store promotion item discount
-        let cd = context.getPageProxy().getClientData();
-        //let promoItems = cd.promoItems;
+        let cd = context.getAppClientData();
         if (!cd.promoItems) {
             cd.promoItems = {};
         }
-        if (cd.promoItems && !cd.promoItems.hasOwnProperty(context.binding.ProductId)) {
-            cd.promoItems[context.binding.ProductId] = itemDiscount;
+        if (cd.promoItems && !cd.promoItems.hasOwnProperty(`${context.binding.ProductID}`)) {
+            cd.promoItems[`${context.binding.ProductID}`] = itemDiscount;
         } else {
-            itemDiscount = cd.promoItems[context.binding.ProductId];
+            itemDiscount = cd.promoItems[`${context.binding.ProductID}`];
         }
         // Defined the Percent Off String
         let discountStr = `+${context.formatPercentage(itemDiscount,null,{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:0,useGrouping:true})} Off`;

@@ -5,8 +5,8 @@
 				"Icon": "sap-icon://customer",
 				"IsIconCircular": false,
 				"OnPress": "/MDKDemoApp/Actions/Application/UserMenuPopover.action",
-				"Position": "left",
-				"Text": "User",
+				"Position": "Left",
+				"Caption": "User",
 				"Visible": true
 			}
 		]
@@ -17,16 +17,20 @@
 			"Sections": [
 				{
 					"ObjectHeader": {
+						"Tags": [
+							{
+								"Text": "/MDKDemoApp/Rules/Dashboard/daysLeftInQuarter.rule.js"
+							},
+							{
+								"Text": "/MDKDemoApp/Rules/Dashboard/getCurrentQuarter.rule.js"
+							}
+						],
 						"Description": "$(L,'dashboard_header_body')",
 						"DetailImage": "/MDKDemoApp/Images/mdk_logo.png",
 						"DetailImageIsCircular": false,
 						"HeadlineText": "$(L,'mdk')",
 						"StatusText": "/MDKDemoApp/Rules/Dashboard/versionString.js",
-						"Subhead": "$(L,'app_name')",
-						"Tags": [
-							"/MDKDemoApp/Rules/Dashboard/daysLeftInQuarter.rule.js",
-							"/MDKDemoApp/Rules/Dashboard/getCurrentQuarter.rule.js"
-						]
+						"Subhead": "$(L,'app_name')"
 					},
 					"Visible": true,
 					"_Name": "SectionObjectHeader0",
@@ -42,10 +46,10 @@
 						"FooterVisible": false
 					},
 					"Footer": {
-						"AccessoryType": "disclosureIndicator",
+						"AccessoryType": "DisclosureIndicator",
 						"AttributeLabel": "/MDKDemoApp/Rules/Customer/CustomerCount.js",
 						"Caption": "All Customers",
-						"FooterStyle": "attribute",
+						"FooterStyle": "Attribute",
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_List.action",
 						"UseBottomPadding": true,
 						"Visible": true
@@ -58,9 +62,15 @@
 						"NumberOfColumns": 2
 					},
 					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
-						"DetailImage": "/MDKDemoApp/Rules/Customer/GetSmallCustomerAvatarURL.js",
-						"DetailImageIsCircular": false,
+						"AccessoryType": "DisclosureIndicator",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "/MDKDemoApp/Rules/Customer/GetSmallCustomerAvatarURL.js"
+								}
+							],
+							"ImageIsCircular": false
+						},
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_Detail.action",
 						"PreserveIconStackSpacing": false,
 						"Title": "{FirstName} {LastName}"
@@ -84,10 +94,10 @@
 						"FooterVisible": false
 					},
 					"Footer": {
-						"AccessoryType": "disclosureIndicator",
+						"AccessoryType": "DisclosureIndicator",
 						"AttributeLabel": "/MDKDemoApp/Rules/Product/ProductCount.js",
 						"Caption": "All Products",
-						"FooterStyle": "attribute",
+						"FooterStyle": "Attribute",
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_List.action",
 						"UseBottomPadding": false,
 						"Visible": true
@@ -101,9 +111,15 @@
 					},
 					"MaxItemCount": 6,
 					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
-						"DetailImage": "/MDKDemoApp/Rules/Product/GetProductImage.js",
-						"DetailImageIsCircular": false,
+						"AccessoryType": "DisclosureIndicator",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "/MDKDemoApp/Rules/Product/GetProductImage.js"
+								}
+							],
+							"ImageIsCircular": false
+						},
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
 						"PreserveIconStackSpacing": false,
 						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
@@ -130,5 +146,6 @@
 		}
 	],
 	"_Name": "Dashboard_ObjPromos",
-	"_Type": "Page"
+	"_Type": "Page",
+	"PrefersLargeCaption": true
 }

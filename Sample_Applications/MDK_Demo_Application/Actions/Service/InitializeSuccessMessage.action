@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"ActionResult": {
+		"_Name": "InitializeSuccessMessage"
+	},
+	"Message": "Service Initialized",
+	"NumberOfLines": 1,
+	"Duration": 1
+}

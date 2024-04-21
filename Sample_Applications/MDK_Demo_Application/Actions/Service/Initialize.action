@@ -1,8 +1,19 @@
 {
+	"_Type": "Action.Type.ODataService.Initialize",
 	"ActionResult": {
 		"_Name": "initialize"
 	},
+	"OnFailure": {
+		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
+		"Properties": {
+			"Duration": 0,
+			"Message": "Failed to Initialize Service - {#ActionResults:initialize/#Property:error}"
+		}
+	},
+	"OnSuccess": "/MDKDemoApp/Actions/Service/InitializeSuccessMessage.action",
+	"ShowActivityIndicator": true,
 	"ActivityIndicatorText": "Initializing Application...",
+	"Service": "/MDKDemoApp/Services/Sample.service",
 	"DefiningRequests": [
 		{
 			"AutomaticallyRetrievesStreams": false,
@@ -44,21 +55,5 @@
 			"Name": "Suppliers",
 			"Query": "Suppliers"
 		}
-	],
-	"OnFailure": {
-		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
-		"Properties": {
-			"Duration": 0,
-			"Message": "Failed to Initialize Service - {#ActionResults:initialize/#Property:error}"
-		}
-	},
-	"OnSuccess": {
-		"Name": "/MDKDemoApp/Actions/GenericToastMessage.action",
-		"Properties": {
-			"Message": "Service Initialized"
-		}
-	},
-	"Service": "/MDKDemoApp/Services/Sample.service",
-	"ShowActivityIndicator": true,
-	"_Type": "Action.Type.ODataService.Initialize"
+	]
 }

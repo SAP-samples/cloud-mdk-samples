@@ -2,7 +2,7 @@
 
 This is the demo application that is included in the SAP Mobile Services Client that is distributed on the Apple App Store and Google Play Store.
 
-*Last Updated: 29-Nov-2021*
+*Last Updated: 19-Apr-2024*
 *** 
 ## Trying the Demo:
 
@@ -19,19 +19,20 @@ This application is unique in that it can be previewed simply by installing the 
 * Web
 
 ### *MDK Client Version*
-* MDK 5.0.1 or higher
+* MDK 23.4.0 or higher
 
 ### *Data Source*
-* Mobile Sample OData ESPM
+* Mobile Sample OData ESPM V4
 
 ***
 
 ## Key Highlights
 
-* Utilizes the MDK 5.0 harmonized ODataService.Initialize action
+* Utilizes the harmonized ODataService.Initialize action
 * Randomly selects promotion times from the overall products list
 * Retrieves Customer Avatar images from http service
 * Retrieves product media images from the service
+* Utilizes the section header button for See All instead of dedicated footer area
 * Includes Product Filter page
 
 ***
