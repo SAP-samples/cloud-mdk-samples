@@ -50,7 +50,7 @@ For more detailed information on building a Mobile Development Kit Client please
 * [Build Your Mobile Development Kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
 * [Build Your Mobile Development Kit Client Using Cloud Build Service](https://developers.sap.com/tutorials/cp-mobile-dev-kit-cbs-client.html)
 
-The application metadata is the [HomeScreenWidgetApp](HomeScreenWidgetApp) folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor and make sure to enable feature `Mobile Sample OData ESPM` in your mobile services app.
+The application metadata is the [HomeScreenWidgetApp](HomeScreenWidgetApp) folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor. Make sure to enable the feature `Mobile Sample OData ESPM` (configured with OData Version 4) in your mobile services app.
 
 ### Add Widget to Home Screen
 
