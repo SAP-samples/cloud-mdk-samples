@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "Refresh"
+	},
+	"Service": "/HomeScreenWidgetApp/Services/com_sap_edm_sampleservice_v4.service"
+}

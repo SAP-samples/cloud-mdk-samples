@@ -7,6 +7,7 @@ All of the applications in these folders are full working applications.  Please 
 
 ## Applications
 * FormCell Inline Validation
+* Home Screen Widget
 * Image Handling
 * Multi-Select & Context Menu
 * PDF Generation
