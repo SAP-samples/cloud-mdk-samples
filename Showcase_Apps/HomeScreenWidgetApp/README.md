@@ -23,7 +23,7 @@ This is a showcase application that demonstrates how to implement a [Home Screen
 
 ### Data Source
 
-* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v2)
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v4)
 
 ***
 
