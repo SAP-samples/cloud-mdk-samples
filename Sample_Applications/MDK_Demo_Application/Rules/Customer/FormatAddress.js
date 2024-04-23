@@ -8,11 +8,11 @@ export default function FormatAddress(context) {
 
 	// If the house number has a value include it in the address block
 	if (!isValEmpty(context.binding.HouseNumber)) {
-		addrBlock = addrBlock + context.binding.HouseNumber + ' ' + context.binding.AddrStreet;
+		addrBlock = addrBlock + context.binding.HouseNumber + ' ' + context.binding.Street;
 	}
 
 	// If at least one of (city, state or postal code) is populated add that to the address block
-	if (!isValEmpty(context.binding.City) || !isValEmpty(context.binding.AddrPostalCode)) {
+	if (!isValEmpty(context.binding.City) || !isValEmpty(context.binding.PostalCode)) {
 		// Add a new line if there is something already in the address block	
 		if (addrBlock.length > 0) {
 			addrBlock = addrBlock + '\n'
