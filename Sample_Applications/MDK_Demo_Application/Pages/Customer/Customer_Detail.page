@@ -35,23 +35,10 @@
 					"KeyAndValues": [
 						{
 							"KeyName": "Address",
-							"Value": "{HouseNumber} {Street}",
-							"Visible": true
-						},
-						{
-							"KeyName": "City",
-							"Value": "{City}",
-							"Visible": true
-						},
-						{
-							"KeyName": "Postal Code",
-							"Value": "{PostalCode}",
-							"Visible": true
-						},
-						{
-							"KeyName": "Country / Region",
-							"Value": "{Country}",
-							"Visible": true
+							"Value": "/MDKDemoApp/Rules/Customer/FormattedAddress.js",
+							"Visible": true,
+							"OnPress": "/MDKDemoApp/Rules/Customer/OpenMap.js",
+							"LinkColor": "#6189C7"
 						}
 					],
 					"Layout": {
