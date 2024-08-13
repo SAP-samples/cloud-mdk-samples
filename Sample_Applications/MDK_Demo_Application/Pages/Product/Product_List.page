@@ -65,7 +65,8 @@
 						}
 					},
 						"Search": {
-						"Enabled": true
+						"Enabled": true,
+						"BarcodeScanner": true
 					},
 					"HighlightSelectedItem": false
 				}
