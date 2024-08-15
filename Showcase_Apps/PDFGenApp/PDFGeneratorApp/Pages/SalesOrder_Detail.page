@@ -36,7 +36,8 @@
 				},
 				{
 					"Header": {
-						"Caption": "Items"
+						"Caption": "Items",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"_Name": "SalesOrderItemsTable",
@@ -58,18 +59,20 @@
 			"_Type": "Control.Type.SectionedTable"
 		}
 	],
-	"ToolBar": {
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",
 		"Items": [
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "GeneratePDFToolbarItem",
-				"Caption": "$(L,GeneratePDFInlineToolbarItem_Label)",
+				"Title": "$(L,GeneratePDFInlineToolbarItem_Label)",
 				"OnPress": "/PDFGeneratorApp/Rules/GeneratePDFAsBase64.js"
 			},
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "GeneratePDFToolbarItem2",
-				"Caption": "$(L,GeneratePDFExternalToolbarItem_Label)",
+				"Title": "$(L,GeneratePDFExternalToolbarItem_Label)",
 				"OnPress": "/PDFGeneratorApp/Rules/GeneratePDFAsFile.js"
 			}
 		]

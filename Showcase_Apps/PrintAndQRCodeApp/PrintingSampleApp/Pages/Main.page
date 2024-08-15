@@ -11,7 +11,8 @@
 							"Title": "Show QR Code",
 							"Visible": true,
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						}
 					],
 					"EmptySection": {
@@ -26,16 +27,17 @@
 			"_Type": "Control.Type.SectionedTable"
 		}
 	],
-	"ToolBar": {
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",
 		"Items": [
 			{
-				"Caption": "Logout",
-				"Clickable": true,
-				"Enabled": true,
-				"OnPress": "/PrintingSampleApp/Actions/Logout.action",
-				"Visible": true,
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "LogoutToolbarItem",
-				"_Type": "Control.Type.ToolbarItem"
+				"Visible": true,
+				"Title": "Logout",
+				"OnPress": "/PrintingSampleApp/Actions/Logout.action",
+				"Enabled": true
 			}
 		]
 	},

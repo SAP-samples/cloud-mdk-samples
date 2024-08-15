@@ -35,7 +35,8 @@
 				},
 				{
 					"Header": {
-						"Caption": "Items"
+						"Caption": "Items",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"_Name": "SalesOrderItemsTable",

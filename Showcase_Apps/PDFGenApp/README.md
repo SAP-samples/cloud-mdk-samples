@@ -14,7 +14,7 @@ This showcase application is loosely based on the following guide:
 
 And contains excerpt of sample code from the following project [`nativescript-pdf-generation`](https://github.com/kumarandena/nativescript-pdf-generation)
 
-*Last Updated: 16-Nov-2023*
+*Last Updated: 15-Aug-2024*
 
 ***
 
@@ -33,7 +33,7 @@ And contains excerpt of sample code from the following project [`nativescript-pd
 
 ### MDK Client Version
 
-* MDK 23.8 or higher
+* MDK 24.7 or higher
 
 ### Data Source
 

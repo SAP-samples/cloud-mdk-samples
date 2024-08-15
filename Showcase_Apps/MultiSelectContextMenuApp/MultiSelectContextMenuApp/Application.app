@@ -9,5 +9,5 @@
 	"Styles": "/MultiSelectContextMenuApp/Styles/Styles.less",
 	"Version": "/MultiSelectContextMenuApp/Globals/AppDefinition_Version.global",
 	"_Name": "MultiSelectContextMenuApp",
-	"_SchemaVersion": "23.8"
+	"_SchemaVersion": "24.7"
 }

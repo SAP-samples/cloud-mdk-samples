@@ -8,10 +8,11 @@
 			"Sections": [
 				{
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
+						"AccessoryType": "DisclosureIndicator",
 						"Description": "",
 						"AvatarStack": {
 							"Avatars": [

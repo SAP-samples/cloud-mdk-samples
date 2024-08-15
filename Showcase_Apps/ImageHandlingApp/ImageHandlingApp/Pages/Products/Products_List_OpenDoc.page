@@ -5,7 +5,8 @@
 			"Sections": [
 				{
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"ObjectCell": {
 						"OnPress": "/ImageHandlingApp/Rules/Product/DownloadOrOpenDocument.js",
