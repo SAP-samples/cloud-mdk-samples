@@ -1,0 +1,18 @@
+{
+  "_Type": "Action.Type.RestService.SendRequest",
+  "Target": {
+    "Path": "/inference/deployments/d1234567890abcde",
+    "RequestProperties": {
+      "Method": "POST",
+      "Headers": {
+        "content-type": "application/json"
+      },
+      "FetchCSRF": false
+    },
+    "Service": "/MDKDevApp/Services/AzureOpenAI.service"
+  },
+  "ShowActivityIndicator": true,
+  "ActivityIndicatorText": "Processing ...",
+  "ActionResult": { "_Name" : "OData" },
+  "OnFailure": "/MDKDevApp/Actions/Failure.action"
+}

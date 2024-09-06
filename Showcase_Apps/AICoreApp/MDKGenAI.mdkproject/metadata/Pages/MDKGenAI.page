@@ -1,0 +1,90 @@
+{
+  "Caption": "MDK GenAI",
+  "PrefersLargeCaption": true,
+  "ActionBar": {
+    "Items": [
+			{
+        "Position": "right",
+        "Caption": "VectorDB",
+				"OnPress": "/MDKDevApp/Actions/VectorDBAdmin.action"
+      },
+			{
+        "Position": "right",
+        "SystemItem": "Add",
+				"OnPress": "/MDKDevApp/Actions/OpenModalPage.action"
+      }
+		]
+  },
+  "Controls": [
+    {
+      "Sections": [
+        {  
+          "Header": {
+            "UseTopPadding": false
+          },
+					"_Type": "Section.Type.Image",
+					"_Name": "Placeholder",
+          "Image": "/MDKDevApp/Images/placeholder.jpg",
+          "ContentMode": "ScaleAspectFill",
+          "Height": 500
+				},
+        {
+					"_Type": "Section.Type.ObjectCollection",
+					"_Name": "AnomalyDetected",
+					"Header": {
+						"Caption": "Anomalies Detected",
+            "UseTopPadding": false
+					},
+          "Layout": {
+            "NumberOfColumns": 1
+          },
+          "ObjectCell": {
+            "_Name": "Anomaly",
+            "Title": "{anomalyTitle}",
+            "Subhead": "Problem description:",
+            "Footnote": "{description}",
+            "PreserveIconStackSpacing": false,
+            "AccessoryType": "disclosureIndicator",
+            "OnPress": "/MDKDevApp/Rules/ImageAnalysis/ShowAnomalyAlert.js"
+          },
+          "EmptySection": {
+            "Caption": "No data available.",
+            "FooterVisible": true
+          },
+          "Target": "/MDKDevApp/Rules/ImageAnalysis/GetAnomalyData.js",
+					"Separators": {
+						"HeaderSeparator": true
+					}
+				},
+				{
+					"_Type": "Section.Type.ObjectCollection",
+					"_Name": "Operations",
+          "Layout": {
+            "NumberOfColumns": 1
+          },
+					"Header": {
+						"Caption": "Operations Recommended by AI"
+					},
+          "ObjectCell": {
+            "_Name": "Operation",
+            "Title": "{taskTitle}",
+            "Footnote": "{description}",
+            "Subhead": "{shortDescription}",
+            "PreserveIconStackSpacing": false,
+            "AccessoryButtonText": "/MDKDevApp/Rules/ImageAnalysis/GetAccessoryButtonText.js",
+            "OnPress": "/MDKDevApp/Rules/ImageAnalysis/NavToOperationDetail.js"
+          },
+          "Visible": "/MDKDevApp/Rules/ImageAnalysis/OperationsVisibility.js",
+          "Target": "/MDKDevApp/Rules/ImageAnalysis/GetOperationsData.js",
+					"Separators": {
+						"HeaderSeparator": true
+					}
+				}
+      ],
+      "_Name": "SectionedTable1",
+      "_Type": "Control.Type.SectionedTable"
+    }
+  ],
+  "_Name": "MDKGenAIPage",
+  "_Type": "Page"
+}
