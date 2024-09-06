@@ -1,0 +1,109 @@
+{
+  "Caption": "Use Voice or Free Text",
+  "ActionBar": {
+    "Items": [
+      {
+        "Position": "left",
+        "SystemItem": "Cancel",
+        "OnPress": "/MDKDevApp/Actions/ClosePage.action"
+      },
+      {
+        "Position":"right",
+        "Caption": "Confirm",
+        "OnPress":  "/MDKDevApp/Rules/ImageAnalysis/SubmitTextToEditForm.js"
+      }
+    ]
+  },
+  "Controls": [
+    {
+      "_Type": "Control.Type.SectionedTable",
+      "_Name": "SectionedTable1",
+      "Sections": [
+        {
+          "ObjectHeader": {
+            "Subhead": "Guided questions: ",
+            "Description": "/MDKDevApp/Rules/SpeechAnalysis/GetGuidedQuestions.js"
+          },
+          "Header": {
+            "UseTopPadding": false
+          },
+          "_Type": "Section.Type.ObjectHeader"
+        },
+        {
+          "_Type": "Section.Type.FormCell",
+          "Header": {
+            "UseTopPadding": false
+          },
+          "Footer": {
+            "UseBottomPadding": false
+          },
+          "_Name": "FormCellSection",
+          "Controls": [
+            {
+              "_Type": "Control.Type.FormCell.Note",
+              "_Name": "NoteFormCell",
+              "IsEditable": true,
+              "Enabled": true,
+              "MaxNumberOfLines": 0,  
+              "PlaceHolder": "Your response to the question for form completion.",      
+              "validationProperties": {
+                "ValidationMessage": "Validation Message",
+                "ValidationMessageColor": "ff0000",
+                "SeparatorBackgroundColor": "000000",
+                "SeparatorIsHidden": false,
+                "ValidationViewBackgroundColor": "fffa00",
+                "ValidationViewIsHidden": true,
+                "MaxNumberOfLines": 2
+              }
+            }
+          ]
+        },
+        {
+          "_Type": "Section.Type.ButtonTable",
+          "Separators": {
+            "ControlSeparator": false
+          },
+          "Header": {
+            "UseTopPadding": false
+          },
+          "Footer": {
+            "UseBottomPadding": false
+          },
+          "Layout": {
+            "LayoutType": "Horizontal",
+            "HorizontalAlignment": "Center"
+          },
+          "Buttons": [
+            {
+              "ButtonType": "Primary",
+              "Title": "Record",
+              "Image": "sap-icon://microphone",
+              "OnPress": "/MDKDevApp/Rules/SpeechAnalysis/StartRecording.js",
+              "Visible": "/MDKDevApp/Rules/ImageAnalysis/GetRecordControlVisibility.js",
+              "_Name": "Record"
+            },
+            {
+              "ButtonType": "Primary",
+              "Semantic": "Negative",
+              "Title": "Stop",
+              "Image": "sap-icon://stop",
+              "OnPress":  "/MDKDevApp/Rules/SpeechAnalysis/StopRecording.js",
+              "Visible": "/MDKDevApp/Rules/ImageAnalysis/GetRecordControlVisibility.js",
+              "_Name": "Stop"
+            }
+          ]
+        }, {  
+          "Header": {
+            "UseTopPadding": false
+          },
+					"_Type": "Section.Type.Image",
+					"_Name": "PlaceholderForPadding",
+          "Image": "/MDKDevApp/Images/transparent.png",
+          "Height": 10
+				}
+      ]
+    }
+  ],
+  "_Name": "OperationRecord",
+  "_Type": "Page"
+}

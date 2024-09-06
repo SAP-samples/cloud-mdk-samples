@@ -1,0 +1,61 @@
+{
+  "Caption": "Vector DB Admin",
+  "OnLoaded": "/MDKDevApp/Actions/Initialize.action",
+  "ActionBar": {
+    "Items": [
+			{
+        "Position": "right",
+        "Text": "Populate",
+				"OnPress": "/MDKDevApp/Rules/RAG/PopulateEmbeddings.js"
+      },
+      {
+        "Position": "right",
+        "Text": "Clear",
+				"OnPress": "/MDKDevApp/Rules/RAG/DeleteEmbeddings.js"
+      }
+		]
+  },
+  "Controls": [
+    {
+      "Sections": [
+        {
+          "EmptySection": {
+            "Caption": "No Data"
+          },
+          "StickyColumn": true,
+          "Visible": true,
+          "Header": {
+            "DataTable": {     
+              "Items": [{
+                "Text": "Text Chunk"
+              }]
+            }
+          },
+          "Row": {
+            "Layout": {
+              "ColumnWidth": [500]
+            },
+            "Items": [{
+              "Text": "{text_chunk}",
+              "NumberOfLines": 2
+            }]
+          },
+          "Target": {
+            "EntitySet": "DocumentChunk",
+            "Service": "/MDKDevApp/Services/CAPVectorEngine.service"
+          },
+          "LoadingIndicator": {
+            "Enabled": true,
+            "Text": "Loading, please wait..."
+          },
+          "_Name": "Section",
+          "_Type": "Section.Type.DataTable"
+        }
+      ],
+      "_Name": "SectionedTable",
+      "_Type": "Control.Type.SectionedTable"
+    }
+  ],
+  "_Name": "VectorDBAdmin",
+  "_Type": "Page"
+}
