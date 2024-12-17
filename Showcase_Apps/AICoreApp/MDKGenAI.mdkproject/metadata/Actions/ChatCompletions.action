@@ -1,0 +1,19 @@
+{
+  "_Type": "Action.Type.AICore.Chat.Completions",
+  "ResourceGroup": "default",
+  "APIVersion": "2024-02-01",
+  "Target": {
+    "Service": "/MDKDevApp/Services/AzureOpenAI.service",
+    "Path": "/chat/completions"
+  },
+  "Properties": {
+    "Model": "gpt-4o",
+    "Messages": []
+  },
+  "ShowActivityIndicator": true,
+  "ActivityIndicatorText": "Processing ...",
+  "ActionResult": {
+    "_Name": "OData"
+  },
+  "OnFailure": "/MDKDevApp/Actions/Failure.action"
+}

@@ -27,6 +27,7 @@
             "Items": [
               {
                 "_Type": "SectionHeaderItem.Type.Label",
+                "_Name": "AnomalyDetectionHeader",
                 "Title": "Images for Anomaly Detection",
                 "Position": "Left"
               }
@@ -54,6 +55,7 @@
             "Items": [
               {
                 "_Type": "SectionHeaderItem.Type.Label",
+                "_Name": "MeterReadingHeader",
                 "Title": "Images for Meter Reading",
                 "Position": "Left"
               }
@@ -80,6 +82,7 @@
             "Items": [
               {
                 "_Type": "SectionHeaderItem.Type.Label",
+                "_Name": "MeterReadingResultsHeader",
                 "Title": "Meter Readings",
                 "Position": "Left"
               }

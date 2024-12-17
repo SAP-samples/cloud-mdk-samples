@@ -3,17 +3,17 @@
   "OnLoaded": "/MDKDevApp/Actions/Initialize.action",
   "ActionBar": {
     "Items": [
-			{
+      {
         "Position": "right",
-        "Text": "Populate",
-				"OnPress": "/MDKDevApp/Rules/RAG/PopulateEmbeddings.js"
+        "Caption": "Populate",
+        "OnPress": "/MDKDevApp/Rules/RAG/PopulateEmbeddings.js"
       },
       {
         "Position": "right",
-        "Text": "Clear",
-				"OnPress": "/MDKDevApp/Rules/RAG/DeleteEmbeddings.js"
+        "Caption": "Clear",
+        "OnPress": "/MDKDevApp/Rules/RAG/DeleteEmbeddings.js"
       }
-		]
+    ]
   },
   "Controls": [
     {
@@ -37,7 +37,7 @@
             },
             "Items": [{
               "Text": "{text_chunk}",
-              "NumberOfLines": 2
+              "NumberOfLines": 10
             }]
           },
           "Target": {

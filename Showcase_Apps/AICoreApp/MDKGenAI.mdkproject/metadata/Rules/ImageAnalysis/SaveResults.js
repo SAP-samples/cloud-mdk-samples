@@ -136,43 +136,35 @@ const formCellSchema = {
 };
 
 async function generateFormCells(context, schema) {
-  const method = "POST";
-  const path = "/chat/completions?api-version=2024-02-01";
-  const body = {
-    messages: [
-      {
-        role: "user",
-        content: `Generate form filling cells based on the schema provided as mentioned. ${schema}`
-      }
-    ],
-    max_tokens: 256,
-    temperature: 0,
-    frequency_penalty: 0,
-    presence_penalty: 0,
-    functions: [{ name: "format_response", parameters: formCellSchema }],
-    function_call: { name: "format_response" },
-  };
-  const headers = {
-    "content-type": "application/json",
-    "AI-Resource-Group": "default"
-  };
-  const service = "/MDKDevApp/Services/AzureOpenAI.service";
+
+  const messages = [{
+    role: "user",
+    content: `Generate form filling cells based on the schema provided as mentioned. ${schema}`
+  }];
+
+  const tools = [{
+    type: "function",
+    function: { name: "format_response", parameters: formCellSchema }
+  }];
+
+  const toolChoice = {
+    type: "function",
+    function: { name: "format_response" }
+  }
+
   return context.executeAction({
-    "Name": "/MDKDevApp/Actions/SendRequest.action",
+    "Name": "/MDKDevApp/Actions/ChatCompletions.action",
     "Properties": {
-      "ShowActivityIndicator": false,
-      "Target": {
-        "Path": path,
-        "RequestProperties": {
-          "Method": method,
-          "Headers": headers,
-          "Body": JSON.stringify(body)
-        },
-        "Service": service
-      }
+      "Properties": {
+        "Messages": messages,
+        "Tools": tools,
+        "ToolChoice": toolChoice,
+        "MaxTokens": 256
+      },
+      "ActivityIndicatorText": "Sending anomaly detection request..."
     }
   }).then(response => {
-    const resultsObj = JSON.parse(response.data.choices[0].message.function_call.arguments);
+    const resultsObj = JSON.parse(response.data.choices[0].message.tool_calls[0].function.arguments);
     return resultsObj;
   });
 }

@@ -21,6 +21,7 @@
       "Sections": [
         {
           "ObjectHeader": {
+            "HeadlineText": "Operation Record",
             "Subhead": "Guided questions: ",
             "Description": "/MDKDevApp/Rules/SpeechAnalysis/GetGuidedQuestions.js"
           },
@@ -96,11 +97,11 @@
           "Header": {
             "UseTopPadding": false
           },
-					"_Type": "Section.Type.Image",
-					"_Name": "PlaceholderForPadding",
+          "_Type": "Section.Type.Image",
+          "_Name": "PlaceholderForPadding",
           "Image": "/MDKDevApp/Images/transparent.png",
           "Height": 10
-				}
+        }
       ]
     }
   ],

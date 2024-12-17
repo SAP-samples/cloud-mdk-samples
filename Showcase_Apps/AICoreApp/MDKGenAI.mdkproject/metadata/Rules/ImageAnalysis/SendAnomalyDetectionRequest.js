@@ -1,5 +1,4 @@
 import GetMeterReadingResults from './GetMeterReadingResults';
-import BinaryToBase64 from '../Utils/BinaryToBase64';
 
 const IMAGE_URL_PREFIX = "data:image/jpeg;base64,";
 const schema = {
@@ -67,88 +66,86 @@ export default async function SendAnomalyDetectionRequest(context) {
     - Priority: Indicate the urgency of the task (e.g., high, medium, low).
     `;
 
-  const method = "POST";
-  const body = {
-    messages: [
-      {
-        "role": "user",
-        "content": [
-          {
-            "type": "text",
-            "text": prompt
-          }
-        ]
-      }
-    ],
-    temperature: 0.2,
-    max_tokens: 1024,
-    top_p: 1,
-    frequency_penalty: 0,
-    presence_penalty: 0,
-    functions: [{ name: "format_response", parameters: schema }],
-    function_call: { name: "format_response" },
+  const messages = [{
+    role: "user",
+    content: [{
+      type: "text",
+      text: prompt
+    }]
+  }];
+
+  const tools = [{
+    type: "function",
+    function: { name: "format_response", parameters: schema }
+  }];
+
+  const toolChoice = {
+    type: "function",
+    function: { name: "format_response" },
   };
-  const headers = {
-    "content-type": "application/json",
-    "AI-Resource-Group": "default"
-  }
-  const service = "/MDKDevApp/Services/AzureOpenAI.service";
-  const path = "/chat/completions?api-version=2024-02-01";
   const pageProxy = context.getPageProxy();
-  const attachments = pageProxy.evaluateTargetPath("#Control:AttachmentAnomalyDetection/#Value");
+  const attachments = pageProxy.evaluateTargetPath(
+    "#Control:AttachmentAnomalyDetection/#Value"
+  );
   if (!attachments || attachments.length === 0) {
     alert("Please attach an image");
     return;
   }
 
   // Preprocess images
-  attachments.forEach((attachment) => {
-    let base64String = BinaryToBase64(context, attachment.content);
+  for (const attachment of attachments) {
+    let base64String = await context.binaryToBase64String(attachment.content);
     const imageData = {
-      "type": "image_url",
-      "image_url": {
-        "url": `${IMAGE_URL_PREFIX}${base64String}`
-      }
-    }
-    body.messages[0].content.push(imageData);
-  });
+      type: "image_url",
+      image_url: {
+        url: `${IMAGE_URL_PREFIX}${base64String}`,
+      },
+    };
+    messages[0].content.push(imageData);
+  };
 
   // Send API request
   console.log("Sending anomaly detection request...");
-  return context.executeAction({
-    "Name": "/MDKDevApp/Actions/SendRequest.action",
-    "Properties": {
-      "Target": {
-        "Path": path,
-        "RequestProperties": {
-          "Method": method,
-          "Headers": headers,
-          "Body": JSON.stringify(body)
+  return context
+    .executeAction({
+      Name: "/MDKDevApp/Actions/ChatCompletions.action",
+      Properties: {
+        Properties: {
+          Messages: messages,
+          Tools: tools,
+          ToolChoice: toolChoice,
+          Temperature: 0.2,
+          MaxTokens: 1024,
         },
-        "Service": service
-      },
-      "ActivityIndicatorText": "Sending anomaly detection request...",
-    }
-  }).then(async response => {
-    const results = JSON.parse(response.data.choices[0].message.function_call.arguments);
-    const mainPage = context.evaluateTargetPathForAPI("#Page:MDKGenAIPage");
-    const cd = mainPage.getClientData();
-    cd.AnomalyResults = results.anomalyDetected;
-    console.log("Anomaly results:", results.anomalyDetected);
-    console.log("");
+        ActivityIndicatorText: "Sending anomaly detection request..."
+      }
+    })
+    .then(async (response) => {
+      const results = JSON.parse(
+        response.data.choices[0].message.tool_calls[0].function.arguments
+      );
+      const mainPage = context.evaluateTargetPathForAPI(
+        "#Page:MDKGenAIPage"
+      );
+      const cd = mainPage.getClientData();
+      cd.AnomalyResults = results.anomalyDetected;
+      console.log("Anomaly results:", results.anomalyDetected);
+      console.log("");
 
-    // Get image type for manual input (limitation to only one type of equipment per request)
-    const description = JSON.stringify(results.anomalyDetected[0], null, 2);
+      // Get image type for manual input (limitation to only one type of equipment per request)
+      const description = JSON.stringify(results.anomalyDetected[0], null, 2);
 
-    console.log("Fetching equipment name...");
-    let spinnerID = context.showActivityIndicator('Fetching equipment name...');
-    const equipmentName = await getEquipmentName(context, description);
-    context.dismissActivityIndicator(spinnerID);
-    cd.EquipmentNameResults = equipmentName;
-    console.log("Equipment Name:", equipmentName);
-    console.log("");
-    return true;
-  });
+      console.log("Fetching equipment name...");
+      let spinnerID = context.showActivityIndicator(
+        "Fetching equipment name..."
+      );
+      const equipmentName = await getEquipmentName(context, description);
+      context.dismissActivityIndicator(spinnerID);
+      cd.EquipmentNameResults = equipmentName;
+      console.log("Equipment Name:", equipmentName);
+      console.log("");
+      return true;
+    });
 }
 
 async function getEquipmentName(context, description) {

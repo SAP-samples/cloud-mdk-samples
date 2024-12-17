@@ -1,3 +1,4 @@
 {
-  "_Type" : "Action.Type.Navigation"
+  "_Type" : "Action.Type.Navigation",
+  "PageToOpen": "/MDKDevApp/Pages/Empty.page"
 }

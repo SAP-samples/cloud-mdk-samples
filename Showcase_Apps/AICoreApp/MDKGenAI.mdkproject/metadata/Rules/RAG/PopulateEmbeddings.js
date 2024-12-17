@@ -18,8 +18,8 @@ Common Schema
 
 Specific Schema for SAPPump:
 [
-  {"Title": "yearOfInstallation", "Description": "Year of installation", "Type": "Text"},
-  {"Title": "length", "Description": "Length of the water pump in meters", "Type": "Text"}
+  {"Title": "Time Spend"", "Description": "Time spend on work order", "Type": "Text"},
+  {"Title": "Expense", "Description": "Expense of parts replacement ", "Type": "Text"}
 ]
 `;
 
@@ -37,7 +37,9 @@ export default async function PopulateEmbeddings(context) {
   const functionName = 'storeEmbeddings';
   const serviceName = '/MDKDevApp/Services/CAPVectorEngine.service';
 
+  console.log("knowledgeBase: ", knowledgeBase);
   const chunks = splitKnowledgeBase(knowledgeBase);
+  console.log("chunks: ", chunks);
   context.showActivityIndicator("Populating embeddings...");
   for (const chunk of chunks) {
     const parameters = {

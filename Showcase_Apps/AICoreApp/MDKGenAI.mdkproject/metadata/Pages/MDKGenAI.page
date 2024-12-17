@@ -1,19 +1,19 @@
 {
-  "Caption": "MDK GenAI",
+  "Caption": "MDK AI",
   "PrefersLargeCaption": true,
   "ActionBar": {
     "Items": [
-			{
+      {
         "Position": "right",
         "Caption": "VectorDB",
-				"OnPress": "/MDKDevApp/Actions/VectorDBAdmin.action"
+        "OnPress": "/MDKDevApp/Actions/VectorDBAdmin.action"
       },
-			{
+      {
         "Position": "right",
         "SystemItem": "Add",
-				"OnPress": "/MDKDevApp/Actions/OpenModalPage.action"
+        "OnPress": "/MDKDevApp/Actions/OpenModalPage.action"
       }
-		]
+    ]
   },
   "Controls": [
     {
@@ -22,19 +22,46 @@
           "Header": {
             "UseTopPadding": false
           },
-					"_Type": "Section.Type.Image",
-					"_Name": "Placeholder",
+          "_Type": "Section.Type.Image",
+          "_Name": "Placeholder",
           "Image": "/MDKDevApp/Images/placeholder.jpg",
           "ContentMode": "ScaleAspectFill",
           "Height": 500
-				},
+        },
         {
-					"_Type": "Section.Type.ObjectCollection",
-					"_Name": "AnomalyDetected",
-					"Header": {
-						"Caption": "Anomalies Detected",
+          "_Type": "Section.Type.ObjectCollection",
+          "_Name": "MeterReadings",
+          "Header": {
+            "Caption": "Meter Readings",
             "UseTopPadding": false
-					},
+          },
+          "Layout": {
+            "NumberOfColumns": 1
+          },
+          "ObjectCell": {
+            "_Name": "MeterReading",
+            "Title": "{value}",
+            "Subhead": "{unit}",
+            "PreserveIconStackSpacing": false,
+            "AccessoryType": "disclosureIndicator",
+            "OnPress": "/MDKDevApp/Rules/ImageAnalysis/ShowAnomalyAlert.js"
+          },
+          "EmptySection": {
+            "Caption": "No data available.",
+            "FooterVisible": true
+          },
+          "Target": "/MDKDevApp/Rules/ImageAnalysis/GetMeterReadingResults.js",
+          "Separators": {
+            "HeaderSeparator": true
+          }
+        },
+        {
+          "_Type": "Section.Type.ObjectCollection",
+          "_Name": "AnomalyDetected",
+          "Header": {
+            "Caption": "Anomalies Detected",
+            "UseTopPadding": false
+          },
           "Layout": {
             "NumberOfColumns": 1
           },
@@ -52,19 +79,19 @@
             "FooterVisible": true
           },
           "Target": "/MDKDevApp/Rules/ImageAnalysis/GetAnomalyData.js",
-					"Separators": {
-						"HeaderSeparator": true
-					}
-				},
-				{
-					"_Type": "Section.Type.ObjectCollection",
-					"_Name": "Operations",
+          "Separators": {
+            "HeaderSeparator": true
+          }
+        },        
+        {
+          "_Type": "Section.Type.ObjectCollection",
+          "_Name": "Operations",
           "Layout": {
             "NumberOfColumns": 1
           },
-					"Header": {
-						"Caption": "Operations Recommended by AI"
-					},
+          "Header": {
+            "Caption": "Operations Recommended by AI"
+          },
           "ObjectCell": {
             "_Name": "Operation",
             "Title": "{taskTitle}",
@@ -76,10 +103,10 @@
           },
           "Visible": "/MDKDevApp/Rules/ImageAnalysis/OperationsVisibility.js",
           "Target": "/MDKDevApp/Rules/ImageAnalysis/GetOperationsData.js",
-					"Separators": {
-						"HeaderSeparator": true
-					}
-				}
+          "Separators": {
+            "HeaderSeparator": true
+          }
+        }
       ],
       "_Name": "SectionedTable1",
       "_Type": "Control.Type.SectionedTable"

@@ -42,7 +42,7 @@ export default function NavToOperationEdit(context) {
           },
           {
             "Position": "right",
-            "Text": "Confirm",
+            "Caption": "Confirm",
             "OnPress": "/MDKDevApp/Rules/ImageAnalysis/SaveData.js"
           }
         ]

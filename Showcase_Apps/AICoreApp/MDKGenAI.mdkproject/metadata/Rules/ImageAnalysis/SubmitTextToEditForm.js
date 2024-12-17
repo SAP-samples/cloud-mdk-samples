@@ -64,49 +64,39 @@ const structuredDataSchema = {
 };
 
 async function convertSpeechIntoStucturedData(context, userInput, schema) {
-  const method = "POST";
-  const path = "/chat/completions?api-version=2024-02-01";
-  const body = {
-    messages: [
-      {
-        role: "system",
-        content: `Convert the following speech to structure data as defined in ${schema}. The properties in the schema
-            are optional so if the speech does not contain the information on some property, do not include it.`
-      },
-      {
-        role: "user",
-        content: userInput
-      }
-    ],
-    max_tokens: 512,
-    temperature: 0,
-    frequency_penalty: 0,
-    presence_penalty: 0,
-    functions: [{ name: "format_response", parameters: structuredDataSchema }],
-    function_call: { name: "format_response" },
+  const messages = [{
+    role: "system",
+    content: `Convert the following speech to structure data as defined in ${schema}. The properties in the schema
+        are optional so if the speech does not contain the information on some property, do not include it.`
+  }, {
+    role: "user",
+    content: userInput
+  }];
+
+  const tools = [{
+    type: "function",
+    function: { name: "format_response", parameters: structuredDataSchema }
+  }];
+
+  const toolChoice = {
+    type: "function",
+    function: { name: "format_response" }
   };
-  const headers = {
-    "content-type": "application/json",
-    "AI-Resource-Group": "default"
-  };
-  const service = "/MDKDevApp/Services/AzureOpenAI.service";
+
   console.log("Converting natural language to structured data...")
   return context.executeAction({
-    "Name": "/MDKDevApp/Actions/SendRequest.action",
+    "Name": "/MDKDevApp/Actions/ChatCompletions.action",
     "Properties": {
-      "Target": {
-        "Path": path,
-        "RequestProperties": {
-          "Method": method,
-          "Headers": headers,
-          "Body": JSON.stringify(body)
-        },
-        "Service": service
-      }
-    },
-    "ActivityIndicatorText": "Converting natural language to structured data...",
+      "Properties": {
+        "Messages": messages,
+        "Tools": tools,
+        "ToolChoice": toolChoice,
+        "MaxTokens": 512
+      },
+      "ActivityIndicatorText": "Converting natural language to structured data..."
+    }
   }).then(response => {
-    const resultsObj = JSON.parse(response.data.choices[0].message.function_call.arguments);
+    const resultsObj = JSON.parse(response.data.choices[0].message.tool_calls[0].function.arguments);
     console.log("Structured data results:", resultsObj);
     console.log("");
     return resultsObj;

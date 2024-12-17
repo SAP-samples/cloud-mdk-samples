@@ -4,11 +4,11 @@
       "Items": [
         {
           "Position": "right",
-          "Text": "Edit",
+          "Caption": "Edit",
           "OnPress": "/MDKDevApp/Rules/ImageAnalysis/NavToOperationEdit.js",
           "Visible": "/MDKDevApp/Rules/ImageAnalysis/GetAcceptToolbarVisibility.js"
         }
-		]
+    ]
   },
   "Controls": [
     {
@@ -33,7 +33,7 @@
             "Caption": "Operation Details"
           },
           "KeyAndValues": []
-				}
+        }
       ],
       "_Name": "SectionedTable",
       "_Type": "Control.Type.SectionedTable"

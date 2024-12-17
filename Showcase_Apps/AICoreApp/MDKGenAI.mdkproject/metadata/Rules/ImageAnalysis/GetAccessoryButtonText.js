@@ -3,7 +3,7 @@ export default function GetAccessoryButtonText(context) {
     const accepted = context.evaluateTargetPath("#Property:accepted");
 
     if (accepted) {
-      return "Accepted";
+      return "Completed";
     } else {
       return "Pending";
     }

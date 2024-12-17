@@ -1,6 +1,6 @@
 # MDK Generative AI 
 
-This project serves as a Proof of Concept (POC) for integrating multimodal Generative AI with the SAP Mobile Development Kit (MDK). It demonstrates the following use cases:
+This project serves as a Demo App for consuming SAP AI Core services and SAP HANA Vector DB service with the SAP Mobile Development Kit (MDK). It demonstrates the following use cases:
 
 1. Extracting meter readings from images.
 2. Detecting anomalies using images.
@@ -69,6 +69,17 @@ Populate embeddings into the vector database for retrieval-augmented generation 
 3. Click on the `Star` icon to use AI for auto-filling forms.
 4. Answer at least one of the displayed questions.
 5. Click `Confirm` when done.
+
+### Demo
+
+##### Blogs
+ [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 1 - Setup](https://community.sap.com/t5/technology-blogs-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-1/ba-p/13799088) 
+ [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 2 - Business Use Cases](https://community.sap.com/t5/technology-blogs-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-2/ba-p/13801732) 
+ [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 3 - Measurement Reading](https://community.sap.com/t5/technology-blogs-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-3/ba-p/13850930)
+ [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 4 - Anomaly Detection and Maintenance Guidelines](https://community.sap.com/t5/technology-blogs-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-4-anomaly-detection-and/ba-p/13856450)
+ [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 5 - Retrieval Augmented Generation](https://community.sap.com/t5/technology-blogs-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-5-retrieval-augmented/ba-p/13800342)
+ [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 6 - Work Order and Operation Recording](https://community.sap.com/t5/technology-blogs-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-6-work-order-and/ba-p/13876628)
+
 
 ## Development
 In the demo flow, there are a total of 5 calls to AI Core and 2 calls to the vector database for Retrieval-Augmented Generation (RAG).

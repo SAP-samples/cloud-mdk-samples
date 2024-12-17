@@ -29,46 +29,36 @@ const guidedQuestionsResponseSchema = {
 };
 
 async function generateGuidedQuestions(context, schema) {
-  const method = "POST";
-  const path = "/chat/completions?api-version=2024-02-01";
-  const body = {
-    messages: [
-      {
-        role: "system",
-        content: `You are an assistant and the user is using their voice to fill up forms. Generate a guided question list to assist the user to fill the fields described in the schema.`
-      },
-      {
-        role: "user",
-        content: `${schema}`
-      }
-    ],
-    max_tokens: 256,
-    temperature: 0,
-    frequency_penalty: 0,
-    presence_penalty: 0,
-    functions: [{ name: "format_response", parameters: guidedQuestionsResponseSchema }],
-    function_call: { name: "format_response" },
+  const messages = [{
+    role: "system",
+    content: `You are an assistant and the user is using their voice to fill up forms. Generate a guided question list to assist the user to fill the fields described in the schema.`
+  }, {
+    role: "user",
+    content: `${schema}`
+  }];
+
+  const tools = [{
+    type: "function",
+    function: { name: "format_response", parameters: guidedQuestionsResponseSchema }
+  }];
+
+  const toolChoice = {
+    type: "function",
+    function: { name: "format_response" }
   };
-  const headers = {
-    "content-type": "application/json",
-    "AI-Resource-Group": "default"
-  };
-  const service = "/MDKDevApp/Services/AzureOpenAI.service";
+
   return context.executeAction({
-    "Name": "/MDKDevApp/Actions/SendRequest.action",
-    "Properties": {
-      "Target": {
-        "Path": path,
-        "RequestProperties": {
-          "Method": method,
-          "Headers": headers,
-          "Body": JSON.stringify(body)
-        },
-        "Service": service
+    Name: "/MDKDevApp/Actions/ChatCompletions.action",
+    Properties: {
+      Properties: {
+        Messages: messages,
+        Tools: tools,
+        ToolChoice: toolChoice,
+        MaxTokens: 256
       }
     }
   }).then(response => {
-    const resultsObj = JSON.parse(response.data.choices[0].message.function_call.arguments);
+    const resultsObj = JSON.parse(response.data.choices[0].message.tool_calls[0].function.arguments);
     return resultsObj;
   });
 }
