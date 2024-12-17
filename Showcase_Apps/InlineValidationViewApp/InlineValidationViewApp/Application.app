@@ -4,5 +4,5 @@
 	"Styles": "/InlineValidationViewApp/Styles/Styles.less",
 	"Localization": "/InlineValidationViewApp/i18n/i18n.properties",
 	"_Name": "InlineValidationViewApp",
-	"_SchemaVersion": "23.4"
+	"_SchemaVersion": "24.11"
 }

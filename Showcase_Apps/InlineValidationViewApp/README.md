@@ -4,7 +4,7 @@ This is a showcase application that demonstrates how to implement a proper error
 
 For more details about Inline Errors check out the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-ios/article/inline-errors/)
 
-*Last Updated: 30-June-2023*
+*Last Updated: 15-December-2024*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
@@ -21,7 +21,7 @@ For more details about Inline Errors check out the [SAP Fiori Design Guidelines]
 
 ### MDK Client Version
 
-* MDK 23.4 or higher
+* MDK 24.11 or higher
 
 ***
 
