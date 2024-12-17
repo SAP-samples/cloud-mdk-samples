@@ -1,0 +1,105 @@
+{
+  "Caption": "Equipment Checking with AI",
+  "OnLoaded": "/MDKDevApp/Actions/Initialize.action",
+  "ActionBar": {
+    "Items": [
+      {
+        "Position": "left",
+        "SystemItem": "Cancel",
+        "OnPress": "/MDKDevApp/Actions/ClosePage.action"
+      },
+      {
+        "Position":"right",
+        "OnPress": "/MDKDevApp/Rules/ImageAnalysis/SaveResults.js",
+        "Caption": "Submit"
+      }
+    ]
+  },
+  "Controls": [
+    {
+      "_Type": "Control.Type.SectionedTable",
+      "_Name": "SectionedTable1",
+      "Sections": [
+        {
+          "_Type": "Section.Type.FormCell",
+          "_Name": "AnomalyDetectionSection",
+          "Header": {
+            "Items": [
+              {
+                "_Type": "SectionHeaderItem.Type.Label",
+                "_Name": "AnomalyDetectionHeader",
+                "Title": "Images for Anomaly Detection",
+                "Position": "Left"
+              }
+            ]
+          },
+          "Controls": [
+            {
+              "_Type": "Control.Type.FormCell.Attachment",
+              "_Name": "AttachmentAnomalyDetection",
+              "AttachmentActionType": [
+                "AddPhoto",
+                "TakePhoto",
+                "SelectFile"
+              ],
+              "Value": [],
+              "OnValueChange": "/MDKDevApp/Rules/ImageAnalysis/UpdateMeterReadingVisibility.js"
+            }
+          ]
+        },
+        {
+          "_Type": "Section.Type.FormCell",
+          "_Name": "MeterReadingSection",
+          "Visible": false,
+          "Header": {
+            "Items": [
+              {
+                "_Type": "SectionHeaderItem.Type.Label",
+                "_Name": "MeterReadingHeader",
+                "Title": "Images for Meter Reading",
+                "Position": "Left"
+              }
+            ]
+          },
+          "Controls": [
+            {
+              "_Type": "Control.Type.FormCell.Attachment",
+              "_Name": "AttachmentMeterReading",
+              "AttachmentActionType": [
+                "AddPhoto",
+                "TakePhoto",
+                "SelectFile"
+              ],
+              "Value": []
+            }
+          ]
+        },
+        {
+          "_Type": "Section.Type.SimplePropertyCollection",
+          "_Name": "MeterReadingResults",
+          "Visible": false,
+          "Header": {
+            "Items": [
+              {
+                "_Type": "SectionHeaderItem.Type.Label",
+                "_Name": "MeterReadingResultsHeader",
+                "Title": "Meter Readings",
+                "Position": "Left"
+              }
+            ]
+          },
+          "Layout": {
+            "NumberOfColumns": 1
+          },
+          "SimplePropertyCell": {
+            "KeyName" : "{unit}",
+            "Value" : "{reading}"
+          },
+          "Target": "/MDKDevApp/Rules/ImageAnalysis/GetMeterReadingResults.js"
+        }
+      ]
+    }
+  ],
+  "_Name": "EquipmentChecking",
+  "_Type": "Page"
+}
