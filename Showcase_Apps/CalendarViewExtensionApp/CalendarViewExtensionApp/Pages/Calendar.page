@@ -18,7 +18,8 @@
 						}
 					],
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -35,7 +36,8 @@
 						"QueryOptions": "/CalendarViewExtensionApp/Rules/CalendarPage/QueryOptions.js"
 					},
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
@@ -46,18 +48,20 @@
 					"ObjectCell": {
 						"ContextMenu": {
 							"Items": [],
-							"PerformFirstActionWithFullSwipe": true
+							"PerformFirstActionWithFullSwipe": true,
+							"_Type": "ObjectCell.Type.ContextMenu"
 						},
 						"Title": "Order Date: $(D,{CreatedAt},'','',{format:'medium'})",
-						"Footnote": "{SalesOrderId}",
+						"Footnote": "{SalesOrderID}",
 						"StatusText": "{LifeCycleStatusName}",
 						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
 						"AvatarStack": {
 							"ImageIsCircular": false
 						},
 						"PreserveIconStackSpacing": false,
-						"AccessoryType": "none",
-						"Selected": false
+						"AccessoryType": "None",
+						"Selected": false,
+						"_Type": "ObjectTable.Type.ObjectCell"
 					},
 					"DataPaging": {
 						"PageSize": 50,
@@ -75,28 +79,31 @@
 	],
 	"_Type": "Page",
 	"_Name": "Calendar_FormCellSection",
-	"Caption": "/CalendarViewExtensionApp/Rules/CalendarPage/Caption.js",
-	"ToolBar": {
+	"ActionBar": {
+		"Caption": "/CalendarViewExtensionApp/Rules/CalendarPage/Caption.js",
+		"PrefersLargeCaption": false,
+		"_Type": "Control.Type.ActionBar"
+	},
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",
 		"Items": [
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "LogoutToolbarItem",
-				"Caption": "Logout",
-				"Enabled": true,
 				"Visible": true,
-				"Clickable": true,
-				"OnPress": "/CalendarViewExtensionApp/Actions/Logout.action"
+				"Title": "Logout",
+				"OnPress": "/CalendarViewExtensionApp/Actions/Logout.action",
+				"Enabled": true
 			},
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "UploadToolbarItem",
-				"Caption": "Sync",
-				"Enabled": true,
 				"Visible": "$(PLT,true,true,false)",
-				"Clickable": true,
-				"OnPress": "/CalendarViewExtensionApp/Actions/Service/SyncStartedMessage.action"
+				"Title": "Sync",
+				"OnPress": "/CalendarViewExtensionApp/Actions/Service/SyncStartedMessage.action",
+				"Enabled": true
 			}
 		]
-	},
-	"PrefersLargeCaption": false
+	}
 }

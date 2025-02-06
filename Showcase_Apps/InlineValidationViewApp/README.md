@@ -4,7 +4,7 @@ This is a showcase application that demonstrates how to implement a proper error
 
 For more details about Inline Errors check out the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-ios/article/inline-errors/)
 
-*Last Updated: 15-December-2024*
+*Last Updated: 06-Feb-2025*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
@@ -17,7 +17,6 @@ For more details about Inline Errors check out the [SAP Fiori Design Guidelines]
 
 * iOS
 * Android
-* Web
 
 ### MDK Client Version
 
@@ -38,7 +37,3 @@ No additional steps required. The content of [InlineValidationViewApp/](InlineVa
 ### Android
 
 <img src="Screenshots/android.gif" width="35%"> 
-
-### Web
-
-<img src="Screenshots/web.gif" width="95%">

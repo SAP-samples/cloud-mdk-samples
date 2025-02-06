@@ -8,7 +8,8 @@
 					"_Type": "Section.Type.Extension",
 					"_Name": "SectionExtension0",
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -27,19 +28,23 @@
 	],
 	"_Type": "Page",
 	"_Name": "VideoPlayer",
-	"Caption": "VideoPlayer",
-	"ToolBar": {
+	"ActionBar": {
+		"Caption": "VideoPlayer",
+		"PrefersLargeCaption": false,
+		"_Type": "Control.Type.ActionBar"
+	},
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",
 		"Items": [
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "LogoutToolbarItem",
-				"Caption": "Logout",
-				"Enabled": true,
 				"Visible": true,
-				"Clickable": true,
-				"OnPress": "/VideoPlayerViewExtensionApp/Actions/Logout.action"
+				"Title": "Logout",
+				"OnPress": "/VideoPlayerViewExtensionApp/Actions/Logout.action",
+				"Enabled": true
 			}
 		]
-	},
-	"PrefersLargeCaption": false
+	}
 }
