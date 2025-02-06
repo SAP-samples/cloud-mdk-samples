@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/CalendarViewExtensionApp/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/CalendarViewExtensionApp/Rules/Application/AppUpdateSuccess.js"
+}

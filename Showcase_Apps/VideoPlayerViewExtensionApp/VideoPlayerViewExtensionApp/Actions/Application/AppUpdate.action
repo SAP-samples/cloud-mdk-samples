@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/VideoPlayerViewExtensionApp/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/VideoPlayerViewExtensionApp/Rules/Application/AppUpdateSuccess.js"
+}

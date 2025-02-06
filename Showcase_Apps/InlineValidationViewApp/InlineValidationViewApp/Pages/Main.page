@@ -405,39 +405,21 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/InlineValidationViewApp/Rules/ValidateFormCellControls.js"
+			},
+					{
+				"_Name": "ActionBarItem1",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/InlineValidationViewApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
 		"_Name": "ActionBar1",
 		"_Type": "Control.Type.ActionBar",
 		"Caption": "Main",
 		"PrefersLargeCaption": false
-	},
-	"FioriToolbar": {
-		"_Type": "Control.Type.FioriToolbar",
-		"_Name": "FioriToolbar",
-		"Items": [
-			{
-				"_Type": "FioriToolbarItem.Type.Button",
-				"_Name": "LogoutToolbarItem",
-				"Visible": true,
-				"Title": "Logout",
-				"OnPress": "/InlineValidationViewApp/Actions/LogoutMessage.action",
-				"Enabled": true,
-				"ButtonType": "Text",
-				"Semantic": "Tint",
-				"ImagePosition": "Leading"
-			},
-			{
-				"_Type": "FioriToolbarItem.Type.Button",
-				"_Name": "UpdateToolbarItem",
-				"Visible": "$(PLT,true,true,false)",
-				"Title": "Update",
-				"OnPress": "/InlineValidationViewApp/Actions/AppUpdateProgressBanner.action",
-				"Enabled": true,
-				"ButtonType": "Text",
-				"Semantic": "Tint",
-				"ImagePosition": "Leading"
-			}
-		]
 	}
 }

@@ -1,0 +1,6 @@
+{
+    "ModalPage": true,
+    "NavigationType": "Cross",
+    "PageToOpen": "/InlineValidationViewApp/Pages/Application/Support.page",
+    "_Type": "Action.Type.Navigation"
+}

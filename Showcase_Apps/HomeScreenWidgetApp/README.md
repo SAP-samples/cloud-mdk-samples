@@ -4,7 +4,7 @@ This is a showcase application that demonstrates how to implement a [Home Screen
 
 *Android Widget sample will be added soon.*
 
-*Last Updated: 11-Mar-2024*
+*Last Updated: 06-Feb-2025*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
@@ -15,11 +15,11 @@ This is a showcase application that demonstrates how to implement a [Home Screen
 
 ### Supported Platforms
 
-* iOS 17.0 or higher
+* iOS 18.0 or higher
 
 ### MDK Client Version
 
-* MDK 23.12 or higher
+* MDK 24.11 or higher
 
 ### Data Source
 

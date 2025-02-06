@@ -7,56 +7,86 @@
 				{
 					"Controls": [
 						{
-							"OnValueChange": "/CalendarViewExtensionApp/Rules/CalendarPage/OnSelectDate.js",
 							"_Type": "Control.Type.FormCell.Extension",
 							"_Name": "FormCellExtension1",
 							"Module": "CalendarControl",
 							"Control": "CalendarControl",
 							"Class": "CalendarControl",
 							"Height": "$(PLT,280,300)",
-							"IsVisible": true
+							"OnValueChange": "/CalendarViewExtensionApp/Rules/CalendarPage/OnSelectDate.js",
+							"IsVisible": true,
+							"Separator": true
 						}
 					],
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
 						"UseTopPadding": false
 					},
 					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
 					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "SectionFormCell0"
 				},
 				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": false
+					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
 						"EntitySet": "SalesOrderHeaders",
 						"Service": "/CalendarViewExtensionApp/Services/Sample.service",
 						"QueryOptions": "/CalendarViewExtensionApp/Rules/CalendarPage/QueryOptions.js"
 					},
-					"Header": {
-						"UseTopPadding": false
-					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
 					"EmptySection": {
-						"FooterVisible": false,
-						"Caption": "No sales orders found"
+						"Caption": "No sales orders found",
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
 					},
 					"ObjectCell": {
 						"ContextMenu": {
 							"Items": [],
-							"PerformFirstActionWithFullSwipe": true
+							"PerformFirstActionWithFullSwipe": true,
+							"_Type": "ObjectCell.Type.ContextMenu",
+							"LeadingItems": [],
+							"TrailingItems": []
 						},
 						"Title": "Order Date: $(D,{CreatedAt},'','',{format:'medium'})",
-						"Footnote": "{SalesOrderId}",
+						"Footnote": "{SalesOrderID}",
 						"StatusText": "{LifeCycleStatusName}",
 						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
-						"AvatarStack": {
-							"ImageIsCircular": false
-						},
 						"PreserveIconStackSpacing": false,
-						"AccessoryType": "none",
+						"AccessoryType": "None",
+						"Tags": [],
+						"AvatarStack": {
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
 						"Selected": false
 					},
 					"DataPaging": {
@@ -70,33 +100,31 @@
 						"Mode": "None"
 					}
 				}
-			]
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Calendar_FormCellSection",
-	"Caption": "/CalendarViewExtensionApp/Rules/CalendarPage/Caption.js",
-	"ToolBar": {
+	"ActionBar": {
 		"Items": [
 			{
-				"_Type": "Control.Type.ToolbarItem",
-				"_Name": "LogoutToolbarItem",
-				"Caption": "Logout",
-				"Enabled": true,
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
 				"Visible": true,
-				"Clickable": true,
-				"OnPress": "/CalendarViewExtensionApp/Actions/Logout.action"
-			},
-			{
-				"_Type": "Control.Type.ToolbarItem",
-				"_Name": "UploadToolbarItem",
-				"Caption": "Sync",
-				"Enabled": true,
-				"Visible": "$(PLT,true,true,false)",
-				"Clickable": true,
-				"OnPress": "/CalendarViewExtensionApp/Actions/Service/SyncStartedMessage.action"
+				"OnPress": "/CalendarViewExtensionApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
-		]
-	},
-	"PrefersLargeCaption": false
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "/CalendarViewExtensionApp/Rules/CalendarPage/Caption.js",
+		"PrefersLargeCaption": false
+	}
 }

@@ -8,7 +8,8 @@
 					"_Type": "Section.Type.Extension",
 					"_Name": "SectionExtension0",
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -27,19 +28,21 @@
 	],
 	"_Type": "Page",
 	"_Name": "VideoPlayer",
-	"Caption": "VideoPlayer",
-	"ToolBar": {
-		"Items": [
+	"ActionBar": {
+		"Caption": "VideoPlayer",
+		"PrefersLargeCaption": false,
+		"_Type": "Control.Type.ActionBar",
+			"Items": [
 			{
-				"_Type": "Control.Type.ToolbarItem",
-				"_Name": "LogoutToolbarItem",
-				"Caption": "Logout",
-				"Enabled": true,
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
 				"Visible": true,
-				"Clickable": true,
-				"OnPress": "/VideoPlayerViewExtensionApp/Actions/Logout.action"
+				"OnPress": "/VideoPlayerViewExtensionApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		]
-	},
-	"PrefersLargeCaption": false
+	}
 }

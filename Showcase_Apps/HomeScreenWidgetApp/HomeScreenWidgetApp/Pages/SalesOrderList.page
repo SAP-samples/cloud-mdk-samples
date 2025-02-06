@@ -48,7 +48,8 @@
 					"Header": {
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
@@ -66,7 +67,8 @@
 							"Items": [],
 							"PerformFirstActionWithFullSwipe": true,
 							"LeadingItems": [],
-							"TrailingItems": []
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
 						},
 						"Title": "{SalesOrderID}",
 						"Subhead": "{NetAmount} {CurrencyCode}",
@@ -85,7 +87,8 @@
 							"ImageIsCircular": true
 						},
 						"OnPress": "/HomeScreenWidgetApp/Actions/Navigation/NavToEditSalesOrderStatus.action",
-						"Selected": false
+						"Selected": false,
+						"_Type": "ObjectTable.Type.ObjectCell"
 					},
 					"DataPaging": {
 						"ShowLoadingIndicator": false,
@@ -107,8 +110,6 @@
 	},
 	"_Type": "Page",
 	"_Name": "SalesOrderList",
-	"Caption": "Sales Orders",
-	"PrefersLargeCaption": false,
 	"ActionBar": {
 		"Items": [
 			{
@@ -118,9 +119,13 @@
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/HomeScreenWidgetApp/Actions/Application/UserMenuPopover.action"
+				"OnPress": "/HomeScreenWidgetApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "Sales Orders",
+		"PrefersLargeCaption": false,
+		"_Type": "Control.Type.ActionBar"
 	}
 }
