@@ -1,6 +1,6 @@
 {
 	"_Type": "Action.Type.OfflineOData.Close",
-	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
+	"Service": "/ImageHandlingApp/Services/Sample.service",
 	"Force": true,
 	"ActionResult": {
 		"_Name": "close"

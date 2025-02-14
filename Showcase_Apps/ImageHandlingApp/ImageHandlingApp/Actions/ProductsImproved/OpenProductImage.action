@@ -1,5 +1,0 @@
-{
-	"_Type": "Action.Type.OpenDocument",
-	"Path": "/ImageHandlingApp/Services/SampleServiceV2.service/{@odata.readLink}/$value",
-	"MimeType": "image/png"
-}

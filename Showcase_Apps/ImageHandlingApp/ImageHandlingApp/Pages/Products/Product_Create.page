@@ -1,18 +1,22 @@
 {
-	"Caption": "Product_Create",
 	"ActionBar": {
 		"Items": [
 			{
 				"Position": "Left",
 				"SystemItem": "Cancel",
-				"OnPress": "/ImageHandlingApp/Actions/CloseModalPage_Cancel.action"
+				"OnPress": "/ImageHandlingApp/Actions/Generic/CloseModalPage_Cancel.action",
+				"_Type": "Control.Type.ActionBarItem"
 			},
 			{
 				"Position": "Right",
 				"Icon": "sap-icon://save",
-				"OnPress": "/ImageHandlingApp/Rules/CreateProduct.js"
+				"OnPress": "/ImageHandlingApp/Rules/Product/CreateProduct.js",
+				"_Type": "Control.Type.ActionBarItem"
 			}
-		]
+		],
+		"Caption": "Product_Create",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	},
 	"Controls": [
 		{
@@ -20,12 +24,6 @@
 				{
 					"_Type": "Section.Type.FormCell",
 					"Controls": [
-						{
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "ProductId",
-							"Caption": "Product ID",
-							"Value": "abc-123-456-"
-						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductName",
@@ -81,6 +79,5 @@
 		}
 	],
 	"_Name": "Product_Create",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Type": "Page"
 }

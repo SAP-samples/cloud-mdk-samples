@@ -1,6 +1,19 @@
 {
-	"Caption": "Main",
-	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Right",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Visible": true,
+				"OnPress": "/PDFGeneratorApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "Sales Orders",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
 			"Sections": [
@@ -28,20 +41,6 @@
 			"_Type": "Control.Type.SectionedTable"
 		}
 	],
-	"FioriToolbar": {
-		"_Name": "FioriToolbar",
-		"_Type": "Control.Type.FioriToolbar",
-		"Items": [
-			{
-				"_Type": "FioriToolbarItem.Type.Button",
-				"_Name": "LogoutToolbarItem",
-				"Visible": true,
-				"Title": "Logout",
-				"OnPress": "/PDFGeneratorApp/Actions/Logout.action",
-				"Enabled": true
-			}
-		]
-	},
 	"_Name": "Main",
 	"_Type": "Page"
 }

@@ -1,0 +1,30 @@
+{
+ "_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "CreateProductResult"
+	},
+	"OnFailure": {
+		"Name": "/ImageHandlingApp/Actions/Generic/ToastMessage.action",
+		"Properties": {
+			"Message": "Product Creation Failed {#ActionResults:CreateProductResult/error}"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/ImageHandlingApp/Actions/Generic/ToastMessage.action",
+		"Properties": {
+			"Message": "Produce Created",
+			"OnSuccess": "/ImageHandlingApp/Actions/Generic/CloseModalPage_Complete.action"
+		}
+	},
+	"Target": {
+		"Service": "/ImageHandlingApp/Services/Sample.service",
+		"EntitySet": "Products"
+	},
+	"Properties": {
+		"CurrencyCode": "#Control:ProductCurrencyCode/#Value",
+		"LongDescription": "#Control:ProductLongDesc/#Value",
+		"Name": "#Control:ProductName/#Value",
+		"Price": "#Control:ProductPrice/#Value",
+		"ShortDescription": "#Control:ProductShortDesc/#Value"
+	}
+}		

@@ -5,9 +5,9 @@
 		"/PDFGeneratorApp/Actions/Service/InitializeService.action"
 	],
 	"OnDidUpdate": "/PDFGeneratorApp/Actions/Service/InitializeService.action",
-	"OnWillUpdate": "/PDFGeneratorApp/Rules/OnWillUpdate.js",
+	"OnWillUpdate": "/PDFGeneratorApp/Rules/Application/OnWillUpdate.js",
 	"Styles": "/PDFGeneratorApp/Styles/Styles.less",
-	"Version": "/PDFGeneratorApp/Globals/AppDefinition_Version.global",
+	"Version": "/PDFGeneratorApp/Globals/Application/AppDefinition_Version.global",
 	"_Name": "PDFGeneratorApp",
-	"_SchemaVersion": "24.7"
+	"_SchemaVersion": "24.11"
 }

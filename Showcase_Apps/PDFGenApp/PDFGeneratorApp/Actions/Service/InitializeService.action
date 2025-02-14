@@ -1,6 +1,6 @@
 {
 	"_Type": "Action.Type.ODataService.Initialize",
-	"Service": "/PDFGeneratorApp/Services/SampleService.service",
+	"Service": "/PDFGeneratorApp/Services/Sample.service",
 	"OnSuccess": "/PDFGeneratorApp/Actions/Service/InitializeServiceSuccessMessage.action",
 	"OnFailure": "/PDFGeneratorApp/Actions/Service/InitializeServiceFailureMessage.action",
 	"ShowActivityIndicator": true,

@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/PDFGeneratorApp/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/PDFGeneratorApp/Rules/Application/AppUpdateSuccess.js"
+}

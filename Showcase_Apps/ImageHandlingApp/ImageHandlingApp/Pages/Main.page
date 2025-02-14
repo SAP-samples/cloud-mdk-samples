@@ -1,118 +1,154 @@
 {
-	"Caption": "Main",
-	"Controls": [
-		{
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable",
-			"Sections": [
-				{
-					"Header": {
-						"Caption": "Direct binding of OData Media (MDK 6.1 or newer)",
-						"_Type": "SectionCommon.Type.Header"
-					},
-					"Buttons": [
-						{
-							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_List.action",
-							"Alignment": "Center",
-							"Title": "Products",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
-						},
-						{
-							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_ImgColl.action",
-							"Alignment": "Center",
-							"Title": "Products Image Collection",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
-						},
-						{
-							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_List_OpenDoc.action",
-							"Alignment": "Center",
-							"Title": "Products Image via Open Doc",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
-						}
-					],
-					"_Name": "SectionButtonTable1",
-					"_Type": "Section.Type.ButtonTable"
+	"Controls": [{
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable0",
+		"Sections": [{
+				"_Type": "Section.Type.ButtonTable",
+				"_Name": "SectionButtonTable1",
+				"Header": {
+					"_Type": "SectionCommon.Type.Header",
+					"_Name": "SectionCommonTypeHeader0",
+					"AccessoryType": "None",
+					"UseTopPadding": true,
+					"Caption": "Direct binding of OData entity's media stream"
 				},
-				{
-					"Header": {
-						"Caption": "Download and write OData Media to local filesystem (Pre MDK 6.1)",
-						"_Type": "SectionCommon.Type.Header"
-					},
-					"Buttons": [
-						{
-							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List.action",
-							"Alignment": "Center",
-							"Title": "Products",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
-						},
-						{
-							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_ImgColl.action",
-							"Alignment": "Center",
-							"Title": "Products Image Collection",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
-						},
-						{
-							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List_OpenDoc.action",
-							"Alignment": "Center",
-							"Title": "Products Image via Open Doc",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
-						}
-					],
-					"_Name": "SectionButtonTable0",
-					"_Type": "Section.Type.ButtonTable"
+				"Visible": true,
+				"EmptySection": {
+					"FooterVisible": false
 				},
-				{
-					"Header": {
-						"Caption": "Uploading Media",
-						"_Type": "SectionCommon.Type.Header"
-					},
-					"Buttons": [
-						{
-							"OnPress": "/ImageHandlingApp/Actions/Products/NavToCreateProduct.action",
-							"Alignment": "Center",
-							"Title": "Create Product with Image Attachment",
-							"ButtonType": "Text",
-							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
+				"Separators": {
+					"TopSectionSeparator": false,
+					"BottomSectionSeparator": true,
+					"HeaderSeparator": true,
+					"FooterSeparator": true,
+					"ControlSeparator": true
+				},
+				"Buttons": [{
+						"_Type": "ButtonTable.Type.Button",
+						"_Name": "ButtonTableTypeButton0",
+						"Title": "Products",
+						"Alignment": "Center",
+						"ButtonType": "Text",
+						"Semantic": "Tint",
+						"ImagePosition": "Leading",
+						"FullWidth": false,
+						"Visible": true,
+						"Enabled": true,
+						"OnPress": {
+							"Name": "/ImageHandlingApp/Actions/Generic/GenericNavigation.action",
+							"Properties": {
+								"PageToOpen": "/ImageHandlingApp/Pages/Products/Products_List.page"
+							}
 						}
-					],
-					"_Name": "SectionButtonTable2",
-					"_Type": "Section.Type.ButtonTable"
+					},
+					{
+						"_Type": "ButtonTable.Type.Button",
+						"_Name": "ButtonTableTypeButton1",
+						"Title": "Products Image Collection",
+						"Alignment": "Center",
+						"ButtonType": "Text",
+						"Semantic": "Tint",
+						"ImagePosition": "Leading",
+						"FullWidth": false,
+						"Visible": true,
+						"Enabled": true,
+						"OnPress": {
+							"Name": "/ImageHandlingApp/Actions/Generic/GenericNavigation.action",
+							"Properties": {
+								"PageToOpen": "/ImageHandlingApp/Pages/Products/Products_ImgColl.page"
+							}
+						}
+					},
+					{
+						"_Type": "ButtonTable.Type.Button",
+						"_Name": "ButtonTableTypeButton2",
+						"Title": "Products Image via Open Doc",
+						"Alignment": "Center",
+						"ButtonType": "Text",
+						"Semantic": "Tint",
+						"ImagePosition": "Leading",
+						"FullWidth": false,
+						"Visible": true,
+						"Enabled": true,
+						"OnPress": {
+							"Name": "/ImageHandlingApp/Actions/Generic/GenericNavigation.action",
+							"Properties": {
+								"PageToOpen": "/ImageHandlingApp/Pages/Products/Products_List_OpenDoc.page"
+							}
+						}
+					}
+				],
+				"Layout": {
+					"LayoutType": "Vertical",
+					"HorizontalAlignment": "Leading"
 				}
-			]
-		}
-	],
-	"_Name": "Main",
-	"_Type": "Page",
-	"FioriToolbar": {
-		"_Name": "FioriToolbar",
-		"_Type": "Control.Type.FioriToolbar",
-		"Items": [
-			{
-				"_Type": "FioriToolbarItem.Type.Button",
-				"_Name": "LogoutToolbarItem",
-				"Title": "Logout",
-				"OnPress": "/ImageHandlingApp/Actions/Logout.action"
 			},
 			{
-				"_Type": "FioriToolbarItem.Type.Button",
-				"_Name": "UploadToolbarItem",
-				"Title": "Sync",
-				"OnPress": "/ImageHandlingApp/Actions/Service/SyncStartedMessage.action"
+				"_Type": "Section.Type.ButtonTable",
+				"_Name": "SectionButtonTable2",
+				"Header": {
+					"_Type": "SectionCommon.Type.Header",
+					"_Name": "SectionCommonTypeHeader1",
+					"AccessoryType": "None",
+					"UseTopPadding": true,
+					"Caption": "Uploading data stream to an OData entity"
+				},
+				"Visible": true,
+				"EmptySection": {
+					"FooterVisible": false
+				},
+				"Separators": {
+					"TopSectionSeparator": false,
+					"BottomSectionSeparator": true,
+					"HeaderSeparator": true,
+					"FooterSeparator": true,
+					"ControlSeparator": true
+				},
+				"Buttons": [{
+					"_Type": "ButtonTable.Type.Button",
+					"_Name": "ButtonTableTypeButton3",
+					"Title": "Create Product with Image Attachment",
+					"Alignment": "Center",
+					"ButtonType": "Text",
+					"Semantic": "Tint",
+					"ImagePosition": "Leading",
+					"FullWidth": false,
+					"Visible": true,
+					"Enabled": true,
+					"OnPress": {
+						"Name": "/ImageHandlingApp/Actions/Generic/GenericNavigation.action",
+						"Properties": {
+							"PageToOpen": "/ImageHandlingApp/Pages/Products/Product_Create.page"
+						}
+					}
+				}],
+				"Layout": {
+					"LayoutType": "Vertical",
+					"HorizontalAlignment": "Leading"
+				}
 			}
-		]
-	},
-	"PrefersLargeCaption": true
+		],
+		"FilterFeedbackBar": {
+			"ShowAllFilters": false,
+			"_Type": "Control.Type.FilterFeedbackBar"
+		}
+	}],
+	"_Type": "Page",
+	"_Name": "Main",
+	"ActionBar": {
+		"Items": [{
+			"_Type": "Control.Type.ActionBarItem",
+			"_Name": "ActionBarItem0",
+			"Caption": "User Menu",
+			"Icon": "sap-icon://customer",
+			"Position": "Right",
+			"IsIconCircular": false,
+			"Visible": true,
+			"OnPress": "/ImageHandlingApp/Actions/Application/UserMenuPopover.action"
+		}],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Main",
+		"PrefersLargeCaption": true
+	}
 }

@@ -1,0 +1,46 @@
+{
+    "PopoverItems": [{
+            "Enabled": true,
+            "Icon": "sap-icon://synchronize",
+            "OnPress": "/PDFGeneratorApp/Actions/Service/SyncStartedMessage.action",
+            "Title": "Sync Changes",
+            "Visible": "$(PLT,true,true,false)"
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://headset",
+            "OnPress": "/PDFGeneratorApp/Actions/Application/NavToSupport.action",
+            "Title": "Support",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://refresh",
+            "OnPress": "/PDFGeneratorApp/Actions/Application/AppUpdateProgressBanner.action",
+            "Title": "Check for Updates",
+            "Visible": "$(PLT,true,true,false)"
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://hint",
+            "OnPress": "/PDFGeneratorApp/Actions/Application/NavToAbout.action",
+            "Title": "About",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://reset",
+            "OnPress": "/PDFGeneratorApp/Actions/Application/ResetMessage.action",
+            "Title": "Reset",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://log",
+            "OnPress": "/PDFGeneratorApp/Actions/Application/Logout.action",
+            "Title": "Logout",
+            "Visible": "/PDFGeneratorApp/Rules/Application/ClientIsMultiUserMode.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

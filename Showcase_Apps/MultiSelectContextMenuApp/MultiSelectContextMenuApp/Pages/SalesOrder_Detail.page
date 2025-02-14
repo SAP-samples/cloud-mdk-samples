@@ -1,5 +1,9 @@
 {
-	"Caption": "Sales Order Detail",
+	"ActionBar": {
+		"Caption": "Sales Order Detail",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
 			"Sections": [
@@ -11,8 +15,8 @@
 								"Text": "{LifeCycleStatusName}"
 							}
 						],
-						"HeadlineText": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
-						"Subhead": "{SalesOrderId}",
+						"HeadlineText": "{Customer/FirstName} {Customer/LastName}",
+						"Subhead": "{SalesOrderID}",
 						"StatusText": "$(C, {NetAmount}, {CurrencyCode})"
 					}
 				},
@@ -21,15 +25,18 @@
 					"KeyAndValues": [
 						{
 							"KeyName": "Net Amount",
-							"Value": "$(C, {NetAmount}, {CurrencyCode})"
+							"Value": "$(C, {NetAmount}, {CurrencyCode})",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Gross Amount",
-							"Value": "$(C, {GrossAmount}, {CurrencyCode})"
+							"Value": "$(C, {GrossAmount}, {CurrencyCode})",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Tax Amount",
-							"Value": "$(C, {TaxAmount}, {CurrencyCode})"
+							"Value": "$(C, {TaxAmount}, {CurrencyCode})",
+							"_Type": "KeyValue.Type.Item"
 						}
 					]
 				},
@@ -41,16 +48,17 @@
 					"_Type": "Section.Type.ObjectTable",
 					"_Name": "SalesOrderItemsTable",
 					"Target": {
-						"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+						"Service": "/MultiSelectContextMenuApp/Services/Sample.service",
 						"EntitySet": "{@odata.readLink}/Items",
-						"QueryOptions": "$expand=ProductDetails"
+						"QueryOptions": "$expand=Product"
 					},
 					"ObjectCell": {
 						"PreserveIconStackSpacing": false,
-						"Title": "{ProductDetails/Name}",
-						"Subhead": "{ProductDetails/CategoryName}",
+						"Title": "{Product/Name}",
+						"Subhead": "{Product/CategoryName}",
 						"StatusText": "$(C, {NetAmount}, {CurrencyCode})",
-						"SubStatusText": "{Quantity}{QuantityUnit}"
+						"SubStatusText": "{Quantity}{QuantityUnit}",
+						"_Type": "ObjectTable.Type.ObjectCell"
 					}
 				}
 			],
@@ -59,6 +67,5 @@
 		}
 	],
 	"_Name": "SalesOrders_Detail",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Type": "Page"
 }

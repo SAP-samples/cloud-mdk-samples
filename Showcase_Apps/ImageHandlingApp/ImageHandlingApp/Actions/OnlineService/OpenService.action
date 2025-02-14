@@ -1,6 +1,0 @@
-{
-	"_Type": "Action.Type.ODataService.Open",
-	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
-	"OnFailure": "/ImageHandlingApp/Actions/OnlineService/OpenServiceFailureToast.action",
-	"OnSuccess": "/ImageHandlingApp/Actions/OnlineService/OpenServiceSuccessToast.action"
-}

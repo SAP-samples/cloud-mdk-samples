@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/MultiSelectContextMenuApp/Services/Sample.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/MultiSelectContextMenuApp/Actions/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/MultiSelectContextMenuApp/Actions/Service/CloseOfflineFailureMessage.action"
+}

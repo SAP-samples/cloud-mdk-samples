@@ -1,6 +1,0 @@
-{
-	"_Type": "Action.Type.ODataService.Create",
-	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
-	"OnSuccess": "/ImageHandlingApp/Actions/OnlineService/OpenService.action",
-	"OnFailure": "/ImageHandlingApp/Actions/OnlineService/CreateServiceFailureToast.action"
-}

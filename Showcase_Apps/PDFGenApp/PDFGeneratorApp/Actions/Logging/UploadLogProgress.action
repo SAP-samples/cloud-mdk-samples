@@ -1,0 +1,8 @@
+{
+    "Animated": true,
+    "CompletionMessage": "Logs Uploaded",
+    "CompletionTimeout": 2,
+    "Message": "Uploading Log Files...",
+    "OnSuccess": "/PDFGeneratorApp/Actions/Logging/UploadLog.action",
+    "_Type": "Action.Type.ProgressBanner"
+}

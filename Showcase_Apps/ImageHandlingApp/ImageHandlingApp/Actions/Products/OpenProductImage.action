@@ -1,4 +1,5 @@
 {
 	"_Type": "Action.Type.OpenDocument",
-	"Path": "{FileName}"
+	"Path": "/ImageHandlingApp/Services/Sample.service/{@odata.readLink}/Picture",
+	"MimeType": "image/png"
 }

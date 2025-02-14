@@ -1,0 +1,9 @@
+{
+    "Service": "/PDFGeneratorApp/Services/Sample.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/PDFGeneratorApp/Actions/Service/DownloadStartedMessage.action",
+    "OnFailure": "/PDFGeneratorApp/Actions/Service/SyncFailureMessage.action"
+}

@@ -5,7 +5,7 @@ create and return a NativeScript view in an extension control for Form Cell Exte
 
  You can do similar implementation of creating and returning a NativeScript view in an extension control for Section Extension, Object Cell extension and Object Header Extension types too.
 
-*Last Updated: 26-May-2023*
+*Last Updated: 15-Feb-2025*
 
 ***
 
@@ -24,7 +24,7 @@ create and return a NativeScript view in an extension control for Form Cell Exte
 
 ### MDK Client Version
 
-* MDK 23.4 or higher
+* MDK 24.11 or higher
 
 ***
 

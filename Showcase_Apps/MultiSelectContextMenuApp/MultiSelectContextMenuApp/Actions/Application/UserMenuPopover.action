@@ -1,0 +1,46 @@
+{
+    "PopoverItems": [{
+            "Enabled": true,
+            "Icon": "sap-icon://synchronize",
+            "OnPress": "/MultiSelectContextMenuApp/Actions/Service/SyncStartedMessage.action",
+            "Title": "Sync Changes",
+            "Visible": "$(PLT,true,true,false)"
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://headset",
+            "OnPress": "/MultiSelectContextMenuApp/Actions/Application/NavToSupport.action",
+            "Title": "Support",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://refresh",
+            "OnPress": "/MultiSelectContextMenuApp/Actions/Application/AppUpdateProgressBanner.action",
+            "Title": "Check for Updates",
+            "Visible": "$(PLT,true,true,false)"
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://hint",
+            "OnPress": "/MultiSelectContextMenuApp/Actions/Application/NavToAbout.action",
+            "Title": "About",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://reset",
+            "OnPress": "/MultiSelectContextMenuApp/Actions/Application/ResetMessage.action",
+            "Title": "Reset",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://log",
+            "OnPress": "/MultiSelectContextMenuApp/Actions/Application/Logout.action",
+            "Title": "Logout",
+            "Visible": "/MultiSelectContextMenuApp/Rules/Application/ClientIsMultiUserMode.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}
