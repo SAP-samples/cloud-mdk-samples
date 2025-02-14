@@ -8,8 +8,8 @@ export default async function DeleteSelectedProducts(context) {
 	var section = sectionedTable.getSection("SalesOrdersTable");
 	var selectedItems = section.getSelectedItems();	
 	if (!selectedItems  || selectedItems.length === 0) {
-		context.executeAction({
-			"Name": "/MultiSelectContextMenuApp/Actions/BasicToast.action",
+		return context.executeAction({
+			"Name": "/MultiSelectContextMenuApp/Actions/GenericToastMessage.action",
 			"Properties": {
 				"Message": "Nothing is selected"
 			}

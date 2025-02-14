@@ -1,34 +1,68 @@
 {
-	"Caption": "Products List",
-	"ActionBar": {
-		"Items": []
-	},
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
 			"Sections": [
 				{
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
 						"UseTopPadding": false
 					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/ImageHandlingApp/Services/Sample.service",
+						"EntitySet": "Products",
+						"QueryOptions": "$expand=Supplier&$orderby=Name"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
-						"Description": "",
+						"Title": "{Name}",
+						"Subhead": "{CategoryName}",
+						"Footnote": "{Supplier/SupplierName}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "DisclosureIndicator",
+						"Tags": [],
 						"AvatarStack": {
 							"Avatars": [
 								{
-									"Image": "/ImageHandlingApp/Rules/Product/GetDetailImage.js"
+									"Image": "/ImageHandlingApp/Services/Sample.service/{@odata.readLink}/Picture"
 								}
 							],
-							"ImageIsCircular": false
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
 						},
-						"Icons": [],
-						"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_Detail.action",
-						"Title": "{Name}",
-						"Footnote": "{SupplierDetails/SupplierName}",
-						"PreserveIconStackSpacing": false,
-						"StatusText": "",
-						"Subhead": "{CategoryName}",
-						"SubstatusText": ""
+						"AvatarGrid": {
+							"ImageIsCircular": true
+						},
+							"OnPress": {
+							"Name": "/ImageHandlingApp/Actions/Generic/GenericNavigation.action",
+							"Properties": {
+								"PageToOpen": "/ImageHandlingApp/Pages/Products/Products_Detail.page"
+							}
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false,
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						}
 					},
 					"Search": {
 						"Enabled": true,
@@ -37,19 +71,22 @@
 						"Delay": 500,
 						"MinimumCharacterThreshold": 3
 					},
-					"Target": {
-						"EntitySet": "Products",
-						"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
-						"QueryOptions": "$expand=SupplierDetails&$orderby=Name"
-					},
-					"_Type": "Section.Type.ObjectTable"
+					"HighlightSelectedItem": false
 				}
 			],
-			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable"
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Products_List",
-	"PrefersLargeCaption": true
+	"_Name": "Products_List_Improved",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Products List",
+		"PrefersLargeCaption": true
+	}
 }

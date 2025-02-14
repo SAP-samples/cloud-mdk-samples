@@ -1,45 +1,79 @@
 {
-	"Caption": "Main",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"Buttons": [
-						{
-							"OnPress": "/MultiSelectContextMenuApp/Actions/NavToSalesOrders_ListPage.action",
-							"Alignment": "Center",
-							"Title": "$(L,NavToSalesOrders_List_Button)",
-							"Visible": true,
-							"ButtonType": "Text",
-							"Semantic": "Tint"
-						}
-					],
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
 					},
-					"Visible": true,
-					"_Name": "SectionButtonTable0",
-					"_Type": "Section.Type.ButtonTable"
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Buttons": [
+						{
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "ButtonTableTypeButton0",
+							"Title": "$(L,NavToSalesOrders_List_Button)",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": {
+								"Name": "/MultiSelectContextMenuApp/Actions/GenericNavigation.action",
+								"Properties": {
+									"PageToOpen": "/MultiSelectContextMenuApp/Pages/SalesOrders_List.page"
+								}
+							}
+						}
+					],
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					}
 				}
 			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
-	"ToolBar": {
+	"_Type": "Page",
+	"_Name": "Main",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Main",
+		"PrefersLargeCaption": true
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar",
 		"Items": [
 			{
-				"Caption": "Logout",
-				"Clickable": true,
-				"Enabled": true,
-				"OnPress": "/MultiSelectContextMenuApp/Actions/Logout.action",
-				"Visible": true,
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "LogoutToolbarItem",
-				"_Type": "Control.Type.ToolbarItem"
+				"Visible": true,
+				"Title": "Logout",
+				"OnPress": "/MultiSelectContextMenuApp/Actions/Application/Logout.action",
+				"Enabled": true,
+				"ButtonType": "Text",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
 			}
 		]
-	},
-	"_Name": "Main",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	}
 }

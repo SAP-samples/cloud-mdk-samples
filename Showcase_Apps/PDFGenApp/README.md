@@ -14,7 +14,7 @@ This showcase application is loosely based on the following guide:
 
 And contains excerpt of sample code from the following project [`nativescript-pdf-generation`](https://github.com/kumarandena/nativescript-pdf-generation)
 
-*Last Updated: 16-Nov-2023*
+*Last Updated: 12-Feb-2025*
 
 ***
 
@@ -33,7 +33,7 @@ And contains excerpt of sample code from the following project [`nativescript-pd
 
 ### MDK Client Version
 
-* MDK 23.8 or higher
+* MDK 24.11 or higher
 
 ### Data Source
 
@@ -58,16 +58,6 @@ The `pdfgenapp.mdkproject` folder contains the MDK client configuration to add t
 For a more detailed information on the setup for MDK development please see the following tutorial.
 
 * [Build Your Mobile Development Kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
-
-
-> Info: For MDK version 6.2 or older, you'd need to make additional changes after executing the create-client:
->
-> 1. Generate this project using the the create-client command/cmd
->      * Note: Between MDK version 6.0.3 to 6.2.x, you will get an error when running the create-client command e.g. `TS2307: Cannot find module 'pdfmake/build/pdfmake' or its corresponding type declarations.`. You can ignore this error and continue to the next step to add the `pdfmake` module.
-> 2. Go to the generated `PDFGenApp` folder in Terminal
-> 3. Execute `npm i pdfmake` to install the PDFMake library to your project (Note: PDFMake is not a NativeScript Plugin, therefore you can't use the `NSPlugins` property in `MDKProject.json` to install it)
-> 4. You need to do this every time you regenerate the project using the create-client command/cmd
-> 
 
 If you are using SAP Business Application Studio or Visual Studio Code to develop your app, then you need to add `"pdfmake/build/pdfmake"` and `"nativescript-pdf-view"` to the externals property of the built-in MDK bundler tool.
 

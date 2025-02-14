@@ -19,57 +19,67 @@
 								"Title": "Counter"
 							},
 							"Height": 100,
-							"OnValueChange": "/NativeScriptViewExtensionApp/Rules/FormCellExtensionOnValueChange.js"
+							"OnValueChange": "/NativeScriptViewExtensionApp/Rules/FormCellExtensionOnValueChange.js",
+							"IsVisible": true,
+							"Separator": true
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCCurrentValue",
-							"Caption": "Current Value"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Current Value",
+							"Enabled": true,
+							"IsEditable": true
 						}
 					],
 					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "FormCellContainerSectionFormCell0"
 				}
-			]
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Main",
-	"Caption": "Main",
-	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
 				"Caption": "Set Counter to 50",
 				"Position": "Right",
 				"IsIconCircular": false,
 				"OnPress": "/NativeScriptViewExtensionApp/Rules/FormCellExtensionSetValue.js"
+			},
+				{
+				"_Name": "ActionBarItem1",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/NativeScriptViewExtensionApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
-	},
-	"ToolBar": {
-		"Items": [
-			{
-				"_Type": "Control.Type.ToolbarItem",
-				"_Name": "LogoutToolbarItem",
-				"Caption": "Logout",
-				"Enabled": true,
-				"Visible": true,
-				"Clickable": true,
-				"OnPress": "/NativeScriptViewExtensionApp/Actions/Logout.action"
-			},
-			{
-				"_Type": "Control.Type.ToolbarItem",
-				"_Name": "UpdateToolbarItem",
-				"Caption": "Update",
-				"Enabled": true,
-				"Visible": "$(PLT,true,true,false)",
-				"Clickable": true,
-				"OnPress": "/NativeScriptViewExtensionApp/Actions/AppUpdateProgressBanner.action"
-			}
-		]
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Main",
+		"PrefersLargeCaption": true
 	}
 }

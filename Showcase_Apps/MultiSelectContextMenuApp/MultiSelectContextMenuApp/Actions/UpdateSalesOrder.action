@@ -4,7 +4,7 @@
 		"LifeCycleStatus": "?"
 	},
 	"OnFailure": {
-		"Name": "/MultiSelectContextMenuApp/Actions/BasicToast.action",
+		"Name": "/MultiSelectContextMenuApp/Actions/GenericToastMessage.action",
 		"Properties": {
 			"Message": "Update Failed: {#ActionResults:UpdateSalesOrderResult/error}",
 			"NumberOfLines": 4
@@ -14,7 +14,7 @@
 		"_Name": "UpdateSalesOrderResult"
 	},
 	"Target": {
-		"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+		"Service": "/MultiSelectContextMenuApp/Services/Sample.service",
 		"EntitySet": "SalesOrderHeaders",
 		"ReadLink": "{@odata.readLink}"
 	}

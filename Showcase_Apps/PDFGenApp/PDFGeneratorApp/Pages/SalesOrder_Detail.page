@@ -1,6 +1,9 @@
 {
-	"Caption": "Sales Order Detail",
-	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Caption": "Sales Order Detail",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
 			"Sections": [
@@ -12,7 +15,7 @@
 								"Text": "{LifeCycleStatusName}"
 							}
 						],
-						"HeadlineText": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
+						"HeadlineText": "{Customer/FirstName} {Customer/LastName}",
 						"Subhead": "{SalesOrderId}",
 						"StatusText": "$(C, {NetAmount}, {CurrencyCode})"
 					}
@@ -22,35 +25,40 @@
 					"KeyAndValues": [
 						{
 							"KeyName": "Net Amount",
-							"Value": "$(C, {NetAmount}, {CurrencyCode})"
+							"Value": "$(C, {NetAmount}, {CurrencyCode})",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Gross Amount",
-							"Value": "$(C, {GrossAmount}, {CurrencyCode})"
+							"Value": "$(C, {GrossAmount}, {CurrencyCode})",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Tax Amount",
-							"Value": "$(C, {TaxAmount}, {CurrencyCode})"
+							"Value": "$(C, {TaxAmount}, {CurrencyCode})",
+							"_Type": "KeyValue.Type.Item"
 						}
 					]
 				},
 				{
 					"Header": {
-						"Caption": "Items"
+						"Caption": "Items",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"_Name": "SalesOrderItemsTable",
 					"Target": {
-						"Service": "/PDFGeneratorApp/Services/SampleService.service",
+						"Service": "/PDFGeneratorApp/Services/Sample.service",
 						"EntitySet": "{@odata.readLink}/Items",
-						"QueryOptions": "$expand=ProductDetails"
+						"QueryOptions": "$expand=Product"
 					},
 					"ObjectCell": {
 						"PreserveIconStackSpacing": false,
-						"Title": "{ProductDetails/Name}",
-						"Subhead": "{ProductDetails/CategoryName}",
+						"Title": "{Product/Name}",
+						"Subhead": "{Product/CategoryName}",
 						"StatusText": "$(C, {NetAmount}, {CurrencyCode})",
-						"SubStatusText": "{Quantity}{QuantityUnit}"
+						"SubStatusText": "{Quantity}{QuantityUnit}",
+						"_Type": "ObjectTable.Type.ObjectCell"
 					}
 				}
 			],
@@ -58,18 +66,20 @@
 			"_Type": "Control.Type.SectionedTable"
 		}
 	],
-	"ToolBar": {
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",
 		"Items": [
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "GeneratePDFToolbarItem",
-				"Caption": "$(L,GeneratePDFInlineToolbarItem_Label)",
+				"Title": "$(L,GeneratePDFInlineToolbarItem_Label)",
 				"OnPress": "/PDFGeneratorApp/Rules/GeneratePDFAsBase64.js"
 			},
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "GeneratePDFToolbarItem2",
-				"Caption": "$(L,GeneratePDFExternalToolbarItem_Label)",
+				"Title": "$(L,GeneratePDFExternalToolbarItem_Label)",
 				"OnPress": "/PDFGeneratorApp/Rules/GeneratePDFAsFile.js"
 			}
 		]

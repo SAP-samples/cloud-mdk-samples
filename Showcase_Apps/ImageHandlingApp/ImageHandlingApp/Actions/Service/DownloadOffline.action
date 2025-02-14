@@ -1,13 +1,21 @@
 {
-	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
-	"DefiningRequests": [{
-		"Name": "Products",
-		"Query": "Products",
-		"AutomaticallyRetrievesStreams": false
-	}],
 	"_Type": "Action.Type.OfflineOData.Download",
 	"ActionResult": {
 		"_Name": "sync"
 	},
-	"OnFailure": "/ImageHandlingApp/Actions/Service/SyncFailureMessage.action"
+	 "OnSuccess": "/ImageHandlingApp/Rules/ErrorArchive_CheckForSyncError.js",
+	"OnFailure": "/ImageHandlingApp/Actions/Service/SyncFailureMessage.action",
+	"Service": "/ImageHandlingApp/Services/Sample.service",
+	"DefiningRequests": [
+		{
+			"Name": "Products",
+			"Query": "Products",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "Suppliers",
+			"Query": "Suppliers",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
 }

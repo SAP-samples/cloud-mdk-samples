@@ -1,0 +1,59 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/ImageHandlingApp/Services/Sample.service",
+						"EntitySet": "ErrorArchive"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false,
+						"Caption": "No record found!"
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{HTTPStatusCode}",
+						"Subhead": "{RequestURL}",
+						"Footnote": "{Message}",
+						"StatusText": "{RequestMethod}",
+						"AvatarStack": {
+							"ImageIsCircular": false
+						},
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"OnPress": "/ImageHandlingApp/Actions/ErrorArchive/NavToErrorArchive_Detail.action",
+						"Selected": false,
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "ErrorArchive_List",
+	"ActionBar": {
+		"Caption": "Error List",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	}
+}

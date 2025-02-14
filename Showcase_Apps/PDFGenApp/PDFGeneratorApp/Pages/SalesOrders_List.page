@@ -1,25 +1,31 @@
 {
-	"Caption": "SalesOrders_List",
-	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Caption": "SalesOrders_List",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
-			"Sections": [{
-				"_Type": "Section.Type.ObjectTable",
-				"_Name": "SalesOrdersTable",
-				"Target": {
-					"Service": "/PDFGeneratorApp/Services/SampleService.service",
-					"EntitySet": "SalesOrderHeaders",
-					"QueryOptions": "$expand=CustomerDetails,Items"
-				},
-				"ObjectCell": {
-					"PreserveIconStackSpacing": false,
-					"Title": "{CustomerDetails/FirstName} {CustomerDetails/LastName}",
-					"Subhead": "{SalesOrderId}",
-					"StatusText": "{LifeCycleStatusName}",
-					"SubstatusText": "$(C, {NetAmount}, {CurrencyCode})",
-					"OnPress":"/PDFGeneratorApp/Actions/NavToSalesOrder_Detail.action"
+			"Sections": [
+				{
+					"_Type": "Section.Type.ObjectTable",
+					"_Name": "SalesOrdersTable",
+					"Target": {
+						"Service": "/PDFGeneratorApp/Services/Sample.service",
+						"EntitySet": "SalesOrderHeaders",
+						"QueryOptions": "$expand=Customer,Items"
+					},
+					"ObjectCell": {
+						"PreserveIconStackSpacing": false,
+						"Title": "{Customer/FirstName} {Customer/LastName}",
+						"Subhead": "{SalesOrderID}",
+						"StatusText": "{LifeCycleStatusName}",
+						"SubstatusText": "$(C, {NetAmount}, {CurrencyCode})",
+						"OnPress": "/PDFGeneratorApp/Actions/NavToSalesOrder_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					}
 				}
-			}],
+			],
 			"_Name": "SectionedTable0",
 			"_Type": "Control.Type.SectionedTable"
 		}

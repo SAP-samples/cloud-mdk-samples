@@ -1,5 +1,5 @@
 {
-	"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+	"Service": "/MultiSelectContextMenuApp/Services/Sample.service",
 	"_Type": "Action.Type.OfflineOData.Upload",
 	"ActionResult": {
 		"_Name": "sync"

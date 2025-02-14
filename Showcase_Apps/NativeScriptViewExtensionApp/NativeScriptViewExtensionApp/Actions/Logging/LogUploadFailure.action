@@ -1,0 +1,6 @@
+{
+    "Message": "Uploading log file failed with error: {#ActionResults:UploadLog/error}",
+    "OKCaption": "OK",
+    "Title": "Log Upload Failed",
+    "_Type": "Action.Type.Message"
+}

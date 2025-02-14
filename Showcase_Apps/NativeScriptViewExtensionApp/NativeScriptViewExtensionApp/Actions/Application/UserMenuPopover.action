@@ -1,0 +1,39 @@
+{
+    "PopoverItems": [{
+            "Enabled": true,
+            "Icon": "sap-icon://headset",
+            "OnPress": "/NativeScriptViewExtensionApp/Actions/Application/NavToSupport.action",
+            "Title": "Support",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://refresh",
+            "OnPress": "/NativeScriptViewExtensionApp/Actions/Application/AppUpdateProgressBanner.action",
+            "Title": "Check for Updates",
+            "Visible": "$(PLT,true,true,false)"
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://hint",
+            "OnPress": "/NativeScriptViewExtensionApp/Actions/Application/NavToAbout.action",
+            "Title": "About",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://reset",
+            "OnPress": "/NativeScriptViewExtensionApp/Actions/Application/ResetMessage.action",
+            "Title": "Reset",
+            "Visible": true
+        },
+        {
+            "Enabled": true,
+            "Icon": "sap-icon://log",
+            "OnPress": "/NativeScriptViewExtensionApp/Actions/Application/Logout.action",
+            "Title": "Logout",
+            "Visible": "/NativeScriptViewExtensionApp/Rules/Application/ClientIsMultiUserMode.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

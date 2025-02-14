@@ -1,20 +1,26 @@
 {
-	"Caption": "Products List",
+	"ActionBar": {
+		"Caption": "Products List",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
 			"Sections": [
 				{
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"ObjectCell": {
-						"OnPress": "/ImageHandlingApp/Rules/Product/DownloadOrOpenDocument.js",
-						"OnAccessoryButtonPress": "/ImageHandlingApp/Rules/Product/DownloadOrOpenDocument.js",
-						"ProgressIndicator": "/ImageHandlingApp/Rules/Product/GetProductImageStatus.js",
+						"OnPress": "/ImageHandlingApp/Actions/Products/OpenProductImage.action",
+						"OnAccessoryButtonPress": "/ImageHandlingApp/Actions/Products/OpenProductImage.action",
+						"ProgressIndicator": "Open",
 						"Title": "{Name}",
-						"Footnote": "{SupplierDetails/SupplierName}",
+						"Footnote": "{Supplier/SupplierName}",
 						"PreserveIconStackSpacing": false,
-						"Subhead": "{CategoryName}"
+						"Subhead": "{CategoryName}",
+						"_Type": "ObjectTable.Type.ObjectCell"
 					},
 					"Search": {
 						"Enabled": true,
@@ -25,8 +31,8 @@
 					},
 					"Target": {
 						"EntitySet": "Products",
-						"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
-						"QueryOptions": "$expand=SupplierDetails&$orderby=Name"
+						"Service": "/ImageHandlingApp/Services/Sample.service",
+						"QueryOptions": "$expand=Supplier&$orderby=Name"
 					},
 					"_Type": "Section.Type.ObjectTable"
 				}
@@ -36,6 +42,5 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Products_List_OpenDoc",
-	"PrefersLargeCaption": true
+	"_Name": "Products_List_OpenDoc_Improved"
 }

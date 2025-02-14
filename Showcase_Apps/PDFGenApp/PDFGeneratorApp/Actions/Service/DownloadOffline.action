@@ -1,0 +1,23 @@
+{
+    "Service": "/PDFGeneratorApp/Services/Sample.service",
+	"DefiningRequests": [
+		{
+			"Name": "SalesOrderHeaders", "Query": "SalesOrderHeaders"
+		},
+		{
+			"Name": "SalesOrderItems", "Query": "SalesOrderItems"
+		},
+		{
+			"Name": "Customers", "Query": "Customers"
+		},
+		{
+			"Name": "Products", "Query": "Products"
+		}
+	],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/PDFGeneratorApp/Actions/Service/SyncFailureMessage.action",
+    "OnSuccess": "/PDFGeneratorApp/Rules/ErrorArchive_CheckForSyncError.js"
+}

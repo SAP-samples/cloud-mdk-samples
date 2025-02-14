@@ -1,8 +1,0 @@
-{
-		"AppId": "com.sap.mk.otherdemo",
-		"DestinationName": "com.sap.edm.sampleservice.v2",
-		"OfflineEnabled": true,
-		"OnlineOptions": {},
-		"PathSuffix": "",
-		"SourceType": "Mobile"
-}

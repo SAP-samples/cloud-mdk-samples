@@ -1,10 +1,19 @@
 {
-	"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
-	"DefiningRequests": [{
-		"Name": "Products",
-		"Query": "Products",
-		"AutomaticallyRetrievesStreams": false
-	}],
+	"Service": "/MultiSelectContextMenuApp/Services/Sample.service",
+	"DefiningRequests": [
+		{
+			"Name": "SalesOrderHeaders", "Query": "SalesOrderHeaders"
+		},
+		{
+			"Name": "SalesOrderItems", "Query": "SalesOrderItems"
+		},
+		{
+			"Name": "Customers", "Query": "Customers"
+		},
+		{
+			"Name": "Products", "Query": "Products"
+		}
+	],
 	"_Type": "Action.Type.OfflineOData.Download",
 	"ActionResult": {
 		"_Name": "sync"

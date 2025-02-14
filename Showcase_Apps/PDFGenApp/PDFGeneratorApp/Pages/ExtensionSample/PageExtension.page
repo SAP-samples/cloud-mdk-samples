@@ -1,30 +1,37 @@
 {
-    "Caption": "Sales Order Invoice",
-    "PrefersLargeCaption": true,
-    "Controls": [{
-      "Module": "MDKExtension",
-      "Control": "PDFViewer",
-      "Class": "PDFViewerClass",
-      "ExtensionProperties": {
-        "Source": "{#Page:SalesOrders_Detail/#ClientData/PDFSource}"
-      },
-      "_Name": "ExtensionControl",
-      "_Type": "Control.Type.Extension"
-    }],
-    "ToolBar": {
-      "Items": [
-        {
+	"ActionBar": {
+		"Caption": "Sales Order Invoice",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Module": "MDKExtension",
+			"Control": "PDFViewer",
+			"Class": "PDFViewerClass",
+			"ExtensionProperties": {
+				"Source": "{#Page:SalesOrders_Detail/#ClientData/PDFSource}"
+			},
+			"_Name": "ExtensionControl",
+			"_Type": "Control.Type.Extension"
+		}
+	],
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "ToolBarItem1",
-				"_Type": "Control.Type.ToolbarItem",
-				"Caption": "Reject"
+				"Title": "Reject"
 			},
 			{
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "ToolBarItem2",
-				"_Type": "Control.Type.ToolbarItem",
-				"Caption": "Approve"
+				"Title": "Approve"
 			}
-      ]
-    },
-    "_Type": "Page",
-    "_Name": "ExtensionControl"
+		]
+	},
+	"_Type": "Page",
+	"_Name": "ExtensionControl"
 }

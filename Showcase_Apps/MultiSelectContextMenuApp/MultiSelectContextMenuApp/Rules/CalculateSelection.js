@@ -6,6 +6,7 @@ export default function CalculateSelection(context) {
 	let pageProxy = context.getPageProxy();
 	let sectionedTable = pageProxy.getControl("SectionedTable0");
 	let objectTable = sectionedTable.getSection("SalesOrdersTable");
+	let fioriToolbar = pageProxy.getFioriToolbar();
 	const selected = objectTable.getSelectedItems();
 	if (selected) {
 		var total = 0;
@@ -13,8 +14,8 @@ export default function CalculateSelection(context) {
 			var netamt = item.binding.NetAmount;
 			total += netamt;
 		});
-
 		total = context.formatCurrency(total, "EUR"); //For sample only, we'll hard code the currency to EUR
-		return pageProxy.setToolbarItemCaption("ToolBarItem1",context.localizeText("TotalLabel", [total]));
+		let newValue = context.localizeText("TotalLabel", [total]);
+		return fioriToolbar.setHelperText(newValue);
 	}
 }

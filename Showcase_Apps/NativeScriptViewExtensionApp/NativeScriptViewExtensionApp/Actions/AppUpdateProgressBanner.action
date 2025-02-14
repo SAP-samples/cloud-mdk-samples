@@ -1,7 +1,0 @@
-{
-    "Animated": true,
-    "CompletionTimeout": 3,
-    "Message": "Checking for Updates...",
-    "OnSuccess": "/NativeScriptViewExtensionApp/Actions/AppUpdate.action",
-    "_Type": "Action.Type.ProgressBanner"
-}
