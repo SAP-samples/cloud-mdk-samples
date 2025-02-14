@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/PersistentFilters/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/PersistentFilters/Rules/Application/AppUpdateSuccess.js"
+}
