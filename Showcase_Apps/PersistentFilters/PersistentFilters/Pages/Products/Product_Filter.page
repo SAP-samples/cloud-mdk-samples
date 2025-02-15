@@ -1,7 +1,7 @@
 {
 	"Controls": [
 		{
-			"_Type": "Control.Type.FormCellContainer",
+			"_Type": "Control.Type.SectionedTable",
 			"_Name": "FormCellContainer0",
 			"Sections": [
 				{
@@ -87,7 +87,7 @@
 							"FilterProperty": "CategoryName",
 							"PickerItems": {
 								"Target": {
-									"Service": "/PersistentFilters/Services/SampleServiceV2.service",
+									"Service": "/PersistentFilters/Services/SampleServiceV4.service",
 									"EntitySet": "ProductCategories",
 									"QueryOptions": "$orderby=CategoryName"
 								},
@@ -96,14 +96,15 @@
 							}
 						}
 					],
-					"Visible": true
+					"Visible": true,
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell0"
 				}
 			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "ProductFilter",
-	"Caption": "Filter Products",
 	"ActionBar": {
 		"Items": [
 			{
@@ -113,7 +114,8 @@
 				"Position": "Left",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Cancel.action"
+				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Cancel.action",
+				"_Type": "Control.Type.ActionBarItem"
 			},
 			{
 				"_Name": "ActionBarItem1",
@@ -123,10 +125,13 @@
 				"IsIconCircular": false,
 				"IconText": "Done",
 				"Visible": true,
-				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Complete.action"
+				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Complete.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "Filter Products",
+		"_Type": "Control.Type.ActionBar"
 	},
 	"Result": [
 		"#Page:ProductFilter/#Control:FilterPriceRange/#Value",
