@@ -1,0 +1,8 @@
+{
+  "AppName": "MDK GenAI",
+  "AppVersion": "1.0.0",
+  "BundleID": "com.sap.mdk.genai",
+  "Externals": ["nativescript-speech-recognition"],
+  "NSPlugins": ["nativescript-speech-recognition"],
+  "UrlScheme": "mdkclient"
+}
