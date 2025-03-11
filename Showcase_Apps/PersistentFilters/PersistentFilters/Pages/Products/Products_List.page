@@ -6,11 +6,12 @@
 			"Sections": [
 				{
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
-						"Service": "/PersistentFilters/Services/SampleServiceV2.service",
+						"Service": "/PersistentFilters/Services/SampleServiceV4.service",
 						"EntitySet": "Products",
 						"QueryOptions": ""
 					},
@@ -20,20 +21,27 @@
 					},
 					"ObjectCell": {
 						"ContextMenu": {
-							"Items": [
-							],
-							"PerformFirstActionWithFullSwipe": true
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"_Type": "ObjectCell.Type.ContextMenu"
 						},
 						"Title": "{Name}",
 						"Subhead": "{CategoryName}",
 						"Footnote": "{DimensionWidth} {DimensionUnit} x {DimensionHeight} {DimensionUnit} x {DimensionDepth} {DimensionUnit}",
 						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
 						"SubstatusText": "{QuantityUnit}",
-						"DetailImage": "/PersistentFilters/Services/SampleServiceV2.service/{@odata.readLink}/$value",
-						"DetailImageIsCircular": false,
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "/PersistentFilters/Services/SampleServiceV4.service/{@odata.readLink}/Picture"
+								}
+							],
+							"ImageIsCircular": false
+						},
 						"PreserveIconStackSpacing": false,
-						"AccessoryType": "disclosureIndicator",
-						"OnPress": "/PersistentFilters/Actions/Products/NavToProducts_Detail.action"
+						"AccessoryType": "DisclosureIndicator",
+						"OnPress": "/PersistentFilters/Actions/Products/NavToProducts_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
 					},
 					"Search": {
 						"Enabled": true,
@@ -57,7 +65,6 @@
 	],
 	"_Type": "Page",
 	"_Name": "Products_List",
-	"Caption": "Products",
 	"OnReturning": "/PersistentFilters/Rules/Products/SaveCurrentFilter.js",
 	"ActionBar": {
 		"Items": [
@@ -69,9 +76,12 @@
 				"IsIconCircular": false,
 				"IconText": "Filter",
 				"Visible": true,
-				"OnPress": "/PersistentFilters/Actions/Products/ProductFilter.action"
+				"OnPress": "/PersistentFilters/Actions/Products/ProductFilter.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "Products",
+		"_Type": "Control.Type.ActionBar"
 	}
 }

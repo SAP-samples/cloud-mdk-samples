@@ -14,8 +14,11 @@
 						{
 							"_Name": "SectionButton1",
 							"Title": "Products",
-							"TextAlignment": "center",
-							"OnPress": "/PersistentFilters/Actions/Products/NavToProducts_List.action"
+							"Alignment": "Center",
+							"OnPress": "/PersistentFilters/Actions/Products/NavToProducts_List.action",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						}
 					]
 				},
@@ -30,9 +33,12 @@
 						{
 							"_Name": "SectionButton2",
 							"Title": "Reset Saved Filter",
-							"TextAlignment": "center",
+							"Alignment": "Center",
 							"Visible": true,
-							"OnPress": "/PersistentFilters/Rules/ClearFilters.js"
+							"OnPress": "/PersistentFilters/Rules/ClearFilters.js",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						}
 					]
 				}
@@ -41,27 +47,22 @@
 	],
 	"_Type": "Page",
 	"_Name": "Main",
-	"Caption": "Persistent Filters",
-	"ToolBar": {
+	"ActionBar": {
 		"Items": [
 			{
-				"_Type": "Control.Type.ToolbarItem",
-				"_Name": "LogoutToolbarItem",
-				"Caption": "Logout",
-				"Enabled": true,
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
 				"Visible": true,
-				"Clickable": true,
-				"OnPress": "/PersistentFilters/Actions/Logout.action"
-			},
-			{
-				"_Type": "Control.Type.ToolbarItem",
-				"_Name": "UploadToolbarItem",
-				"Caption": "Sync",
-				"Enabled": true,
-				"Visible": "$(PLT,true,true,false)",
-				"Clickable": true,
-				"OnPress": "/PersistentFilters/Actions/Service/SyncStartedMessage.action"
+				"OnPress": "/PersistentFilters/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
-		]
+		],
+		"_Name": "ActionBar1",
+		"Caption": "Main",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	}
 }

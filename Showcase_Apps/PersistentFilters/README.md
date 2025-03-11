@@ -8,7 +8,7 @@ The application shows how to:
 2. Save the filters to app settings
 3. Reapply the user filter values on opening the list page using the Sectioned Table filters property
 
-*Last Updated: 01-Dec-2021*
+*Last Updated: 14-Feb-2025*
 
 ***
 
@@ -24,15 +24,14 @@ The application shows how to:
 
 * iOS
 * Android
-* Web
 
 ### *MDK Client Version*
 
-* MDK 6.1 or higher
+* MDK 24.11 or higher
 
 ### *Data Source*
 
-* Mobile Services Sample OData ESPM (destination created as SampleServiceV2)
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v4)
 
 ***
 
@@ -55,6 +54,3 @@ The application shows how to:
 
 ![Android Persistent Filters](./Screenshots/android_persistent_filters.gif)
 
-### Web
-
-![Web Persistent Filters](./Screenshots/web_persistent_filters.gif)

@@ -1,5 +1,5 @@
 {
-    "Service": "/PersistentFilters/Services/SampleServiceV2.service",
+    "Service": "/PersistentFilters/Services/SampleServiceV4.service",
     "_Type": "Action.Type.OfflineOData.Upload",
     "ActionResult": {
         "_Name": "sync"
