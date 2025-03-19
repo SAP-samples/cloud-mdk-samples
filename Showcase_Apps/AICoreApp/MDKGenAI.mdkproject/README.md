@@ -15,7 +15,6 @@ This project serves as a Demo App for consuming SAP AI Core services and SAP HAN
 
 2. Create a deployment for a model that supports the Chat Completions API and accepts image input. This demo uses the GPT-4o model.
 
-3. Create a destination in the SAP BTP Cockpit of your subaccount for the deployed service using the Service Key of SAP AI Core created in the previous step for WebClient.
 
 ```bash
 Name: AICoreAPI
@@ -106,4 +105,4 @@ To update the database, clear and repopulate the embeddings via VectorDB.
 ### Limitation
 Only one type of equipment image can be uploaded per anomaly detection request. For example, you can upload multiple images of a water pump but not images of different equipment types simultaneously. Users may need to refine the prompts to overcome this limitation.
 
-Note that the NativeScript voice plugin is used for this demo for voice input since voice input is not yet supported by the Chat Completions API. The NativeScript voice plugin is not supported for WebClient.
+Note that the NativeScript voice plugin is used for this demo for voice input since voice input is not yet supported by the Chat Completions API.
