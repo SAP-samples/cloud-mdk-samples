@@ -1,58 +1,62 @@
 {
-  "Caption": "Operation",
-    "ActionBar": {
-      "Items": [
-        {
-          "Position": "right",
-          "Caption": "Edit",
-          "OnPress": "/MDKDevApp/Rules/ImageAnalysis/NavToOperationEdit.js",
-          "Visible": "/MDKDevApp/Rules/ImageAnalysis/GetAcceptToolbarVisibility.js"
-        }
-    ]
-  },
-  "Controls": [
-    {
-      "Sections": [        {
-          "ObjectHeader": {
-            "DetailImage": "/MDKDevApp/Images/operation.png",
-            "HeadlineText": "{OperationData/taskTitle}",
-            "Subhead": "{OperationData/description}",
-            "StatusText": "{OperationData/priority}",
-            "StatusImage": "res://n_icon.png",
-            "Tags": "/MDKDevApp/Rules/ImageAnalysis/GetOperationDetailTags.js",
-            "Styles": {
-              "StatusText": "/MDKDevApp/Rules/ImageAnalysis/GetPriorityColor.js"
-            }
-          },
-          "_Type": "Section.Type.ObjectHeader"
-        },
-        {
-          "_Type": "Section.Type.KeyValue",
-          "_Name": "OperationDetail",
-          "Header": {
-            "Caption": "Operation Details"
-          },
-          "KeyAndValues": []
-        }
-      ],
-      "_Name": "SectionedTable",
-      "_Type": "Control.Type.SectionedTable"
-    }
-  ],
-  "FioriToolbar": {
-    "_Name": "FioriToolbar",
-    "_Type": "Control.Type.FioriToolbar",
-    "Items": [
-      {
-        "_Type": "FioriToolbarItem.Type.Button",
-        "_Name": "acceptButton",
-        "Title": "Accept",
-        "ButtonType": "Primary",
-        "OnPress": "/MDKDevApp/Rules/ImageAnalysis/AcceptOperation.js"
-      }
-    ],
-    "Visible": "/MDKDevApp/Rules/ImageAnalysis/GetAcceptToolbarVisibility.js"
-  },
-  "_Name": "OperationDetail",
-  "_Type": "Page"
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Right",
+				"Caption": "Edit",
+				"OnPress": "/MDKDevApp/Rules/ImageAnalysis/NavToOperationEdit.js",
+				"Visible": "/MDKDevApp/Rules/ImageAnalysis/GetAcceptToolbarVisibility.js",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "Operation",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": "/MDKDevApp/Rules/ImageAnalysis/GetOperationDetailTags.js",
+						"DetailImage": "/MDKDevApp/Images/operation.png",
+						"HeadlineText": "{OperationData/taskTitle}",
+						"Subhead": "{OperationData/description}",
+						"StatusText": "{OperationData/priority}",
+						"StatusImage": "res://n_icon.png",
+						"Styles": {
+							"StatusText": "/MDKDevApp/Rules/ImageAnalysis/GetPriorityColor.js"
+						}
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "OperationDetail",
+					"Header": {
+						"Caption": "Operation Details",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"KeyAndValues": []
+				}
+			],
+			"_Name": "SectionedTable",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "acceptButton",
+				"Title": "Accept",
+				"ButtonType": "Primary",
+				"OnPress": "/MDKDevApp/Rules/ImageAnalysis/AcceptOperation.js"
+			}
+		],
+		"Visible": "/MDKDevApp/Rules/ImageAnalysis/GetAcceptToolbarVisibility.js"
+	},
+	"_Name": "OperationDetail",
+	"_Type": "Page"
 }
