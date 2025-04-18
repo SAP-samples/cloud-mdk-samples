@@ -1,6 +1,0 @@
-{
-	"_Type": "Action.Type.Filter",
-	"Filterable": "#Page:Products_List/#Control:SectionedTable",
-	"PageToOpen": "/PersistentFilters/Pages/Products/Product_Filter.page",
-	"ModalPageFullscreen": false
-}

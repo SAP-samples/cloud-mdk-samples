@@ -1,0 +1,158 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.MultiSorter",
+							"_Name": "SortBy",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowEmptySelection": false,
+							"Caption": "Sort by",
+							"IsEditable": true,
+							"Items": [
+								{
+									"DisplayValue": "Name",
+									"ReturnValue": "Name"
+								},
+								{
+									"DisplayValue": "Category",
+									"ReturnValue": "CategoryName"
+								},
+								{
+									"AscendingLabel": "Low to High",
+									"DescendingLabel": "High to Low",
+									"DisplayValue": "Price",
+									"ReturnValue": "Price"
+								}
+							],
+							"Styles": {}
+						},
+						{
+							"_Type": "Control.Type.FormCell.Filter",
+							"_Name": "FilterPriceRange",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
+							"Caption": "Filter by Price Range",
+							"IsEditable": true,
+							"FilterProperty": [
+								{
+									"DisplayValue": "Price (0 to 25)",
+									"ReturnValue": "Price le 25"
+								},
+								{
+									"DisplayValue": "Price (25 to 50)",
+									"ReturnValue": "(Price ge 25 and Price le 50)"
+								},
+								{
+									"DisplayValue": "Price (50 to 100)",
+									"ReturnValue": "(Price ge 50 and Price le 100)"
+								},
+								{
+									"DisplayValue": "Price (100 to 500)",
+									"ReturnValue": "(Price ge 100 and Price le 500)"
+								},
+								{
+									"DisplayValue": "Price (500 to 1000)",
+									"ReturnValue": "(Price ge 500 and Price le 1000)"
+								},
+								{
+									"DisplayValue": "Price (> 1000)",
+									"ReturnValue": "Price ge 1000"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "ProductCategoryPicker",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
+							"Caption": "Filter by Categories",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"LoadingIndicatorText": "Loading...",
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select multiple items",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"FilterProperty": "CategoryName",
+							"PickerItems": {
+								"Target": {
+									"Service": "/PersistentFilters/Services/SampleServiceV4.service",
+									"EntitySet": "ProductCategories",
+									"QueryOptions": "$orderby=CategoryName"
+								},
+								"DisplayValue": "{CategoryName}",
+								"ReturnValue": "{CategoryName}"
+							}
+						}
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell0"
+				}
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "ProductFilter",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Cancel",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem1",
+				"Caption": "Done",
+				"SystemItem": "Done",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"IconText": "Done",
+				"Visible": true,
+				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Complete.action"
+			}
+		],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Filter Products"
+	},
+	"Result": [
+		"#Page:ProductFilter/#Control:FilterPriceRange/#Value",
+		"#Page:ProductFilter/#Control:ProductCategoryPicker/#FilterValue",
+		"#Page:ProductFilter/#Control:SortBy/#Value"
+	]
+}

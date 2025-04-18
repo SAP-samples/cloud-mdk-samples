@@ -1,0 +1,21 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/PersistentFilters/Actions/SampleServiceV4/Service/InitializeOfflineFailureMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"Service": "/PersistentFilters/Services/SampleServiceV4.service",
+	"DefiningRequests": [
+		{
+			"Name": "Products",
+			"Query": "Products"
+		},
+		{
+			"Name": "ProductCategories",
+			"Query": "ProductCategories",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}
