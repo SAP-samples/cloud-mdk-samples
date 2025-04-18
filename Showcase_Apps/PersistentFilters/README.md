@@ -8,7 +8,7 @@ The application shows how to:
 2. Save the filters to app settings
 3. Reapply the user filter values on opening the list page using the Sectioned Table filters property
 
-*Last Updated: 14-Feb-2025*
+*Last Updated: 18-Apr-2025*
 
 ***
 
@@ -37,12 +37,12 @@ The application shows how to:
 
 ## Key Highlights
 
-* Uses the new Sectioned Table `Filters` metadata property during page loading to set the persisted filter
-* Uses the new section table property and client API methods
+* Uses the Sectioned Table `Filters` metadata property during page loading to set the persisted filter
+* Uses the section table property and client API methods
    * sectionedTable.filters
    * convertFilterCriteriaArrayToJSONString
    * convertJSONStringToFilterCriteriaArray
-* Only for the purpose of showcasing how to use the new MDK 6.1 property and associated methods
+
 
 ## Screenshots
 

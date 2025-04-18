@@ -1,0 +1,187 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/PersistentFilters/Services/SampleServiceV4.service",
+		"EntitySet": "Products",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [
+				"PurchaseOrderItems",
+				"SalesOrderItems"
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "{CategoryName}",
+						"Footnote": "{DimensionWidth} {DimensionUnit} x {DimensionHeight} {DimensionUnit} x {DimensionDepth} {DimensionUnit}",
+						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
+						"SubstatusText": "{QuantityUnit}",
+						"DetailImage": "/PersistentFilters/Services/SampleServiceV4.service/{@odata.readLink}/Picture",
+						"HeadlineText": "{Name}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{Category}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue0",
+							"KeyName": "Category",
+							"Visible": true
+						},
+						{
+							"Value": "{CategoryName}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue1",
+							"KeyName": "CategoryName",
+							"Visible": true
+						},
+						{
+							"Value": "{CurrencyCode}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue2",
+							"KeyName": "CurrencyCode",
+							"Visible": true
+						},
+						{
+							"Value": "{DimensionDepth}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue3",
+							"KeyName": "DimensionDepth",
+							"Visible": true
+						},
+						{
+							"Value": "{DimensionHeight}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue4",
+							"KeyName": "DimensionHeight",
+							"Visible": true
+						},
+						{
+							"Value": "{DimensionUnit}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue5",
+							"KeyName": "DimensionUnit",
+							"Visible": true
+						},
+						{
+							"Value": "{DimensionWidth}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue6",
+							"KeyName": "DimensionWidth",
+							"Visible": true
+						},
+						{
+							"Value": "{LongDescription}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue7",
+							"KeyName": "LongDescription",
+							"Visible": true
+						},
+						{
+							"Value": "{Name}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue8",
+							"KeyName": "Name",
+							"Visible": true
+						},
+						{
+							"Value": "{PictureUrl}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue9",
+							"KeyName": "PictureUrl",
+							"Visible": true
+						},
+						{
+							"Value": "{Price}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue10",
+							"KeyName": "Price",
+							"Visible": true
+						},
+						{
+							"Value": "{ProductID}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue11",
+							"KeyName": "ProductID",
+							"Visible": true
+						},
+						{
+							"Value": "{QuantityUnit}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue12",
+							"KeyName": "QuantityUnit",
+							"Visible": true
+						},
+						{
+							"Value": "{ShortDescription}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue13",
+							"KeyName": "ShortDescription",
+							"Visible": true
+						},
+						{
+							"Value": "{SupplierID}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue14",
+							"KeyName": "SupplierID",
+							"Visible": true
+						},
+						{
+							"Value": "{Weight}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue15",
+							"KeyName": "Weight",
+							"Visible": true
+						},
+						{
+							"Value": "{WeightUnit}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue16",
+							"KeyName": "WeightUnit",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Products_Detail",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar2",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,Product_Detail)"
+	}
+}

@@ -1,0 +1,13 @@
+{
+    "Service": "/PersistentFilters/Services/SampleServiceV4.service",
+    "DefiningRequests": [{
+        "Name": "Products",
+        "Query": "Products"
+    }],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/PersistentFilters/Actions/SampleServiceV4/Service/SyncFailureMessage.action",
+    "OnSuccess": "/PersistentFilters/Rules/SampleServiceV4/ErrorArchive_CheckForSyncError.js"
+}

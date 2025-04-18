@@ -7,5 +7,5 @@ export default function ClearFilters(context) {
     if (appSettings.hasKey('ProductFilter')) {
         appSettings.remove('ProductFilter');
     }
-    context.getPageProxy().executeAction('/PersistentFilters/Actions/FiltersClearedMessage.action');
+    context.getPageProxy().executeAction('/PersistentFilters/Actions/SampleServiceV4/Products/FiltersClearedMessage.action');
 }
