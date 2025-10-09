@@ -1,6 +1,10 @@
 {
 	"Controls": [
 		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
 			"_Type": "Control.Type.SectionedTable",
 			"_Name": "SectionedTable",
 			"Sections": [
@@ -10,6 +14,19 @@
 						"_Name": "SectionCommonTypeHeader0",
 						"AccessoryType": "None",
 						"UseTopPadding": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
@@ -23,29 +40,22 @@
 						"Caption": "No record found!",
 						"FooterVisible": false
 					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
 					"ObjectCell": {
-						"Title": "{LifeCycleStatusName}",
-						"Subhead": "{CreatedAt}",
-						"Footnote": "{CustomerID}",
-						"Description": "{CurrencyCode}",
-						"StatusText": "{GrossAmount}",
-						"SubstatusText": "{LifeCycleStatus}",
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{SalesOrderID}",
+						"Subhead": "{NetAmount} {CurrencyCode}",
+						"StatusText": "{LifeCycleStatusName}",
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "DisclosureIndicator",
 						"Tags": [],
 						"AvatarStack": {
-							"Avatars": [
-								{
-									"Image": ""
-								}
-							],
+							"Avatars": [],
 							"ImageIsCircular": false,
 							"ImageHasBorder": false
 						},
@@ -54,14 +64,7 @@
 						},
 						"OnPress": "/SiblingNavigationApp/Rules/SalesOrderHeaders_List/OnPressObjectCell.js",
 						"_Type": "ObjectTable.Type.ObjectCell",
-						"Selected": false,
-						"ContextMenu": {
-							"Items": [],
-							"PerformFirstActionWithFullSwipe": true,
-							"LeadingItems": [],
-							"TrailingItems": [],
-							"_Type": "ObjectCell.Type.ContextMenu"
-						}
+						"Selected": false
 					},
 					"Search": {
 						"Enabled": true,
@@ -72,13 +75,7 @@
 					},
 					"DataPaging": {
 						"ShowLoadingIndicator": true,
-						"LoadingIndicatorText": "Loading more items, please wait..."
-					},
-					"Grouping": {
-						"GroupingProperties": [],
-						"Header": {
-							"Items": []
-						}
+						"PageSize": 50
 					},
 					"HighlightSelectedItem": false
 				}
@@ -86,10 +83,6 @@
 			"LoadingIndicator": {
 				"Enabled": true,
 				"Text": "Loading, please wait..."
-			},
-			"FilterFeedbackBar": {
-				"ShowAllFilters": false,
-				"_Type": "Control.Type.FilterFeedbackBar"
 			}
 		}
 	],
