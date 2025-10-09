@@ -1,0 +1,7 @@
+**/.DS_Store  # MacOS file which is not needed in MDK
+**/jsconfig.json # Used to enable JavaScript language service. Recommend letting editor recreate as needed.
+**/IClientAPI.d.ts # Used to enable client API code completion in js. Recommend letting editor recreate as needed.
+**/.build/ # Used to store the MDK build output
+**/.base/ # Used to store the MDK base project
+**/.vscode/ # Used to save user preference
+**/.project.json # Used to save last MDK deployment settings

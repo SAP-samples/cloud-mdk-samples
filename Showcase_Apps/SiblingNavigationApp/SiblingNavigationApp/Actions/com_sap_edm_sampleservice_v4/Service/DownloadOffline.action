@@ -1,0 +1,13 @@
+{
+    "Service": "/SiblingNavigationApp/Services/com_sap_edm_sampleservice_v4.service",
+    "DefiningRequests": [{
+        "Name": "SalesOrderHeaders",
+        "Query": "SalesOrderHeaders"
+    }],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/SiblingNavigationApp/Actions/com_sap_edm_sampleservice_v4/Service/SyncFailureMessage.action",
+    "OnSuccess": "/SiblingNavigationApp/Rules/com_sap_edm_sampleservice_v4/ErrorArchive_CheckForSyncError.js"
+}

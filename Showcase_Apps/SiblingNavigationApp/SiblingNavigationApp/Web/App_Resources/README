@@ -1,0 +1,1 @@
+This folder is for putting web specific app resource files, which will be consumed by your web application using the res:// protocol in the metadata definition, e.g. images, icons,  documents and more.
