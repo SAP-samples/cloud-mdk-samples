@@ -5,7 +5,7 @@ This is a showcase application that demonstrate how to:
 1. Use the Selection feature of the Object Table
 2. Use the Context Menu feature of the Object Cell in Object Table
 
-*Last Updated: 11-Feb-2025*
+*Last Updated: 15-Oct-2025*
 
 ***
 
@@ -28,7 +28,7 @@ This is a showcase application that demonstrate how to:
 
 ### *Data Source*
 
-* Mobile Services Sample OData ESPM
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v4)
 
 ***
 
@@ -47,22 +47,7 @@ The following list are known issues that we are investigating and will fix in on
 
 ## Screenshots
 
-### iOS
-
-![iOS Multi Select](./Screenshots/iOS1.png)
-
-*Screenshot: iOS Multi Select*
-
-![iOS Context Menu](./Screenshots/iOS2.png)
-
-*Screenshot: iOS Context Menu*
-
-### Android
-
-![Android Multi Select](./Screenshots/Android1.png)
-
-*Screenshot: Android Multi Select*
-
-![Android Context Menu](./Screenshots/Android2.png)
-
-*Screenshot: Android Context Menu*
+| Functionality | Android | iOS |
+| --- | --- | --- |
+| Multi Select | <img src="./Screenshots/Android1.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/iOS1.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| Context Menu | <img src="./Screenshots/Android2.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/iOS2.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |

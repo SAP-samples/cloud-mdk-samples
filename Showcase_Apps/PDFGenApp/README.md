@@ -1,5 +1,3 @@
-# Read Me First
-
 ## PDF Generation App
 
 This is a showcase application that demonstrate how to generate PDF document using 3rd party open source library : [`pdfmake`](https://pdfmake.github.io/docs/0.1/) and also create an MDK Extension that consume 3rd party nativescript plugin [nativescript-pdf-view](https://market.nativescript.org/plugins/nativescript-pdf-view/):
@@ -14,7 +12,7 @@ This showcase application is loosely based on the following guide:
 
 And contains excerpt of sample code from the following project [`nativescript-pdf-generation`](https://github.com/kumarandena/nativescript-pdf-generation)
 
-*Last Updated: 12-Feb-2025*
+*Last Updated: 15-Oct-2025*
 
 ***
 
@@ -35,9 +33,9 @@ And contains excerpt of sample code from the following project [`nativescript-pd
 
 * MDK 24.11 or higher
 
-### Data Source
+### *Data Source*
 
-* Mobile Services Sample OData ESPM
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v4)
 
 ***
 

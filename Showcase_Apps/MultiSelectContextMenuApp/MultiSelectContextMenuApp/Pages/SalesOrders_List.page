@@ -197,7 +197,7 @@
 			"_Name": "LogoutToolbarItem1",
 			"Visible": true,
 			"Title": "Logout",
-			"OnPress": "/MultiSelectContextMenuApp/Actions/Application/Logout.action",
+			"OnPress": "/MultiSelectContextMenuApp/Actions/Application/ResetMessage.action",
 			"Enabled": true
 		},
 		{

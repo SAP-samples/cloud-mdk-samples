@@ -5,7 +5,7 @@ create and return a NativeScript view in an extension control for Form Cell Exte
 
  You can do similar implementation of creating and returning a NativeScript view in an extension control for Section Extension, Object Cell extension and Object Header Extension types too.
 
-*Last Updated: 15-Feb-2025*
+*Last Updated: 15-Oct-2025*
 
 ***
 

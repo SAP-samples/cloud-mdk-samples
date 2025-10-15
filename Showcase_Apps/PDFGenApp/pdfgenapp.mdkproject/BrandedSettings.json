@@ -9,6 +9,5 @@
     "MaxFileSizeInMegaBytes": 1,
     "LogLevel": "Debug"
   },
-	"DetailLabelViewText": "Demonstrate how to generate PDF document using 3rd party open source library",
-  "PasscodeTimeout": 120
+	"DetailLabelViewText": "Demonstrate how to generate PDF document using 3rd party open source library"
 }

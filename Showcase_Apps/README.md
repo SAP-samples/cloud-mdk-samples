@@ -30,9 +30,9 @@ To run any of the apps, you will need to setup an Application in Mobile Services
 1. Select the Assign Features for: Mobile Development Kit Application
 1. In addition to the default feature set, also select the **Mobile Sample OData ESPM** feature if the Showcase Application indicates this as the data source
 
-### MDK Editor (Business Application Studio)
+### MDK Editor (SAP Business Application Studio)
 
-It is assumed that you will use Business Application Studio as the Editor environment for working with the showcase applications.  The steps below are for the BAS environment, but the application metadata can also be used with WebIDE or the Visual Studio Code MDK Editor.
+It is assumed that you will use Business Application Studio as the Editor environment for working with the showcase applications.
 
 1. If you do not already have a dev space created, on the BAS Dev Spaces page click **Create Dev Space**
 1. Enter the name for your Dev Space
