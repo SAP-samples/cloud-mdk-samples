@@ -7,7 +7,7 @@ This is a showcase application that demonstrate how to:
       1. Generate QR Code as image from text using `nativescript-qr-generator` plugin
       2. Print the image using the `nativescript-printer` plugin
 
-*Last Updated: 15-Aug-2024*
+*Last Updated: 15-Oct-2025*
 
 ***
 
@@ -26,11 +26,11 @@ This is a showcase application that demonstrate how to:
 
 ### *MDK Client Version*
 
-* MDK 24.7 or higher
+* MDK 24.11 or higher
 
 ### *Data Source*
 
-* Mobile Services Sample OData ESPM
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v4)
 
 ***
 
@@ -52,24 +52,22 @@ For a more detailed information on the setup for MDK development please see the 
 
 * [Build Your Mobile Development Kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
 
+If you are using SAP Business Application Studio or Visual Studio Code to develop your app, then you need to add `"nativescript-printer"` and `"nativescript-qr-generator"` to the externals property of the built-in MDK bundler tool.
+
+Go to `Preferences` > Search for "MDK Bundler Externals" > Press Edit in settings.son > Add `"nativescript-printer"` and `"nativescript-qr-generator"` inside the `"mdk.bundlerExternals"` array. e.g.
+
+```json
+"mdk.bundlerExternals": [
+ "nativescript-printer",
+ "nativescript-qr-generator"
+]
+```
+
+
 ## Screenshots
 
-### iOS
+| Functionality | Android | iOS |
+| --- | --- | --- |
+| QR Code | <img src="./Screenshots/Android1.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/iOS1.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| Printing | <img src="./Screenshots/Android2.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/iOS2.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
 
-![iOS QR Code](./Screenshots/iOS1.png)
-
-*Screenshot: iOS QR Code*
-
-![iOS Printing](./Screenshots/iOS2.png)
-
-*Screenshot: iOS Printing*
-
-### Android
-
-![Android QR Code](./Screenshots/Android1.png)
-
-*Screenshot: Android QR Code*
-
-![Android Printing](./Screenshots/Android2.png)
-
-*Screenshot: Android Printing*
