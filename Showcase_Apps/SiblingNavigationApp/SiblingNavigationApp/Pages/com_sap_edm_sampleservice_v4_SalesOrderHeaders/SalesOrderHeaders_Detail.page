@@ -1,0 +1,159 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/SiblingNavigationApp/Services/com_sap_edm_sampleservice_v4.service",
+		"EntitySet": "SalesOrderHeaders",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [
+				"SalesOrderItems"
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "{CreatedAt}",
+						"Footnote": "{CustomerID}",
+						"Description": "{CurrencyCode}",
+						"StatusText": "{GrossAmount}",
+						"SubstatusText": "{LifeCycleStatus}",
+						"HeadlineText": "{LifeCycleStatusName}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{CreatedAt}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue0",
+							"KeyName": "CreatedAt",
+							"Visible": true
+						},
+						{
+							"Value": "{CurrencyCode}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue1",
+							"KeyName": "CurrencyCode",
+							"Visible": true
+						},
+						{
+							"Value": "{CustomerID}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue2",
+							"KeyName": "CustomerID",
+							"Visible": true
+						},
+						{
+							"Value": "{GrossAmount}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue3",
+							"KeyName": "GrossAmount",
+							"Visible": true
+						},
+						{
+							"Value": "{LifeCycleStatus}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue4",
+							"KeyName": "LifeCycleStatus",
+							"Visible": true
+						},
+						{
+							"Value": "{LifeCycleStatusName}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue5",
+							"KeyName": "LifeCycleStatusName",
+							"Visible": true
+						},
+						{
+							"Value": "{NetAmount}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue6",
+							"KeyName": "NetAmount",
+							"Visible": true
+						},
+						{
+							"Value": "{SalesOrderID}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue7",
+							"KeyName": "SalesOrderID",
+							"Visible": true
+						},
+						{
+							"Value": "{TaxAmount}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue8",
+							"KeyName": "TaxAmount",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SalesOrderHeaders_Detail",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar5",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "/SiblingNavigationApp/Rules/SalesOrderHeaders_Detail/GetCaption.js",
+		"Subhead": "$(L,SalesOrderHeaders)"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem1",
+				"Visible": true,
+				"OnPress": "/SiblingNavigationApp/Rules/SalesOrderHeaders_Detail/OnPressNextNavigationButton.js",
+				"Title": "Next",
+				"Enabled": "/SiblingNavigationApp/Rules/SalesOrderHeaders_Detail/NextNavigationButtonEnabled.js",
+				"ButtonType": "Text",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			},
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": true,
+				"OnPress": "/SiblingNavigationApp/Rules/SalesOrderHeaders_Detail/OnPressPreviousNavigationButton.js",
+				"Title": "Previous",
+				"Enabled": "/SiblingNavigationApp/Rules/SalesOrderHeaders_Detail/PreviousNavigationButtonEnabled.js",
+				"ButtonType": "Text",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}
