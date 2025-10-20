@@ -1,0 +1,24 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/Devtoberfest/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/Devtoberfest/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "City": "#Page:Suppliers_Create/#Control:City/#Value",
+        "Country": "#Page:Suppliers_Create/#Control:Country/#Value",
+        "EmailAddress": "#Page:Suppliers_Create/#Control:EmailAddress/#Value",
+        "HouseNumber": "#Page:Suppliers_Create/#Control:HouseNumber/#Value",
+        "PhoneNumber": "#Page:Suppliers_Create/#Control:PhoneNumber/#Value",
+        "PostalCode": "#Page:Suppliers_Create/#Control:PostalCode/#Value",
+        "Street": "#Page:Suppliers_Create/#Control:Street/#Value",
+        "SupplierID": "#Page:Suppliers_Create/#Control:SupplierID/#Value",
+        "SupplierName": "#Page:Suppliers_Create/#Control:SupplierName/#Value"
+    },
+    "Target": {
+        "EntitySet": "Suppliers",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

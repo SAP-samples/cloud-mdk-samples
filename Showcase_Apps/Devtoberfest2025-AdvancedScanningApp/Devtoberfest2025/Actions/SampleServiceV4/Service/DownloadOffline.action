@@ -1,0 +1,37 @@
+{
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/Devtoberfest/Actions/SampleServiceV4/Service/SyncFailureMessage.action",
+	"OnSuccess": "/Devtoberfest/Rules/SampleServiceV4/ErrorArchive_CheckForSyncError.js",
+	"Service": "/Devtoberfest/Services/SampleServiceV4.service",
+	"DefiningRequests": [
+		{
+			"Name": "Products",
+			"Query": "Products"
+		},
+		{
+			"Name": "ProductCategories",
+			"Query": "ProductCategories"
+		},
+		{
+			"Name": "Stock",
+			"Query": "Stock"
+		},
+		{
+			"Name": "Suppliers",
+			"Query": "Suppliers"
+		},
+		{
+			"Name": "PurchaseOrderHeaders",
+			"Query": "PurchaseOrderHeaders",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "PurchaseOrderItems",
+			"Query": "PurchaseOrderItems",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}

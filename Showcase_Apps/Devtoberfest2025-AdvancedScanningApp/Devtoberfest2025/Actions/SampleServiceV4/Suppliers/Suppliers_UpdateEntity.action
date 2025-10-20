@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Suppliers",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "City": "#Page:Suppliers_Edit/#Control:City/#Value",
+        "Country": "#Page:Suppliers_Edit/#Control:Country/#Value",
+        "EmailAddress": "#Page:Suppliers_Edit/#Control:EmailAddress/#Value",
+        "HouseNumber": "#Page:Suppliers_Edit/#Control:HouseNumber/#Value",
+        "PhoneNumber": "#Page:Suppliers_Edit/#Control:PhoneNumber/#Value",
+        "PostalCode": "#Page:Suppliers_Edit/#Control:PostalCode/#Value",
+        "Street": "#Page:Suppliers_Edit/#Control:Street/#Value",
+        "SupplierID": "#Page:Suppliers_Edit/#Control:SupplierID/#Value",
+        "SupplierName": "#Page:Suppliers_Edit/#Control:SupplierName/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/UpdateEntityFailureMessage.action"
+}

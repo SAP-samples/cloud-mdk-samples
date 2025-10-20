@@ -1,0 +1,10 @@
+{
+    "Animated": true,
+    "Duration": 2,
+    "Message": "Stream uploaded",
+    "Icon": "",
+    "IsIconHidden": false,
+    "NumberOfLines": 2,
+    "OnSuccess": "/Devtoberfest/Actions/CloseModalPage_Complete.action",
+    "_Type": "Action.Type.ToastMessage"
+}

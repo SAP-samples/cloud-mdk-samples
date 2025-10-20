@@ -1,0 +1,130 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/Devtoberfest/Services/SampleServiceV4.service",
+		"EntitySet": "PurchaseOrderHeaders",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/Devtoberfest/Actions/SampleServiceV4/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/Devtoberfest/Actions/SampleServiceV4/PurchaseOrderHeaders/PurchaseOrderHeaders_DetailPopover.action",
+				"Position": "Right",
+				"Caption": "More",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,PurchaseOrderHeader_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{PurchaseOrderID}",
+						"Subhead": "{CurrencyCode}",
+						"BodyText": "",
+						"Footnote": "{NetAmount}",
+						"Description": "{GrossAmount}",
+						"StatusText": "{SupplierID}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{TaxAmount}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "CurrencyCode",
+							"Value": "{CurrencyCode}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "GrossAmount",
+							"Value": "{GrossAmount}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "NetAmount",
+							"Value": "{NetAmount}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "PurchaseOrderID",
+							"Value": "{PurchaseOrderID}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "SupplierID",
+							"Value": "{SupplierID}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "TaxAmount",
+							"Value": "{TaxAmount}",
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"Header": {
+						"Caption": "Items",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{GrossAmount}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{ProductID}",
+						"Footnote": "{ItemNumber}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{NetAmount}",
+						"Subhead": "{CurrencyCode}",
+						"SubstatusText": "{PurchaseOrderID}",
+						"OnPress": "/Devtoberfest/Actions/SampleServiceV4/PurchaseOrderItems/NavToPurchaseOrderItems_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/Items",
+						"Service": "/Devtoberfest/Services/SampleServiceV4.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"DataSubscriptions": [
+				"PurchaseOrderItems"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "PurchaseOrderHeaders_Detail"
+}

@@ -1,0 +1,100 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"KeyAndValues": [
+						{
+							"_Name": "KeyValue0",
+							"KeyName": "User ID",
+							"Value": "#Application/#AppData/UserId",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"Value": "#Application/#AppData/DeviceId",
+							"_Name": "KeyValue1",
+							"KeyName": "Device ID",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"Value": "/Devtoberfest/Globals/Application/ApplicationName.global",
+							"_Name": "KeyValue2",
+							"KeyName": "Application",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"Value": "/Devtoberfest/Globals/Application/AppDefinition_Version.global",
+							"_Name": "KeyValue3",
+							"KeyName": "Application Metadata Version",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "/Devtoberfest/Rules/Application/GetClientVersion.js",
+							"_Name": "KeyValue4",
+							"KeyName": "Client Version",
+							"Visible": "$(PLT,true,true,false)",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"Value": "/Devtoberfest/Rules/Application/GetClientSupportVersions.js",
+							"_Name": "KeyValue5",
+							"KeyName": "Client Support Versions",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue1",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "About",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Done",
+				"SystemItem": "Done",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/Devtoberfest/Actions/CloseModalPage_Complete.action",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"_Name": "ActionBar1",
+		"Caption": "About",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	}
+}

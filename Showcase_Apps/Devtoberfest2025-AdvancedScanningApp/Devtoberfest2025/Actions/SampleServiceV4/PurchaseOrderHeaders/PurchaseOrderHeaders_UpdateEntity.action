@@ -1,0 +1,22 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "PurchaseOrderHeaders",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "CurrencyCode": "#Page:PurchaseOrderHeaders_Edit/#Control:CurrencyCode/#Value",
+        "GrossAmount": "#Page:PurchaseOrderHeaders_Edit/#Control:GrossAmount/#Value",
+        "NetAmount": "#Page:PurchaseOrderHeaders_Edit/#Control:NetAmount/#Value",
+        "PurchaseOrderID": "#Page:PurchaseOrderHeaders_Edit/#Control:PurchaseOrderID/#Value",
+        "SupplierID": "#Page:PurchaseOrderHeaders_Edit/#Control:SupplierID/#SelectedValue",
+        "TaxAmount": "#Page:PurchaseOrderHeaders_Edit/#Control:TaxAmount/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/UpdateEntityFailureMessage.action"
+}
