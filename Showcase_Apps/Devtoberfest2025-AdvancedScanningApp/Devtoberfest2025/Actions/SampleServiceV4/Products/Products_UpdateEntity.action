@@ -1,0 +1,33 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Products",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "Category": "#Page:Products_Edit/#Control:Category/#Value",
+        "CategoryName": "#Page:Products_Edit/#Control:CategoryName/#Value",
+        "CurrencyCode": "#Page:Products_Edit/#Control:CurrencyCode/#Value",
+        "DimensionDepth": "#Page:Products_Edit/#Control:DimensionDepth/#Value",
+        "DimensionHeight": "#Page:Products_Edit/#Control:DimensionHeight/#Value",
+        "DimensionUnit": "#Page:Products_Edit/#Control:DimensionUnit/#Value",
+        "DimensionWidth": "#Page:Products_Edit/#Control:DimensionWidth/#Value",
+        "LongDescription": "#Page:Products_Edit/#Control:LongDescription/#Value",
+        "Name": "#Page:Products_Edit/#Control:Name/#Value",
+        "PictureUrl": "#Page:Products_Edit/#Control:PictureUrl/#Value",
+        "Price": "#Page:Products_Edit/#Control:Price/#Value",
+        "ProductID": "#Page:Products_Edit/#Control:ProductID/#Value",
+        "QuantityUnit": "#Page:Products_Edit/#Control:QuantityUnit/#Value",
+        "ShortDescription": "#Page:Products_Edit/#Control:ShortDescription/#Value",
+        "SupplierID": "#Page:Products_Edit/#Control:SupplierID/#SelectedValue",
+        "Weight": "#Page:Products_Edit/#Control:Weight/#Value",
+        "WeightUnit": "#Page:Products_Edit/#Control:WeightUnit/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/UpdateEntityFailureMessage.action"
+}

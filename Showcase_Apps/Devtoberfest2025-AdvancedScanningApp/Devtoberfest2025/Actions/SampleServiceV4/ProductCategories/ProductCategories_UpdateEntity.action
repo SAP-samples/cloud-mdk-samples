@@ -1,0 +1,21 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "ProductCategories",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "Category": "#Page:ProductCategories_Edit/#Control:Category/#Value",
+        "CategoryName": "#Page:ProductCategories_Edit/#Control:CategoryName/#Value",
+        "MainCategory": "#Page:ProductCategories_Edit/#Control:MainCategory/#Value",
+        "MainCategoryName": "#Page:ProductCategories_Edit/#Control:MainCategoryName/#Value",
+        "NumberOfProducts": "#Page:ProductCategories_Edit/#Control:NumberOfProducts/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/UpdateEntityFailureMessage.action"
+}

@@ -1,0 +1,27 @@
+{
+    "ParentLink": {
+        "Property": "PurchaseOrders",
+        "Target": {
+            "EntitySet": "Suppliers",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/Devtoberfest/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/Devtoberfest/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "CurrencyCode": "#Page:Suppliers_CreatePurchaseOrderHeader/#Control:CurrencyCode/#Value",
+        "GrossAmount": "#Page:Suppliers_CreatePurchaseOrderHeader/#Control:GrossAmount/#Value",
+        "NetAmount": "#Page:Suppliers_CreatePurchaseOrderHeader/#Control:NetAmount/#Value",
+        "PurchaseOrderID": "#Page:Suppliers_CreatePurchaseOrderHeader/#Control:PurchaseOrderID/#Value",
+        "SupplierID": "#Page:Suppliers_CreatePurchaseOrderHeader/#Control:SupplierID/#SelectedValue",
+        "TaxAmount": "#Page:Suppliers_CreatePurchaseOrderHeader/#Control:TaxAmount/#Value"
+    },
+    "Target": {
+        "EntitySet": "PurchaseOrderHeaders",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

@@ -1,0 +1,8 @@
+{
+    "Message": "Upload in progress...",
+    "CompletionMessage": "Sync completed",
+    "CompletionTimeout": 7,
+    "OnSuccess": "/Devtoberfest/Actions/SampleServiceV4/Service/UploadOffline.action",
+    "OnFailure": "/Devtoberfest/Actions/SampleServiceV4/Service/SyncFailureMessage.action",
+    "_Type": "Action.Type.ProgressBanner"
+}

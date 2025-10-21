@@ -1,0 +1,8 @@
+{
+    "Message": "Data service closed successfully",
+    "NumberOfLines": 1,
+    "Duration": 3,
+    "Animated": true,
+    "IsIconHidden": true,
+    "_Type": "Action.Type.ToastMessage"
+}

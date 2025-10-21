@@ -1,0 +1,88 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "ObjectTableHeader",
+						"AccessoryType": "None",
+						"UseTopPadding": false,
+						"Caption": "Scanned Items"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": "/Devtoberfest/Rules/GetScannedItems.js",
+					"_Name": "ObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"ObjectCell": {
+						"Title": "{Name}",
+						"Footnote": "{Category}",
+						"Description": "{Supplier}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "{ScanQty}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "DisclosureIndicator",
+						"Tags": [],
+						"AvatarStack": {
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false,
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						}
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"OnScanPress": "/Devtoberfest/Rules/ScannerManager/ScannerStartScanning.js",
+						"MinimumCharacterThreshold": 3
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"HighlightSelectedItem": false
+				}
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "InventoryScan",
+	"OnCustomEventDataReceived": "/Devtoberfest/Rules/EventReceived.js",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Scan Inventory",
+		"PrefersLargeCaption": false
+	}
+}

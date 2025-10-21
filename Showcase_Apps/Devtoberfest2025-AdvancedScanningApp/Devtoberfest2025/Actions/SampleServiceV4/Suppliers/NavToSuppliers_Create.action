@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/Devtoberfest/Pages/SampleServiceV4_Suppliers/Suppliers_Create.page",
+    "_Type": "Action.Type.Navigation"
+}

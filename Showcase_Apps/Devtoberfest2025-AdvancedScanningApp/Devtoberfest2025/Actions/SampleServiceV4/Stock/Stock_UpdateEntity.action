@@ -1,0 +1,21 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Stock",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "LotSize": "#Page:Stock_Edit/#Control:LotSize/#Value",
+        "MinStock": "#Page:Stock_Edit/#Control:MinStock/#Value",
+        "ProductID": "#Page:Stock_Edit/#Control:ProductID/#SelectedValue",
+        "Quantity": "#Page:Stock_Edit/#Control:Quantity/#Value",
+        "QuantityLessMin": "#Page:Stock_Edit/#Control:QuantityLessMin/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/UpdateEntityFailureMessage.action"
+}

@@ -1,0 +1,38 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/Devtoberfest/Actions/SampleServiceV4/Service/InitializeOfflineFailureMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"Service": "/Devtoberfest/Services/SampleServiceV4.service",
+	"DefiningRequests": [
+		{
+			"Name": "Products",
+			"Query": "Products"
+		},
+		{
+			"Name": "ProductCategories",
+			"Query": "ProductCategories"
+		},
+		{
+			"Name": "Stock",
+			"Query": "Stock"
+		},
+		{
+			"Name": "Suppliers",
+			"Query": "Suppliers"
+		},
+		{
+			"Name": "PurchaseOrderHeaders",
+			"Query": "PurchaseOrderHeaders",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "PurchaseOrderItems",
+			"Query": "PurchaseOrderItems",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}
