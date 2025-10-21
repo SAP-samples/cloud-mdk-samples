@@ -4,7 +4,7 @@ This is a showcase application that demonstrates how to implement the Android Vi
 
 >iOS implementation part of this application has been referenced from [this](https://blogs.sap.com/2021/04/04/mobile-development-kit-custom-control-videoplayer/) blog post and Android implementation part has been added in addition to it. 
 
-*Last Updated: 06-Feb-2025*
+*Last Updated: 21-Oct-2025*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
@@ -37,4 +37,6 @@ No additional steps required. The content of [VideoPlayerViewExtensionApp/](Vide
 
 ## Screenshots
 
-<img src="Screenshots/android.png" width="35%"> <img src="Screenshots/ios.png" width="35%">
+| Android | iOS |
+| --- | --- |
+| <img src="./Screenshots/android.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/ios.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |

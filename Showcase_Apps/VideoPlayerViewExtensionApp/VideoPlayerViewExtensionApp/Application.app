@@ -4,5 +4,5 @@
 	"OnWillUpdate": "/VideoPlayerViewExtensionApp/Rules/Application/OnWillUpdate.js",
 	"Styles": "/VideoPlayerViewExtensionApp/Styles/Styles.less",
 	"_Name": "VideoPlayerViewExtensionApp",
-	"_SchemaVersion": "24.11"
+	"_SchemaVersion": "25.9"
 }
