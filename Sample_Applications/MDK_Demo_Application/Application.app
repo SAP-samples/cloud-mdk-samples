@@ -8,5 +8,5 @@
 	"OnWillUpdate": "/MDKDemoApp/Rules/Application/OnWillUpdate.js",
 	"Styles": "/MDKDemoApp/Styles/Styles.less",
 	"_Name": "MDKDemoApp",
-	"_SchemaVersion": "24.4"
+	"_SchemaVersion": "25.9"
 }

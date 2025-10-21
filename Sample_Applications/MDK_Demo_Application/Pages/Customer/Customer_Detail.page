@@ -1,5 +1,9 @@
 {
-	"Caption": "Customer Detail",
+	"ActionBar": {
+		"Caption": "Customer Detail",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
 			"LoadingIndicator": {
@@ -38,7 +42,8 @@
 							"Value": "/MDKDemoApp/Rules/Customer/FormatAddress.js",
 							"Visible": true,
 							"OnPress": "/MDKDemoApp/Rules/Customer/OpenMap.js",
-							"LinkColor": "#6189C7"
+							"LinkColor": "#6189C7",
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"Layout": {
@@ -57,12 +62,14 @@
 						{
 							"KeyName": "Phone",
 							"Value": "{PhoneNumber}",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Email",
 							"Value": "{EmailAddress}",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"Layout": {
@@ -84,11 +91,13 @@
 						"FooterStyle": "Attribute",
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_SalesOrders.action",
 						"UseBottomPadding": false,
-						"Visible": true
+						"Visible": true,
+						"_Type": "SectionCommon.Type.Footer"
 					},
 					"Header": {
 						"Caption": "Sales Orders",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"HighlightSelectedItem": false,
 					"MaxItemCount": 4,
@@ -102,7 +111,8 @@
 						"PreserveIconStackSpacing": false,
 						"StatusText": "{LifeCycleStatusName}",
 						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
-						"Title": "Order Date: $(DT,{CreatedAt},'','')"
+						"Title": "Order Date: $(DT,{CreatedAt},'','')",
+						"_Type": "ObjectTable.Type.ObjectCell"
 					},
 					"Target": {
 						"EntitySet": "{#Property:@odata.readLink}/SalesOrders",
@@ -118,6 +128,5 @@
 		}
 	],
 	"_Name": "Customer_Detail",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Type": "Page"
 }

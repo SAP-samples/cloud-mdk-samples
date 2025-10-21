@@ -16,13 +16,13 @@ This application is unique in that it can be previewed simply by installing the 
 ### *Supported Platforms*
 * iOS
 * Android
-* Web
 
 ### *MDK Client Version*
-* MDK 24.4.0 or higher
+* MDK 24.11 or higher
 
 ### *Data Source*
-* Mobile Sample OData ESPM V4
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v4)
+
 
 ***
 

@@ -12,7 +12,8 @@
 					"Header": {
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Separators": {
 						"TopSectionSeparator": false,
@@ -24,7 +25,8 @@
 					"Footer": {
 						"_Name": "SectionFooter0",
 						"Visible": true,
-						"UseBottomPadding": false
+						"UseBottomPadding": false,
+						"_Type": "SectionCommon.Type.Footer"
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"_Name": "SectionObjectTable0",
@@ -44,7 +46,8 @@
 								"PreserveIconStackSpacing": false,
 								"Styles": {
 									"SubstatusText": "Discount"
-								}
+								},
+								"_Type": "ObjectTable.Type.ObjectCell"
 							}
 						}
 					],
@@ -56,7 +59,8 @@
 							"Value": "{ShortDescription}",
 							"_Name": "KeyValue0",
 							"KeyName": "Description",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"MaxItemCount": 1,
@@ -72,7 +76,8 @@
 					"Header": {
 						"_Name": "SectionHeader1",
 						"AccessoryType": "None",
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -107,13 +112,15 @@
 							"Value": "{CategoryName}",
 							"_Name": "KeyValue1",
 							"KeyName": "Category",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"Value": "{QuantityUnit}",
 							"_Name": "KeyValue2",
 							"KeyName": "Quantity Unit",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"MaxItemCount": 1,
@@ -129,7 +136,8 @@
 					"Header": {
 						"_Name": "SectionHeader2",
 						"AccessoryType": "None",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -145,19 +153,22 @@
 							"Value": "{Quantity}",
 							"_Name": "KeyValue3",
 							"KeyName": "Quantity",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"Value": "{LotSize}",
 							"_Name": "KeyValue4",
 							"KeyName": "Lot Size",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"Value": "{MinStock}",
 							"_Name": "KeyValue5",
 							"KeyName": "Min Stock Level",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"MaxItemCount": 1,
@@ -179,7 +190,8 @@
 						"_Name": "SectionHeader3",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Stock Details"
+						"Caption": "Stock Details",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -203,7 +215,8 @@
 						"_Name": "SectionHeader4",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Dimensions"
+						"Caption": "Dimensions",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -216,7 +229,8 @@
 								"_Name": "SectionSimplePropertyCell0",
 								"KeyName": "Height",
 								"AccessoryType": "None",
-								"Visible": true
+								"Visible": true,
+								"_Type": "SimplePropertyCollection.Type.Cell"
 							}
 						},
 						{
@@ -225,7 +239,8 @@
 								"_Name": "SectionSimplePropertyCell1",
 								"KeyName": "Width",
 								"AccessoryType": "None",
-								"Visible": true
+								"Visible": true,
+								"_Type": "SimplePropertyCollection.Type.Cell"
 							}
 						},
 						{
@@ -234,7 +249,8 @@
 								"_Name": "SectionSimplePropertyCell2",
 								"KeyName": "Depth",
 								"AccessoryType": "None",
-								"Visible": true
+								"Visible": true,
+								"_Type": "SimplePropertyCollection.Type.Cell"
 							}
 						},
 						{
@@ -243,7 +259,8 @@
 								"_Name": "SectionSimplePropertyCell3",
 								"KeyName": "Weight",
 								"AccessoryType": "None",
-								"Visible": true
+								"Visible": true,
+								"_Type": "SimplePropertyCollection.Type.Cell"
 							}
 						}
 					],
@@ -256,8 +273,6 @@
 	],
 	"_Type": "Page",
 	"_Name": "Product_Detail",
-	"Caption": "Product Detail",
-	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
@@ -267,9 +282,13 @@
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail_Edit.action"
+				"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail_Edit.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "Product Detail",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	}
 }

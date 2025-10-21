@@ -58,7 +58,10 @@
 	],
 	"_Type": "Page",
 	"_Name": "UserActivityLog",
-	"Caption": "Activity Log",
-	"OnLoaded": "/MDKDemoApp/Rules/Logging/UserLogSetting.js",
-	"PrefersLargeCaption": true
+	"ActionBar": {
+		"Caption": "Activity Log",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
+	"OnLoaded": "/MDKDemoApp/Rules/Logging/UserLogSetting.js"
 }

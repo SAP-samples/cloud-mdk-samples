@@ -12,7 +12,8 @@
 					"Header": {
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Separators": {
 						"TopSectionSeparator": false,
@@ -37,7 +38,8 @@
 							"Items": [],
 							"PerformFirstActionWithFullSwipe": true,
 							"LeadingItems": [],
-							"TrailingItems": []
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
 						},
 						"Title": "{Name}",
 						"Subhead": "{CategoryName}",
@@ -62,9 +64,10 @@
 						"Selected": false,
 						"Styles": {
 							"SubstatusText": "Discount"
-						}
+						},
+						"_Type": "ObjectTable.Type.ObjectCell"
 					},
-						"Search": {
+					"Search": {
 						"Enabled": true,
 						"BarcodeScanner": true
 					},
@@ -79,8 +82,6 @@
 	],
 	"_Type": "Page",
 	"_Name": "Product_List",
-	"Caption": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
-	"PrefersLargeCaption": true,
 	"OnReturning": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
 	"ActionBar": {
 		"Items": [
@@ -90,9 +91,13 @@
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/MDKDemoApp/Actions/Product/ProductFilter.action"
+				"OnPress": "/MDKDemoApp/Actions/Product/ProductFilter.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	}
 }

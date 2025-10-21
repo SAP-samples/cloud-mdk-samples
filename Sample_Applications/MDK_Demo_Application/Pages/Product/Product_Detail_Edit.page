@@ -6,18 +6,22 @@
 				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action",
 				"Position": "Left",
 				"SystemItem": "Cancel",
-				"Caption": "Cancel"
+				"Caption": "Cancel",
+				"_Type": "Control.Type.ActionBarItem"
 			},
 			{
 				"IsIconCircular": false,
 				"OnPress": "/MDKDemoApp/Actions/Product/UpdateProductDetails.action",
 				"Position": "Right",
 				"SystemItem": "Done",
-				"Caption": "Done"
+				"Caption": "Done",
+				"_Type": "Control.Type.ActionBarItem"
 			}
-		]
+		],
+		"Caption": "Edit Product",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	},
-	"Caption": "Edit Product",
 	"Controls": [
 		{
 			"_Type": "Control.Type.SectionedTable",
@@ -178,6 +182,5 @@
 		}
 	],
 	"_Name": "Product_Detail_Edit",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Type": "Page"
 }
