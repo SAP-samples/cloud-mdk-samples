@@ -1,5 +1,9 @@
 {
-	"Caption": "Customers",
+	"ActionBar": {
+		"Caption": "Customers",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
 			"LoadingIndicator": {
@@ -33,7 +37,8 @@
 						"FooterVisible": false
 					},
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Search": {
 						"Enabled": true,
@@ -53,6 +58,5 @@
 		}
 	],
 	"_Name": "Customer_List",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Type": "Page"
 }

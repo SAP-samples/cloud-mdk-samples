@@ -1,5 +1,9 @@
 {
-	"Caption": "Customer Orders",
+	"ActionBar": {
+		"Caption": "Customer Orders",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
 			"Sections": [
@@ -12,7 +16,8 @@
 						"FooterVisible": false
 					},
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"ObjectCell": {
 						"AccessoryType": "DisclosureIndicator",
@@ -24,7 +29,8 @@
 						"PreserveIconStackSpacing": false,
 						"StatusText": "{LifeCycleStatusName}",
 						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
-						"Title": "Order Date: $(DT,{CreatedAt},'','')"
+						"Title": "Order Date: $(DT,{CreatedAt},'','')",
+						"_Type": "ObjectTable.Type.ObjectCell"
 					},
 					"Search": {
 						"BarcodeScanner": true,
@@ -45,6 +51,5 @@
 		}
 	],
 	"_Name": "Customer_SalesOrders",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Type": "Page"
 }

@@ -7,11 +7,14 @@
 				"Position": "Right",
 				"SystemItem": "Done",
 				"Caption": "Done",
-				"Visible": true
+				"Visible": true,
+				"_Type": "Control.Type.ActionBarItem"
 			}
-		]
+		],
+		"Caption": "About",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	},
-	"Caption": "About",
 	"Controls": [
 		{
 			"Sections": [
@@ -23,12 +26,14 @@
 						{
 							"KeyName": "Application",
 							"Value": "/MDKDemoApp/Globals/Application/ApplicationName.global",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Application Metadata Version",
 							"Value": "/MDKDemoApp/Globals/Application/AppDefinition_Version.global",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"Layout": {
@@ -47,12 +52,14 @@
 						{
 							"KeyName": "Client Version",
 							"Value": "/MDKDemoApp/Rules/Application/GetClientVersion.js",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Client Support Versions",
 							"Value": "/MDKDemoApp/Rules/Application/GetClientSupportVersions.js",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"Layout": {
@@ -69,6 +76,5 @@
 		}
 	],
 	"_Name": "About",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Type": "Page"
 }

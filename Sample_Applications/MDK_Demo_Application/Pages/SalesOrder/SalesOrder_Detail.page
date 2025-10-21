@@ -10,7 +10,8 @@
 							"Value": "{SalesOrderID}",
 							"_Name": "KeyValue0",
 							"KeyName": "Order Number",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"MaxItemCount": 1,
@@ -19,7 +20,8 @@
 					"Header": {
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -42,13 +44,15 @@
 							"Value": "$(DT,{CreatedAt})",
 							"_Name": "KeyValue1",
 							"KeyName": "Created At",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"Value": "{LifeCycleStatusName}",
 							"_Name": "KeyValue2",
 							"KeyName": "Status",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"MaxItemCount": 1,
@@ -75,19 +79,22 @@
 							"Value": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
 							"_Name": "KeyValue3",
 							"KeyName": "Price",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"Value": "$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
 							"_Name": "KeyValue4",
 							"KeyName": "Tax",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"Value": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
 							"_Name": "KeyValue5",
 							"KeyName": "Total",
-							"Visible": true
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"MaxItemCount": 1,
@@ -141,7 +148,8 @@
 						},
 						"_Name": "SectionGridHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": true
+						"UseTopPadding": true,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Row": {
 						"Items": [
@@ -219,6 +227,9 @@
 	],
 	"_Type": "Page",
 	"_Name": "SalesOrder_Detail",
-	"Caption": "Order Detail",
-	"PrefersLargeCaption": true
+	"ActionBar": {
+		"Caption": "Order Detail",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	}
 }

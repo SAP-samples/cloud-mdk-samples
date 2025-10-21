@@ -94,35 +94,36 @@
 	],
 	"_Type": "Page",
 	"_Name": "Product_Filter",
-	"Caption": "Filter",
 	"ActionBar": {
 		"Items": [
 			{
-				"Text": "Cancel",
 				"_Name": "ActionBarItem0",
-				"Caption": "",
+				"Caption": "Cancel",
 				"SystemItem": "Cancel",
-				"Position": "left",
+				"Position": "Left",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action"
+				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action",
+				"_Type": "Control.Type.ActionBarItem"
 			},
 			{
-				"Text": "Done",
 				"_Name": "ActionBarItem1",
-				"Caption": "",
+				"Caption": "Done",
 				"SystemItem": "Done",
-				"Position": "right",
+				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action"
+				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "Filter",
+		"_Type": "Control.Type.ActionBar"
 	},
 	"FioriToolbar": {
 		"_Name": "FioriToolbar",
-		"_Type": "Control.Type.FioriToolbar",		
+		"_Type": "Control.Type.FioriToolbar",
 		"Visible": true,
 		"Items": [
 			{

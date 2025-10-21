@@ -10,12 +10,12 @@
 			"Sections": [
 				{
 					"ObjectHeader": {
+						"Tags": "/MDKDemoApp/Rules/Dashboard/GetDashboardTags.js",
 						"Subhead": "$(L,'app_name')",
 						"Description": "$(L,'dashboard_header_body')",
 						"StatusText": "/MDKDemoApp/Rules/Dashboard/versionString.js",
 						"DetailImage": "/MDKDemoApp/Images/mdk_logo.png",
 						"DetailImageIsCircular": false,
-						"Tags": "/MDKDemoApp/Rules/Dashboard/GetDashboardTags.js",
 						"HeadlineText": "$(L,'mdk')",
 						"StatusPosition": "Stacked",
 						"StatusImagePosition": "Leading",
@@ -58,17 +58,19 @@
 								"_Type": "SectionHeaderItem.Type.Button",
 								"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_List.action"
 							}
-						]
+						],
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Footer": {
 						"_Name": "SectionFooter0",
 						"Caption": "All Customers",
 						"AttributeLabel": "/MDKDemoApp/Rules/Customer/CustomerCount.js",
-						"AccessoryType": "disclosureIndicator",
-						"FooterStyle": "attribute",
+						"AccessoryType": "DisclosureIndicator",
+						"FooterStyle": "Attribute",
 						"Visible": false,
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_List.action",
-						"UseBottomPadding": true
+						"UseBottomPadding": true,
+						"_Type": "SectionCommon.Type.Footer"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -81,7 +83,7 @@
 					},
 					"ObjectCell": {
 						"Title": "{FirstName} {LastName}",
-						"AccessoryType": "disclosureIndicator",
+						"AccessoryType": "DisclosureIndicator",
 						"PreserveIconStackSpacing": false,
 						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_Detail.action",
 						"AvatarStack": {
@@ -91,7 +93,8 @@
 								}
 							],
 							"ImageIsCircular": true
-						}
+						},
+						"_Type": "ObjectCollection.Type.ObjectCell"
 					},
 					"Layout": {
 						"NumberOfColumns": 2
@@ -136,17 +139,19 @@
 								"_Type": "SectionHeaderItem.Type.Button",
 								"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_List.action"
 							}
-						]
+						],
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Footer": {
 						"_Name": "SectionFooter1",
 						"Caption": "All Products",
 						"AttributeLabel": "/MDKDemoApp/Rules/Product/ProductCount.js",
-						"AccessoryType": "disclosureIndicator",
-						"FooterStyle": "attribute",
+						"AccessoryType": "DisclosureIndicator",
+						"FooterStyle": "Attribute",
 						"Visible": false,
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_List.action",
-						"UseBottomPadding": false
+						"UseBottomPadding": false,
+						"_Type": "SectionCommon.Type.Footer"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -169,21 +174,22 @@
 	],
 	"_Type": "Page",
 	"_Name": "Dashboard_ImgPromos",
-	"Caption": "$(L,'dashboard_title')",
-	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
-				"Text": "User",
 				"_Name": "ActionBarItem0",
-				"Caption": "",
+				"Caption": "User",
 				"Icon": "$(PLT,sap-icon://customer, sap-icon://customer, /MDKDemoApp/Images/Web/user-blue-40.png)",
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/MDKDemoApp/Actions/Application/UserMenuPopover.action"
+				"OnPress": "/MDKDemoApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "$(L,'dashboard_title')",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	}
 }
