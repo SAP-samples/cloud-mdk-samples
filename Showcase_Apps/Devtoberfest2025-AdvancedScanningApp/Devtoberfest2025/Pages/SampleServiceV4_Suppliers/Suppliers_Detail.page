@@ -204,7 +204,8 @@
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
 						"EntitySet": "{@odata.readLink}/Products",
-						"Service": "/Devtoberfest/Services/SampleServiceV4.service"
+						"Service": "/Devtoberfest/Services/SampleServiceV4.service",
+						"QueryOptions": "$expand=Stock"
 					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
