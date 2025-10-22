@@ -1,0 +1,14 @@
+{
+    "Service": "/SiblingNavigationApp/Services/com_sap_edm_sampleservice_v4.service",
+    "DefiningRequests": [{
+        "Name": "SalesOrderHeaders",
+        "Query": "SalesOrderHeaders"
+    }],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnFailure": "/SiblingNavigationApp/Actions/com_sap_edm_sampleservice_v4/Service/InitializeOfflineFailureMessage.action"
+}

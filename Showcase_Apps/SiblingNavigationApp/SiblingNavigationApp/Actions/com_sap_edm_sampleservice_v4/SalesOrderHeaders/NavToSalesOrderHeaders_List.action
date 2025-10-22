@@ -1,0 +1,4 @@
+{
+    "_Type": "Action.Type.Navigation",
+    "PageToOpen": "/SiblingNavigationApp/Pages/com_sap_edm_sampleservice_v4_SalesOrderHeaders/SalesOrderHeaders_List.page"
+}
