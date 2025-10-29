@@ -1,0 +1,98 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/Devtoberfest/Services/SampleServiceV4.service",
+		"EntitySet": "Suppliers",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/Devtoberfest/Actions/CloseModalPage_Cancel.action",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/Devtoberfest/Actions/SampleServiceV4/Suppliers/Suppliers_UpdateEntity.action",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Update_Supplier_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "City",
+							"_Name": "City",
+							"Value": "{City}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Country",
+							"_Name": "Country",
+							"Value": "{Country}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "EmailAddress",
+							"_Name": "EmailAddress",
+							"Value": "{EmailAddress}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "HouseNumber",
+							"_Name": "HouseNumber",
+							"Value": "{HouseNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PhoneNumber",
+							"_Name": "PhoneNumber",
+							"Value": "{PhoneNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PostalCode",
+							"_Name": "PostalCode",
+							"Value": "{PostalCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Street",
+							"_Name": "Street",
+							"Value": "{Street}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "SupplierID",
+							"_Name": "SupplierID",
+							"Value": "{SupplierID}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "SupplierName",
+							"_Name": "SupplierName",
+							"Value": "{SupplierName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Suppliers_Edit"
+}

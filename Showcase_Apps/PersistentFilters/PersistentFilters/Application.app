@@ -7,5 +7,5 @@
 	"OnDidUpdate": "/PersistentFilters/Rules/Service/Initialize.js",
 	"Styles": "/PersistentFilters/Styles/Styles.less",
 	"Localization": "/PersistentFilters/i18n/i18n.properties",
-	"_SchemaVersion": "24.11"
+	"_SchemaVersion": "25.9"
 }

@@ -1,0 +1,20 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/Devtoberfest/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/Devtoberfest/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "LotSize": "#Page:Stock_Create/#Control:LotSize/#Value",
+        "MinStock": "#Page:Stock_Create/#Control:MinStock/#Value",
+        "ProductID": "#Page:Stock_Create/#Control:ProductID/#SelectedValue",
+        "Quantity": "#Page:Stock_Create/#Control:Quantity/#Value",
+        "QuantityLessMin": "#Page:Stock_Create/#Control:QuantityLessMin/#Value"
+    },
+    "Target": {
+        "EntitySet": "Stock",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

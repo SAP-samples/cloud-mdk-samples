@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/Devtoberfest/Pages/SampleServiceV4_PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.page",
+    "_Type": "Action.Type.Navigation"
+}

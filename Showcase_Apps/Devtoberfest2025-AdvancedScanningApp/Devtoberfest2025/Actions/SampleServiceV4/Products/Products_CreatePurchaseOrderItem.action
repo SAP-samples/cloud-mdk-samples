@@ -1,0 +1,30 @@
+{
+    "ParentLink": {
+        "Property": "PurchaseOrderItems",
+        "Target": {
+            "EntitySet": "Products",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/Devtoberfest/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/Devtoberfest/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "CurrencyCode": "#Page:Products_CreatePurchaseOrderItem/#Control:CurrencyCode/#Value",
+        "GrossAmount": "#Page:Products_CreatePurchaseOrderItem/#Control:GrossAmount/#Value",
+        "ItemNumber": "#Page:Products_CreatePurchaseOrderItem/#Control:ItemNumber/#Value",
+        "NetAmount": "#Page:Products_CreatePurchaseOrderItem/#Control:NetAmount/#Value",
+        "ProductID": "#Page:Products_CreatePurchaseOrderItem/#Control:ProductID/#SelectedValue",
+        "PurchaseOrderID": "#Page:Products_CreatePurchaseOrderItem/#Control:PurchaseOrderID/#SelectedValue",
+        "Quantity": "#Page:Products_CreatePurchaseOrderItem/#Control:Quantity/#Value",
+        "QuantityUnit": "#Page:Products_CreatePurchaseOrderItem/#Control:QuantityUnit/#Value",
+        "TaxAmount": "#Page:Products_CreatePurchaseOrderItem/#Control:TaxAmount/#Value"
+    },
+    "Target": {
+        "EntitySet": "PurchaseOrderItems",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

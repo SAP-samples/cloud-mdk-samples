@@ -1,0 +1,163 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/Devtoberfest/Services/SampleServiceV4.service",
+		"EntitySet": "Products",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/Devtoberfest/Actions/CloseModalPage_Cancel.action",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/Devtoberfest/Actions/SampleServiceV4/Products/Products_UpdateEntity.action",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Update_Product_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "Category",
+							"_Name": "Category",
+							"Value": "{Category}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CategoryName",
+							"_Name": "CategoryName",
+							"Value": "{CategoryName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CurrencyCode",
+							"_Name": "CurrencyCode",
+							"Value": "{CurrencyCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DimensionDepth",
+							"_Name": "DimensionDepth",
+							"Value": "{DimensionDepth}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DimensionHeight",
+							"_Name": "DimensionHeight",
+							"Value": "{DimensionHeight}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DimensionUnit",
+							"_Name": "DimensionUnit",
+							"Value": "{DimensionUnit}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DimensionWidth",
+							"_Name": "DimensionWidth",
+							"Value": "{DimensionWidth}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "LongDescription",
+							"_Name": "LongDescription",
+							"Value": "{LongDescription}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Name",
+							"_Name": "Name",
+							"Value": "{Name}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PictureUrl",
+							"_Name": "PictureUrl",
+							"Value": "{PictureUrl}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Price",
+							"_Name": "Price",
+							"Value": "{Price}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ProductID",
+							"_Name": "ProductID",
+							"Value": "{ProductID}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "QuantityUnit",
+							"_Name": "QuantityUnit",
+							"Value": "{QuantityUnit}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ShortDescription",
+							"_Name": "ShortDescription",
+							"Value": "{ShortDescription}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "SupplierID",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{SupplierName}",
+								"ReturnValue": "{SupplierID}",
+								"Target": {
+									"EntitySet": "Suppliers",
+									"Service": "/Devtoberfest/Services/SampleServiceV4.service"
+								}
+							},
+							"Value": "{SupplierID}",
+							"_Name": "SupplierID",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						},
+						{
+							"Caption": "Weight",
+							"_Name": "Weight",
+							"Value": "{Weight}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "WeightUnit",
+							"_Name": "WeightUnit",
+							"Value": "{WeightUnit}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Products_Edit"
+}

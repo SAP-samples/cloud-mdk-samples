@@ -9,5 +9,5 @@
 	"OnDidUpdate": "/ImageHandlingApp/Actions/Service/InitializeOffline.action",
 	"Styles": "/ImageHandlingApp/Styles/Styles.less",
 	"Localization": "/ImageHandlingApp/i18n/i18n.properties",
-	"_SchemaVersion": "24.11"
+	"_SchemaVersion": "25.9"
 }

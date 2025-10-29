@@ -1,0 +1,20 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/Devtoberfest/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/Devtoberfest/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "Category": "#Page:ProductCategories_Create/#Control:Category/#Value",
+        "CategoryName": "#Page:ProductCategories_Create/#Control:CategoryName/#Value",
+        "MainCategory": "#Page:ProductCategories_Create/#Control:MainCategory/#Value",
+        "MainCategoryName": "#Page:ProductCategories_Create/#Control:MainCategoryName/#Value",
+        "NumberOfProducts": "#Page:ProductCategories_Create/#Control:NumberOfProducts/#Value"
+    },
+    "Target": {
+        "EntitySet": "ProductCategories",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

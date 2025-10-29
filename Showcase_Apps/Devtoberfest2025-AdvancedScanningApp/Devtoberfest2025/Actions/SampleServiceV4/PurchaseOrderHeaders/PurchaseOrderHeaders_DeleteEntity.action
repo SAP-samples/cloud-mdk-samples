@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "PurchaseOrderHeaders",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

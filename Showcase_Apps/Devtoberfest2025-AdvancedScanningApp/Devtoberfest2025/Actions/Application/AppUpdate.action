@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/Devtoberfest/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/Devtoberfest/Rules/Application/AppUpdateSuccess.js"
+}

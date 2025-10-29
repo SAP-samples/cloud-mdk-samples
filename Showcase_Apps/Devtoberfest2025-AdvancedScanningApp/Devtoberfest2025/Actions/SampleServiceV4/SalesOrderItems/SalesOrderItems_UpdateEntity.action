@@ -1,0 +1,26 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "SalesOrderItems",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "CurrencyCode": "#Page:SalesOrderItems_Edit/#Control:CurrencyCode/#Value",
+        "DeliveryDate": "#Page:SalesOrderItems_Edit/#Control:DeliveryDate/#Value",
+        "GrossAmount": "#Page:SalesOrderItems_Edit/#Control:GrossAmount/#Value",
+        "ItemNumber": "#Page:SalesOrderItems_Edit/#Control:ItemNumber/#Value",
+        "NetAmount": "#Page:SalesOrderItems_Edit/#Control:NetAmount/#Value",
+        "ProductID": "#Page:SalesOrderItems_Edit/#Control:ProductID/#SelectedValue",
+        "Quantity": "#Page:SalesOrderItems_Edit/#Control:Quantity/#Value",
+        "QuantityUnit": "#Page:SalesOrderItems_Edit/#Control:QuantityUnit/#Value",
+        "SalesOrderID": "#Page:SalesOrderItems_Edit/#Control:SalesOrderID/#SelectedValue",
+        "TaxAmount": "#Page:SalesOrderItems_Edit/#Control:TaxAmount/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/UpdateEntityFailureMessage.action"
+}

@@ -1,0 +1,127 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/Devtoberfest/Services/SampleServiceV4.service",
+		"EntitySet": "Stock",
+		"QueryOptions": "$expand=Product"
+	},
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "{ProductID}",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "ProductID",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Product",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"PickerItems": {
+								"DisplayValue": "{Name}",
+								"ReturnValue": "{ProductID}",
+								"Target": {
+									"EntitySet": "Products",
+									"Service": "/Devtoberfest/Services/SampleServiceV4.service"
+								}
+							}
+						},
+						{
+							"Value": "{LotSize}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "LotSize",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "LotSize",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{Quantity}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Quantity",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Quantity",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{QuantityLessMin}",
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "QuantityLessMin",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "QuantityLessMin",
+							"IsEditable": true
+						},
+						{
+							"Value": "{MinStock}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "MinStock",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "MinStock",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Stock_Edit",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/Devtoberfest/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/Devtoberfest/Actions/SampleServiceV4/Stock/Stock_UpdateEntity.action"
+			}
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,Update_Stock_Detail)"
+	}
+}

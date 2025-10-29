@@ -1,0 +1,5 @@
+{
+    "_Type": "Action.Type.OpenDocument",
+    "Path": "/Devtoberfest/Services/SampleServiceV4.service/{@odata.readLink}/Picture",
+    "MimeType": "image/jpeg"
+}
