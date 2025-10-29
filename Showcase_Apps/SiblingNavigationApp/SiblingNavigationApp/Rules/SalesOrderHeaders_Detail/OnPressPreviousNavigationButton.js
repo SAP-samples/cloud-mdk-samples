@@ -1,12 +1,14 @@
 /**
  * @param {IClientAPI} clientAPI
  */
-export default function OnPressPreviousNavigationButton(clientAPI) {
+export default async function OnPressPreviousNavigationButton(clientAPI) {
     let currentBinding = clientAPI.getPageProxy().binding;
     const newIndex = currentBinding.Index - 1;
     const total = currentBinding.Total;
 
-    let newSalesOrder = clientAPI.getPageProxy().evaluateTargetPathForAPI('#Page:-Previous/#Control:SectionedTable').getSections()[0].binding.getItem(newIndex - 1);
+    let newSalesOrderResult = await clientAPI.read('/SiblingNavigationApp/Services/com_sap_edm_sampleservice_v4.service', 'SalesOrderHeaders', [], `$top=1&$skip=${newIndex}`);
+    let newSalesOrder = newSalesOrderResult.getItem(0);
+    
     newSalesOrder.Index = newIndex;
     newSalesOrder.Total = total;
 
