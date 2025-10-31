@@ -10,10 +10,10 @@
 			"Sections": [
 				{
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": false,
-						"_Type": "SectionCommon.Type.Header"
+						"UseTopPadding": false
 					},
 					"Separators": {
 						"TopSectionSeparator": false,
@@ -31,7 +31,8 @@
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
 					"EmptySection": {
-						"FooterVisible": false
+						"FooterVisible": false,
+						"Caption": "$(L,'no_products')"
 					},
 					"ObjectCell": {
 						"ContextMenu": {
@@ -61,15 +62,21 @@
 							"ImageIsCircular": true
 						},
 						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
-						"Selected": false,
 						"Styles": {
 							"SubstatusText": "Discount"
 						},
-						"_Type": "ObjectTable.Type.ObjectCell"
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
 					},
 					"Search": {
 						"Enabled": true,
 						"BarcodeScanner": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
 					},
 					"HighlightSelectedItem": false
 				}
@@ -86,18 +93,19 @@
 	"ActionBar": {
 		"Items": [
 			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
-				"Caption": "Filter",
+				"Caption": "$(L,'product_filter')",
+				"Icon": "sap-icon://filter",
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/MDKDemoApp/Actions/Product/ProductFilter.action",
-				"_Type": "Control.Type.ActionBarItem"
+				"OnPress": "/MDKDemoApp/Actions/Product/ProductFilter.action"
 			}
 		],
 		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
 		"Caption": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
-		"PrefersLargeCaption": true,
-		"_Type": "Control.Type.ActionBar"
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
 	}
 }

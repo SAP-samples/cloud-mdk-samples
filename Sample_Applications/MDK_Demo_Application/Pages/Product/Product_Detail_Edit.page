@@ -1,73 +1,66 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"IsIconCircular": false,
-				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action",
-				"Position": "Left",
-				"SystemItem": "Cancel",
-				"Caption": "Cancel",
-				"_Type": "Control.Type.ActionBarItem"
-			},
-			{
-				"IsIconCircular": false,
-				"OnPress": "/MDKDemoApp/Actions/Product/UpdateProductDetails.action",
-				"Position": "Right",
-				"SystemItem": "Done",
-				"Caption": "Done",
-				"_Type": "Control.Type.ActionBarItem"
-			}
-		],
-		"Caption": "Edit Product",
-		"PrefersLargeCaption": true,
-		"_Type": "Control.Type.ActionBar"
-	},
 	"Controls": [
 		{
 			"_Type": "Control.Type.SectionedTable",
+			"_Name": "FormCellContainer0",
 			"Sections": [
 				{
 					"Controls": [
 						{
-							"Caption": "ID",
-							"IsEditable": false,
-							"IsVisible": false,
-							"KeyboardType": "DateTime",
-							"PlaceHolder": "value",
 							"Value": "{ProductID}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductID",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
-						},
-						{
-							"Caption": "Name",
-							"IsEditable": true,
-							"IsVisible": true,
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "$(L,'id')",
 							"KeyboardType": "DateTime",
-							"PlaceHolder": "value",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
 							"Value": "{Name}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductName",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
-						},
-						{
-							"Caption": "Description",
-							"IsEditable": true,
 							"IsVisible": true,
-							"PlaceHolder": "Description",
-							"Value": "{ShortDescription}",
-							"_Name": "ProductDescription",
-							"_Type": "Control.Type.FormCell.Note"
+							"Separator": true,
+							"Caption": "$(L,'name')",
+							"KeyboardType": "DateTime",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
-							"AllowEmptySelection": true,
-							"AllowMultipleSelection": false,
-							"Caption": "Category",
+							"Value": "{ShortDescription}",
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "ProductDescription",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'description')",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
 							"IsBarcodeScanEnabled": true,
-							"IsEditable": true,
+							"IsSearchEnabled": false,
+							"Value": [
+								"{CategoryName}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "ProductCategory",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "$(L,'category')",
+							"PickerPrompt": "$(L,'category_picker_prompt')",
+							"IsSelectedSectionEnabled": true,
 							"IsPickerDismissedOnSelection": true,
 							"IsSearchCancelledAfterSelection": true,
-							"IsSearchEnabled": false,
-							"IsSelectedSectionEnabled": true,
-							"IsVisible": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Enabled": true,
+								"Placeholder": "$(L,'category_search')"
+							},
 							"PickerItems": {
 								"DisplayValue": "{CategoryName}",
 								"ReturnValue": "{CategoryName}",
@@ -76,111 +69,176 @@
 									"QueryOptions": "$orderby=CategoryName",
 									"Service": "/MDKDemoApp/Services/Sample.service"
 								}
-							},
-							"PickerPrompt": "Please select one single item",
-							"Search": {
-								"Enabled": true,
-								"Placeholder": "Category Search"
-							},
-							"Value": [
-								"{CategoryName}"
-							],
-							"_Name": "ProductCategory",
-							"_Type": "Control.Type.FormCell.ListPicker"
+							}
 						},
 						{
-							"Caption": "Price",
-							"IsEditable": true,
-							"IsVisible": true,
 							"Value": "{Price}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductPrice",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'price')",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
-							"Caption": "Currency",
-							"IsEditable": true,
-							"IsVisible": true,
 							"Value": "{CurrencyCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductCurrencyCode",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'currency')",
+							"Enabled": true,
+							"IsEditable": true
 						}
 					],
 					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "FormCellContainer0SectionFormCell0"
 				},
 				{
 					"Controls": [
 						{
-							"Caption": "Height",
-							"IsEditable": true,
-							"IsVisible": true,
-							"KeyboardType": "DateTime",
 							"Value": "{DimensionHeight}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductHeight",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'height')",
+							"KeyboardType": "DateTime",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
-							"Caption": "Width",
-							"IsEditable": true,
-							"IsVisible": true,
-							"KeyboardType": "DateTime",
 							"Value": "{DimensionWidth}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductWidth",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'width')",
+							"KeyboardType": "DateTime",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
-							"Caption": "Depth",
-							"IsEditable": true,
-							"IsVisible": true,
-							"KeyboardType": "DateTime",
 							"Value": "{DimensionDepth}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductDepth",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'depth')",
+							"KeyboardType": "DateTime",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
-							"Caption": "Unit",
-							"IsEditable": true,
-							"IsVisible": true,
-							"KeyboardType": "DateTime",
 							"Value": "{DimensionUnit}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductDimensionUnit",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'dimension_unit')",
+							"KeyboardType": "DateTime",
+							"Enabled": true,
+							"IsEditable": true
 						}
 					],
 					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "FormCellContainer0SectionFormCell1"
 				},
 				{
 					"Controls": [
 						{
-							"Caption": "Weight",
-							"IsEditable": true,
-							"IsVisible": true,
-							"KeyboardType": "DateTime",
 							"Value": "{Weight}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductWeight",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'weight')",
+							"KeyboardType": "DateTime",
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
-							"Caption": "Unit",
-							"IsEditable": true,
-							"IsVisible": true,
-							"KeyboardType": "DateTime",
 							"Value": "{WeightUnit}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductWeightUnit",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "$(L,'weight_unit')",
+							"KeyboardType": "DateTime",
+							"Enabled": true,
+							"IsEditable": true
 						}
 					],
 					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "FormCellContainer0SectionFormCell2"
 				}
 			],
-			"_Name": "FormCellContainer0"
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
+	"_Type": "Page",
 	"_Name": "Product_Detail_Edit",
-	"_Type": "Page"
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "$(L,'cancel')",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action"
+			},
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem1",
+				"Caption": "$(L,'done')",
+				"SystemItem": "Done",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/MDKDemoApp/Actions/Product/UpdateProductDetails.action"
+			}
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'product_detail_edit_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
+	}
 }

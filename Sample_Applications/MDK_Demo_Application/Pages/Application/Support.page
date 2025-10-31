@@ -1,27 +1,20 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"IsIconCircular": false,
-				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action",
-				"Position": "Right",
-				"SystemItem": "Done",
-				"Caption": "Done",
-				"Visible": true,
-				"_Type": "Control.Type.ActionBarItem"
-			}
-		],
-		"Caption": "Settings",
-		"PrefersLargeCaption": true,
-		"_Type": "Control.Type.ActionBar"
-	},
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
+					"_Type": "Section.Type.ContactCell",
+					"_Name": "SectionContactCellTable1",
+					"EmptySection": {
+						"FooterVisible": false
+					},
 					"ContactCells": [
 						{
 							"ContactCell": {
+								"_Name": "ContactCellItem0",
+								"Headline": "$(L,'contact_support')",
 								"ActivityItems": [
 									{
 										"ActivityType": "Phone",
@@ -32,43 +25,69 @@
 										"ActivityValue": "/MDKDemoApp/Globals/UserMenu/UserSupportEmail.global"
 									}
 								],
-								"Headline": "Contact Support"
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								}
 							}
 						}
-					],
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"_Name": "SectionContactCellTable1",
-					"_Type": "Section.Type.ContactCell"
+					]
 				},
 				{
+					"_Type": "Section.Type.SimplePropertyCollection",
+					"_Name": "SectionSimplePropertyCollection0",
+					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
 					},
-					"Layout": {
-						"MinimumInteritemSpacing": 66,
-						"NumberOfColumns": 1
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
 					},
 					"SimplePropertyCells": [
 						{
 							"SimplePropertyCell": {
+								"_Name": "SectionSimplePropertyCell0",
+								"_Type": "SimplePropertyCollection.Type.Cell",
+								"KeyName": "$(L,'activity_log')",
 								"AccessoryType": "DisclosureIndicator",
-								"KeyName": "Activity Log",
-								"OnPress": "/MDKDemoApp/Actions/Application/NavToActivityLog.action",
 								"Visible": "$(PLT,true,true,false)",
-								"_Type": "SimplePropertyCollection.Type.Cell"
+								"OnPress": "/MDKDemoApp/Actions/Application/NavToActivityLog.action"
 							}
 						}
 					],
-					"_Name": "SectionSimplePropertyCollection0",
-					"_Type": "Section.Type.SimplePropertyCollection"
+					"Layout": {
+						"NumberOfColumns": 1,
+						"MinimumInteritemSpacing": 66
+					}
 				}
 			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
+	"_Type": "Page",
 	"_Name": "Settings",
-	"_Type": "Page"
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "$(L,'done')",
+				"SystemItem": "Done",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action"
+			}
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'support_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
+	}
 }

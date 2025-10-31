@@ -1,7 +1,7 @@
 {
 	"Animated": true,
 	"CompletionTimeout": 3,
-	"Message": "Checking for Updates...",
+	"Message": "$(L,'checking_for_updates')",
 	"OnSuccess": "/MDKDemoApp/Actions/Application/AppUpdateCheck.action",
 	"_Type": "Action.Type.ProgressBanner"
 }

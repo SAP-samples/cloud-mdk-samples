@@ -1,6 +1,6 @@
 {
-	"Message": "Uploading log file failed with error: {#ActionResults:UploadLog/error}",
+	"Message": "$(L,'log_upload_failure_msg',{#ActionResults:UploadLog/error})",
 	"OKCaption": "OK",
-	"Title": "Log Upload Failed",
+	"Title": "$(L,'log_upload_failure_title')",
 	"_Type": "Action.Type.Message"
 }

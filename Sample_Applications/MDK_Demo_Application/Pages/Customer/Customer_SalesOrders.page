@@ -1,55 +1,91 @@
 {
-	"ActionBar": {
-		"Caption": "Customer Orders",
-		"PrefersLargeCaption": true,
-		"_Type": "Control.Type.ActionBar"
-	},
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": false
+					},
+					"_Type": "Section.Type.ObjectTable",
 					"DataSubscriptions": [
 						"SalesOrderHeaders"
 					],
-					"EmptySection": {
-						"Caption": "No Customer Orders",
-						"FooterVisible": false
-					},
-					"Header": {
-						"UseTopPadding": false,
-						"_Type": "SectionCommon.Type.Header"
-					},
-					"ObjectCell": {
-						"AccessoryType": "DisclosureIndicator",
-						"AvatarStack": {
-							"ImageIsCircular": false
-						},
-						"Footnote": "{SalesOrderID}",
-						"OnPress": "/MDKDemoApp/Actions/SalesOrder/NavtoSalesOrder_Detail.action",
-						"PreserveIconStackSpacing": false,
-						"StatusText": "{LifeCycleStatusName}",
-						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
-						"Title": "Order Date: $(DT,{CreatedAt},'','')",
-						"_Type": "ObjectTable.Type.ObjectCell"
-					},
-					"Search": {
-						"BarcodeScanner": true,
-						"Enabled": true,
-						"Placeholder": "Order Search"
-					},
 					"Target": {
 						"EntitySet": "SalesOrderHeaders",
 						"QueryOptions": "$filter=CustomerID eq {CustomerID}&$orderby=CreatedAt desc",
 						"Service": "/MDKDemoApp/Services/Sample.service"
 					},
 					"_Name": "SectionObjectTable0",
-					"_Type": "Section.Type.ObjectTable"
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "$(L,'no_orders')",
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"ObjectCell": {
+						"Title": "$(L,'order_date'): $(DT,{CreatedAt},'','')",
+						"Footnote": "{SalesOrderID}",
+						"StatusText": "{LifeCycleStatusName}",
+						"SubstatusText": "$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:2,maximumFractionDigits:2,useGrouping:true})",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "DisclosureIndicator",
+						"Tags": [],
+						"AvatarStack": {
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"ImageIsCircular": true
+						},
+						"OnPress": "/MDKDemoApp/Actions/SalesOrder/NavtoSalesOrder_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false,
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						}
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "$(L,'search_orders')",
+						"BarcodeScanner": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"HighlightSelectedItem": false
 				}
 			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
+	"_Type": "Page",
 	"_Name": "Customer_SalesOrders",
-	"_Type": "Page"
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'customer_sales_orders_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
+	}
 }
