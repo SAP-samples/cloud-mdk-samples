@@ -7,7 +7,7 @@
 		"Properties": {
 			"Animated": true,
 			"Duration": 0,
-			"Message": "Updating Product Failed: {#ActionResults:UpdateProduct/error}"
+			"Message": "$(L,'product_update_failed_msg',{#ActionResults:UpdateProduct/error})"
 		}
 	},
 	"OnSuccess": {
@@ -15,7 +15,7 @@
 		"Properties": {
 			"Animated": true,
 			"Duration": 2,
-			"Message": "Product Updated",
+			"Message": "$(L,'product_update_success_msg')",
 			"OnSuccess": "/MDKDemoApp/Actions/CloseModalComplete.action"
 		}
 	},

@@ -1,8 +1,8 @@
 {
-	"CancelCaption": "No",
-	"Message": "This action will remove all data and return to the Welcome screen.  Any local data will be lost.  Are you sure you want to continue?",
-	"OKCaption": "Yes",
+	"CancelCaption": "$(L,'reset_cancel')",
+	"Message": "$(L,'reset_confirmation')",
+	"OKCaption": "$(L,'reset_ok')",
 	"OnOK": "/MDKDemoApp/Rules/Application/ResetAppSettingsAndLogout.js",
-	"Title": "Logout",
+	"Title": "$(L,'reset_title')",
 	"_Type": "Action.Type.Message"
 }

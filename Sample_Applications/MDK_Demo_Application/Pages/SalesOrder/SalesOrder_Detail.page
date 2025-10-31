@@ -1,6 +1,10 @@
 {
 	"Controls": [
 		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
 			"_Type": "Control.Type.SectionedTable",
 			"_Name": "SectionedTable0",
 			"Sections": [
@@ -8,15 +12,24 @@
 					"KeyAndValues": [
 						{
 							"Value": "{SalesOrderID}",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue0",
-							"KeyName": "Order Number",
+							"KeyName": "$(L,'order_num')",
 							"Visible": true
 						}
 					],
 					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.KeyValue",
 					"_Name": "SectionKeyValue0",
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
 						"UseTopPadding": false
@@ -24,13 +37,6 @@
 					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
-					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
 					},
 					"Layout": {
 						"NumberOfColumns": 1
@@ -40,30 +46,32 @@
 					"KeyAndValues": [
 						{
 							"Value": "$(DT,{CreatedAt})",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue1",
-							"KeyName": "Created At",
+							"KeyName": "$(L,'created_at')",
 							"Visible": true
 						},
 						{
 							"Value": "{LifeCycleStatusName}",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue2",
-							"KeyName": "Status",
+							"KeyName": "$(L,'status')",
 							"Visible": true
 						}
 					],
 					"MaxItemCount": 1,
-					"_Type": "Section.Type.KeyValue",
-					"_Name": "SectionKeyValue2",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
 					"Separators": {
 						"TopSectionSeparator": false,
 						"BottomSectionSeparator": true,
 						"HeaderSeparator": true,
 						"FooterSeparator": true,
 						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue2",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
 					},
 					"Layout": {
 						"NumberOfColumns": 2
@@ -73,30 +81,27 @@
 					"KeyAndValues": [
 						{
 							"Value": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue3",
-							"KeyName": "Price",
+							"KeyName": "$(L,'price')",
 							"Visible": true
 						},
 						{
 							"Value": "$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue4",
-							"KeyName": "Tax",
+							"KeyName": "$(L,'tax')",
 							"Visible": true
 						},
 						{
 							"Value": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue5",
-							"KeyName": "Total",
+							"KeyName": "$(L,'total')",
 							"Visible": true
 						}
 					],
 					"MaxItemCount": 1,
-					"_Type": "Section.Type.KeyValue",
-					"_Name": "SectionKeyValue1",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
 					"Separators": {
 						"TopSectionSeparator": false,
 						"BottomSectionSeparator": true,
@@ -104,8 +109,47 @@
 						"FooterSeparator": true,
 						"ControlSeparator": true
 					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue1",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
 					"Layout": {
 						"NumberOfColumns": 3
+					}
+				},
+				{
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "$(L,'order_items')"
+					},
+					"Footer": {
+						"_Type": "SectionCommon.Type.Footer",
+						"_Name": "SectionCommonTypeFooter0",
+						"Visible": true,
+						"UseBottomPadding": false
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": false,
+						"HeaderSeparator": false,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Buttons": [],
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
 					}
 				},
 				{
@@ -114,34 +158,34 @@
 							"Items": [
 								{
 									"NumberOfLines": 1,
-									"Text": "Product",
+									"Text": "$(L,'order_item_product')",
 									"TextAlignment": "Left"
 								},
 								{
 									"NumberOfLines": 1,
-									"Text": "Qty",
+									"Text": "$(L,'order_item_quantity')",
 									"TextAlignment": "Right"
 								},
 								{
 									"NumberOfLines": 1,
-									"Text": "Price",
+									"Text": "$(L,'order_item_price')",
 									"TextAlignment": "Right"
 								},
 								{
 									"NumberOfLines": 1,
-									"Text": "Tax",
+									"Text": "$(L,'order_item_tax')",
 									"TextAlignment": "Right"
 								},
 								{
 									"NumberOfLines": 1,
-									"Text": "Total",
+									"Text": "$(L,'order_item_total')",
 									"TextAlignment": "Right"
 								}
 							]
 						},
 						"_Name": "SectionGridHeader0",
 						"AccessoryType": "None",
-						"UseTopPadding": true
+						"UseTopPadding": false
 					},
 					"Row": {
 						"Items": [
@@ -153,7 +197,7 @@
 								"TextAlignment": "Left"
 							},
 							{
-								"BindTo": "Status",
+								"BindTo": "Subheadline",
 								"LineBreakMode": "WordWrapping",
 								"NumberOfLines": 1,
 								"Text": "{Quantity} {QuantityUnit}",
@@ -172,7 +216,7 @@
 								"TextAlignment": "Right"
 							},
 							{
-								"BindTo": "SubStatus",
+								"BindTo": "Status",
 								"LineBreakMode": "WordWrapping",
 								"NumberOfLines": 1,
 								"Text": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
@@ -191,6 +235,13 @@
 						"AccessoryType": "DisclosureIndicator",
 						"OnPress": "/MDKDemoApp/Rules/SalesOrder/ShowSalesOrder_Item_Product.js"
 					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": false,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.GridTable",
 					"Target": {
 						"EntitySet": "SalesOrderItems",
@@ -201,24 +252,18 @@
 					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
-					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
 					}
 				}
-			],
-			"FilterFeedbackBar": {
-				"ShowAllFilters": false,
-				"_Type": "Control.Type.FilterFeedbackBar"
-			}
+			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "SalesOrder_Detail",
-	"Caption": "Order Detail",
-	"PrefersLargeCaption": true
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar2",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'sales_order_detail_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
+	}
 }

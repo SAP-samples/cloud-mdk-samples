@@ -10,31 +10,32 @@
 							"AllowMultipleSelection": true,
 							"_Type": "Control.Type.FormCell.Sorter",
 							"_Name": "SortBy",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"AllowEmptySelection": false,
 							"IsEditable": true,
 							"SortByItems": [
 								{
-									"DisplayValue": "Name",
+									"DisplayValue": "$(L,'sort_by_name')",
 									"ReturnValue": "Name"
 								},
 								{
-									"DisplayValue": "Category",
+									"DisplayValue": "$(L,'sort_by_category')",
 									"ReturnValue": "CategoryName"
 								},
 								{
-									"DisplayValue": "Price (Low to High)",
+									"DisplayValue": "$(L,'sort_by_price_low_to_high')",
 									"ReturnValue": "Price asc"
 								},
 								{
-									"DisplayValue": "Price (High to Low)",
+									"DisplayValue": "$(L,'sort_by_price_high_to_low')",
 									"ReturnValue": "Price desc"
 								}
 							]
 						}
 					],
 					"_Name": "FormCellSection0",
-					"Caption": "Sort by",
+					"Caption": "$(L,'sort_by')",
 					"Visible": true
 				},
 				{
@@ -42,14 +43,15 @@
 						{
 							"_Type": "Control.Type.FormCell.Filter",
 							"_Name": "PromoFilter",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"AllowMultipleSelection": true,
 							"AllowEmptySelection": true,
-							"Caption": "Products",
+							"Caption": "$(L,'products')",
 							"IsEditable": true,
 							"FilterProperty": [
 								{
-									"DisplayValue": "On Promotion",
+									"DisplayValue": "$(L,'on_promotion')",
 									"ReturnValue": "/MDKDemoApp/Rules/Product/ProductOnPromoFilter.js"
 								}
 							]
@@ -60,12 +62,12 @@
 							"IsVisible": true,
 							"AllowMultipleSelection": true,
 							"AllowEmptySelection": true,
-							"Caption": "Category",
+							"Caption": "$(L,'category')",
 							"DataPaging": {
 								"LoadingIndicatorText": "",
 								"ShowLoadingIndicator": true
 							},
-							"PickerPrompt": "Please select multiple items",
+							"PickerPrompt": "$(L,'category_picker_prompt')",
 							"IsSelectedSectionEnabled": false,
 							"IsPickerDismissedOnSelection": false,
 							"IsSearchCancelledAfterSelection": false,
@@ -86,7 +88,7 @@
 						}
 					],
 					"_Name": "FormCellSection1",
-					"Caption": "Filter By",
+					"Caption": "$(L,'filter_by')",
 					"Visible": true
 				}
 			]
@@ -94,42 +96,44 @@
 	],
 	"_Type": "Page",
 	"_Name": "Product_Filter",
-	"Caption": "Filter",
 	"ActionBar": {
 		"Items": [
 			{
-				"Text": "Cancel",
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
-				"Caption": "",
+				"Caption": "$(L,'cancel')",
 				"SystemItem": "Cancel",
-				"Position": "left",
+				"Position": "Left",
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/MDKDemoApp/Actions/CloseModalCanceled.action"
 			},
 			{
-				"Text": "Done",
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem1",
-				"Caption": "",
+				"Caption": "$(L,'done')",
 				"SystemItem": "Done",
-				"Position": "right",
+				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'product_filter_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
 	},
 	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
 		"_Name": "FioriToolbar",
-		"_Type": "Control.Type.FioriToolbar",		
 		"Visible": true,
 		"Items": [
 			{
 				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "ResetAllBtn",
 				"Visible": true,
-				"Title": "Reset All",
+				"Title": "$(L,'reset_all')",
 				"OnPress": "/MDKDemoApp/Rules/Product/ResetFilter.js",
 				"Enabled": true,
 				"ButtonType": "Primary",

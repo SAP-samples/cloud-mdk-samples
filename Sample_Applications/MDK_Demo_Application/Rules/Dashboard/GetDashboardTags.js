@@ -7,7 +7,7 @@ import { getCurrentQuarter } from './getCurrentQuarter';
  */
 export default function GetDashboardTags(context) {
     let tags = [];
-    tags.push(daysLeftInQuarter(context));
     tags.push(getCurrentQuarter(context));
+    tags.push(daysLeftInQuarter(context));
     return tags;
 }

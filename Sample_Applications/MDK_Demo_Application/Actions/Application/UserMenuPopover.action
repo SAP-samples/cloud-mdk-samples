@@ -4,35 +4,35 @@
 			"Enabled": true,
 			"Icon": "sap-icon://synchronize",
 			"OnPress": "/MDKDemoApp/Actions/Service/StartSync.action",
-			"Title": "Sync Changes",
+			"Title": "$(L,'user_menu_sync')",
 			"Visible": "$(PLT,true,true,false)"
 		},
 		{
 			"Enabled": true,
 			"Icon": "sap-icon://headset",
 			"OnPress": "/MDKDemoApp/Actions/Application/NavToSupport.action",
-			"Title": "Support",
+			"Title": "$(L,'user_menu_support')",
 			"Visible": true
 		},
 		{
 			"Enabled": true,
 			"Icon": "sap-icon://refresh",
 			"OnPress": "/MDKDemoApp/Actions/Application/AppUpdateProgressBanner.action",
-			"Title": "Check for Updates",
+			"Title": "$(L,'user_menu_update_check')",
 			"Visible": "$(PLT,true,true,false)"
 		},
 		{
 			"Enabled": true,
 			"Icon": "sap-icon://hint",
 			"OnPress": "/MDKDemoApp/Actions/Application/NavToAbout.action",
-			"Title": "About",
+			"Title": "$(L,'user_menu_about')",
 			"Visible": true
 		},
 		{
 			"Enabled": true,
 			"Icon": "sap-icon://log",
 			"OnPress": "/MDKDemoApp/Actions/LogoutConfirmation.action",
-			"Title": "Logout",
+			"Title": "$(L,'user_menu_logout')",
 			"Visible": true
 		}
 	],

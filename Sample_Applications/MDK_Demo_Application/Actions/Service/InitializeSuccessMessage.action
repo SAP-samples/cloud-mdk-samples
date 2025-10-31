@@ -3,7 +3,7 @@
 	"ActionResult": {
 		"_Name": "InitializeSuccessMessage"
 	},
-	"Message": "Service Initialized",
+	"Message": "$(L,'initialize_success_msg')",
 	"NumberOfLines": 1,
 	"Duration": 1
 }

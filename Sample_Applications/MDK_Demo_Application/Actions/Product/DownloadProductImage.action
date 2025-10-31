@@ -4,7 +4,7 @@
 		"Properties": {
 			"Animated": true,
 			"Duration": 0,
-			"Message": "Failed to download product image - {#ActionResults:download/error}"
+			"Message": "$(L,'product_image_download_failure') - {#ActionResults:download/error}"
 		}
 	},
 	"Target": {
