@@ -32,7 +32,7 @@
 					"Target": {
 						"EntitySet": "SalesOrderHeaders",
 						"Service": "/SiblingNavigationApp/Services/com_sap_edm_sampleservice_v4.service",
-						"QueryOptions": ""
+						"QueryOptions": "$expand=Customer"
 					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
@@ -48,10 +48,12 @@
 							"TrailingItems": [],
 							"_Type": "ObjectCell.Type.ContextMenu"
 						},
-						"Title": "{SalesOrderID}",
-						"Subhead": "{NetAmount} {CurrencyCode}",
-						"StatusText": "{LifeCycleStatusName}",
 						"PreserveIconStackSpacing": false,
+								"Title": "{Customer/FirstName} {Customer/LastName}",
+				"Subhead": "{SalesOrderID}",
+				"Footnote": "$(DT, {CreatedAt})",
+				"StatusText": "{LifeCycleStatusName}",
+				"SubstatusText": "$(C, {NetAmount}, {CurrencyCode})",
 						"AccessoryType": "DisclosureIndicator",
 						"Tags": [],
 						"AvatarStack": {

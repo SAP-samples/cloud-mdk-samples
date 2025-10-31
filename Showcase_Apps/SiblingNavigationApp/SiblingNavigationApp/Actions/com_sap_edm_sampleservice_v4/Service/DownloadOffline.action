@@ -3,6 +3,9 @@
     "DefiningRequests": [{
         "Name": "SalesOrderHeaders",
         "Query": "SalesOrderHeaders"
+    }, {
+        "Name": "Customers",
+        "Query": "Customers"
     }],
     "_Type": "Action.Type.OfflineOData.Download",
     "ActionResult": {
