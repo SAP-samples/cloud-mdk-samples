@@ -1,24 +1,24 @@
 export default function LogLevels(context) { 
     var levels = [];
     levels.push({
-        'DisplayValue': 'Error',
+        'DisplayValue': `${context.localize('log_level_error')}`,
         'ReturnValue': 'Error'
     });
     levels.push({
-        'DisplayValue': 'Debug',
+        'DisplayValue': `${context.localize('log_level_debug')}`,
         'ReturnValue': 'Debug'
     });
     levels.push({
-        'DisplayValue': 'Warning',
+        'DisplayValue': `${context.localize('log_level_warning')}`,
         'ReturnValue': 'Warn'
     });
     levels.push({
-        'DisplayValue': 'Info',
+        'DisplayValue': `${context.localize('log_level_info')}`,
         'ReturnValue': 'Info'
     });
     levels.push({
-        'DisplayValue': 'Trace',
-        'ReturnValue': 'Trace'      
+        'DisplayValue': `${context.localize('log_level_trace')}`,
+        'ReturnValue': 'Trace'
     })
     return levels;
 }

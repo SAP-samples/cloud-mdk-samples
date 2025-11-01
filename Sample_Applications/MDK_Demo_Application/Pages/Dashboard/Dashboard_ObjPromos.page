@@ -1,68 +1,76 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"Icon": "sap-icon://customer",
-				"IsIconCircular": false,
-				"OnPress": "/MDKDemoApp/Actions/Application/UserMenuPopover.action",
-				"Position": "Left",
-				"Caption": "User",
-				"Visible": true
-			}
-		]
-	},
-	"Caption": "$(L,'dashboard_title')",
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
 					"ObjectHeader": {
-						"Tags": [
-							{
-								"Text": "/MDKDemoApp/Rules/Dashboard/daysLeftInQuarter.rule.js"
-							},
-							{
-								"Text": "/MDKDemoApp/Rules/Dashboard/getCurrentQuarter.rule.js"
-							}
-						],
+						"Subhead": "$(L,'app_name')",
 						"Description": "$(L,'dashboard_header_body')",
+						"StatusText": "/MDKDemoApp/Rules/Dashboard/versionString.js",
 						"DetailImage": "/MDKDemoApp/Images/mdk_logo.png",
 						"DetailImageIsCircular": false,
+						"Tags": [
+							{
+								"Text": "/MDKDemoApp/Rules/Dashboard/getCurrentQuarter.js"
+							},
+							{
+								"Text": "/MDKDemoApp/Rules/Dashboard/daysLeftInQuarter.js"
+							}
+						],
 						"HeadlineText": "$(L,'mdk')",
-						"StatusText": "/MDKDemoApp/Rules/Dashboard/versionString.js",
-						"Subhead": "$(L,'app_name')"
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
 					},
-					"Visible": true,
+					"_Type": "Section.Type.ObjectHeader",
 					"_Name": "SectionObjectHeader0",
-					"_Type": "Section.Type.ObjectHeader"
+					"Visible": true
 				},
 				{
-					"DataPaging": {
-						"LoadingIndicatorText": "",
-						"ShowLoadingIndicator": true
+					"_Type": "Section.Type.ObjectCollection",
+					"Target": {
+						"EntitySet": "Customers",
+						"QueryOptions": "/MDKDemoApp/Rules/Customer/TopCustomersQO.js",
+						"Service": "/MDKDemoApp/Services/Sample.service"
 					},
+					"_Name": "SectionObjectCollection0",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Top Customers"
+					},
+					"Footer": {
+						"_Type": "SectionCommon.Type.Footer",
+						"_Name": "SectionCommonTypeFooter0",
+						"Caption": "All Customers",
+						"AttributeLabel": "/MDKDemoApp/Rules/Customer/CustomerCount.js",
+						"AccessoryType": "DisclosureIndicator",
+						"FooterStyle": "Attribute",
+						"Visible": true,
+						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_List.action",
+						"UseBottomPadding": true
+					},
+					"Visible": true,
 					"EmptySection": {
 						"Caption": "No Customers",
 						"FooterVisible": false
 					},
-					"Footer": {
-						"AccessoryType": "DisclosureIndicator",
-						"AttributeLabel": "/MDKDemoApp/Rules/Customer/CustomerCount.js",
-						"Caption": "All Customers",
-						"FooterStyle": "Attribute",
-						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_List.action",
-						"UseBottomPadding": true,
-						"Visible": true
-					},
-					"Header": {
-						"Caption": "Top Customers",
-						"UseTopPadding": true
-					},
-					"Layout": {
-						"NumberOfColumns": 2
+					"DataPaging": {
+						"LoadingIndicatorText": "",
+						"ShowLoadingIndicator": true
 					},
 					"ObjectCell": {
+						"Title": "{FirstName} {LastName}",
 						"AccessoryType": "DisclosureIndicator",
+						"PreserveIconStackSpacing": false,
+						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_Detail.action",
+						"ContextMenu": {
+							"PerformFirstActionWithFullSwipe": true
+						},
 						"AvatarStack": {
 							"Avatars": [
 								{
@@ -71,47 +79,63 @@
 							],
 							"ImageIsCircular": false
 						},
-						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_Detail.action",
-						"PreserveIconStackSpacing": false,
-						"Title": "{FirstName} {LastName}"
+						"_Type": "ObjectCollection.Type.ObjectCell"
 					},
-					"Target": {
-						"EntitySet": "Customers",
-						"QueryOptions": "/MDKDemoApp/Rules/Customer/TopCustomersQO.js",
-						"Service": "/MDKDemoApp/Services/Sample.service"
-					},
-					"Visible": true,
-					"_Name": "SectionObjectCollection0",
-					"_Type": "Section.Type.ObjectCollection"
+					"Layout": {
+						"NumberOfColumns": 2
+					}
 				},
 				{
-					"DataPaging": {
-						"LoadingIndicatorText": "",
-						"ShowLoadingIndicator": true
+					"_Type": "Section.Type.ObjectCollection",
+					"Target": {
+						"EntitySet": "Products",
+						"QueryOptions": "/MDKDemoApp/Rules/Product/PromotionalItemsQO.js",
+						"Service": "/MDKDemoApp/Services/Sample.service"
 					},
+					"_Name": "SectionObjectCollection1",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Promotion Items"
+					},
+					"Footer": {
+						"_Type": "SectionCommon.Type.Footer",
+						"_Name": "SectionCommonTypeFooter1",
+						"Caption": "All Products",
+						"AttributeLabel": "/MDKDemoApp/Rules/Product/ProductCount.js",
+						"AccessoryType": "DisclosureIndicator",
+						"FooterStyle": "Attribute",
+						"Visible": true,
+						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_List.action",
+						"UseBottomPadding": false
+					},
+					"Visible": true,
 					"EmptySection": {
 						"Caption": "No Promotion Items",
 						"FooterVisible": false
 					},
-					"Footer": {
-						"AccessoryType": "DisclosureIndicator",
-						"AttributeLabel": "/MDKDemoApp/Rules/Product/ProductCount.js",
-						"Caption": "All Products",
-						"FooterStyle": "Attribute",
-						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_List.action",
-						"UseBottomPadding": false,
-						"Visible": true
-					},
-					"Header": {
-						"Caption": "Promotion Items",
-						"UseTopPadding": true
-					},
-					"Layout": {
-						"NumberOfColumns": 2
-					},
 					"MaxItemCount": 6,
+					"DataPaging": {
+						"LoadingIndicatorText": "",
+						"ShowLoadingIndicator": true
+					},
 					"ObjectCell": {
+						"Title": "{Name}",
+						"Subhead": "{CategoryName}",
+						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
+						"SubstatusText": "/MDKDemoApp/Rules/Product/PercentOff.js",
 						"AccessoryType": "DisclosureIndicator",
+						"PreserveIconStackSpacing": false,
+						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
+						"ContextMenu": {
+							"PerformFirstActionWithFullSwipe": true
+						},
+						"Styles": {
+							"StatusText": "Price",
+							"SubstatusText": "Discount"
+						},
 						"AvatarStack": {
 							"Avatars": [
 								{
@@ -120,32 +144,36 @@
 							],
 							"ImageIsCircular": false
 						},
-						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
-						"PreserveIconStackSpacing": false,
-						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
-						"Styles": {
-							"StatusText": "Price",
-							"SubstatusText": "Discount"
-						},
-						"Subhead": "{CategoryName}",
-						"SubstatusText": "/MDKDemoApp/Rules/Product/PercentOff.js",
-						"Title": "{Name}"
+						"_Type": "ObjectCollection.Type.ObjectCell"
 					},
-					"Target": {
-						"EntitySet": "Products",
-						"QueryOptions": "/MDKDemoApp/Rules/Product/PromotionalItemsQO.js",
-						"Service": "/MDKDemoApp/Services/Sample.service"
-					},
-					"Visible": true,
-					"_Name": "SectionObjectCollection1",
-					"_Type": "Section.Type.ObjectCollection"
+					"Layout": {
+						"NumberOfColumns": 2
+					}
 				}
 			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
-	"_Name": "Dashboard_ObjPromos",
 	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Name": "Dashboard_ObjPromos",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "User",
+				"Icon": "sap-icon://customer",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDKDemoApp/Actions/Application/UserMenuPopover.action"
+			}
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
+	}
 }

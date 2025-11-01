@@ -7,12 +7,12 @@
 		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
 		"Properties": {
 			"Duration": 0,
-			"Message": "Failed to Initialize Service - {#ActionResults:initialize/#Property:error}"
+			"Message": "$(L,'initialize_failure_msg',{#ActionResults:initialize/#Property:error})"
 		}
 	},
 	"OnSuccess": "/MDKDemoApp/Actions/Service/InitializeSuccessMessage.action",
 	"ShowActivityIndicator": true,
-	"ActivityIndicatorText": "Initializing Application...",
+	"ActivityIndicatorText": "$(L,'initializing_msg')",
 	"Service": "/MDKDemoApp/Services/Sample.service",
 	"DefiningRequests": [
 		{

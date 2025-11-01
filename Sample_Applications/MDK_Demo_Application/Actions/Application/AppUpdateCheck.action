@@ -7,7 +7,7 @@
 		"Properties": {
 			"Animated": true,
 			"Duration": 0,
-			"Message": "App Update Failure {#ActionResults:AppUpdate/error}"
+			"Message": "$(L,'app_update_failure') {#ActionResults:AppUpdate/error}"
 		}
 	},
 	"OnSuccess": "/MDKDemoApp/Rules/Application/AppUpdateResult.js",

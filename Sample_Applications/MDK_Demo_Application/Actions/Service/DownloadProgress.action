@@ -1,8 +1,8 @@
 {
 	"Animated": true,
-	"CompletionMessage": "Sync Complete",
+	"CompletionMessage": "$(L,'sync_complete')",
 	"CompletionTimeout": 3,
-	"Message": "Download in Process...",
+	"Message": "$(L,'download_in_progress')",
 	"OnSuccess": "/MDKDemoApp/Actions/Service/OfflineDownload.action",
 	"_Type": "Action.Type.ProgressBanner"
 }

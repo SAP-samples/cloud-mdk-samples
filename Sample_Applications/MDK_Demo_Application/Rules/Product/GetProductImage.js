@@ -25,6 +25,6 @@ export default function GetProductImage(context) {
         return imageData;
     }, (error) => {
         // error case
-        console.log('Error downloading image');
+        console.log('Error downloading image - ${error}');
     });
 }

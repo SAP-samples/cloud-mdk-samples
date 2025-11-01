@@ -1,6 +1,6 @@
 {
 	"CancelCaption": "Later",
-	"Message": "A new version of the application is now ready to apply.  Do you want to update to this version now?",
+	"Message": "$(L,'on_will_update_msg')",
 	"OKCaption": "Now",
 	"Title": "New Version Available!",
 	"_Type": "Action.Type.Message"

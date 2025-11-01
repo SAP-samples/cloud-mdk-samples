@@ -1,8 +1,8 @@
 {
 	"Animated": true,
-	"CompletionMessage": "Logs Uploaded",
+	"CompletionMessage": "$(L,'log_upload_success_msg')",
 	"CompletionTimeout": 2,
-	"Message": "Uploading Log Files...",
+	"Message": "$(L,'log_uploading')",
 	"OnSuccess": "/MDKDemoApp/Actions/Logging/UploadLog.action",
 	"_Type": "Action.Type.ProgressBanner"
 }

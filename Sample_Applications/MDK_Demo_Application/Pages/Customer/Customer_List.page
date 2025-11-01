@@ -1,14 +1,33 @@
 {
-	"Caption": "Customers",
 	"Controls": [
 		{
-			"LoadingIndicator": {
-				"Enabled": true,
-				"Text": ""
-			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
+					"_Type": "Section.Type.ContactCell",
+					"Target": {
+						"EntitySet": "Customers",
+						"Service": "/MDKDemoApp/Services/Sample.service"
+					},
+					"_Name": "SectionContactCellTable0",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": false
+					},
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "$(L,'no_customers')",
+						"FooterVisible": false
+					},
 					"ContactCell": {
+						"Visible": true,
+						"DetailImage": "/MDKDemoApp/Rules/Customer/GetSmallCustomerAvatarURL.js",
+						"Headline": "{FirstName} {LastName}",
+						"Subheadline": "{City}, {Country}",
+						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_Detail.action",
 						"ActivityItems": [
 							{
 								"ActivityType": "Phone",
@@ -19,40 +38,37 @@
 								"ActivityValue": "{EmailAddress}"
 							}
 						],
-						"DetailImage": "/MDKDemoApp/Rules/Customer/GetSmallCustomerAvatarURL.js",
-						"Headline": "{FirstName} {LastName}",
-						"OnPress": "/MDKDemoApp/Actions/Customer/NavToCustomer_Detail.action",
-						"Subheadline": "{City}, {Country}"
+						"ContextMenu": {
+							"PerformFirstActionWithFullSwipe": true
+						}
 					},
 					"DataPaging": {
 						"LoadingIndicatorText": "",
 						"ShowLoadingIndicator": true
 					},
-					"EmptySection": {
-						"Caption": "No Customers Found",
-						"FooterVisible": false
-					},
-					"Header": {
-						"UseTopPadding": false
-					},
 					"Search": {
 						"Enabled": true,
-						"Placeholder": "Customer Search"
-					},
-					"Target": {
-						"EntitySet": "Customers",
-						"Service": "/MDKDemoApp/Services/Sample.service"
-					},
-					"Visible": true,
-					"_Name": "SectionContactCellTable0",
-					"_Type": "Section.Type.ContactCell"
+						"Placeholder": "$(L,'search_customers')"
+					}
 				}
 			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": ""
+			},
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
-	"_Name": "Customer_List",
 	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Name": "Customer_List",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'customer_list_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
+	}
 }
