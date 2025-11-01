@@ -64,6 +64,9 @@
 							"SubstatusText": "Discount"
 						}
 					},
+						"Search": {
+						"Enabled": true
+					},
 					"HighlightSelectedItem": false
 				}
 			],
