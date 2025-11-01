@@ -1,9 +1,14 @@
 {
     "Service": "/SiblingNavigationApp/Services/com_sap_edm_sampleservice_v4.service",
     "DefiningRequests": [{
-        "Name": "SalesOrderHeaders",
-        "Query": "SalesOrderHeaders"
-    }],
+            "Name": "SalesOrderHeaders",
+            "Query": "SalesOrderHeaders"
+        },
+        {
+            "Name": "Customers",
+            "Query": "Customers"
+        }
+    ],
     "_Type": "Action.Type.ODataService.Initialize",
     "ShowActivityIndicator": true,
     "ActivityIndicatorText": "Downloading...",
