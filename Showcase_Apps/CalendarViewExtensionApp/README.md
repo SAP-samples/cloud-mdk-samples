@@ -4,6 +4,8 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 *Last Updated: 22-Aug-2022*
 
+**Note! A [calendar UI control](https://help.sap.com/doc/3642933ef2e1478fb1578ef2acba4ae9/Latest/en-US/reference/schemadoc/Page/SectionedTable/Container/Calendar.schema.html) is now available as MDK standard control.**
+
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
 
