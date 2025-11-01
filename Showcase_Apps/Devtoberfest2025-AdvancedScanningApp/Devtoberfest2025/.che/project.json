@@ -1,0 +1,15 @@
+{
+	"type": "sap.web",
+	"builders": {
+		"configs": {}
+	},
+	"runners": {
+		"configs": {}
+	},
+	"attributes": {
+		"sap.watt.common.setting": [
+			"{\"definitionsVersion\":\"1.0.0 (MDK 25.9)\",\"projectType\":[\"sap.watt.uitools.ide.web\",\"sap.watt.uitools.ide.fiori\",\"com.sap.mde.project\"],\"generation\":[{\"templateId\":\"com.sap.mde.templates.AppModelerEmptyProject\",\"templateVersion\":\"0.0.0\",\"dateTimeStamp\":\"Thu, 02 Nov 2017 13:46:14 GMT\"}],\"translation\":{\"translationDomain\":\"\",\"supportedLanguages\":\"en,fr,de\",\"defaultLanguage\":\"en\",\"defaultI18NPropertyFile\":\"i18n.properties\",\"resourceModelName\":\"i18n\"},\"basevalidator\":{\"services\":{\"xml\":\"xmlValidator\",\"js\":\"jsValidator\"}}}"
+		]
+	},
+	"mixinTypes": []
+}
