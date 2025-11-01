@@ -1,0 +1,7 @@
+{
+  "_Type": "Action.Type.ODataService.Initialize",
+  "Service": "/MDKDevApp/Services/CAPVectorEngine.service",
+  "ShowActivityIndicator" : true,
+  "ActionResult" : { "_Name" : "OData" },
+  "OnFailure": "/MDKDevApp/Actions/Failure.action"
+}

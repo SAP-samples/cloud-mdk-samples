@@ -1,0 +1,8 @@
+{
+	"ActionBar": {
+		"Caption": "Empty",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"_Type": "Page",
+	"_Name": "Empty"
+}

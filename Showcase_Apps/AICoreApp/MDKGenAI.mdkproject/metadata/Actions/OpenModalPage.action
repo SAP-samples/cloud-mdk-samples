@@ -1,0 +1,5 @@
+{
+  "PageToOpen" : "/MDKDevApp/Pages/EquipmentChecking.page",
+  "ModalPage" : true,
+  "_Type" : "Action.Type.Navigation"
+}
