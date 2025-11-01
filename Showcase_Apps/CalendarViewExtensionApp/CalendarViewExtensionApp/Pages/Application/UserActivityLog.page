@@ -1,0 +1,122 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "EnableLogSwitch",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Enable Logging",
+							"OnValueChange": "/CalendarViewExtensionApp/Rules/Logging/ToggleLogging.js",
+							"IsEditable": true
+						},
+						{
+							"IsSearchEnabled": false,
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "LogLevelListPicker",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Log Level",
+							"OnValueChange": "/CalendarViewExtensionApp/Rules/Logging/SetUserLogLevel.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"PickerItems": "/CalendarViewExtensionApp/Rules/Logging/LogLevels.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "TracingCategoriesListPicker",
+							"IsVisible": false,
+							"Separator": true,
+							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
+							"Caption": "Tracing Categories",
+							"PickerPrompt": "Select Categories for Tracing",
+							"OnValueChange": "/CalendarViewExtensionApp/Rules/Logging/SetTraceCategories.js",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": "/CalendarViewExtensionApp/Rules/Logging/TraceCategories.js"
+						},
+						{
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "odataTrace",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "OData Tracing",
+							"OnValueChange": "/CalendarViewExtensionApp/Rules/Logging/SetTraceCategories.js",
+							"IsEditable": true
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellSection0"
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "Send",
+							"IsVisible": true,
+							"Separator": true,
+							"Title": "Send Activity Log",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/CalendarViewExtensionApp/Actions/Logging/UploadLogProgress.action"
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellSection1"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "UserActivityLog",
+	"ActionBar": {
+		"Caption": "Activity Log",
+		"PrefersLargeCaption": false,
+		"_Type": "Control.Type.ActionBar"
+	},
+	"OnLoaded": "/CalendarViewExtensionApp/Rules/Logging/UserLogSetting.js"
+}

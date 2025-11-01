@@ -2,7 +2,7 @@
     "CancelCaption": "No",
     "Message": "This action will remove all data and return to the Welcome screen. Any local data will be lost. Are you sure you want to continue?",
     "OKCaption": "Yes",
-    "OnOK": "/InlineValidationViewApp/Rules/ResetAppSettingsAndLogout.js",
+    "OnOK": "/InlineValidationViewApp/Rules/Application/ResetAppSettingsAndLogout.js",
     "Title": "Logout",
     "_Type": "Action.Type.Message"
 }

@@ -31,19 +31,17 @@
 	"ActionBar": {
 		"Caption": "VideoPlayer",
 		"PrefersLargeCaption": false,
-		"_Type": "Control.Type.ActionBar"
-	},
-	"FioriToolbar": {
-		"_Name": "FioriToolbar",
-		"_Type": "Control.Type.FioriToolbar",
-		"Items": [
+		"_Type": "Control.Type.ActionBar",
+			"Items": [
 			{
-				"_Type": "FioriToolbarItem.Type.Button",
-				"_Name": "LogoutToolbarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
 				"Visible": true,
-				"Title": "Logout",
-				"OnPress": "/VideoPlayerViewExtensionApp/Actions/Logout.action",
-				"Enabled": true
+				"OnPress": "/VideoPlayerViewExtensionApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		]
 	}
