@@ -1,0 +1,9 @@
+{
+    "Service": "/PersistentFilters/Services/SampleServiceV4.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/PersistentFilters/Actions/SampleServiceV4/Service/DownloadStartedMessage.action",
+    "OnFailure": "/PersistentFilters/Actions/SampleServiceV4/Service/SyncFailureMessage.action"
+}

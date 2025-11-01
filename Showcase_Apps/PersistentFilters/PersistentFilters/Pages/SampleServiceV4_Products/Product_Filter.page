@@ -7,14 +7,14 @@
 				{
 					"Controls": [
 						{
-							"_Type": "Control.Type.FormCell.Sorter",
+							"_Type": "Control.Type.FormCell.MultiSorter",
 							"_Name": "SortBy",
-							"IsEditable": true,
 							"IsVisible": true,
-							"AllowEmptySelection": true,
-							"AllowMultipleSelection": false,
+							"Separator": true,
+							"AllowEmptySelection": false,
 							"Caption": "Sort by",
-							"SortByItems": [
+							"IsEditable": true,
+							"Items": [
 								{
 									"DisplayValue": "Name",
 									"ReturnValue": "Name"
@@ -24,23 +24,23 @@
 									"ReturnValue": "CategoryName"
 								},
 								{
-									"DisplayValue": "Price (Low to High)",
-									"ReturnValue": "Price asc"
-								},
-								{
-									"DisplayValue": "Price (High to Low)",
-									"ReturnValue": "Price desc"
+									"AscendingLabel": "Low to High",
+									"DescendingLabel": "High to Low",
+									"DisplayValue": "Price",
+									"ReturnValue": "Price"
 								}
-							]
+							],
+							"Styles": {}
 						},
 						{
 							"_Type": "Control.Type.FormCell.Filter",
 							"_Name": "FilterPriceRange",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"AllowMultipleSelection": true,
 							"AllowEmptySelection": true,
 							"Caption": "Filter by Price Range",
+							"IsEditable": true,
 							"FilterProperty": [
 								{
 									"DisplayValue": "Price (0 to 25)",
@@ -71,8 +71,8 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "ProductCategoryPicker",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"AllowMultipleSelection": true,
 							"AllowEmptySelection": true,
 							"Caption": "Filter by Categories",
@@ -83,7 +83,10 @@
 							},
 							"PickerPrompt": "Please select multiple items",
 							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
 							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
 							"FilterProperty": "CategoryName",
 							"PickerItems": {
 								"Target": {
@@ -97,10 +100,24 @@
 						}
 					],
 					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.FormCell",
 					"_Name": "FormCellContainer0SectionFormCell0"
 				}
-			]
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
 	"_Type": "Page",
@@ -108,16 +125,17 @@
 	"ActionBar": {
 		"Items": [
 			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
 				"Caption": "Cancel",
 				"SystemItem": "Cancel",
 				"Position": "Left",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Cancel.action",
-				"_Type": "Control.Type.ActionBarItem"
+				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Cancel.action"
 			},
 			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem1",
 				"Caption": "Done",
 				"SystemItem": "Done",
@@ -125,13 +143,12 @@
 				"IsIconCircular": false,
 				"IconText": "Done",
 				"Visible": true,
-				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Complete.action",
-				"_Type": "Control.Type.ActionBarItem"
+				"OnPress": "/PersistentFilters/Actions/CloseModalPage_Complete.action"
 			}
 		],
 		"_Name": "ActionBar1",
-		"Caption": "Filter Products",
-		"_Type": "Control.Type.ActionBar"
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Filter Products"
 	},
 	"Result": [
 		"#Page:ProductFilter/#Control:FilterPriceRange/#Value",

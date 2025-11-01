@@ -2,6 +2,6 @@
     "Message": "Download in progress...",
     "CompletionMessage": "Download Successful",
     "CompletionTimeout": 7,
-    "OnSuccess": "/PersistentFilters/Actions/Service/DownloadOffline.action",
+    "OnSuccess": "/PersistentFilters/Actions/SampleServiceV4/Service/DownloadOffline.action",
     "_Type": "Action.Type.ProgressBanner"
 }

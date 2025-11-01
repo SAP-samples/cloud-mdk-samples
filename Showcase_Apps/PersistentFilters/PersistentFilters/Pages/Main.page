@@ -1,28 +1,66 @@
 {
 	"Controls": [
 		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
 			"_Type": "Control.Type.SectionedTable",
 			"_Name": "SectionedTable0",
 			"Sections": [
 				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
 					"_Type": "Section.Type.ButtonTable",
-					"_Name": "SectionButtonTable0",
+					"_Name": "SectionButtonTable_SampleServiceV4",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionHeader_SampleServiceV4",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "SampleServiceV4"
+					},
+					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
 					},
 					"Buttons": [
 						{
-							"_Name": "SectionButton1",
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "ButtonTableTypeButton0",
 							"Title": "Products",
 							"Alignment": "Center",
-							"OnPress": "/PersistentFilters/Actions/Products/NavToProducts_List.action",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/PersistentFilters/Actions/SampleServiceV4/Products/NavToProducts_List.action"
 						}
 					]
 				},
 				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
 					"_Type": "Section.Type.ButtonTable",
 					"_Name": "SectionButtonTable1",
 					"Visible": true,
@@ -31,14 +69,17 @@
 					},
 					"Buttons": [
 						{
-							"_Name": "SectionButton2",
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "ButtonTableTypeButton1",
 							"Title": "Reset Saved Filter",
 							"Alignment": "Center",
-							"Visible": true,
-							"OnPress": "/PersistentFilters/Rules/ClearFilters.js",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
-							"_Type": "ButtonTable.Type.Button"
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/PersistentFilters/Rules/SampleServiceV4/Products/ClearFilters.js"
 						}
 					]
 				}
@@ -50,19 +91,21 @@
 	"ActionBar": {
 		"Items": [
 			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
 				"Caption": "User Menu",
 				"Icon": "sap-icon://customer",
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/PersistentFilters/Actions/Application/UserMenuPopover.action",
-				"_Type": "Control.Type.ActionBarItem"
+				"OnPress": "/PersistentFilters/Actions/Application/UserMenuPopover.action"
 			}
 		],
 		"_Name": "ActionBar1",
-		"Caption": "Main",
-		"PrefersLargeCaption": true,
-		"_Type": "Control.Type.ActionBar"
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Persistent Filters",
+		"Subhead": "Showcase Application",
+		"PrefersLargeCaption": false,
+		"Logo": "/PersistentFilters/Images/sap_logo.png"
 	}
 }
