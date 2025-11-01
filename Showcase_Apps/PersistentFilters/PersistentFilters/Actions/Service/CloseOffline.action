@@ -1,6 +1,6 @@
 {
     "_Type": "Action.Type.OfflineOData.Close",
-    "Service": "/PersistentFilters/Services/SampleServiceV2.service",
+    "Service": "/PersistentFilters/Services/SampleServiceV4.service",
     "Force": true,
     "ActionResult": {
         "_Name": "close"

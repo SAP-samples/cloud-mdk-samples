@@ -7,7 +7,7 @@
 	"OnSuccess": "/PersistentFilters/Actions/Service/InitializeOfflineSuccessMessage.action",
 	"ShowActivityIndicator": true,
 	"ActivityIndicatorText": "Downloading...",
-	"Service": "/PersistentFilters/Services/SampleServiceV2.service",
+	"Service": "/PersistentFilters/Services/SampleServiceV4.service",
 	"DefiningRequests": [
 		{
 			"Name": "Customers",

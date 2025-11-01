@@ -1,109 +1,133 @@
 {
-    "Caption": "Product",
-
-    "ActionBar": {
-        "Items": []
-    },
-    "Controls": [{
-        "Sections": [{
-            "ObjectHeader": {
-                "DetailImage": "/PersistentFilters/Services/SampleServiceV2.service/{@odata.readLink}/$value",
-                "HeadlineText": "{Name}",
-                "Subhead": "{Category}",
-                "Tags": [],
-                "BodyText": "",
-                "Footnote": "{CurrencyCode}",
-                "Description": "{CategoryName}",
-                "StatusText": "{DimensionDepth}",
-                "StatusImage": "",
-                "SubstatusImage": "",
-                "SubstatusText": "{DimensionHeight}"
-            },
-            "_Type": "Section.Type.ObjectHeader"
-        }, {
-            "KeyAndValues": [{
-                    "KeyName": "Category",
-                    "Value": "{Category}"
-                },
-                {
-                    "KeyName": "CategoryName",
-                    "Value": "{CategoryName}"
-                },
-                {
-                    "KeyName": "CurrencyCode",
-                    "Value": "{CurrencyCode}"
-                },
-                {
-                    "KeyName": "DimensionDepth",
-                    "Value": "{DimensionDepth}"
-                },
-                {
-                    "KeyName": "DimensionHeight",
-                    "Value": "{DimensionHeight}"
-                },
-                {
-                    "KeyName": "DimensionUnit",
-                    "Value": "{DimensionUnit}"
-                },
-                {
-                    "KeyName": "DimensionWidth",
-                    "Value": "{DimensionWidth}"
-                },
-                {
-                    "KeyName": "LongDescription",
-                    "Value": "{LongDescription}"
-                },
-                {
-                    "KeyName": "Name",
-                    "Value": "{Name}"
-                },
-                {
-                    "KeyName": "PictureUrl",
-                    "Value": "{PictureUrl}"
-                },
-                {
-                    "KeyName": "Price",
-                    "Value": "{Price}"
-                },
-                {
-                    "KeyName": "ProductId",
-                    "Value": "{ProductId}"
-                },
-                {
-                    "KeyName": "QuantityUnit",
-                    "Value": "{QuantityUnit}"
-                },
-                {
-                    "KeyName": "ShortDescription",
-                    "Value": "{ShortDescription}"
-                },
-                {
-                    "KeyName": "SupplierId",
-                    "Value": "{SupplierId}"
-                },
-                {
-                    "KeyName": "UpdatedTimestamp",
-                    "Value": "{UpdatedTimestamp}"
-                },
-                {
-                    "KeyName": "Weight",
-                    "Value": "{Weight}"
-                },
-                {
-                    "KeyName": "WeightUnit",
-                    "Value": "{WeightUnit}"
-                }
-            ],
-            "Layout": {
-                "NumberOfColumns": 2
-            },
-            "MaxItemCount": 1,
-            "_Name": "SectionKeyValue0",
-            "_Type": "Section.Type.KeyValue"
-        }],
-        "_Type": "Control.Type.SectionedTable",
-        "_Name": "SectionedTable"
-    }],
-    "_Type": "Page",
-    "_Name": "Products_Detail"
+	"ActionBar": {
+		"Items": [],
+		"Caption": "Product",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "/PersistentFilters/Services/SampleServiceV4.service/{@odata.readLink}/$value",
+						"HeadlineText": "{Name}",
+						"Subhead": "{Category}",
+						"BodyText": "",
+						"Footnote": "{CurrencyCode}",
+						"Description": "{CategoryName}",
+						"StatusText": "{DimensionDepth}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{DimensionHeight}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Category",
+							"Value": "{Category}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "CategoryName",
+							"Value": "{CategoryName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "CurrencyCode",
+							"Value": "{CurrencyCode}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DimensionDepth",
+							"Value": "{DimensionDepth}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DimensionHeight",
+							"Value": "{DimensionHeight}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DimensionUnit",
+							"Value": "{DimensionUnit}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DimensionWidth",
+							"Value": "{DimensionWidth}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "LongDescription",
+							"Value": "{LongDescription}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Name",
+							"Value": "{Name}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "PictureUrl",
+							"Value": "{PictureUrl}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Price",
+							"Value": "{Price}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ProductId",
+							"Value": "{ProductId}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "QuantityUnit",
+							"Value": "{QuantityUnit}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ShortDescription",
+							"Value": "{ShortDescription}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "SupplierId",
+							"Value": "{SupplierId}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "UpdatedTimestamp",
+							"Value": "{UpdatedTimestamp}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Weight",
+							"Value": "{Weight}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "WeightUnit",
+							"Value": "{WeightUnit}",
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Products_Detail"
 }
