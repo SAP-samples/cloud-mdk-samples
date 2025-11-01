@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.OfflineOData.Close",
+	"Service": "/PDFGeneratorApp/Services/Sample.service",
+	"Force": true,
+	"ActionResult": {
+		"_Name": "close"
+	},
+	"OnSuccess": "/PDFGeneratorApp/Actions/Service/CloseOfflineSuccessMessage.action",
+	"OnFailure": "/PDFGeneratorApp/Actions/Service/CloseOfflineFailureMessage.action"
+}

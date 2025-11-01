@@ -5,9 +5,9 @@
 		"/MultiSelectContextMenuApp/Actions/Service/InitializeService.action"
 	],
 	"OnDidUpdate": "/MultiSelectContextMenuApp/Actions/Service/InitializeService.action",
-	"OnWillUpdate": "/MultiSelectContextMenuApp/Rules/OnWillUpdate.js",
+	"OnWillUpdate": "/MultiSelectContextMenuApp/Rules/Application/OnWillUpdate.js",
 	"Styles": "/MultiSelectContextMenuApp/Styles/Styles.less",
-	"Version": "/MultiSelectContextMenuApp/Globals/AppDefinition_Version.global",
+	"Version": "/MultiSelectContextMenuApp/Globals/Application/AppDefinition_Version.global",
 	"_Name": "MultiSelectContextMenuApp",
-	"_SchemaVersion": "24.7"
+	"_SchemaVersion": "24.11"
 }

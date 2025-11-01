@@ -1,7 +1,9 @@
 {
-	"Caption": "Product Details",
 	"ActionBar": {
-		"Items": []
+		"Items": [],
+		"Caption": "Product Details",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	},
 	"Controls": [
 		{
@@ -9,7 +11,7 @@
 				{
 					"ObjectHeader": {
 						"Tags": [],
-						"DetailImage": "/ImageHandlingApp/Rules/Product/GetDetailImage.js",
+						"DetailImage": "/ImageHandlingApp/Services/Sample.service/{@odata.readLink}/Picture",
 						"HeadlineText": "{Name}",
 						"Subhead": "{CategoryName}",
 						"BodyText": "",
@@ -26,75 +28,93 @@
 					"KeyAndValues": [
 						{
 							"KeyName": "Category",
-							"Value": "{Category}"
+							"Value": "{Category}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "CategoryName",
-							"Value": "{CategoryName}"
+							"Value": "{CategoryName}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "CurrencyCode",
-							"Value": "{CurrencyCode}"
+							"Value": "{CurrencyCode}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "DimensionDepth",
-							"Value": "{DimensionDepth}"
+							"Value": "{DimensionDepth}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "DimensionHeight",
-							"Value": "{DimensionHeight}"
+							"Value": "{DimensionHeight}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "DimensionUnit",
-							"Value": "{DimensionUnit}"
+							"Value": "{DimensionUnit}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "DimensionWidth",
-							"Value": "{DimensionWidth}"
+							"Value": "{DimensionWidth}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "LongDescription",
-							"Value": "{LongDescription}"
+							"Value": "{LongDescription}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Name",
-							"Value": "{Name}"
+							"Value": "{Name}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "PictureUrl",
-							"Value": "{PictureUrl}"
+							"Value": "{PictureUrl}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Price",
-							"Value": "{Price}"
+							"Value": "{Price}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "ProductId",
-							"Value": "{ProductId}"
+							"Value": "{ProductID}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "QuantityUnit",
-							"Value": "{QuantityUnit}"
+							"Value": "{QuantityUnit}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "ShortDescription",
-							"Value": "{ShortDescription}"
+							"Value": "{ShortDescription}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "SupplierId",
-							"Value": "{SupplierId}"
+							"Value": "{SupplierID}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "UpdatedTimestamp",
-							"Value": "{UpdatedTimestamp}"
+							"Value": "{UpdatedTimestamp}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "Weight",
-							"Value": "{Weight}"
+							"Value": "{Weight}",
+							"_Type": "KeyValue.Type.Item"
 						},
 						{
 							"KeyName": "WeightUnit",
-							"Value": "{WeightUnit}"
+							"Value": "{WeightUnit}",
+							"_Type": "KeyValue.Type.Item"
 						}
 					],
 					"Layout": {
@@ -110,6 +130,5 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Products_Detail",
-	"PrefersLargeCaption": true
+	"_Name": "Products_Detail_Improved"
 }

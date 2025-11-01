@@ -14,7 +14,7 @@ export default function GeneratePDF(context) {
 	
 	let pageProxy = context.getPageProxy();
 	let salesOrderHeader = pageProxy.binding;
-	let customer = salesOrderHeader.CustomerDetails;
+	let customer = salesOrderHeader.Customer;
 	// Get Sales Order Items
 	let sectionedTable = pageProxy.getControl("SectionedTable0");
 	let itemsTable = sectionedTable.getSection("SalesOrderItemsTable");
@@ -40,7 +40,7 @@ export default function GeneratePDF(context) {
 	for (var i = 0; i < salesOrderItems.length; i++) {
 		var salesOrderItem = salesOrderItems.getItem(i);
 		var row = [
-			{ text: salesOrderItem.ProductDetails.Name, bold: true },
+			{ text: salesOrderItem.Product.Name, bold: true },
 			`${salesOrderItem.Quantity}${salesOrderItem.QuantityUnit}`,
 			{ text: context.formatCurrency(salesOrderItem.NetAmount, salesOrderItem.CurrencyCode), alignment: 'right' }
 		];
@@ -62,7 +62,7 @@ export default function GeneratePDF(context) {
 				{ text: 'Invoice\n', fontSize: '25', alignment: 'center' },
 				{
 					columns: [
-						{ text: `\nInvoice ID: ${salesOrderHeader.SalesOrderId}` },
+						{ text: `\nInvoice ID: ${salesOrderHeader.SalesOrderID}` },
 						{ text: `\nDate: ${context.formatDate(salesOrderHeader.CreatedAt)}`, alignment: 'right' }
 					]
 				},

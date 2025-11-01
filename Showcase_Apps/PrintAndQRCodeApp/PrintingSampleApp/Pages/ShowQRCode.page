@@ -1,13 +1,18 @@
 {
-	"Caption": "Generate QR Code",
 	"ActionBar": {
 		"Items": [
 			{
-				"Position": "Left",
-				"Caption": "Close",
-				"OnPress": "/PrintingSampleApp/Actions/ClosePage.action"
+					"Position": "Right",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Visible": true,
+				"OnPress": "/PrintingSampleApp/Actions/Application/UserMenuPopover.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
-		]
+		],
+		"Caption": "Generate QR Code",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	},
 	"Controls": [
 		{
@@ -21,9 +26,6 @@
 							"ImageCell": {
 								"Image": "/PrintingSampleApp/Rules/GetQRCodeImage.js",
 								"ImageIsCircular": false,
-								"Styles": {
-									"Image": "/PrintingSampleApp/Rules/GetQRCodeImage.js"
-								},
 								"Title": "QR Code",
 								"Visible": true
 							}
@@ -80,6 +82,5 @@
 		}
 	],
 	"_Name": "ShowQRCode",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+	"_Type": "Page"
 }

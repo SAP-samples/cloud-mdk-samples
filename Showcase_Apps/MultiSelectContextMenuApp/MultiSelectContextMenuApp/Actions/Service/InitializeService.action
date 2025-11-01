@@ -1,6 +1,6 @@
 {
 	"_Type": "Action.Type.ODataService.Initialize",
-	"Service": "/MultiSelectContextMenuApp/Services/SampleService.service",
+	"Service": "/MultiSelectContextMenuApp/Services/Sample.service",
 	"OnSuccess": "/MultiSelectContextMenuApp/Actions/Service/InitializeServiceSuccessMessage.action",
 	"OnFailure": "/MultiSelectContextMenuApp/Actions/Service/InitializeServiceFailureMessage.action",
 	"ShowActivityIndicator": true,

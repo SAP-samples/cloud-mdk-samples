@@ -1,15 +1,22 @@
 {
-	"Caption": "Products",
 	"ActionBar": {
-		"Items": []
+		"Items": [],
+		"Caption": "Products",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
 	},
 	"Controls": [
 		{
 			"Sections": [
 				{
 					"ImageCell": {
-						"Image": "/ImageHandlingApp/Rules/Product/GetImageCellImage.js",
-						"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_Detail.action",
+						"Image": "/ImageHandlingApp/Services/Sample.service/{@odata.readLink}/Picture",
+						"OnPress": {
+							"Name": "/ImageHandlingApp/Actions/Generic/GenericNavigation.action",
+							"Properties": {
+								"PageToOpen": "/ImageHandlingApp/Pages/Products/Products_Detail.page"
+							}
+						},
 						"Title": "{Name}"
 					},
 					"Layout": {
@@ -17,7 +24,7 @@
 					},
 					"Target": {
 						"EntitySet": "Products",
-						"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
+						"Service": "/ImageHandlingApp/Services/Sample.service",
 						"QueryOptions": "$orderby=Name"
 					},
 					"_Type": "Section.Type.ImageCollection"
@@ -28,6 +35,5 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Products_ImgColl",
-	"PrefersLargeCaption": true
+	"_Name": "Products_ImgColl_Improved"
 }

@@ -30,7 +30,7 @@ export default function AppUpdateFailure(clientAPI) {
             break;
     }
     return clientAPI.getPageProxy().executeAction({
-        "Name": "/NativeScriptViewExtensionApp/Actions/AppUpdateFailureMessage.action",
+        "Name": "/NativeScriptViewExtensionApp/Actions/Application/AppUpdateFailureMessage.action",
         "Properties": {
             "Duration": 0,
             "Message": message

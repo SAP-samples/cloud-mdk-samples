@@ -1,0 +1,94 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ContactCell",
+					"_Name": "SectionContactCellTable1",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ContactCells": [
+						{
+							"ContactCell": {
+								"_Name": "ContactCellItem0",
+								"Headline": "Contact Support",
+								"ActivityItems": [
+									{
+										"ActivityType": "Phone",
+										"ActivityValue": "/ImageHandlingApp/Globals/Application/SupportPhone.global"
+									},
+									{
+										"ActivityType": "Email",
+										"ActivityValue": "/ImageHandlingApp/Globals/Application/SupportEmail.global"
+									},
+									{
+										"ActivityType": "Message",
+										"ActivityValue": "/ImageHandlingApp/Globals/Application/SupportPhone.global"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": false,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.SimplePropertyCollection",
+					"_Name": "SectionSimplePropertyCollection0",
+					"Visible": "$(PLT,true,true,false)",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"SimplePropertyCells": [
+						{
+							"SimplePropertyCell": {
+								"_Name": "SectionSimplePropertyCell0",
+								"KeyName": "Activity Log",
+								"AccessoryType": "DisclosureIndicator",
+								"Visible": "$(PLT,true,true,false)",
+								"OnPress": "/ImageHandlingApp/Actions/Application/NavToActivityLog.action",
+								"_Type": "SimplePropertyCollection.Type.Cell"
+							}
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1,
+						"MinimumInteritemSpacing": 66
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Settings",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Done",
+				"SystemItem": "Done",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/ImageHandlingApp/Actions/Generic/CloseModalPage_Complete.action",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"_Name": "ActionBar1",
+		"Caption": "Settings",
+		"PrefersLargeCaption": false,
+		"_Type": "Control.Type.ActionBar"
+	}
+}

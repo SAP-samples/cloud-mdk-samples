@@ -1,5 +1,5 @@
 {
-	"Service": "/PrintingSampleApp/Services/SampleService.service",
+	"Service": "/PrintingSampleApp/Services/Sample.service",
 	"_Type": "Action.Type.ODataService.Open",
 	"OnSuccess": "/PrintingSampleApp/Actions/Service/CreateOpenServiceSuccessMessage.action",
 	"OnFailure": "/PrintingSampleApp/Actions/Service/CreateOpenServiceFailureMessage.action",

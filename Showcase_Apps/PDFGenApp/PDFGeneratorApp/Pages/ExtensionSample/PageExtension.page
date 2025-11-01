@@ -1,6 +1,9 @@
 {
-	"Caption": "Sales Order Invoice",
-	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Caption": "Sales Order Invoice",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	},
 	"Controls": [
 		{
 			"Module": "MDKExtension",

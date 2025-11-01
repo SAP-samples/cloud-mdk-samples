@@ -1,5 +1,5 @@
 {
-	"Service": "/ImageHandlingApp/Services/SampleServiceV2.service",
+	"Service": "/ImageHandlingApp/Services/Sample.service",
 	"_Type": "Action.Type.OfflineOData.Upload",
 	"ActionResult": {
 		"_Name": "sync"

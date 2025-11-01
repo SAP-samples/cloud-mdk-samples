@@ -1,0 +1,28 @@
+{
+    "_Type": "Action.Type.ODataService.UploadStream",
+    "Target": {
+        "Service": "/ImageHandlingApp/Services/Sample.service",
+        "EntitySet": "Products",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+       	"Picture": "#Control:ProductImage/#Value"
+    },
+    "ShowActivityIndicator": true,
+    "ActionResult": {
+        "_Name": "uploadstream"
+    },
+	"OnFailure": {
+		"Name": "/ImageHandlingApp/Actions/Generic/ToastMessage.action",
+		"Properties": {
+			"Message": "Product Creation Failed {#ActionResults:uploadstream/error}"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/ImageHandlingApp/Actions/Generic/ToastMessage.action",
+		"Properties": {
+			"Message": "Produce Created",
+			"OnSuccess": "/ImageHandlingApp/Actions/Generic/CloseModalPage_Complete.action"
+		}
+	}
+}
