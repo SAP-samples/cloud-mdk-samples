@@ -5,12 +5,13 @@
 			"Sections": [
 				{
 					"Header": {
-						"UseTopPadding": false
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"ObjectCell": {
 						"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/OpenProductImage.action",
 						"OnAccessoryButtonPress": "/ImageHandlingApp/Actions/ProductsImproved/OpenProductImage.action",
-						"ProgressIndicator": "open",
+						"ProgressIndicator": "Open",
 						"Title": "{Name}",
 						"Footnote": "{SupplierDetails/SupplierName}",
 						"PreserveIconStackSpacing": false,

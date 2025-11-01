@@ -5,7 +5,7 @@ This is a showcase application that demonstrate how to:
 1. Use the Selection feature of the Object Table
 2. Use the Context Menu feature of the Object Cell in Object Table
 
-*Last Updated: 16-Nov-2023*
+*Last Updated: 15-Aug-2024*
 
 ***
 
@@ -25,7 +25,7 @@ This is a showcase application that demonstrate how to:
 
 ### *MDK Client Version*
 
-* MDK 23.8 or higher
+* MDK 24.7 or higher
 
 ### *Data Source*
 

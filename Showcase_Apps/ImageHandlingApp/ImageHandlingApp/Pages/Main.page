@@ -7,7 +7,8 @@
 			"Sections": [
 				{
 					"Header": {
-						"Caption": "Direct binding of OData Media (MDK 6.1 or newer)"
+						"Caption": "Direct binding of OData Media (MDK 6.1 or newer)",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Buttons": [
 						{
@@ -15,21 +16,24 @@
 							"Alignment": "Center",
 							"Title": "Products",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						},
 						{
 							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_ImgColl.action",
 							"Alignment": "Center",
 							"Title": "Products Image Collection",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						},
 						{
 							"OnPress": "/ImageHandlingApp/Actions/ProductsImproved/NavToProducts_List_OpenDoc.action",
 							"Alignment": "Center",
 							"Title": "Products Image via Open Doc",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						}
 					],
 					"_Name": "SectionButtonTable1",
@@ -37,7 +41,8 @@
 				},
 				{
 					"Header": {
-						"Caption": "Download and write OData Media to local filesystem (Pre MDK 6.1)"
+						"Caption": "Download and write OData Media to local filesystem (Pre MDK 6.1)",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Buttons": [
 						{
@@ -45,21 +50,24 @@
 							"Alignment": "Center",
 							"Title": "Products",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						},
 						{
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_ImgColl.action",
 							"Alignment": "Center",
 							"Title": "Products Image Collection",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						},
 						{
 							"OnPress": "/ImageHandlingApp/Actions/Products/NavToProducts_List_OpenDoc.action",
 							"Alignment": "Center",
 							"Title": "Products Image via Open Doc",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						}
 					],
 					"_Name": "SectionButtonTable0",
@@ -67,7 +75,8 @@
 				},
 				{
 					"Header": {
-						"Caption": "Uploading Media"
+						"Caption": "Uploading Media",
+						"_Type": "SectionCommon.Type.Header"
 					},
 					"Buttons": [
 						{
@@ -75,7 +84,8 @@
 							"Alignment": "Center",
 							"Title": "Create Product with Image Attachment",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"_Type": "ButtonTable.Type.Button"
 						}
 					],
 					"_Name": "SectionButtonTable2",
@@ -86,18 +96,20 @@
 	],
 	"_Name": "Main",
 	"_Type": "Page",
-	"ToolBar": {
+	"FioriToolbar": {
+		"_Name": "FioriToolbar",
+		"_Type": "Control.Type.FioriToolbar",
 		"Items": [
 			{
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "LogoutToolbarItem",
-				"_Type": "Control.Type.ToolbarItem",
-				"Caption": "Logout",
+				"Title": "Logout",
 				"OnPress": "/ImageHandlingApp/Actions/Logout.action"
 			},
 			{
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "UploadToolbarItem",
-				"_Type": "Control.Type.ToolbarItem",
-				"Caption": "Sync",
+				"Title": "Sync",
 				"OnPress": "/ImageHandlingApp/Actions/Service/SyncStartedMessage.action"
 			}
 		]
