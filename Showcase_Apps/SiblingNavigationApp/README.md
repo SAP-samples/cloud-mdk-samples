@@ -29,8 +29,8 @@ For more details about Sibling Navigation check out the [SAP Fiori Design Guidel
 
 ## Key Highlights
 
-* Navigation between MDK Pages with custom implementation of [Action Binding](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/development/action-binding-and-result.html#action-binding).
-* Access Data of a different UI Control's Target Binding using [Target Path](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/development/property-binding/target-path.html)
+* Navigation between MDK Pages with custom implementation of [Action Binding](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/development/action-binding-and-result.html#action-binding) (defined in [SiblingNavigationApp/Rules/SalesOrderHeaders_List/OnPressObjectCell.js](SiblingNavigationApp/Rules/SalesOrderHeaders_List/OnPressObjectCell.js), line 8)
+* Access Data of a different UI Control's [Target Binding](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/features/backend-connectivity/mdk/odata-crud.html#target-binding) using [Target Path](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/development/property-binding/target-path.html) (defined in [SiblingNavigationApp/Rules/SalesOrderHeaders_Detail/OnPressPreviousNavigationButton.js](SiblingNavigationApp/Rules/SalesOrderHeaders_Detail/OnPressPreviousNavigationButton.js), line 9)
 
 ***
 
