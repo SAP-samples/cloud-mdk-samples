@@ -1,6 +1,10 @@
 {
 	"Controls": [
 		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
 			"_Type": "Control.Type.SectionedTable",
 			"_Name": "SectionedTable0",
 			"Sections": [
@@ -9,16 +13,27 @@
 						{
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "TitleInput",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"Value": "",
 							"PlaceHolder": "PlaceHolder",
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
 							"HelperText": "HelperText",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader0",
+						"AccessoryType": "None",
 						"UseTopPadding": false,
 						"Caption": "Title"
 					},
@@ -32,21 +47,29 @@
 				{
 					"Controls": [
 						{
-							"validationProperties": {
-								"ValidationViewIsHidden": true
-							},
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "SimplePropertyInput",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"Caption": "Input",
 							"PlaceHolder": "PlaceHolder",
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
 							"HelperText": "HelperText",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader1",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "Simple Property"
 					},
@@ -62,15 +85,26 @@
 						{
 							"_Type": "Control.Type.FormCell.Note",
 							"_Name": "NoteInput",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"PlaceHolder": "PlaceHolder",
 							"HelperText": "HelperText",
-							"Enabled": true
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
+							"Enabled": true,
+							"IsEditable": true
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader2",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "Note"
 					},
@@ -87,8 +121,8 @@
 							"Value": [],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "ListPicker",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": true,
 							"Caption": "Choose Single",
@@ -98,10 +132,12 @@
 							},
 							"PickerPrompt": "Please select one single item",
 							"HelperText": "HelperText",
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
 							"IsSelectedSectionEnabled": false,
 							"IsPickerDismissedOnSelection": true,
 							"IsSearchCancelledAfterSelection": false,
 							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
 							"PickerItems": [
 								"One",
 								"Two",
@@ -109,8 +145,17 @@
 							]
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader3",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "List Picker"
 					},
@@ -126,10 +171,12 @@
 						{
 							"_Type": "Control.Type.FormCell.SegmentedControl",
 							"_Name": "Segmented",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"Caption": "Caption",
 							"HelperText": "HelperText",
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
+							"IsEditable": true,
 							"ApportionsSegmentWidthsByContent": false,
 							"Segments": [
 								"Low",
@@ -138,8 +185,17 @@
 							]
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader4",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "Segmented"
 					},
@@ -156,15 +212,26 @@
 							"Value": "Enter Date",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "DatePicker",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"Caption": "Caption",
 							"HelperText": "HelperText",
-							"Mode": "Date"
+							"IsEditable": true,
+							"Mode": "Date",
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js"
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader5",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "Date Picker"
 					},
@@ -180,16 +247,27 @@
 						{
 							"_Type": "Control.Type.FormCell.DurationPicker",
 							"_Name": "DurationPicker",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"Caption": "Duration",
 							"HelperText": "HelperText",
 							"MinuteInterval": 1,
-							"Unit": "H"
+							"IsEditable": true,
+							"Unit": "H",
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js"
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader6",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "Duration Picker"
 					},
@@ -206,6 +284,8 @@
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "Attachment",
 							"IsVisible": true,
+							"Separator": true,
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
 							"AttachmentActionType": [
 								"SelectFile",
 								"AddPhoto",
@@ -213,8 +293,17 @@
 							]
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader7",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "Attachment"
 					},
@@ -231,17 +320,28 @@
 							"_Type": "Control.Type.FormCell.InlineSignatureCapture",
 							"_Name": "InlineSignatureCapture",
 							"IsVisible": true,
+							"Separator": true,
 							"Caption": "Add Inline Signature",
 							"ShowTimestampInImage": false,
 							"ShowXMark": true,
 							"ShowUnderline": true,
 							"WatermarkText": "",
 							"WatermarkTextMaxLines": 5,
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
 							"HelperText": "HelperText"
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader8",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "Inline Signature Capture"
 					},
@@ -258,17 +358,28 @@
 							"_Type": "Control.Type.FormCell.SignatureCapture",
 							"_Name": "SignatureCapture",
 							"IsVisible": true,
+							"Separator": true,
 							"Caption": "Add Signature",
 							"ShowTimestampInImage": false,
 							"ShowXMark": true,
 							"ShowUnderline": true,
 							"WatermarkText": "",
 							"WatermarkTextMaxLines": 5,
+							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
 							"HelperText": "HelperText"
 						}
 					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader9",
+						"AccessoryType": "None",
 						"UseTopPadding": true,
 						"Caption": "Signature Capture"
 					},
@@ -277,18 +388,17 @@
 						"FooterVisible": false
 					},
 					"_Type": "Section.Type.FormCell",
-					"_Name": "SectionFormCell0"
+					"_Name": "SectionFormCell10"
 				}
 			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Main",
-	"Caption": "Main",
-	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
 				"Caption": "Validate",
 				"Position": "Right",
@@ -297,27 +407,36 @@
 				"OnPress": "/InlineValidationViewApp/Rules/ValidateFormCellControls.js"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Main",
+		"PrefersLargeCaption": false
 	},
-	"ToolBar": {
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar",
 		"Items": [
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "LogoutToolbarItem",
-				"Caption": "Logout",
-				"Enabled": true,
 				"Visible": true,
-				"Clickable": true,
-				"OnPress": "/InlineValidationViewApp/Actions/LogoutMessage.action"
+				"Title": "Logout",
+				"OnPress": "/InlineValidationViewApp/Actions/LogoutMessage.action",
+				"Enabled": true,
+				"ButtonType": "Text",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
 			},
 			{
-				"_Type": "Control.Type.ToolbarItem",
+				"_Type": "FioriToolbarItem.Type.Button",
 				"_Name": "UpdateToolbarItem",
-				"Caption": "Update",
-				"Enabled": true,
 				"Visible": "$(PLT,true,true,false)",
-				"Clickable": true,
-				"OnPress": "/InlineValidationViewApp/Actions/AppUpdateProgressBanner.action"
+				"Title": "Update",
+				"OnPress": "/InlineValidationViewApp/Actions/AppUpdateProgressBanner.action",
+				"Enabled": true,
+				"ButtonType": "Text",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
 			}
 		]
 	}
