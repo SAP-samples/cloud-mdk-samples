@@ -11,6 +11,7 @@
 				{
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Title",
 							"_Name": "TitleInput",
 							"IsVisible": true,
@@ -49,8 +50,12 @@
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "SimplePropertyInput",
+							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
+							"Styles": {
+								"RequiredIndicator": "true"
+							},
 							"Caption": "Input",
 							"PlaceHolder": "PlaceHolder",
 							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
@@ -85,8 +90,12 @@
 						{
 							"_Type": "Control.Type.FormCell.Note",
 							"_Name": "NoteInput",
+							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
+							"Styles": {
+								"RequiredIndicator": "true"
+							},
 							"PlaceHolder": "PlaceHolder",
 							"HelperText": "HelperText",
 							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
@@ -121,6 +130,7 @@
 							"Value": [],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "ListPicker",
+							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -169,6 +179,7 @@
 				{
 					"Controls": [
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.SegmentedControl",
 							"_Name": "Segmented",
 							"IsVisible": true,
@@ -212,6 +223,7 @@
 							"Value": "Enter Date",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "DatePicker",
+							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Caption",
@@ -247,6 +259,7 @@
 						{
 							"_Type": "Control.Type.FormCell.DurationPicker",
 							"_Name": "DurationPicker",
+							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Duration",
@@ -283,9 +296,13 @@
 						{
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "Attachment",
+							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
 							"OnValueChange": "/InlineValidationViewApp/Rules/ResetValidationOnValueChange.js",
+							"IsEditable": true,
+							"MaxAttachments": 0,
+							"MaxFileSize": 0,
 							"AttachmentActionType": [
 								"SelectFile",
 								"AddPhoto",
@@ -319,6 +336,7 @@
 						{
 							"_Type": "Control.Type.FormCell.InlineSignatureCapture",
 							"_Name": "InlineSignatureCapture",
+							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Add Inline Signature",
@@ -357,6 +375,7 @@
 						{
 							"_Type": "Control.Type.FormCell.SignatureCapture",
 							"_Name": "SignatureCapture",
+							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Add Signature",
@@ -406,15 +425,15 @@
 				"Visible": true,
 				"OnPress": "/InlineValidationViewApp/Rules/ValidateFormCellControls.js"
 			},
-					{
+			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem1",
 				"Caption": "User Menu",
 				"Icon": "sap-icon://customer",
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/InlineValidationViewApp/Actions/Application/UserMenuPopover.action",
-				"_Type": "Control.Type.ActionBarItem"
+				"OnPress": "/InlineValidationViewApp/Actions/Application/UserMenuPopover.action"
 			}
 		],
 		"_Name": "ActionBar1",

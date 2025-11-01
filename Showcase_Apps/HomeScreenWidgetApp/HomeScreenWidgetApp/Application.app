@@ -9,6 +9,6 @@
 	"Styles": "/HomeScreenWidgetApp/Styles/Styles.less",
 	"Version": "/HomeScreenWidgetApp/Globals/Application/AppDefinition_Version.global",
 	"Localization": "/HomeScreenWidgetApp/i18n/i18n.properties",
-	"_SchemaVersion": "24.11",
+	"_SchemaVersion": "25.9",
 	"_Name": "HomeScreenWidgetApp"
 }
