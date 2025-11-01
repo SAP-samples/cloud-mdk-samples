@@ -13,6 +13,7 @@ All of the applications in these folders are full working applications.  Please 
 * PDF Generation
 * Persistent Filters
 * Printing and QR Codes
+* Sibling Navigation
 * Extension Samples
     * Calender View
     * Video Player

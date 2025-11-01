@@ -6,12 +6,12 @@
 				"_Type": "Control.Type.FilterFeedbackBar"
 			},
 			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable0",
+			"_Name": "SectionedTable",
 			"Sections": [
 				{
 					"Header": {
 						"_Type": "SectionCommon.Type.Header",
-						"_Name": "SectionHeader0",
+						"_Name": "SectionCommonTypeHeader0",
 						"AccessoryType": "None",
 						"UseTopPadding": false
 					},
@@ -22,17 +22,23 @@
 						"FooterSeparator": true,
 						"ControlSeparator": true
 					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
-						"EntitySet": "Products",
-						"QueryOptions": "$orderby=Name",
-						"Service": "/MDKDemoApp/Services/Sample.service"
+						"EntitySet": "SalesOrderHeaders",
+						"Service": "/SiblingNavigationApp/Services/com_sap_edm_sampleservice_v4.service",
+						"QueryOptions": "$expand=Customer"
 					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
 					"EmptySection": {
-						"FooterVisible": false,
-						"Caption": "$(L,'no_products')"
+						"Caption": "No record found!",
+						"FooterVisible": false
 					},
 					"ObjectCell": {
 						"ContextMenu": {
@@ -42,74 +48,63 @@
 							"TrailingItems": [],
 							"_Type": "ObjectCell.Type.ContextMenu"
 						},
-						"Title": "{Name}",
-						"Subhead": "{CategoryName}",
-						"StatusText": "$(C,{Price},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})",
-						"SubstatusText": "/MDKDemoApp/Rules/Product/GetPromoDiscount.js",
 						"PreserveIconStackSpacing": false,
-						"AccessoryType": "None",
+								"Title": "{Customer/FirstName} {Customer/LastName}",
+				"Subhead": "{SalesOrderID}",
+				"Footnote": "$(DT, {CreatedAt})",
+				"StatusText": "{LifeCycleStatusName}",
+				"SubstatusText": "$(C, {NetAmount}, {CurrencyCode})",
+						"AccessoryType": "DisclosureIndicator",
 						"Tags": [],
 						"AvatarStack": {
-							"Avatars": [
-								{
-									"Image": "/MDKDemoApp/Services/Sample.service/{@odata.readLink}/Picture"
-								}
-							],
+							"Avatars": [],
 							"ImageIsCircular": false,
 							"ImageHasBorder": false
 						},
 						"AvatarGrid": {
 							"ImageIsCircular": true
 						},
-						"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail.action",
-						"Styles": {
-							"SubstatusText": "Discount"
-						},
+						"OnPress": "/SiblingNavigationApp/Rules/SalesOrderHeaders_List/OnPressObjectCell.js",
 						"_Type": "ObjectTable.Type.ObjectCell",
 						"Selected": false
 					},
 					"Search": {
 						"Enabled": true,
-						"BarcodeScanner": true
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
 					},
-					"Grouping": {
-						"GroupingProperties": [],
-						"Header": {
-							"Items": []
-						}
-					},
-						"Search": {
-						"Enabled": true,
-						"BarcodeScanner": true
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"PageSize": 50
 					},
 					"HighlightSelectedItem": false
 				}
 			],
 			"LoadingIndicator": {
 				"Enabled": true,
-				"Text": ""
+				"Text": "Loading, please wait..."
 			}
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Product_List",
-	"OnReturning": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
+	"_Name": "SalesOrderHeaders_List",
 	"ActionBar": {
 		"Items": [
 			{
 				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
-				"Caption": "$(L,'product_filter')",
-				"Icon": "sap-icon://filter",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/MDKDemoApp/Actions/Product/ProductFilter.action"
+				"OnPress": "/SiblingNavigationApp/Actions/Application/UserMenuPopover.action"
 			}
 		],
-		"_Name": "ActionBar1",
+		"_Name": "ActionBar0",
 		"_Type": "Control.Type.ActionBar",
-		"Caption": "/MDKDemoApp/Rules/Product/ProductListCaption.js",
-		"PrefersLargeCaption": "$(PLT,true,false,false)"
+		"Caption": "$(L,SalesOrderHeaders)"
 	}
 }

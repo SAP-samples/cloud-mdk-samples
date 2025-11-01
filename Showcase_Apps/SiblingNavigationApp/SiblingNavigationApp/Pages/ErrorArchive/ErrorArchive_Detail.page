@@ -1,0 +1,66 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{Message}",
+							"_Name": "KeyValue0",
+							"KeyName": "Error",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"Value": "{RequestBody}",
+							"_Name": "KeyValue1",
+							"KeyName": "Request Body",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"Value": "{RequestURL}",
+							"_Name": "KeyValue2",
+							"KeyName": "Request URL",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"Value": "{HTTPStatusCode}",
+							"_Name": "KeyValue3",
+							"KeyName": "HTTP Status Code",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"Value": "{RequestMethod}",
+							"_Name": "KeyValue4",
+							"KeyName": "Request Method",
+							"Visible": true,
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "ErrorArchive_Detail",
+	"ActionBar": {
+		"Caption": "Details",
+		"PrefersLargeCaption": true,
+		"_Type": "Control.Type.ActionBar"
+	}
+}
