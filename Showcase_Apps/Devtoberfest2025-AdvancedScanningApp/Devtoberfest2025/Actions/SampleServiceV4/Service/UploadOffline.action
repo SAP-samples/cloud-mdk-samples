@@ -1,0 +1,9 @@
+{
+    "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/SampleServiceV4/Service/DownloadStartedMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/SampleServiceV4/Service/SyncFailureMessage.action"
+}

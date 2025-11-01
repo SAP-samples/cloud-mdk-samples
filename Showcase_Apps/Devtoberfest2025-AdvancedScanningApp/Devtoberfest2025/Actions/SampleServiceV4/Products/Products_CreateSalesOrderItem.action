@@ -1,0 +1,31 @@
+{
+    "ParentLink": {
+        "Property": "SalesOrderItems",
+        "Target": {
+            "EntitySet": "Products",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/Devtoberfest/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/Devtoberfest/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "CurrencyCode": "#Page:Products_CreateSalesOrderItem/#Control:CurrencyCode/#Value",
+        "DeliveryDate": "#Page:Products_CreateSalesOrderItem/#Control:DeliveryDate/#Value",
+        "GrossAmount": "#Page:Products_CreateSalesOrderItem/#Control:GrossAmount/#Value",
+        "ItemNumber": "#Page:Products_CreateSalesOrderItem/#Control:ItemNumber/#Value",
+        "NetAmount": "#Page:Products_CreateSalesOrderItem/#Control:NetAmount/#Value",
+        "ProductID": "#Page:Products_CreateSalesOrderItem/#Control:ProductID/#SelectedValue",
+        "Quantity": "#Page:Products_CreateSalesOrderItem/#Control:Quantity/#Value",
+        "QuantityUnit": "#Page:Products_CreateSalesOrderItem/#Control:QuantityUnit/#Value",
+        "SalesOrderID": "#Page:Products_CreateSalesOrderItem/#Control:SalesOrderID/#SelectedValue",
+        "TaxAmount": "#Page:Products_CreateSalesOrderItem/#Control:TaxAmount/#Value"
+    },
+    "Target": {
+        "EntitySet": "SalesOrderItems",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

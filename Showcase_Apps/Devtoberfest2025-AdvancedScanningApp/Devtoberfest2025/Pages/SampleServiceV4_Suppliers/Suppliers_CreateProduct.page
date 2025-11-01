@@ -1,0 +1,158 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/Devtoberfest/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/Devtoberfest/Actions/SampleServiceV4/Suppliers/Suppliers_CreateProduct.action",
+				"Position": "Right",
+				"SystemItem": "Save",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Create_Product)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "Category",
+							"_Name": "Category",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CategoryName",
+							"_Name": "CategoryName",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CurrencyCode",
+							"_Name": "CurrencyCode",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DimensionDepth",
+							"KeyboardType": "Number",
+							"_Name": "DimensionDepth",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DimensionHeight",
+							"KeyboardType": "Number",
+							"_Name": "DimensionHeight",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DimensionUnit",
+							"_Name": "DimensionUnit",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DimensionWidth",
+							"KeyboardType": "Number",
+							"_Name": "DimensionWidth",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "LongDescription",
+							"_Name": "LongDescription",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Name",
+							"_Name": "Name",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PictureUrl",
+							"_Name": "PictureUrl",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Price",
+							"KeyboardType": "Number",
+							"_Name": "Price",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ProductID",
+							"KeyboardType": "Number",
+							"_Name": "ProductID",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "QuantityUnit",
+							"_Name": "QuantityUnit",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ShortDescription",
+							"_Name": "ShortDescription",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "SupplierID",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsEditable": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{SupplierName}",
+								"ReturnValue": "{SupplierID}",
+								"Target": {
+									"EntitySet": "Suppliers",
+									"Service": "/Devtoberfest/Services/SampleServiceV4.service"
+								}
+							},
+							"_Name": "SupplierID",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"Value": "{SupplierID}"
+						},
+						{
+							"Caption": "Weight",
+							"KeyboardType": "Number",
+							"_Name": "Weight",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "WeightUnit",
+							"_Name": "WeightUnit",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"AttachmentTitle": "Picture",
+							"AttachmentAddTitle": "Browse",
+							"AttachmentActionType": [
+								"AddPhoto",
+								"TakePhoto",
+								"SelectFile"
+							],
+							"AllowedFileTypes": [
+								"jpg",
+								"png",
+								"gif"
+							],
+							"_Name": "Picture",
+							"_Type": "Control.Type.FormCell.Attachment"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Suppliers_CreateProduct"
+}

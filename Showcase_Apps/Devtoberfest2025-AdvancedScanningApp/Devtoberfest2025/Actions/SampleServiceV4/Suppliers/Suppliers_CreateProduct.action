@@ -1,0 +1,38 @@
+{
+    "ParentLink": {
+        "Property": "Products",
+        "Target": {
+            "EntitySet": "Suppliers",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/Devtoberfest/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/Devtoberfest/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "Category": "#Page:Suppliers_CreateProduct/#Control:Category/#Value",
+        "CategoryName": "#Page:Suppliers_CreateProduct/#Control:CategoryName/#Value",
+        "CurrencyCode": "#Page:Suppliers_CreateProduct/#Control:CurrencyCode/#Value",
+        "DimensionDepth": "#Page:Suppliers_CreateProduct/#Control:DimensionDepth/#Value",
+        "DimensionHeight": "#Page:Suppliers_CreateProduct/#Control:DimensionHeight/#Value",
+        "DimensionUnit": "#Page:Suppliers_CreateProduct/#Control:DimensionUnit/#Value",
+        "DimensionWidth": "#Page:Suppliers_CreateProduct/#Control:DimensionWidth/#Value",
+        "LongDescription": "#Page:Suppliers_CreateProduct/#Control:LongDescription/#Value",
+        "Name": "#Page:Suppliers_CreateProduct/#Control:Name/#Value",
+        "PictureUrl": "#Page:Suppliers_CreateProduct/#Control:PictureUrl/#Value",
+        "Price": "#Page:Suppliers_CreateProduct/#Control:Price/#Value",
+        "ProductID": "#Page:Suppliers_CreateProduct/#Control:ProductID/#Value",
+        "QuantityUnit": "#Page:Suppliers_CreateProduct/#Control:QuantityUnit/#Value",
+        "ShortDescription": "#Page:Suppliers_CreateProduct/#Control:ShortDescription/#Value",
+        "SupplierID": "#Page:Suppliers_CreateProduct/#Control:SupplierID/#SelectedValue",
+        "Weight": "#Page:Suppliers_CreateProduct/#Control:Weight/#Value",
+        "WeightUnit": "#Page:Suppliers_CreateProduct/#Control:WeightUnit/#Value"
+    },
+    "Target": {
+        "EntitySet": "Products",
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

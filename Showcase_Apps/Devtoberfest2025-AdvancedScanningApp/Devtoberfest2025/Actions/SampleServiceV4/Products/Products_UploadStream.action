@@ -1,0 +1,17 @@
+{
+    "_Type": "Action.Type.ODataService.UploadStream",
+    "Target": {
+        "Service": "/Devtoberfest/Services/SampleServiceV4.service",
+        "EntitySet": "Products",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "Picture": "#Control:Picture/#Value"
+    },
+    "ShowActivityIndicator": true,
+    "ActionResult": {
+        "_Name": "uploadstream"
+    },
+    "OnSuccess": "/Devtoberfest/Actions/UploadStreamSuccessMessage.action",
+    "OnFailure": "/Devtoberfest/Actions/UploadStreamFailureMessage.action"
+}

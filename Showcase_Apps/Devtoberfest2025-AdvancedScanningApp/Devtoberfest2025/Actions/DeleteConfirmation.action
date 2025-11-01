@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.Message",
+    "Message": "Delete current entity?",
+    "Title": "Confirmation",
+    "OKCaption": "OK",
+    "CancelCaption": "Cancel",
+    "ActionResult": {
+        "_Name": "DeleteConfirmation"
+    }
+}
