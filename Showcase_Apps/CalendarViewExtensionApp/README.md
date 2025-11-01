@@ -2,7 +2,7 @@
 
 This is a showcase application that demonstrates how to implement the Calendar View for Android and iOS as Extension Control.
 
-*Last Updated: 22-Aug-2022*
+*Last Updated: 06-Feb-2025*
 
 **Note! A [calendar UI control](https://help.sap.com/doc/3642933ef2e1478fb1578ef2acba4ae9/Latest/en-US/reference/schemadoc/Page/SectionedTable/Container/Calendar.schema.html) is now available as MDK standard control.**
 
@@ -19,11 +19,11 @@ This is a showcase application that demonstrates how to implement the Calendar V
 
 ### MDK Client Version
 
-* MDK 23.4 or higher
+* MDK 24.11 or higher
 
 ### Data Source
 
-* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v2)
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v4)
 
 ***
 
@@ -64,4 +64,4 @@ In the mobile application, select `Sync` to synchronize offline store and downlo
 
 ## Screenshots
 
-<img src="Screenshots/android.gif" width="35%"> <img src="Screenshots/iOS.gif" width="35%">
+<img src="Screenshots/calendar.gif" width="35%">

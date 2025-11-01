@@ -64,8 +64,6 @@
 	],
 	"_Type": "Page",
 	"_Name": "EditSalesOrderStatus",
-	"Caption": "Edit Status",
-	"PrefersLargeCaption": false,
 	"ActionBar": {
 		"Items": [
 			{
@@ -75,7 +73,8 @@
 				"Position": "Left",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/HomeScreenWidgetApp/Actions/ClosePage.action"
+				"OnPress": "/HomeScreenWidgetApp/Actions/ClosePage.action",
+				"_Type": "Control.Type.ActionBarItem"
 			},
 			{
 				"_Name": "ActionBarItem0",
@@ -84,9 +83,13 @@
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/HomeScreenWidgetApp/Rules/EditSalesOrderStatus/OnPressSave.js"
+				"OnPress": "/HomeScreenWidgetApp/Rules/EditSalesOrderStatus/OnPressSave.js",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "Edit Status",
+		"PrefersLargeCaption": false,
+		"_Type": "Control.Type.ActionBar"
 	}
 }

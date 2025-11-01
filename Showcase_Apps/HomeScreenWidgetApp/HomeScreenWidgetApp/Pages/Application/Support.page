@@ -58,7 +58,8 @@
 								"KeyName": "Activity Log",
 								"AccessoryType": "DisclosureIndicator",
 								"Visible": "$(PLT,true,true,false)",
-								"OnPress": "/HomeScreenWidgetApp/Actions/Application/NavToActivityLog.action"
+								"OnPress": "/HomeScreenWidgetApp/Actions/Application/NavToActivityLog.action",
+								"_Type": "SimplePropertyCollection.Type.Cell"
 							}
 						}
 					],
@@ -72,8 +73,6 @@
 	],
 	"_Type": "Page",
 	"_Name": "Settings",
-	"Caption": "Settings",
-	"PrefersLargeCaption": false,
 	"ActionBar": {
 		"Items": [
 			{
@@ -83,9 +82,13 @@
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/HomeScreenWidgetApp/Actions/CloseModalPage_Complete.action"
+				"OnPress": "/HomeScreenWidgetApp/Actions/CloseModalPage_Complete.action",
+				"_Type": "Control.Type.ActionBarItem"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"Caption": "Settings",
+		"PrefersLargeCaption": false,
+		"_Type": "Control.Type.ActionBar"
 	}
 }
