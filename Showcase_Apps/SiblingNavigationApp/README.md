@@ -36,7 +36,7 @@ For more details about Sibling Navigation check out the [SAP Fiori Design Guidel
 
 ## Setup Instructions
 
-No additional steps required. The content of [SiblingNavigationApp/](SiblingNavigationApp/) folder can be used as is to run the application.
+The application metadata is the [SiblingNavigationApp](SiblingNavigationApp) folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor. Make sure to enable the feature `Sample OData ESPM` (configured with OData Version 4) in your mobile services app.
 
 ## Screenshots
 
