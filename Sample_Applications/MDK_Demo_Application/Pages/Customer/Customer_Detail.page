@@ -35,7 +35,7 @@
 					"KeyAndValues": [
 						{
 							"KeyName": "Address",
-							"Value": "/MDKDemoApp/Rules/Customer/FormattedAddress.js",
+							"Value": "/MDKDemoApp/Rules/Customer/FormatAddress.js",
 							"Visible": true,
 							"OnPress": "/MDKDemoApp/Rules/Customer/OpenMap.js",
 							"LinkColor": "#6189C7"
