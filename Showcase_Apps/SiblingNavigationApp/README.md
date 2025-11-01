@@ -1,6 +1,8 @@
 # Sibling Navigation App
 TBD
 
+For more details about Sibling Navigation check out the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-ios/article/siblingnavigation/)
+
 *Last Updated: 09-Oct-2025*
 
 ### Author
