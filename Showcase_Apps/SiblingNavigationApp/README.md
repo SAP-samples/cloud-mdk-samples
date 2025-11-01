@@ -3,7 +3,7 @@ Sibling Navigation refers to navigating between elements that are on the same le
 
 For more details about Sibling Navigation check out the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-ios/article/siblingnavigation/)
 
-*Last Updated: 29-Oct-2025*
+*Last Updated: 30-Oct-2025*
 
 ### Author
 * Robin Kuck ([GitHub](https://github.com/robinkuck), [SAP Community](https://community.sap.com/t5/user/viewprofilepage/user-id/16438))
@@ -37,10 +37,6 @@ For more details about Sibling Navigation check out the [SAP Fiori Design Guidel
 
 The application metadata is the [SiblingNavigationApp](SiblingNavigationApp) folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor. Make sure to enable the feature `Sample OData ESPM` (configured with OData Version 4) in your mobile services app.
 
-## Screenshots
-
-### iOS
-TBD
-
-### Android
-TBD
+| Android | iOS |
+| --- | --- |
+| <img src="./Screenshots/android.gif" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/ios.gif" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
