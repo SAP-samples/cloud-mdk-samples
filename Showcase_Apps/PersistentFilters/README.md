@@ -8,7 +8,7 @@ The application shows how to:
 2. Save the filters to app settings
 3. Reapply the user filter values on opening the list page using the Sectioned Table filters property
 
-*Last Updated: 18-Apr-2025*
+*Last Updated: 15-Oct-2025*
 
 ***
 

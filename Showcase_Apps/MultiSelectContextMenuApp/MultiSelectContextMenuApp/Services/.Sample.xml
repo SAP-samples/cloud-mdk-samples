@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
     <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
         <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
@@ -16,52 +16,52 @@
                 <Key>
                     <PropertyRef Name="CustomerID"/>
                 </Key>
-                <Property Name="City" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="Country" Type="Edm.String" Nullable="true" MaxLength="3"/>
-                <Property Name="CustomerID" Type="Edm.Int64" Nullable="false" MaxLength="10">
+                <Property MaxLength="40" Name="City" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="3" Name="Country" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="CustomerID" Nullable="false" Type="Edm.Int64">
                     <Annotation Term="Org.OData.Core.V1.Computed"/>
                 </Property>
-                <Property Name="DateOfBirth" Type="Edm.Date" Nullable="false"/>
-                <Property Name="EmailAddress" Type="Edm.String" Nullable="true" MaxLength="255"/>
-                <Property Name="Gender" Type="ESPM.Gender" Nullable="true"/>
-                <Property Name="FirstName" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="HouseNumber" Type="Edm.String" Nullable="true" MaxLength="10"/>
-                <Property Name="LastName" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="PhoneNumber" Type="Edm.String" Nullable="true" MaxLength="30"/>
-                <Property Name="PostalCode" Type="Edm.String" Nullable="true" MaxLength="10"/>
-                <Property Name="Street" Type="Edm.String" Nullable="true" MaxLength="60"/>
-                <Property Name="Address" Type="ESPM.Address" Nullable="true"/>
-                <NavigationProperty Name="SalesOrders" Type="Collection(ESPM.SalesOrderHeader)" Partner="Customer">
+                <Property Name="DateOfBirth" Nullable="false" Type="Edm.Date"/>
+                <Property MaxLength="255" Name="EmailAddress" Nullable="true" Type="Edm.String"/>
+                <Property Name="Gender" Nullable="true" Type="ESPM.Gender"/>
+                <Property MaxLength="40" Name="FirstName" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="HouseNumber" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="40" Name="LastName" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="30" Name="PhoneNumber" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="PostalCode" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="60" Name="Street" Nullable="true" Type="Edm.String"/>
+                <Property Name="Address" Nullable="true" Type="ESPM.Address"/>
+                <NavigationProperty Name="SalesOrders" Partner="Customer" Type="Collection(ESPM.SalesOrderHeader)">
                     <OnDelete Action="None"/>
                 </NavigationProperty>
             </EntityType>
             <ComplexType Name="Address">
-                <Property Name="HouseNumber" Type="Edm.String" Nullable="true"/>
-                <Property Name="Street" Type="Edm.String" Nullable="true"/>
-                <Property Name="City" Type="Edm.String" Nullable="true"/>
-                <Property Name="Country" Type="Edm.String" Nullable="true"/>
-                <Property Name="PostalCode" Type="Edm.String" Nullable="true"/>
+                <Property Name="HouseNumber" Nullable="true" Type="Edm.String"/>
+                <Property Name="Street" Nullable="true" Type="Edm.String"/>
+                <Property Name="City" Nullable="true" Type="Edm.String"/>
+                <Property Name="Country" Nullable="true" Type="Edm.String"/>
+                <Property Name="PostalCode" Nullable="true" Type="Edm.String"/>
             </ComplexType>
             <EntityType Name="Supplier">
                 <Key>
                     <PropertyRef Name="SupplierID"/>
                 </Key>
-                <Property Name="City" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="Country" Type="Edm.String" Nullable="true" MaxLength="3"/>
-                <Property Name="EmailAddress" Type="Edm.String" Nullable="true" MaxLength="255"/>
-                <Property Name="HouseNumber" Type="Edm.String" Nullable="true" MaxLength="10"/>
-                <Property Name="PhoneNumber" Type="Edm.String" Nullable="true" MaxLength="30"/>
-                <Property Name="PostalCode" Type="Edm.String" Nullable="true" MaxLength="10"/>
-                <Property Name="Street" Type="Edm.String" Nullable="true" MaxLength="60"/>
-                <Property Name="SupplierID" Type="Edm.Int64" Nullable="false" MaxLength="10">
+                <Property MaxLength="40" Name="City" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="3" Name="Country" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="255" Name="EmailAddress" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="HouseNumber" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="30" Name="PhoneNumber" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="PostalCode" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="60" Name="Street" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="SupplierID" Nullable="false" Type="Edm.Int64">
                     <Annotation Term="Org.OData.Core.V1.Computed"/>
                 </Property>
-                <Property Name="SupplierName" Type="Edm.String" Nullable="true" MaxLength="80"/>
-                <Property Name="Address" Type="ESPM.Address" Nullable="true"/>
-                <NavigationProperty Name="Products" Type="Collection(ESPM.Product)" Partner="Supplier">
+                <Property MaxLength="80" Name="SupplierName" Nullable="true" Type="Edm.String"/>
+                <Property Name="Address" Nullable="true" Type="ESPM.Address"/>
+                <NavigationProperty Name="Products" Partner="Supplier" Type="Collection(ESPM.Product)">
                     <OnDelete Action="None"/>
                 </NavigationProperty>
-                <NavigationProperty Name="PurchaseOrders" Type="Collection(ESPM.PurchaseOrderHeader)" Partner="Supplier">
+                <NavigationProperty Name="PurchaseOrders" Partner="Supplier" Type="Collection(ESPM.PurchaseOrderHeader)">
                     <OnDelete Action="None"/>
                 </NavigationProperty>
             </EntityType>
@@ -69,36 +69,36 @@
                 <Key>
                     <PropertyRef Name="ProductID"/>
                 </Key>
-                <Property Name="Category" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="CategoryName" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="CurrencyCode" Type="Edm.String" Nullable="true" MaxLength="5"/>
-                <Property Name="DimensionDepth" Type="Edm.Decimal" Nullable="true" Precision="13" Scale="4"/>
-                <Property Name="DimensionHeight" Type="Edm.Decimal" Nullable="true" Precision="13" Scale="4"/>
-                <Property Name="DimensionUnit" Type="Edm.String" Nullable="true" MaxLength="3"/>
-                <Property Name="DimensionWidth" Type="Edm.Decimal" Nullable="true" Precision="13" Scale="4"/>
-                <Property Name="LongDescription" Type="Edm.String" Nullable="true" MaxLength="255"/>
-                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="80"/>
-                <Property Name="PictureUrl" Type="Edm.String" Nullable="true" MaxLength="255"/>
-                <Property Name="Price" Type="Edm.Decimal" Nullable="true" Precision="23" Scale="3"/>
-                <Property Name="ProductID" Type="Edm.Int64" Nullable="false" MaxLength="10">
+                <Property MaxLength="40" Name="Category" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="40" Name="CategoryName" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="5" Name="CurrencyCode" Nullable="true" Type="Edm.String"/>
+                <Property Name="DimensionDepth" Nullable="true" Precision="13" Scale="4" Type="Edm.Decimal"/>
+                <Property Name="DimensionHeight" Nullable="true" Precision="13" Scale="4" Type="Edm.Decimal"/>
+                <Property MaxLength="3" Name="DimensionUnit" Nullable="true" Type="Edm.String"/>
+                <Property Name="DimensionWidth" Nullable="true" Precision="13" Scale="4" Type="Edm.Decimal"/>
+                <Property MaxLength="255" Name="LongDescription" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="80" Name="Name" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="255" Name="PictureUrl" Nullable="true" Type="Edm.String"/>
+                <Property Name="Price" Nullable="true" Precision="23" Scale="3" Type="Edm.Decimal"/>
+                <Property MaxLength="10" Name="ProductID" Nullable="false" Type="Edm.Int64">
                     <Annotation Term="Org.OData.Core.V1.Computed"/>
                 </Property>
-                <Property Name="QuantityUnit" Type="Edm.String" Nullable="true" MaxLength="3"/>
-                <Property Name="ShortDescription" Type="Edm.String" Nullable="true" MaxLength="255"/>
-                <Property Name="SupplierID" Type="Edm.Int64" Nullable="false" MaxLength="10"/>
-                <Property Name="Weight" Type="Edm.Decimal" Nullable="true" Precision="13" Scale="3"/>
-                <Property Name="WeightUnit" Type="Edm.String" Nullable="true" MaxLength="3"/>
-                <Property Name="Picture" Type="Edm.Stream" Nullable="true"/>
-                <NavigationProperty Name="Supplier" Type="ESPM.Supplier" Nullable="false" Partner="Products">
+                <Property MaxLength="3" Name="QuantityUnit" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="255" Name="ShortDescription" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="SupplierID" Nullable="false" Type="Edm.Int64"/>
+                <Property Name="Weight" Nullable="true" Precision="13" Scale="3" Type="Edm.Decimal"/>
+                <Property MaxLength="3" Name="WeightUnit" Nullable="true" Type="Edm.String"/>
+                <Property Name="Picture" Nullable="true" Type="Edm.Stream"/>
+                <NavigationProperty Name="Supplier" Nullable="false" Partner="Products" Type="ESPM.Supplier">
                     <ReferentialConstraint Property="SupplierID" ReferencedProperty="SupplierID"/>
                 </NavigationProperty>
-                <NavigationProperty Name="Stock" Type="ESPM.Stock" Nullable="true" Partner="Product">
+                <NavigationProperty Name="Stock" Nullable="true" Partner="Product" Type="ESPM.Stock">
                     <OnDelete Action="Cascade"/>
                 </NavigationProperty>
-                <NavigationProperty Name="PurchaseOrderItems" Type="Collection(ESPM.PurchaseOrderItem)" Partner="Product">
+                <NavigationProperty Name="PurchaseOrderItems" Partner="Product" Type="Collection(ESPM.PurchaseOrderItem)">
                     <OnDelete Action="None"/>
                 </NavigationProperty>
-                <NavigationProperty Name="SalesOrderItems" Type="Collection(ESPM.SalesOrderItem)" Partner="Product">
+                <NavigationProperty Name="SalesOrderItems" Partner="Product" Type="Collection(ESPM.SalesOrderItem)">
                     <OnDelete Action="None"/>
                 </NavigationProperty>
             </EntityType>
@@ -107,42 +107,42 @@
                 <Key>
                     <PropertyRef Name="Category"/>
                 </Key>
-                <Property Name="Category" Type="Edm.String" Nullable="false" MaxLength="40"/>
-                <Property Name="CategoryName" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="MainCategory" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="MainCategoryName" Type="Edm.String" Nullable="true" MaxLength="40"/>
-                <Property Name="NumberOfProducts" Type="Edm.Int64" Nullable="true"/>
+                <Property MaxLength="40" Name="Category" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="40" Name="CategoryName" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="40" Name="MainCategory" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="40" Name="MainCategoryName" Nullable="true" Type="Edm.String"/>
+                <Property Name="NumberOfProducts" Nullable="true" Type="Edm.Int64"/>
             </EntityType>
             <EntityType Name="ProductText">
                 <!-- TODO: reconsider key, navigation properties?-->
                 <Key>
                     <PropertyRef Name="ID"/>
                 </Key>
-                <Property Name="ID" Type="Edm.Int64" Nullable="false">
+                <Property Name="ID" Nullable="false" Type="Edm.Int64">
                     <Annotation Term="Org.OData.Core.V1.Computed"/>
                 </Property>
-                <Property Name="Language" Type="Edm.String" Nullable="true" MaxLength="2"/>
-                <Property Name="LongDescription" Type="Edm.String" Nullable="true" MaxLength="255"/>
+                <Property MaxLength="2" Name="Language" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="255" Name="LongDescription" Nullable="true" Type="Edm.String"/>
                 <Property Name="Name" Type="Edm.String"/>
-                <Property Name="ProductID" Type="Edm.Int64" Nullable="true" MaxLength="10"/>
-                <Property Name="ShortDescription" Type="Edm.String" Nullable="true" MaxLength="255"/>
+                <Property MaxLength="10" Name="ProductID" Nullable="true" Type="Edm.Int64"/>
+                <Property MaxLength="255" Name="ShortDescription" Nullable="true" Type="Edm.String"/>
             </EntityType>
             <EntityType Name="PurchaseOrderHeader">
                 <Key>
                     <PropertyRef Name="PurchaseOrderID"/>
                 </Key>
-                <Property Name="CurrencyCode" Type="Edm.String" Nullable="true" MaxLength="5"/>
-                <Property Name="GrossAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <Property Name="NetAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <Property Name="PurchaseOrderID" Type="Edm.Int64" Nullable="false" MaxLength="10">
+                <Property MaxLength="5" Name="CurrencyCode" Nullable="true" Type="Edm.String"/>
+                <Property Name="GrossAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <Property Name="NetAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <Property MaxLength="10" Name="PurchaseOrderID" Nullable="false" Type="Edm.Int64">
                     <Annotation Term="Org.OData.Core.V1.Computed"/>
                 </Property>
-                <Property Name="SupplierID" Type="Edm.Int64" Nullable="false" MaxLength="10"/>
-                <Property Name="TaxAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <NavigationProperty Name="Supplier" Type="ESPM.Supplier" Nullable="false" Partner="PurchaseOrders">
+                <Property MaxLength="10" Name="SupplierID" Nullable="false" Type="Edm.Int64"/>
+                <Property Name="TaxAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <NavigationProperty Name="Supplier" Nullable="false" Partner="PurchaseOrders" Type="ESPM.Supplier">
                     <ReferentialConstraint Property="SupplierID" ReferencedProperty="SupplierID"/>
                 </NavigationProperty>
-                <NavigationProperty Name="Items" Type="Collection(ESPM.PurchaseOrderItem)" Partner="Header">
+                <NavigationProperty Name="Items" Partner="Header" Type="Collection(ESPM.PurchaseOrderItem)">
                     <OnDelete Action="Cascade"/>
                 </NavigationProperty>
             </EntityType>
@@ -151,19 +151,19 @@
                     <PropertyRef Name="ItemNumber"/>
                     <PropertyRef Name="PurchaseOrderID"/>
                 </Key>
-                <Property Name="CurrencyCode" Type="Edm.String" Nullable="true" MaxLength="5"/>
-                <Property Name="GrossAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <Property Name="ItemNumber" Type="Edm.Int32" Nullable="false"/>
-                <Property Name="NetAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <Property Name="ProductID" Type="Edm.Int64" Nullable="false" MaxLength="10"/>
-                <Property Name="PurchaseOrderID" Type="Edm.Int64" Nullable="false" MaxLength="10"/>
-                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" Precision="13" Scale="3"/>
-                <Property Name="QuantityUnit" Type="Edm.String" Nullable="true" MaxLength="3"/>
-                <Property Name="TaxAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <NavigationProperty Name="Product" Type="ESPM.Product" Nullable="false">
+                <Property MaxLength="5" Name="CurrencyCode" Nullable="true" Type="Edm.String"/>
+                <Property Name="GrossAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <Property Name="ItemNumber" Nullable="false" Type="Edm.Int32"/>
+                <Property Name="NetAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <Property MaxLength="10" Name="ProductID" Nullable="false" Type="Edm.Int64"/>
+                <Property MaxLength="10" Name="PurchaseOrderID" Nullable="false" Type="Edm.Int64"/>
+                <Property Name="Quantity" Nullable="false" Precision="13" Scale="3" Type="Edm.Int32"/>
+                <Property MaxLength="3" Name="QuantityUnit" Nullable="true" Type="Edm.String"/>
+                <Property Name="TaxAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <NavigationProperty Name="Product" Nullable="false" Type="ESPM.Product">
                     <ReferentialConstraint Property="ProductID" ReferencedProperty="ProductID"/>
                 </NavigationProperty>
-                <NavigationProperty Name="Header" Type="ESPM.PurchaseOrderHeader" Nullable="false">
+                <NavigationProperty Name="Header" Nullable="false" Type="ESPM.PurchaseOrderHeader">
                     <ReferentialConstraint Property="PurchaseOrderID" ReferencedProperty="PurchaseOrderID"/>
                 </NavigationProperty>
             </EntityType>
@@ -171,21 +171,21 @@
                 <Key>
                     <PropertyRef Name="SalesOrderID"/>
                 </Key>
-                <Property Name="CreatedAt" Type="Edm.DateTimeOffset" Nullable="true"/>
-                <Property Name="CurrencyCode" Type="Edm.String" Nullable="true" MaxLength="5"/>
-                <Property Name="CustomerID" Type="Edm.Int64" Nullable="true" MaxLength="10"/>
-                <Property Name="GrossAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <Property Name="LifeCycleStatus" Type="Edm.String" Nullable="false" MaxLength="1"/>
-                <Property Name="LifeCycleStatusName" Type="Edm.String" Nullable="false" MaxLength="255"/>
-                <Property Name="NetAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <Property Name="SalesOrderID" Type="Edm.Int64" Nullable="false" MaxLength="10">
+                <Property Name="CreatedAt" Nullable="true" Type="Edm.DateTimeOffset"/>
+                <Property MaxLength="5" Name="CurrencyCode" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="CustomerID" Nullable="true" Type="Edm.Int64"/>
+                <Property Name="GrossAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <Property MaxLength="1" Name="LifeCycleStatus" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="255" Name="LifeCycleStatusName" Nullable="false" Type="Edm.String"/>
+                <Property Name="NetAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <Property MaxLength="10" Name="SalesOrderID" Nullable="false" Type="Edm.Int64">
                     <Annotation Term="Org.OData.Core.V1.Computed"/>
                 </Property>
-                <Property Name="TaxAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <NavigationProperty Name="Customer" Type="ESPM.Customer" Nullable="false" Partner="SalesOrders">
+                <Property Name="TaxAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <NavigationProperty Name="Customer" Nullable="false" Partner="SalesOrders" Type="ESPM.Customer">
                     <ReferentialConstraint Property="CustomerID" ReferencedProperty="CustomerID"/>
                 </NavigationProperty>
-                <NavigationProperty Name="Items" Type="Collection(ESPM.SalesOrderItem)" Partner="Header">
+                <NavigationProperty Name="Items" Partner="Header" Type="Collection(ESPM.SalesOrderItem)">
                     <OnDelete Action="Cascade"/>
                 </NavigationProperty>
             </EntityType>
@@ -194,20 +194,20 @@
                     <PropertyRef Name="ItemNumber"/>
                     <PropertyRef Name="SalesOrderID"/>
                 </Key>
-                <Property Name="CurrencyCode" Type="Edm.String" Nullable="true" MaxLength="5"/>
-                <Property Name="DeliveryDate" Type="Edm.Date" Nullable="true"/>
-                <Property Name="GrossAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <Property Name="ItemNumber" Type="Edm.Int32" Nullable="false"/>
-                <Property Name="NetAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <Property Name="ProductID" Type="Edm.Int64" Nullable="false" MaxLength="10"/>
-                <Property Name="Quantity" Type="Edm.Int32" Nullable="false" Precision="13" Scale="3"/>
-                <Property Name="QuantityUnit" Type="Edm.String" Nullable="true" MaxLength="3"/>
-                <Property Name="SalesOrderID" Type="Edm.Int64" Nullable="false" MaxLength="10"/>
-                <Property Name="TaxAmount" Type="Edm.Decimal" Nullable="true" Precision="15" Scale="3"/>
-                <NavigationProperty Name="Product" Type="ESPM.Product" Nullable="false">
+                <Property MaxLength="5" Name="CurrencyCode" Nullable="true" Type="Edm.String"/>
+                <Property Name="DeliveryDate" Nullable="true" Type="Edm.Date"/>
+                <Property Name="GrossAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <Property Name="ItemNumber" Nullable="false" Type="Edm.Int32"/>
+                <Property Name="NetAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <Property MaxLength="10" Name="ProductID" Nullable="false" Type="Edm.Int64"/>
+                <Property Name="Quantity" Nullable="false" Precision="13" Scale="3" Type="Edm.Int32"/>
+                <Property MaxLength="3" Name="QuantityUnit" Nullable="true" Type="Edm.String"/>
+                <Property MaxLength="10" Name="SalesOrderID" Nullable="false" Type="Edm.Int64"/>
+                <Property Name="TaxAmount" Nullable="true" Precision="15" Scale="3" Type="Edm.Decimal"/>
+                <NavigationProperty Name="Product" Nullable="false" Type="ESPM.Product">
                     <ReferentialConstraint Property="ProductID" ReferencedProperty="ProductID"/>
                 </NavigationProperty>
-                <NavigationProperty Name="Header" Type="ESPM.SalesOrderHeader" Nullable="false">
+                <NavigationProperty Name="Header" Nullable="false" Type="ESPM.SalesOrderHeader">
                     <ReferentialConstraint Property="SalesOrderID" ReferencedProperty="SalesOrderID"/>
                 </NavigationProperty>
             </EntityType>
@@ -215,71 +215,299 @@
                 <Key>
                     <PropertyRef Name="ProductID"/>
                 </Key>
-                <Property Name="LotSize" Type="Edm.Int32" Nullable="true" Precision="13" Scale="3"/>
-                <Property Name="MinStock" Type="Edm.Int32" Nullable="true" Precision="13" Scale="3"/>
-                <Property Name="ProductID" Type="Edm.Int64" Nullable="false" MaxLength="255"/>
-                <Property Name="Quantity" Type="Edm.Int32" Nullable="true" Precision="13" Scale="3"/>
-                <Property Name="QuantityLessMin" Type="Edm.Boolean" Nullable="false"/>
-                <NavigationProperty Name="Product" Type="ESPM.Product" Nullable="false">
+                <Property Name="LotSize" Nullable="true" Precision="13" Scale="3" Type="Edm.Int32"/>
+                <Property Name="MinStock" Nullable="true" Precision="13" Scale="3" Type="Edm.Int32"/>
+                <Property MaxLength="255" Name="ProductID" Nullable="false" Type="Edm.Int64"/>
+                <Property Name="Quantity" Nullable="true" Precision="13" Scale="3" Type="Edm.Int32"/>
+                <Property Name="QuantityLessMin" Nullable="false" Type="Edm.Boolean"/>
+                <NavigationProperty Name="Product" Nullable="false" Type="ESPM.Product">
                     <ReferentialConstraint Property="ProductID" ReferencedProperty="ProductID"/>
                 </NavigationProperty>
             </EntityType>
             <Action Name="GenerateSamplePurchaseOrders">
-                <ReturnType Type="Edm.Boolean" Nullable="false"/>
+                <ReturnType Nullable="false" Type="Edm.Boolean"/>
             </Action>
             <Action Name="GenerateSampleSalesOrders">
-                <ReturnType Type="Edm.Boolean" Nullable="false"/>
+                <ReturnType Nullable="false" Type="Edm.Boolean"/>
             </Action>
             <Action Name="ResetSampleData">
-                <ReturnType Type="Edm.Boolean" Nullable="false"/>
+                <ReturnType Nullable="false" Type="Edm.Boolean"/>
             </Action>
             <Action Name="UpdateSalesOrderStatus">
-                <ReturnType Type="Edm.Boolean" Nullable="false"/>
-                <Parameter Name="id" Type="Edm.Int64" Nullable="false"/>
-                <Parameter Name="newStatus" Type="Edm.String" Nullable="false"/>
+                <ReturnType Nullable="false" Type="Edm.Boolean"/>
+                <Parameter Name="id" Nullable="false" Type="Edm.Int64"/>
+                <Parameter Name="newStatus" Nullable="false" Type="Edm.String"/>
             </Action>
             <EntityContainer Name="ESPMContainer">
-                <EntitySet Name="Customers" EntityType="ESPM.Customer">
+                <EntitySet EntityType="ESPM.Customer" Name="Customers">
                     <NavigationPropertyBinding Path="SalesOrders" Target="SalesOrderHeaders"/>
                 </EntitySet>
-                <EntitySet Name="Suppliers" EntityType="ESPM.Supplier">
+                <EntitySet EntityType="ESPM.Supplier" Name="Suppliers">
                     <NavigationPropertyBinding Path="Products" Target="Products"/>
                     <NavigationPropertyBinding Path="PurchaseOrders" Target="PurchaseOrderHeaders"/>
                 </EntitySet>
-                <EntitySet Name="Products" EntityType="ESPM.Product">
+                <EntitySet EntityType="ESPM.Product" Name="Products">
                     <NavigationPropertyBinding Path="Supplier" Target="Suppliers"/>
                     <NavigationPropertyBinding Path="Stock" Target="Stock"/>
                     <NavigationPropertyBinding Path="PurchaseOrderItems" Target="PurchaseOrderItems"/>
                     <NavigationPropertyBinding Path="SalesOrderItems" Target="SalesOrderItems"/>
                 </EntitySet>
-                <EntitySet Name="ProductCategories" EntityType="ESPM.ProductCategory">
+                <EntitySet EntityType="ESPM.ProductCategory" Name="ProductCategories">
                 </EntitySet>
-                <EntitySet Name="ProductTexts" EntityType="ESPM.ProductText">
+                <EntitySet EntityType="ESPM.ProductText" Name="ProductTexts">
                 </EntitySet>
-                <EntitySet Name="PurchaseOrderHeaders" EntityType="ESPM.PurchaseOrderHeader">
+                <EntitySet EntityType="ESPM.PurchaseOrderHeader" Name="PurchaseOrderHeaders">
                     <NavigationPropertyBinding Path="Items" Target="PurchaseOrderItems"/>
                     <NavigationPropertyBinding Path="Supplier" Target="Suppliers"/>
                 </EntitySet>
-                <EntitySet Name="PurchaseOrderItems" EntityType="ESPM.PurchaseOrderItem">
+                <EntitySet EntityType="ESPM.PurchaseOrderItem" Name="PurchaseOrderItems">
                     <NavigationPropertyBinding Path="Header" Target="PurchaseOrderHeaders"/>
                     <NavigationPropertyBinding Path="Product" Target="Products"/>
                 </EntitySet>
-                <EntitySet Name="SalesOrderHeaders" EntityType="ESPM.SalesOrderHeader">
+                <EntitySet EntityType="ESPM.SalesOrderHeader" Name="SalesOrderHeaders">
                     <NavigationPropertyBinding Path="Items" Target="SalesOrderItems"/>
                     <NavigationPropertyBinding Path="Customer" Target="Customers"/>
                 </EntitySet>
-                <EntitySet Name="SalesOrderItems" EntityType="ESPM.SalesOrderItem">
+                <EntitySet EntityType="ESPM.SalesOrderItem" Name="SalesOrderItems">
                     <NavigationPropertyBinding Path="Header" Target="SalesOrderHeaders"/>
                     <NavigationPropertyBinding Path="Product" Target="Products"/>
                 </EntitySet>
-                <EntitySet Name="Stock" EntityType="ESPM.Stock">
+                <EntitySet EntityType="ESPM.Stock" Name="Stock">
                     <NavigationPropertyBinding Path="Product" Target="Products"/>
                 </EntitySet>
-                <ActionImport Name="GenerateSamplePurchaseOrders" Action="ESPM.GenerateSamplePurchaseOrders"/>
-                <ActionImport Name="GenerateSampleSalesOrders" Action="ESPM.GenerateSampleSalesOrders"/>
-                <ActionImport Name="ResetSampleData" Action="ESPM.ResetSampleData"/>
-                <ActionImport Name="UpdateSalesOrderStatus" Action="ESPM.UpdateSalesOrderStatus"/>
+                <ActionImport Action="ESPM.GenerateSamplePurchaseOrders" Name="GenerateSamplePurchaseOrders"/>
+                <ActionImport Action="ESPM.GenerateSampleSalesOrders" Name="GenerateSampleSalesOrders"/>
+                <ActionImport Action="ESPM.ResetSampleData" Name="ResetSampleData"/>
+                <ActionImport Action="ESPM.UpdateSalesOrderStatus" Name="UpdateSalesOrderStatus"/>
             </EntityContainer>
+            <Annotations Target="ESPM.Product">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Bool="false" Property="Deletable"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Bool="false" Property="Insertable"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Bool="false" Property="Updatable"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>
+                            ProductId
+                        </PropertyPath>
+                        <PropertyPath>
+                            Name
+                        </PropertyPath>
+                        <PropertyPath>
+                            Category
+                        </PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue AnnotationPath="@UI.Identification" Property="Target"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="Name" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_NAME}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="Category" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_CATEGORY}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="ShortDescription" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_SHORT_DESCRIPTION}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="LongDescription" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_LONG_DESCRIPTION}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="Price" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_PRICE}"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue AnnotationPath="@UI.FieldGroup" Property="Target"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue AnnotationPath="@UI.DataPoint" Property="Target"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Path="Weight" Property="Value"/>
+                                    <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_WEIGHT}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Path="DimensionHeight" Property="Value"/>
+                                    <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_HEIGHT}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Path="DimensionDepth" Property="Value"/>
+                                    <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_DEPTH}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Path="DimensionWidth" Property="Value"/>
+                                    <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_WIDTH}"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.DataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="{@i18n&gt;PRODUCT_PRICE}"/>
+                        <PropertyValue Path="Price" Property="Value"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="{@i18n&gt;PRODUCT_TYPE}"/>
+                        <PropertyValue Property="TypeNamePlural" String="{@i18n&gt;PRODUCT_TYPES}"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Path="Name" Property="Value"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Path="LongDescription" Property="Value"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="ProductId" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_PRODUCT_ID}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="Name" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_NAME}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="Category" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_CATEGORY}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="ShortDescription" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_SHORT_DESCRIPTION}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="Price" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_PRICE}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="DimensionHeight" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_HEIGHT}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="DimensionDepth" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_DEPTH}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="DimensionWidth" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_WIDTH}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="DimensionUnit" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_UNIT}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="Weight" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_WEIGHT}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="WeightUnit" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_WEIGHT_UNIT}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="QuantityUnit" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_QUANTITY_UNIT}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="CategoryName" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_CATEGORY_NAME}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="CurrencyCode" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_CURENCY_CODE}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="LongDescription" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_LONG_DESCRIPTION}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="PictureUrl" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_PICTURE_URL}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="SupplierId" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_SUPPLIER_ID}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Path="UpdatedTimestamp" Property="Value"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;PRODUCT_UPDATE_TIMESTAMP}"/>
+                            <Annotation EnumMember="UI.ImportanceType/Low" Term="UI.Importance"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
+    <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs02/vocabularies/Org.OData.Aggregation.V1.xml">
+        <edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Capabilities.V1.xml">
+        <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470971/Communication.xml?api=v2">
+        <edmx:Include Alias="vCard" Namespace="com.sap.vocabularies.Communication.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Measures.V1.xml">
+        <edmx:Include Alias="CQP" Namespace="Org.OData.Measures.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
 </edmx:Edmx>

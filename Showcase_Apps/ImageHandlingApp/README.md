@@ -5,7 +5,7 @@ This is a showcase application that demonstrate how to:
 - Add check to enforce limit of 1 image per Product entity
 - Resize the image before uploading steam to the Product entity
 
-*Last Updated: 11-Feb-2025*
+*Last Updated: 15-Oct-2025*
 
 ***
 
@@ -24,11 +24,11 @@ This is a showcase application that demonstrate how to:
 
 ### *MDK Client Version*
 
-* MDK 24.11 or higher
+* MDK 25.9 or higher
 
 ### *Data Source*
 
-* Mobile Services Sample OData ESPM
+* Mobile Services Sample OData ESPM (destination created as com.sap.edm.sampleservice.v4)
 
 ***
 
@@ -41,38 +41,10 @@ This is a showcase application that demonstrate how to:
 
 ## Screenshots
 
-### iOS
+| Functionality | Android | iOS |
+| --- | --- | --- |
+| Object Table Detail Images | <img src="./Screenshots/Android1.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/iOS1.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| Image Collection | <img src="./Screenshots/Android2.png" alt="MDK" width="400" style="max-height:750px; object-fit:contain;" /> | <img src="./Screenshots/iOS2.png" alt="MDK" width="400" style="max-height:750px; object-fit:contain;" /> |
+| Image via Open Document | <img src="./Screenshots/Android3.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/iOS3.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| Create a Product entity and upload stream to the entity | <img src="./Screenshots/Android4.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="./Screenshots/iOS4.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
 
-![iOS Object Table](./Screenshots/iOS1.png)
-
-*Screenshot: iOS Object Table Detail Images*
-
-![iOS Image Collection](./Screenshots/iOS2.png)
-
-*Screenshot: iOS Image Collection*
-
-![iOS Image via Open Document](./Screenshots/iOS3.png)
-
-*Screenshot: iOS Image via Open Document*
-
-![Create a Product entity and upload stream to the entity ](./Screenshots/iOS4.png)
-
-*Screenshot: Create a Product entity and upload stream to the entity*
-
-### Android
-
-![Android Object Table Detail Images](./Screenshots/Android1.png)
-
-*Screenshot: Android Object Table Detail Images*
-
-![Android Image Collection](./Screenshots/Android2.png)
-
-*Screenshot: Android Image Collection*
-
-![Android Image via Open Document](./Screenshots/Android3.png)
-
-*Screenshot: Android Image via Open Document*
-
-![Create a Product entity and upload stream to the entity](./Screenshots/Android4.png)
-
-*Screenshot: Create a Product entity and upload stream to the entity*

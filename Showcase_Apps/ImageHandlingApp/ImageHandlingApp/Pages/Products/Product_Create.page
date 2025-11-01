@@ -34,6 +34,7 @@
 							"_Type": "Control.Type.FormCell.Attachment",
 							"_Name": "ProductImage",
 							"AttachmentTitle": "Product's Image (Max. 1 Image)",
+							"MaxAttachments": 1,
 							"AttachmentActionType": [
 								"AddPhoto",
 								"TakePhoto"

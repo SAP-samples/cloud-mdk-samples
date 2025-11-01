@@ -9,5 +9,5 @@
 	"Styles": "/PDFGeneratorApp/Styles/Styles.less",
 	"Version": "/PDFGeneratorApp/Globals/Application/AppDefinition_Version.global",
 	"_Name": "PDFGeneratorApp",
-	"_SchemaVersion": "24.11"
+	"_SchemaVersion": "25.9"
 }

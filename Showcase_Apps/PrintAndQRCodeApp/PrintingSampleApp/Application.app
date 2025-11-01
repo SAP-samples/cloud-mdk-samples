@@ -6,5 +6,5 @@
 	"Styles": "/PrintingSampleApp/Styles/Styles.less",
 	"Version": "/PrintingSampleApp/Globals/Application/AppDefinition_Version.global",
 	"_Name": "PrintingSampleApp",
-	"_SchemaVersion": "24.11"
+	"_SchemaVersion": "25.9"
 }
