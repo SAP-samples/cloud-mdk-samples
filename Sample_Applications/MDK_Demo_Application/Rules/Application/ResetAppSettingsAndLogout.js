@@ -16,7 +16,7 @@ export default function ResetAppSettingsAndLogout(context) {
             }
         });
     } catch(err) {
-        console.log(`ERROR: AppSettings cleanup failure - ${err}`);
+        console.log(`${context.localize('reset_error')} - ${err}`);
     } finally {
         // Logout
         return context.getPageProxy().executeAction('/MDKDemoApp/Actions/Logout.action');

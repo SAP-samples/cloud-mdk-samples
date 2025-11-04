@@ -5,7 +5,7 @@
 	"OnFailure": {
 		"Name": "/MDKDemoApp/Actions/GenericBannerMessage.action",
 		"Properties": {
-			"Message": "Upload Failure - {#ActionResults:upload/#Property:error}"
+			"Message": "$(L,'upload_failure_msg',{#ActionResults:upload/#Property:error})"
 		}
 	},
 	"OnSuccess": "/MDKDemoApp/Actions/Service/DownloadProgress.action",

@@ -43,6 +43,6 @@ export default function UserLogSetting(context) {
         }
     } catch (exception) {
         // eslint-disable-next-line no-console
-        console.log(String(exception), 'Error User Logger could not be set');
+        console.log(String(exception), 'ERROR: User Logger could not be set');
     }
 }

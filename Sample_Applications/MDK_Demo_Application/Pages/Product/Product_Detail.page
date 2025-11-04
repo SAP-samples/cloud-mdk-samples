@@ -10,6 +10,7 @@
 			"Sections": [
 				{
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader0",
 						"AccessoryType": "None",
 						"UseTopPadding": true
@@ -22,6 +23,7 @@
 						"ControlSeparator": true
 					},
 					"Footer": {
+						"_Type": "SectionCommon.Type.Footer",
 						"_Name": "SectionFooter0",
 						"Visible": true,
 						"UseBottomPadding": false
@@ -35,6 +37,7 @@
 					"ObjectCells": [
 						{
 							"ObjectCell": {
+								"_Type": "ObjectTable.Type.ObjectCell",
 								"_Name": "SectionObjectCell0",
 								"Title": "{Name}",
 								"Subhead": " ",
@@ -42,20 +45,30 @@
 								"SubstatusText": "/MDKDemoApp/Rules/Product/GetPromoDiscount.js",
 								"AccessoryType": "None",
 								"PreserveIconStackSpacing": false,
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								},
 								"Styles": {
 									"SubstatusText": "Discount"
 								}
 							}
 						}
 					],
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
 					"HighlightSelectedItem": false
 				},
 				{
 					"KeyAndValues": [
 						{
 							"Value": "{ShortDescription}",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue0",
-							"KeyName": "Description",
+							"KeyName": "$(L,'description')",
 							"Visible": true
 						}
 					],
@@ -70,6 +83,7 @@
 					"_Type": "Section.Type.KeyValue",
 					"_Name": "SectionKeyValue4",
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader1",
 						"AccessoryType": "None",
 						"UseTopPadding": false
@@ -105,14 +119,16 @@
 					"KeyAndValues": [
 						{
 							"Value": "{CategoryName}",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue1",
-							"KeyName": "Category",
+							"KeyName": "$(L,'category')",
 							"Visible": true
 						},
 						{
 							"Value": "{QuantityUnit}",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue2",
-							"KeyName": "Quantity Unit",
+							"KeyName": "$(L,'quantity_unit')",
 							"Visible": true
 						}
 					],
@@ -127,6 +143,7 @@
 					"_Type": "Section.Type.KeyValue",
 					"_Name": "SectionKeyValue2",
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader2",
 						"AccessoryType": "None",
 						"UseTopPadding": true
@@ -143,20 +160,23 @@
 					"KeyAndValues": [
 						{
 							"Value": "{Quantity}",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue3",
-							"KeyName": "Quantity",
+							"KeyName": "$(L,'quantity')",
 							"Visible": true
 						},
 						{
 							"Value": "{LotSize}",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue4",
-							"KeyName": "Lot Size",
+							"KeyName": "$(L,'lot_size')",
 							"Visible": true
 						},
 						{
 							"Value": "{MinStock}",
+							"_Type": "KeyValue.Type.Item",
 							"_Name": "KeyValue5",
-							"KeyName": "Min Stock Level",
+							"KeyName": "$(L,'min_stock_level')",
 							"Visible": true
 						}
 					],
@@ -176,10 +196,11 @@
 					},
 					"_Name": "SectionKeyValue3",
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader3",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Stock Details"
+						"Caption": "$(L,'stock_details')"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -200,10 +221,11 @@
 					"_Type": "Section.Type.SimplePropertyCollection",
 					"_Name": "SectionSimplePropertyCollection1",
 					"Header": {
+						"_Type": "SectionCommon.Type.Header",
 						"_Name": "SectionHeader4",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Dimensions"
+						"Caption": "$(L,'dimensions')"
 					},
 					"Visible": true,
 					"EmptySection": {
@@ -214,7 +236,8 @@
 							"SimplePropertyCell": {
 								"Value": "{DimensionHeight} {DimensionUnit}",
 								"_Name": "SectionSimplePropertyCell0",
-								"KeyName": "Height",
+								"_Type": "SimplePropertyCollection.Type.Cell",
+								"KeyName": "$(L,'height')",
 								"AccessoryType": "None",
 								"Visible": true
 							}
@@ -223,7 +246,8 @@
 							"SimplePropertyCell": {
 								"Value": "{DimensionWidth} {DimensionUnit}",
 								"_Name": "SectionSimplePropertyCell1",
-								"KeyName": "Width",
+								"_Type": "SimplePropertyCollection.Type.Cell",
+								"KeyName": "$(L,'width')",
 								"AccessoryType": "None",
 								"Visible": true
 							}
@@ -232,7 +256,8 @@
 							"SimplePropertyCell": {
 								"Value": "{DimensionDepth} {DimensionUnit}",
 								"_Name": "SectionSimplePropertyCell2",
-								"KeyName": "Depth",
+								"_Type": "SimplePropertyCollection.Type.Cell",
+								"KeyName": "$(L,'depth')",
 								"AccessoryType": "None",
 								"Visible": true
 							}
@@ -241,7 +266,8 @@
 							"SimplePropertyCell": {
 								"Value": "{Weight} {WeightUnit}",
 								"_Name": "SectionSimplePropertyCell3",
-								"KeyName": "Weight",
+								"_Type": "SimplePropertyCollection.Type.Cell",
+								"KeyName": "$(L,'weight')",
 								"AccessoryType": "None",
 								"Visible": true
 							}
@@ -256,13 +282,12 @@
 	],
 	"_Type": "Page",
 	"_Name": "Product_Detail",
-	"Caption": "Product Detail",
-	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{
+				"_Type": "Control.Type.ActionBarItem",
 				"_Name": "ActionBarItem0",
-				"Caption": "Edit",
+				"Caption": "$(L,'edit')",
 				"SystemItem": "Edit",
 				"Position": "Right",
 				"IsIconCircular": false,
@@ -270,6 +295,9 @@
 				"OnPress": "/MDKDemoApp/Actions/Product/NavToProduct_Detail_Edit.action"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'product_detail_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
 	}
 }

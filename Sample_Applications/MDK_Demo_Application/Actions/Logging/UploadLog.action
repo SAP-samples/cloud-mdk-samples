@@ -2,7 +2,7 @@
 	"ActionResult": {
 		"_Name": "UploadLog"
 	},
-	"ActivityIndicatorText": "Uploading...",
+	"ActivityIndicatorText": "$(L,'log_uploading')",
 	"OnFailure": "/MDKDemoApp/Actions/Logging/LogUploadFailure.action",
 	"OnSuccess": "/MDKDemoApp/Actions/Logging/LogUploadSuccessful.action",
 	"ShowActivityIndicator": false,

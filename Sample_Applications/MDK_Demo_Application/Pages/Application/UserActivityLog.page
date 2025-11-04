@@ -11,7 +11,8 @@
 							"_Type": "Control.Type.FormCell.Switch",
 							"_Name": "EnableLogSwitch",
 							"IsVisible": true,
-							"Caption": "Enable Logging",
+							"Separator": true,
+							"Caption": "$(L,'enable_logging')",
 							"OnValueChange": "/MDKDemoApp/Rules/Logging/ToggleLogging.js",
 							"IsEditable": true
 						},
@@ -20,9 +21,10 @@
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "LogLevelListPicker",
 							"IsVisible": true,
+							"Separator": true,
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": true,
-							"Caption": "Log Level",
+							"Caption": "$(L,'log_level')",
 							"OnValueChange": "/MDKDemoApp/Rules/Logging/SetUserLogLevel.js",
 							"IsSelectedSectionEnabled": false,
 							"IsPickerDismissedOnSelection": true,
@@ -31,9 +33,19 @@
 							"PickerItems": "/MDKDemoApp/Rules/Logging/LogLevels.js"
 						}
 					],
-					"_Name": "FormCellContainerSectionFormCell0",
 					"Visible": true,
-					"_Type": "Section.Type.FormCell"
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainerSectionFormCell0"
 				},
 				{
 					"Controls": [
@@ -41,7 +53,8 @@
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "Send",
 							"IsVisible": true,
-							"Title": "Send Activity Log",
+							"Separator": true,
+							"Title": "$(L,'send_activity_log')",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
@@ -49,16 +62,35 @@
 							"Enabled": true
 						}
 					],
-					"_Name": "FormCellContainerSectionFormCell1",
 					"Visible": true,
-					"_Type": "Section.Type.FormCell"
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainerSectionFormCell1"
 				}
-			]
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
 	"_Type": "Page",
 	"_Name": "UserActivityLog",
-	"Caption": "Activity Log",
 	"OnLoaded": "/MDKDemoApp/Rules/Logging/UserLogSetting.js",
-	"PrefersLargeCaption": true
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'activity_log_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
+	}
 }

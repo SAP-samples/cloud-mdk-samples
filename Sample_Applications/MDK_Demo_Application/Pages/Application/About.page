@@ -1,74 +1,104 @@
 {
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"KeyAndValues": [
+						{
+							"Value": "/MDKDemoApp/Globals/Application/ApplicationName.global",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue0",
+							"KeyName": "$(L,'application')",
+							"Visible": true
+						},
+						{
+							"Value": "/MDKDemoApp/Globals/Application/AppDefinition_Version.global",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue1",
+							"KeyName": "$(L,'metadata_version')",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "/MDKDemoApp/Rules/Application/GetClientVersion.js",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue2",
+							"KeyName": "$(L,'client_version')",
+							"Visible": true
+						},
+						{
+							"Value": "/MDKDemoApp/Rules/Application/GetClientSupportVersions.js",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue3",
+							"KeyName": "$(L,'client_support_version')",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue1",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "About",
 	"ActionBar": {
 		"Items": [
 			{
-				"IsIconCircular": false,
-				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action",
-				"Position": "Right",
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "$(L,'done')",
 				"SystemItem": "Done",
-				"Caption": "Done",
-				"Visible": true
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDKDemoApp/Actions/CloseModalComplete.action"
 			}
-		]
-	},
-	"Caption": "About",
-	"Controls": [
-		{
-			"Sections": [
-				{
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"KeyAndValues": [
-						{
-							"KeyName": "Application",
-							"Value": "/MDKDemoApp/Globals/Application/ApplicationName.global",
-							"Visible": true
-						},
-						{
-							"KeyName": "Application Metadata Version",
-							"Value": "/MDKDemoApp/Globals/Application/AppDefinition_Version.global",
-							"Visible": true
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"MaxItemCount": 1,
-					"Visible": true,
-					"_Name": "SectionKeyValue0",
-					"_Type": "Section.Type.KeyValue"
-				},
-				{
-					"EmptySection": {
-						"FooterVisible": false
-					},
-					"KeyAndValues": [
-						{
-							"KeyName": "Client Version",
-							"Value": "/MDKDemoApp/Rules/Application/GetClientVersion.js",
-							"Visible": true
-						},
-						{
-							"KeyName": "Client Support Versions",
-							"Value": "/MDKDemoApp/Rules/Application/GetClientSupportVersions.js",
-							"Visible": true
-						}
-					],
-					"Layout": {
-						"NumberOfColumns": 1
-					},
-					"MaxItemCount": 1,
-					"Visible": true,
-					"_Name": "SectionKeyValue1",
-					"_Type": "Section.Type.KeyValue"
-				}
-			],
-			"_Name": "SectionedTable0",
-			"_Type": "Control.Type.SectionedTable"
-		}
-	],
-	"_Name": "About",
-	"_Type": "Page",
-	"PrefersLargeCaption": true
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "$(L,'about_caption')",
+		"PrefersLargeCaption": "$(PLT,true,false,false)"
+	}
 }

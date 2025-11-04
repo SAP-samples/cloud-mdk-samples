@@ -10,14 +10,15 @@ export default function ProductCatalogCaption(context) {
 			filter = `$filter=${encodeURIComponent(currentFilter)}`;
 			console.log(filter);
 		}
+		let products_caption = context.localizeText('product_list_caption');
 		
 		return context.count('/MDKDemoApp/Services/Sample.service', 'Products', ``).then((totalCount) => {
 			return context.count('/MDKDemoApp/Services/Sample.service', 'Products', filter).then((count) => {
 				let caption = null;
 				if (count != totalCount) {
-					caption = `Products (${count}/${totalCount})`;
+					caption = `${products_caption} (${count}/${totalCount})`;
 				} else {
-					caption = `Products (${count})`;
+					caption = `${products_caption} (${count})`;
 				}
 				pageProxy.setCaption(caption);
 				return caption;
@@ -25,7 +26,7 @@ export default function ProductCatalogCaption(context) {
 		});
 	} else {
 		return context.count('/MDKDemoApp/Services/Sample.service', 'Products', ``).then((count) => {
-			let caption = `Products (${count})`;
+			let caption = `${products_caption} (${count})`;
 			pageProxy.setCaption(caption);			
 			return caption;
 		});
