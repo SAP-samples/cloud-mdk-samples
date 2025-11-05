@@ -1,0 +1,6 @@
+{
+    "ModalPage": true,
+    "NavigationType": "Cross",
+    "PageToOpen": "/SiblingNavigationApp/Pages/Application/Support.page",
+    "_Type": "Action.Type.Navigation"
+}

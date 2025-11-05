@@ -6,17 +6,19 @@ All of the applications in these folders are full working applications.  Please 
 ***
 
 ## Applications
-* FormCell Inline Validation
-* Home Screen Widget
-* Image Handling
-* Multi-Select & Context Menu
-* PDF Generation
-* Persistent Filters
-* Printing and QR Codes
+* [Devtoberfest 2025 - Build Mobile Solutions with Advanced Scanning using SAP Build](./Devtoberfest2025-AdvancedScanningApp/)
+* [Image Handling](./ImageHandlingApp/)
+* [Inline Validation View](./InlineValidationViewApp/)
+* [Multi-Select & Context Menu](./MultiSelectContextMenuApp/)
+* [PDF Generation](./PDFGenApp/)
+* [Persistent Filters](./PersistentFilters/)
+* [Print and Generate QR Codes](./PrintAndQRCodeApp/)
+* [Sibling Navigation](./SiblingNavigationApp/)
 * Extension Samples
-    * Calender View
-    * Video Player
-    * NativeScript View
+    * [Calender View](./CalendarViewExtensionApp/)
+    * [Home Screen Widget](./HomeScreenWidgetApp/)
+    * [NativeScript View](./NativeScriptViewExtensionApp/)
+    * [Video Player View](./VideoPlayerViewExtensionApp/)
 
 ## Setup and Installation
 

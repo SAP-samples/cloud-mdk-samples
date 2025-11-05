@@ -1,0 +1,9 @@
+{
+    "Service": "/SiblingNavigationApp/Services/com_sap_edm_sampleservice_v4.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/SiblingNavigationApp/Actions/com_sap_edm_sampleservice_v4/Service/DownloadStartedMessage.action",
+    "OnFailure": "/SiblingNavigationApp/Actions/com_sap_edm_sampleservice_v4/Service/SyncFailureMessage.action"
+}
