@@ -1,0 +1,6 @@
+{
+  "_Type" : "Action.Type.Message",
+  "Message" : "#ActionResults:OData/#Property:error",
+  "Title" : "OData",
+  "OKCaption" : "OK"
+}

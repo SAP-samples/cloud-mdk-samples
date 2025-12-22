@@ -6,6 +6,7 @@ All of the applications in these folders are full working applications.  Please 
 ***
 
 ## Applications
+* [AI-Enabled Field Service App](./AICoreApp/)
 * [Devtoberfest 2025 - Build Mobile Solutions with Advanced Scanning using SAP Build](./Devtoberfest2025-AdvancedScanningApp/)
 * [Image Handling](./ImageHandlingApp/)
 * [Inline Validation View](./InlineValidationViewApp/)

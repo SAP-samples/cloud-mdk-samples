@@ -1,0 +1,13 @@
+{
+  "ApplicationDisplayName": "MDK GenAI",
+  "SecureDatabaseEncryptionKey": false,
+  "ConnectionSettings": {
+    "EnableOverrides": true,
+    "EnableScreenSharing": true
+  },
+  "LogSettings": {
+    "FileName": "ClientLog.txt",
+    "MaxFileSizeInMegaBytes": 5,
+    "LogLevel": "Error"
+  }
+}
