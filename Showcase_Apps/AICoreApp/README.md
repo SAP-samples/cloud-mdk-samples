@@ -1,6 +1,6 @@
 # AI-Enabled Field Service App
 
-This is a showcase application that demonstrates how to consume SAP AI Core and SAP HANA Vector DB services using the SAP Mobile Development Kit (MDK). The application was created during the SAP MDK integration with SAP AI Core services blog series. Links to the blog posts are included below. The application demonstrates:
+This is a showcase application that demonstrates how to consume SAP AI Core and SAP HANA Vector DB services using the mobile development kit (MDK). The application was created during the SAP MDK integration with SAP AI Core services blog series. Links to the blog posts are included below. The application demonstrates:
 
 1. Extracting meter readings from images
 2. Detecting anomalies from images
@@ -99,12 +99,12 @@ Populate embeddings into the vector database for retrieval-augmented generation 
 ### Demo
 
 ##### Blogs
- 1. [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 1 - Setup](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-1/ba-p/13799088) 
- 2. [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 2 - Business Use Cases](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-2/ba-p/13801732) 
- 3. [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 3 - Measurement Reading](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-3/ba-p/13850930)
- 4. [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 4 - Anomaly Detection and Maintenance Guidelines](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-4-anomaly-detection-and/ba-p/13856450)
- 5. [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 5 - Retrieval Augmented Generation](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-5-retrieval-augmented/ba-p/13800342)
- 6. [SAP Mobile Development Kit (MDK) integration with SAP AI Core services: Part 6 - Work Order and Operation Recording](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-6-work-order-and/ba-p/13876628)
+ 1. [mobile development kit (MDK) integration with SAP AI Core services: Part 1 - Setup](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-1/ba-p/13799088) 
+ 2. [mobile development kit (MDK) integration with SAP AI Core services: Part 2 - Business Use Cases](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-2/ba-p/13801732) 
+ 3. [mobile development kit (MDK) integration with SAP AI Core services: Part 3 - Measurement Reading](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mobile-development-kit-mdk-integration-with-sap-ai-core-services-part-3/ba-p/13850930)
+ 4. [mobile development kit (MDK) integration with SAP AI Core services: Part 4 - Anomaly Detection and Maintenance Guidelines](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-4-anomaly-detection-and/ba-p/13856450)
+ 5. [mobile development kit (MDK) integration with SAP AI Core services: Part 5 - Retrieval Augmented Generation](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-5-retrieval-augmented/ba-p/13800342)
+ 6. [mobile development kit (MDK) integration with SAP AI Core services: Part 6 - Work Order and Operation Recording](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-mdk-integration-with-sap-ai-core-services-part-6-work-order-and/ba-p/13876628)
 
 
 ## Development
