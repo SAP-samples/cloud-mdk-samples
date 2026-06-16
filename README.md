@@ -1,14 +1,14 @@
-# SAP Mobile Development Kit Samples
+# mobile development kit Samples
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-mdk-samples)](https://api.reuse.software/info/github.com/SAP-samples/cloud-mdk-samples)
 
-## Welcome to the Mobile Development Kit (MDK) Samples Repository!
+## Welcome to the mobile development kit (MDK) Samples Repository!
 
 The samples provided in this repository are targeted at intermediate to experienced MDK users and are intended to showcase some of the how-to topics that come up in discussions with customers.  We may also provide more full featured sample applications that demonstrate the capabilities of the MDK.
 
 Some samples may be provided more as self contained demonstrations rather than full fledged applcations to showcase a particular topic.  Some samples may also include a **Mobile OData Service** Project or **CAP** Project that will provide the backend data for use in the samples.
 
-If you are new to using the MDK, we highly recommend visiting the Mobile Development Kit page on the [SAP Developers site](https://developers.sap.com/topics/mobile-development-kit.html) and going through the tutorials to get familiar with the basics of MDK before trying to work with the samples in this repository.
+If you are new to using the MDK, we highly recommend visiting the mobile development kit page on the [SAP Developers site](https://developers.sap.com/topics/mobile-development-kit.html) and going through the tutorials to get familiar with the basics of MDK before trying to work with the samples in this repository.
 
 ***
 
@@ -21,11 +21,11 @@ The included resources depend on availability of an SAP Business Technology Plat
 
 1. Some of the resources connect to a **Mobile OData Service** backend. Use of these backends will require Quota within your SAP BTP account. Before attempting to run these backends, please ensure you have appropriate quota available.
 
-1. The Mobile Development Kit SDK environment. Users can download the Mobile Development Kit SDK from the SAP Software Downloads center or the latest version is available on the [SAP Developers site](https://developers.sap.com/trials-downloads.html?search=Mobile%20development%20kit).  Please be sure to run the MDK Dependency Installer within the MDK SDK to ensure your environment is setup before trying to create an MDK client using the samples in this repository.
+1. The mobile development kit SDK environment. Users can download the mobile development kit SDK from the SAP Software Downloads center or the latest version is available on the [SAP Developers site](https://developers.sap.com/trials-downloads.html?search=Mobile%20development%20kit).  Please be sure to run the MDK Dependency Installer within the MDK SDK to ensure your environment is setup before trying to create an MDK client using the samples in this repository.
 
 ***
 
-The resources can also be used as a general code reference and starting point for the Mobile development kit.
+The resources can also be used as a general code reference and starting point for the mobile development kit.
 
 Please be advised that any downloads are subject to the following:
 

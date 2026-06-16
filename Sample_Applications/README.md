@@ -13,9 +13,8 @@ All of the applications in these folders are full working applications.  Please 
 ### Mobile Application Setup
 To run any of the applications, you will need to setup an Application in Mobile Servies for the MDK Client to onboard against when running the sample application.
 
-1. Create an application in CF Mobile Services
-1. Select the Assign Features for: Mobile Development Kit Application
-1. In addition to the default feature set, also select the **Mobile Sample OData ESPM** feature
+1. Create an MDK type application in Mobile Services
+1. In addition to the default feature set, also select the **Sample OData ESPM** feature
 
 For a more detailed tutorial on the initial configuration please see the [Set Up Initial Configuration for an MDK App](https://developers.sap.com/tutorials/cp-mobile-dev-kit-ms-setup.html) tutorial.
 

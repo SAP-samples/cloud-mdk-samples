@@ -29,9 +29,8 @@ To run any of the applications, please see the README file contained within each
 
 To run any of the apps, you will need to setup an Application in Mobile Services for the MDK Client to onboard against when running the showcase applications.
 
-1. Create an application in Mobile Services
-1. Select the Assign Features for: Mobile Development Kit Application
-1. In addition to the default feature set, also select the **Mobile Sample OData ESPM** feature if the Showcase Application indicates this as the data source
+1. Create an MDK type application in Mobile Services
+1. In addition to the default feature set, also select the **Sample OData ESPM** feature if the Showcase Application indicates this as the data source
 
 ### MDK Editor (SAP Business Application Studio)
 

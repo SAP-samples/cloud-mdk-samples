@@ -45,10 +45,10 @@ The [homescreenwidgetapp.mdkproject/App_Resources/iOS/src](homescreenwidgetapp.m
 
 You can find more information about adding native iOS source code [here](https://v7.docs.nativescript.org/guides/ios-source-code) and details about the structure of `.mdkproject` folder [here](https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/getting-started/mdk/custom-client/branding-custom-client.html#structure-of-mdkproject).
 
-For more detailed information on building a Mobile Development Kit Client please see the following tutorials:
+For more detailed information on building a mobile development kit Client please see the following tutorials:
 
-* [Build Your Mobile Development Kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
-* [Build Your Mobile Development Kit Client Using Cloud Build Service](https://developers.sap.com/tutorials/cp-mobile-dev-kit-cbs-client.html)
+* [Build Your mobile development kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
+* [Build Your mobile development kit Client Using Cloud Build Service](https://developers.sap.com/tutorials/cp-mobile-dev-kit-cbs-client.html)
 
 The application metadata is the [HomeScreenWidgetApp](HomeScreenWidgetApp) folder and it is assumed that you will load and deploy the metadata to Mobile Services from an MDK Editor. Make sure to enable the feature `Mobile Sample OData ESPM` (configured with OData Version 4) in your mobile services app.
 

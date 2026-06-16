@@ -50,7 +50,7 @@ The `printapp.mdkproject` folder contains the MDK client configuration to add th
 
 For a more detailed information on the setup for MDK development please see the following tutorial.
 
-* [Build Your Mobile Development Kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
+* [Build Your mobile development kit Client Using MDK SDK](https://developers.sap.com/tutorials/cp-mobile-dev-kit-build-client.html)
 
 If you are using SAP Business Application Studio or Visual Studio Code to develop your app, then you need to add `"nativescript-printer"` and `"nativescript-qr-generator"` to the externals property of the built-in MDK bundler tool.
 
